@@ -1,0 +1,174 @@
+/*******************************************************************************
+
+"A Collection of Useful C++ Classes for Digital Signal Processing"
+ By Vinnie Falco
+
+ Adadpted for Linux by Bernd Porr, berndporr@f2s.com
+
+The original project location of the Windows implementation:
+https://github.com/vinniefalco/DSPFilters
+
+--------------------------------------------------------------------------------
+
+License: MIT License (http://www.opensource.org/licenses/mit-license.php)
+Copyright (c) 2009 by Vinnie Falco
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+********************************************************************************
+
+="A Collection of Useful C++ Classes for Digital Signal Processing"=
+_By Vincent Falco - adapted for Linux by Bernd Porr_
+
+_"Techniques for digital signal processing are well guarded and held
+close to the chest, as they have valuable applications for multimedia
+content. The black art of Infinite Impulse Response ("IIR") filtering
+has remained shrouded in secrecy with little publicly available source
+code....until now."_
+
+----
+Building on the work of cherished luminaries such as Sophocles Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this library harnesses the power of C++ templates to solve a useful problem in digital signal processing: the realization of multichannel IIR filters of arbitrary order and prescribed specifications with various properties such as Butterworth, Chebyshev, Elliptic, and Optimum-L (Legendre) responses. The library is provided under the MIT license and is therefore fully compatible with proprietary usage.
+
+Classes are designed as independent re-usable building blocks. Use some or all of the provided features, or extend the functionality by writing your own objects that plug into the robust framework. Only the code that you need will get linked into your application. Here's a list of features:
+
+	* Exclusive focus on IIR filters
+	* Complete implementation of all "RBJ Biquad" Cookbook filter formulas
+	* Butterworth, Chebyshev, Elliptic, Bessel, Legendre designs
+	* Low Pass, High Pass, Band Pass, Band Stop transformations
+	* Low, High, and Band Shelf filter implementations for most types
+	* Smooth interpolation of filter settings, pole/zeros, and biquad coefficients to achieve seamless parameter changes
+	* Representation of digital filters using poles and zeros
+	* Realization using Direct Form I, Direct Form II, or user provided class
+	* Fully factored to minimize template instantiations
+	* "Design" layer provides runtime introspection into a filter
+	* Utility template functions for manipulating buffers of sample data
+	* No calls to malloc or new, great for embedded systems
+	* No external dependencies, just the standard C++ library!
+
+Using these filters is easy:
+
+{{{
+    // Create a Chebyshev type I Band Stop filter of order 3
+    Dsp::ChebyshevI::BandStop <3> f;
+    f.setup (3,    // order
+             44100,// sample rate
+             4000, // center frequency
+             880,  // band width
+             1);   // ripple dB
+    a = f.filter(a);
+}}}
+
+********************************************************************************
+
+Credits
+
+  All of this code was written by the author Vinnie Falco except where marked.
+
+  Some filter ideas are based on a java applet (http://www.falstad.com/dfilter/)
+  developed by Paul Falstad.
+
+  This code has been adapted for Unix and realtime processing
+  by Bernd Porr <www.berndporr.me.uk>.
+
+Bibliography
+
+  "High-Order Digital Parametric Equalizer Design"
+   Sophocles J. Orfanidis
+   (Journal of the Audio Engineering Society, vol 53. pp 1026-1046)
+
+  http://crca.ucsd.edu/~msp/techniques/v0.08/book-html/node1.html
+ 
+  "Spectral Transformations for digital filters"
+   A. G. Constantinides, B.Sc.(Eng.) Ph.D.
+   (Proceedings of the IEEE, vol. 117, pp. 1585-1590, August 1970)
+
+********************************************************************************
+
+DOCUMENTATION
+
+All symbols are in the Dsp namespace.
+
+Filter family namespaces
+
+  Each family of filters is given its own namespace. Currently these namespaces
+  include:
+
+  RBJ:          Filters from the RBJ Cookbook
+  Butterworth:  Filters with Butterworth response
+  ChebyshevI:   Filters using Chebyshev polynomials (ripple in the passband)
+  ChebyshevII:  "Inverse Chebyshev" filters (ripple in the stopband)
+  Elliptic:     Filters with ripple in both the passband and stopband
+  Bessel:       Uses Bessel polynomials, theoretically with linear phase
+  Legendre:     "Optimum-L" filters with steepest transition and monotonic passband.
+  Custom:       Simple filters that allow poles and zeros to be specified directly
+
+<class FilterClass>
+
+  Within each namespace we have a set of "raw filters" (each one is an example
+  of a FilterClass). For example, the raw filters in the Butterworth namespace are:
+
+  Butterworth::LowPass
+  Butterworth::HighPass
+  Butterworth::BandPass
+  Butterworth::BandStop
+  Butterworth::LowShelf
+  Butterworth::HighShelf
+  Butterworth::BandShelf
+
+  When a class template (such as SimpleFilter) requires a FilterClass, it is
+  expecting an identifier of a raw filter. For example, Legendre::LowPass. The
+  raw filters do not have any support for introspection or the Params style of
+  changing filter settings. All they offer is a setup() function for updating
+  the IIR coefficients to a given set of parameters.
+
+<class DesignClass>
+
+  Each filter family namespace also has the nested namespace "Design". Inside
+  this namespace we have all of the raw filter names repeated, except that
+  these classes additional provide the Design interface, which adds
+  introspection, polymorphism, the Params style of changing filter settings,
+  and in general all of the features necessary to interoperate with the Filter
+  virtual base class and its derived classes. For example, the design filters
+  from the Butterworth namespace are:
+
+  Butterworth::Design::LowPass
+  Butterworth::Design::HighPass
+  Butterworth::Design::BandPass
+  Butterworth::Design::BandStop
+  Butterworth::Design::LowShelf
+  Butterworth::Design::HighShelf
+  Butterworth::Design::BandShelf
+
+  For any class template that expects a DesignClass, you must pass a suitable
+  object from the Design namespace of the desired filter family. For example,
+  ChebyshevI::Design::BandPass.
+
+2nd order IIR implementations which are cascaded to perform
+the actual number crunching (default is DirectFormII):
+
+ DirectFormI
+ *  y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2]
+ *                      - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]  
+
+ DirectFormII
+ *  v[n] =         x[n] - (a1/a0)*v[n-1] - (a2/a0)*v[n-2]
+ *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
+
+ TransposedDirectFormI
+ TransposedDirectFormII

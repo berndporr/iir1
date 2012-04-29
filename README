@@ -1,0 +1,29 @@
+This is a library which implements a variety of IIR filters.
+
+Installation is done with the standard sequence:
+CXXFLAGS="-O3 -march=native" ./configure
+make
+sudo make install
+sudo ldconfig
+
+Usage is very simple. A demo program is in the
+"demo" directory which demonstrates
+a lowpass and a highpass filter. A delta pulse
+is sent into the filters and saved as a gnuplot/octave
+file. For the documentation have a look at
+Documentation.txt
+
+This library has been adapted form Vinnie Falco's
+original work which can be found here:
+https://github.com/vinniefalco/DSPFilters
+
+The main advancement from the original library is
+the implementation of the "filter" function
+so that the IIR filter can be used in realime
+applications. This has been achieved by just
+re-shuffling existing code and making it available
+to the user in form of the API call "filter".
+
+Enjoy!
+
+Bernd Porr
