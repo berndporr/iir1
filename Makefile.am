@@ -1,5 +1,5 @@
 AUTOMAKE_OPTIONS = subdir-objects
-ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
+ACLOCAL_AMFLAGS = -I m4
 lib_LTLIBRARIES = libiir.la
 libiir_la_LDFLAGS = -version-info $(IIR_SO_VERSION)
 iir_includedir = $(includedir)
