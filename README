@@ -1,7 +1,7 @@
 This is a powerful filter library which implements all 
 standard IIR filters such as Bessel, Butterworth, 
 Elliptic and Chebychev. The data format is
-floating point throughout.
+floating-point throughout.
 
 There is no need to resort to MATLAB/OCTAVE to calculate
 the filter coefficients because the library does it
@@ -16,10 +16,10 @@ sudo make install
 sudo ldconfig
 
 Usage is very simple. A demo program is in the
-"demo" directory which demonstrates
-a lowpass and a bandstop filter. A delta pulse
-is sent into the filters and saved as a gnuplot/octave
-file. For the documentation have a look at
+"demo" directory which sets up a lowpass and a bandstop 
+filter. A delta pulse is sent into the filters 
+and saved as a gnuplot/octave file. 
+For the documentation have a look at
 Documentation.txt
 
 This library has been adapted form Vinnie Falco's
