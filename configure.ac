@@ -1,4 +1,4 @@
-AC_INIT([LibIIR], [1.0], [berndporr@f2s.com], [iir],
+AC_INIT([LibIIR], [1.0], [mail@berndporr.me.uk], [iir],
         [http://www.berndporr.me.uk])
 AC_PREREQ([2.59])
 AM_INIT_AUTOMAKE([1.10 -Wall no-define])

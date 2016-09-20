@@ -3,7 +3,7 @@
 "A Collection of Useful C++ Classes for Digital Signal Processing"
  By Vinnie Falco
 
- Adadpted for Linux by Bernd Porr, berndporr@f2s.com
+ Adadpted for Linux by Bernd Porr, mail@berndporr.me.uk
 
 The original project location of the Windows implementation:
 https://github.com/vinniefalco/DSPFilters
