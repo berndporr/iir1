@@ -10,6 +10,7 @@ frequency, filter order and the filter is
 ready to be used.
 
 Installation is done with the standard sequence:
+./autogen.sh
 CXXFLAGS="-O3 -march=native" ./configure
 make
 sudo make install
