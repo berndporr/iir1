@@ -51,6 +51,9 @@ namespace Iir {
 // Factored implementation to reduce template instantiations
 class Cascade
 {
+
+public:
+	
   struct Stage : Biquad
   {
   };
@@ -67,7 +70,6 @@ class Cascade
     Stage* stageArray;
   };
 
-public:
   int getNumStages () const
   {
     return m_numStages;
@@ -79,7 +81,6 @@ public:
     return m_stageArray[index];
   }
 
-public:
   // Calculate filter response at the given normalized frequency.
   complex_t response (double normalizedFrequency) const;
 
