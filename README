@@ -3,11 +3,21 @@ standard IIR filters such as Bessel, Butterworth,
 Elliptic and Chebychev. The data format is
 floating-point throughout.
 
-There is no need to resort to MATLAB/OCTAVE to calculate
+There is no need to resort to MATLAB/OCTAVE/Python to calculate
 the filter coefficients because the library does it
 by itself. Just provide the sampling rate, cutoff
 frequency, filter order and the filter is
-ready to be used.
+ready to be used. For example for a lowpass:
+
+Init:
+       Iir::Butterworth::LowPass<order> f;
+       const float samplingrate = 1000; // Hz
+       const float cutoff_frequency = 5; // Hz
+       f.setup (order, samplingrate, cutoff_frequency);
+       
+Realtime filtering sample by sample:
+       float y = f.filter(x);
+
 
 Installation is done with the standard sequence:
 ./autogen.sh
@@ -15,6 +25,11 @@ CXXFLAGS="-O3 -march=native" ./configure
 make
 sudo make install
 sudo ldconfig
+
+If you have Ubuntu xenial, artful or ludic then you can
+install it as a pre-compiled package:
+
+sudo add-apt-repository ppa:berndporr/usbdux
 
 Usage is very simple. A demo program is in the
 "demo" directory which sets up a lowpass and a bandstop 
@@ -26,13 +41,6 @@ Documentation.txt
 This library has been adapted form Vinnie Falco's
 original work which can be found here:
 https://github.com/vinniefalco/DSPFilters
-
-The main advancement from the original library is
-the implementation of the "filter" function
-so that the IIR filter can be used in realime
-applications. This has been achieved by just
-re-shuffling existing code and making it available
-to the user in form of the API call "filter".
 
 Enjoy!
 
