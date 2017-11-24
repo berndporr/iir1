@@ -1,7 +1,7 @@
-This is a powerful filter library which implements all 
-standard IIR filters such as Bessel, Butterworth, 
-Elliptic and Chebychev. The data format is
-floating-point throughout.
+This is a powerful C++ filter library for Linux & Mac OSX
+which implements all standard IIR filters such as
+Bessel, Butterworth, Elliptic and Chebychev.
+The data format is floating-point throughout.
 
 There is no need to resort to MATLAB/OCTAVE/Python to calculate
 the filter coefficients because the library does it
@@ -10,6 +10,7 @@ frequency, filter order and the filter is
 ready to be used. For example for a lowpass:
 
 Init:
+       #define order 4
        Iir::Butterworth::LowPass<order> f;
        const float samplingrate = 1000; // Hz
        const float cutoff_frequency = 5; // Hz
@@ -19,14 +20,15 @@ Realtime filtering sample by sample:
        float y = f.filter(x);
 
 
-Installation is done with the standard sequence:
+The installation is done with the standard sequence:
+
 ./autogen.sh
 CXXFLAGS="-O3 -march=native" ./configure
 make
 sudo make install
 sudo ldconfig
 
-If you have Ubuntu xenial, artful or ludic then you can
+If you have Ubuntu xenial, artful or lucid then you can
 install it as a pre-compiled package:
 
 sudo add-apt-repository ppa:berndporr/usbdux
