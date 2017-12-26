@@ -1,6 +1,7 @@
-This is a powerful C++ filter library for Linux & Mac OSX
-which implements all standard IIR filters such as
+This is a powerful C++ filter library for Linux, Mac OSX
+and Windows which implements all standard IIR filters such as
 Bessel, Butterworth, Elliptic and Chebychev.
+
 The data format is floating-point throughout.
 
 There is no need to resort to MATLAB/OCTAVE/Python to calculate
@@ -20,7 +21,7 @@ Realtime filtering sample by sample:
        float y = f.filter(x);
 
 
-The installation is done with the standard sequence:
+The installation is done with the standard sequence (under Linux/Mac):
 
 ./autogen.sh
 CXXFLAGS="-O3 -march=native" ./configure
@@ -32,6 +33,10 @@ If you have Ubuntu xenial, artful or lucid then you can
 install it as a pre-compiled package:
 
 sudo add-apt-repository ppa:berndporr/usbdux
+
+Building for Windows: 
+Just open the solution and click build.
+The static library is in the subdir x86.
 
 Usage is very simple. A demo program is in the
 "demo" directory which sets up a lowpass and a bandstop 
