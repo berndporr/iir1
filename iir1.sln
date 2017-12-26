@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iir1", "iir1.vcxproj", "{D96C66CA-6F22-417E-9849-E7B72C887838}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iirdemo", "demo\iirdemo.vcxproj", "{8CEA7F5E-B00C-4420-95FC-F75AA96B1294}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D96C66CA-6F22-417E-9849-E7B72C887838} = {D96C66CA-6F22-417E-9849-E7B72C887838}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

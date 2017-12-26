@@ -20,6 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\x64\iir1.lib" />
+    <Library Include="..\iir1.lib" />
   </ItemGroup>
 </Project>

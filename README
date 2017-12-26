@@ -36,7 +36,7 @@ sudo add-apt-repository ppa:berndporr/usbdux
 
 Building for Windows: 
 Just open the solution and click build.
-The static library is in the subdir x86.
+The static library is in the subdir x86 or Win32.
 
 Usage is very simple. A demo program is in the
 "demo" directory which sets up a lowpass and a bandstop 
