@@ -1,7 +1,7 @@
 all: iirdemo
 
 iirdemo: iirdemo.o
-	g++ -L../.libs -o iirdemo iirdemo.o -liir
+	g++ -o iirdemo iirdemo.o -liir
 
 iirdemo.o: iirdemo.cpp
 	g++ -c iirdemo.cpp
