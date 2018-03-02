@@ -21,7 +21,7 @@ Realtime filtering sample by sample:
        float y = f.filter(x);
 
 
-The installation is done with the standard sequence (under Linux/Mac):
+Building with automake (under Linux/Mac):
 
 ./autogen.sh
 CXXFLAGS="-O3 -march=native" ./configure
@@ -34,9 +34,13 @@ install it as a pre-compiled package:
 
 sudo add-apt-repository ppa:berndporr/usbdux
 
-Building under Windows:
+
+Building with cmake (Windows):
+
 cmake -G "Visual Studio 15 2017 Win64" .
 see cmake for the different options. Above is for a 64 bit build.
+Then start visual C++ and open the solution. This will create
+the DLL and the LIB files.
 
 Usage is very simple. A demo program is in the
 "demo" directory which sets up a lowpass and a bandstop 
