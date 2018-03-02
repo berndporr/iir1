@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
+
 project(iir VERSION 1.0.1 LANGUAGES CXX)
 include(GNUInstallDirs)
-add_library(iir
-  SHARED
+
+set(LIBSRC
   iir/Bessel.cpp
   iir/Biquad.cpp
   iir/Butterworth.cpp
@@ -16,8 +17,8 @@ add_library(iir
   iir/RBJ.cpp
   iir/RootFinder.cpp
   iir/State.cpp)
-target_include_directories(iir PRIVATE iir)
-list(APPEND MYHEADERS
+
+set(LIBINCLUDE
   iir/Bessel.h
   iir/Biquad.h
   iir/Butterworth.h
@@ -35,15 +36,43 @@ list(APPEND MYHEADERS
   iir/RootFinder.h
   iir/State.h
   iir/Types.h
-  iir/Utilities.h)
+  iir/Utilities.h) 
+
+add_library(iir
+  SHARED
+  ${LIBSRC}
+  )
+
+target_include_directories(iir PRIVATE iir)
+
 set_target_properties(iir PROPERTIES
   SOVERSION 1
   VERSION ${PROJECT_VERSION}
   PUBLIC_HEADER Iir.h
-  PRIVATE_HEADER "${MYHEADERS}")
+  PRIVATE_HEADER "${LIBINCLUDE}")
+
 install(TARGETS iir
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
   PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
+
 configure_file(iir.pc.in iir.pc @ONLY)
+
+add_library(iir_static
+  STATIC
+  ${LIBSRC}
+  )
+
+target_include_directories(iir_static PRIVATE iir)
+
+set_target_properties(iir_static PROPERTIES
+  VERSION ${PROJECT_VERSION}
+  PUBLIC_HEADER Iir.h
+  PRIVATE_HEADER "${LIBINCLUDE}")
+
+install(TARGETS iir_static
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
