@@ -48,14 +48,27 @@ cmake -G "Visual Studio 15 2017 Win64" .
 ```
 
 see `cmake` for the different options. Above this is for a 64 bit build.
-Then start visual C++ and open the solution. This will create
+Then start Visual C++ and open the solution. This will create
 the DLL and the LIB files.
+
+### Linux / Mac
+
+Run
+```
+cmake .
+```
+which generates the Makefile. Then run:
+```
+make
+sudo make install
+```
+which installs it under `/usr/local/lib` and `/usr/local/include`.
+
+## Usage / Documentation
 
 Usage is very simple. A demo program is in the `demo` directory which
 sets up a lowpass and a bandstop filter. A delta pulse is sent into
 the filters and saved as a gnuplot/octave file.
-
-## Documentation
 
 For the full documentation have a look at Documentation.txt.
 
