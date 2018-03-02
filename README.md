@@ -55,7 +55,7 @@ the DLL and the LIB files.
 
 Run
 ```
-cmake .
+cmake -DCMAKE_BUILD_TYPE=Release .
 ```
 which generates the Makefile. Then run:
 ```
