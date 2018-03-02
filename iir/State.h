@@ -61,7 +61,7 @@ namespace Iir {
  *  y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2]
  *                      - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]  
  */
-class DirectFormI
+class DllExport DirectFormI
 {
 public:
   DirectFormI ()
@@ -109,7 +109,7 @@ protected:
  *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
  *
  */
-class DirectFormII
+class DllExport DirectFormII
 {
 public:
   DirectFormII ()
@@ -153,7 +153,7 @@ private:
  */
 
 // I think this one is broken
-class TransposedDirectFormI
+class DllExport TransposedDirectFormI
 {
 public:
   TransposedDirectFormI ()
@@ -210,7 +210,7 @@ private:
 
 //------------------------------------------------------------------------------
 
-class TransposedDirectFormII
+class DllExport TransposedDirectFormII
 {
 public:
   TransposedDirectFormII ()

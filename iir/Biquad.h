@@ -51,7 +51,7 @@ struct BiquadPoleState;
  */
 
 // Factored interface to prevent outsiders from fiddling
-class BiquadBase
+class DllExport BiquadBase
 {
 public:
   template <class StateType>
@@ -135,7 +135,7 @@ struct BiquadPoleState : PoleZeroPair
 };
 
 // More permissive interface for fooling around
-class Biquad : public BiquadBase
+class DllExport Biquad : public BiquadBase
 {
 public:
   Biquad ();

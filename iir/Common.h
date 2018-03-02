@@ -45,6 +45,13 @@ THE SOFTWARE.
 #  pragma warning (disable: 4100)
 #endif
 
+// This exports the classes/structures to the windows DLL
+#ifdef _WIN32
+#define DllExport   __declspec( dllexport )
+#else
+#define DllExport
+#endif
+
 //#include <assert.h>
 #include <stdlib.h>
 

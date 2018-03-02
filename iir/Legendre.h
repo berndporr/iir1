@@ -53,7 +53,7 @@ namespace Legendre {
 
 // Numerical computation of Legendre "Optimum-L" polynomials
 
-class PolynomialFinderBase
+class DllExport PolynomialFinderBase
 {
 public:
   void solve (int n);
@@ -78,7 +78,7 @@ protected:
 };
 
 template <int maxN>
-class PolynomialFinder : public PolynomialFinderBase
+class DllExport PolynomialFinder : public PolynomialFinderBase
 {
 public:
   PolynomialFinder ()
@@ -147,7 +147,7 @@ private:
 
 // Half-band analog prototypes (s-plane)
 
-class AnalogLowPass : public LayoutBase
+class DllExport AnalogLowPass : public LayoutBase
 {
 public:
   AnalogLowPass ();

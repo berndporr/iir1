@@ -83,7 +83,7 @@ private:
 
 // Half-band analog prototypes (s-plane)
 
-class AnalogLowPass : public LayoutBase
+class DllExport AnalogLowPass : public LayoutBase
 {
 public:
   AnalogLowPass ();
@@ -97,7 +97,7 @@ private:
 
 //------------------------------------------------------------------------------
 
-class AnalogLowShelf : public LayoutBase
+class DllExport AnalogLowShelf : public LayoutBase
 {
 public:
   AnalogLowShelf ();

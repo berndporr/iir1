@@ -48,7 +48,7 @@ namespace Iir {
 //
 
 // Base uses pointers to reduce template instantiations
-class LayoutBase
+class DllExport LayoutBase
 {
 public:
   LayoutBase ()
@@ -153,7 +153,7 @@ private:
 
 // Storage for Layout
 template <int MaxPoles>
-class Layout
+class DllExport Layout
 {
 public:
   operator LayoutBase ()

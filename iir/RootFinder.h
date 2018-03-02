@@ -46,7 +46,7 @@ namespace Iir {
 // complex-valued coefficients using a numerical method.
 //
 
-class RootFinderBase
+class DllExport RootFinderBase
 {
 public:
   struct Array

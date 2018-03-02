@@ -51,7 +51,7 @@ namespace Iir {
 namespace Elliptic {
 
 // Solves for Jacobi elliptics
-class Solver
+class DllExport Solver
 {
 public:
   static double ellipticK (double k);
@@ -59,7 +59,7 @@ public:
 
 // Half-band analog prototype (s-plane)
 
-class AnalogLowPass : public LayoutBase
+class DllExport AnalogLowPass : public LayoutBase
 {
 public:
   AnalogLowPass ();

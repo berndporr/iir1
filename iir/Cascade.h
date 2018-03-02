@@ -49,7 +49,7 @@ namespace Iir {
  */
 
 // Factored implementation to reduce template instantiations
-class Cascade
+class DllExport Cascade
 {
 
 public:
@@ -105,7 +105,7 @@ private:
 
 // Storage for Cascade
 template <int MaxStages,class StateType>
-class CascadeStages
+class DllExport CascadeStages
 {
 public:
     void reset ()
