@@ -8,7 +8,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_PROG_CXX
 LT_INIT([disable-static])
 
-AC_SUBST([IIR_SO_VERSION], [1:0:0])
+AC_SUBST([IIR_SO_VERSION], [1:0:1])
 
 AC_CONFIG_FILES([Makefile
                  iir.pc:iir.pc.in])

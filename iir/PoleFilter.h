@@ -107,7 +107,7 @@ template <class BaseClass,
 	  class StateType,
           int MaxAnalogPoles,
 	  int MaxDigitalPoles = MaxAnalogPoles>
-struct PoleFilter : BaseClass
+	struct PoleFilter : BaseClass
 	, CascadeStages <(MaxDigitalPoles + 1) / 2 , StateType>
 {
   PoleFilter ()

@@ -165,7 +165,7 @@ struct LowShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
+struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
   void setup (int order,
               double sampleRate,
@@ -180,7 +180,7 @@ struct LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
+struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
   void setup (int order,
               double sampleRate,
@@ -195,7 +195,7 @@ struct HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
+struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
   void setup (int order,
               double sampleRate,
@@ -212,7 +212,7 @@ struct BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 {
   void setup (int order,
               double sampleRate,
@@ -229,7 +229,7 @@ struct BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder, MaxOrder*2>
+struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder, MaxOrder*2>
 {
   void setup (int order,
               double sampleRate,

@@ -34,9 +34,9 @@ install it as a pre-compiled package:
 
 sudo add-apt-repository ppa:berndporr/usbdux
 
-Building for Windows: 
-Just open the solution and click build.
-The static library is in the parent directory of the project.
+Building under Windows:
+cmake -G "Visual Studio 15 2017 Win64" .
+see cmake for the different options. Above is for a 64 bit build.
 
 Usage is very simple. A demo program is in the
 "demo" directory which sets up a lowpass and a bandstop 

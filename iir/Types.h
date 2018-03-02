@@ -42,7 +42,7 @@ THE SOFTWARE.
 namespace Iir {
 
 // A conjugate or real pair
-struct ComplexPair : complex_pair_t
+struct DllExport ComplexPair : complex_pair_t
 {
   ComplexPair ()
   {
@@ -89,7 +89,7 @@ struct ComplexPair : complex_pair_t
 };
 
 // A pair of pole/zeros. This fits in a biquad (but is missing the gain)
-struct PoleZeroPair
+struct DllExport PoleZeroPair
 {
   ComplexPair poles;
   ComplexPair zeros;

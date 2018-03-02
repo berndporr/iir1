@@ -42,7 +42,7 @@ THE SOFTWARE.
 
 namespace Iir {
 
-struct BiquadPoleState;
+struct DllExport BiquadPoleState;
 
 /*
  * Holds coefficients for a second order Infinite Impulse Response
@@ -125,7 +125,7 @@ public:
 
 // Expresses a biquad as a pair of pole/zeros, with gain
 // values so that the coefficients can be reconstructed precisely.
-struct BiquadPoleState : PoleZeroPair
+struct DllExport BiquadPoleState : PoleZeroPair
 {
   BiquadPoleState () { }
 

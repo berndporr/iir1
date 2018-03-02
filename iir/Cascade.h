@@ -54,11 +54,11 @@ class DllExport Cascade
 
 public:
 	
-  struct Stage : Biquad
+  struct DllExport Stage : Biquad
   {
   };
 
-  struct Storage
+  struct DllExport Storage
   {
     Storage (int maxStages_, Stage* stageArray_)
       : maxStages (maxStages_)
