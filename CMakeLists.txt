@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(iir VERSION 1.0.1 LANGUAGES CXX)
 include(GNUInstallDirs)
+add_subdirectory(test)
+enable_testing ()
 
 set(LIBSRC
   iir/Bessel.cpp
@@ -76,3 +78,4 @@ install(TARGETS iir_static
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
   PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
+
