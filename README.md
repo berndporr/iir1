@@ -54,7 +54,7 @@ sudo make install
 ```
 which installs it under `/usr/local/lib` and `/usr/local/include`.
 
-You can run unit tests with `make test` or run `ctest`.
+You can run unit tests with the parameter `make test` or just run `ctest`.
 
 ### Windows
 
@@ -62,7 +62,7 @@ You can run unit tests with `make test` or run `ctest`.
 cmake -G "Visual Studio 15 2017 Win64" .
 ```
 
-see `cmake` for the different options. Above this is for a 64 bit build.
+see `cmake` for the different options. Above is for a 64 bit build.
 Then start Visual C++ and open the solution. This will create
 the DLL and the LIB files.
 
