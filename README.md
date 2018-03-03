@@ -41,16 +41,6 @@ Generally the build tool is `cmake` which generates the make or project
 files for the different platforms. `cmake` is available for Linux, Windows
 and Mac.
 
-### Windows
-
-```
-cmake -G "Visual Studio 15 2017 Win64" .
-```
-
-see `cmake` for the different options. Above this is for a 64 bit build.
-Then start Visual C++ and open the solution. This will create
-the DLL and the LIB files.
-
 ### Linux / Mac
 
 Run
@@ -63,6 +53,18 @@ make
 sudo make install
 ```
 which installs it under `/usr/local/lib` and `/usr/local/include`.
+
+You can run unit tests with `make test` or run `ctest`.
+
+### Windows
+
+```
+cmake -G "Visual Studio 15 2017 Win64" .
+```
+
+see `cmake` for the different options. Above this is for a 64 bit build.
+Then start Visual C++ and open the solution. This will create
+the DLL and the LIB files.
 
 ## Usage / Documentation
 
