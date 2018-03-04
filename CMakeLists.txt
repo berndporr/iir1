@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(iir VERSION 1.0.1 LANGUAGES CXX)
 include(GNUInstallDirs)
 add_subdirectory(test)
+add_subdirectory(demo)
 enable_testing ()
 
 set(LIBSRC
