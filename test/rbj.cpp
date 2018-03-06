@@ -8,12 +8,10 @@ int main (int,char**)
 {
 	const int order = 3;
 	Iir::RBJ::LowPass f;
-	//Iir::RBJ::RBJbase2 b;
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 5; // Hz
 	const float qfactor = 1;
 	f.setup (samplingrate, cutoff_frequency,qfactor);
-	f.getA0();
 	double b;
 	for(int i=0;i<10000;i++) 
 	{

@@ -51,6 +51,7 @@ namespace Iir {
 
 namespace RBJ {
 
+	template <class StateType>
 	struct DllExport RBJbase : BiquadBase
 	{
 	public:
@@ -59,24 +60,24 @@ namespace RBJ {
 			return state.filter(s,*this);
 		}
 	private:
-		DEFAULT_STATE state;
+		StateType state;
 	};
 
-	struct DllExport LowPass : RBJbase
+	struct DllExport LowPass : RBJbase<DEFAULT_STATE>
+	{
+		void setup(double sampleRate,
+			    double cutoffFrequency,
+			    double q);
+	};
+
+	struct DllExport HighPass : RBJbase<DEFAULT_STATE>
 	{
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double q);
 	};
 
-	struct DllExport HighPass : RBJbase
-	{
-		void setup (double sampleRate,
-			    double cutoffFrequency,
-			    double q);
-	};
-
-	struct DllExport BandPass1 : RBJbase
+	struct DllExport BandPass1 : RBJbase<DEFAULT_STATE>
 	{
 		// (constant skirt gain, peak gain = Q)
 		void setup (double sampleRate,
@@ -84,7 +85,7 @@ namespace RBJ {
 			    double bandWidth);
 	};
 
-	struct DllExport BandPass2 : RBJbase
+	struct DllExport BandPass2 : RBJbase<DEFAULT_STATE>
 	{
 		// (constant 0 dB peak gain)
 		void setup (double sampleRate,
@@ -92,14 +93,14 @@ namespace RBJ {
 			    double bandWidth);
 	};
 
-	struct DllExport BandStop : RBJbase
+	struct DllExport BandStop : RBJbase<DEFAULT_STATE>
 	{
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
 	};
 
-	struct DllExport LowShelf : RBJbase
+	struct DllExport LowShelf : RBJbase<DEFAULT_STATE>
 	{
 		void setup (double sampleRate,
 			    double cutoffFrequency,
@@ -107,7 +108,7 @@ namespace RBJ {
 			    double shelfSlope);
 	};
 
-	struct DllExport HighShelf : RBJbase
+	struct DllExport HighShelf : RBJbase<DEFAULT_STATE>
 	{
 		void setup (double sampleRate,
 			    double cutoffFrequency,
@@ -115,7 +116,7 @@ namespace RBJ {
 			    double shelfSlope);
 	};
 
-	struct DllExport BandShelf : RBJbase
+	struct DllExport BandShelf : RBJbase<DEFAULT_STATE>
 	{
 		void setup (double sampleRate,
 			    double centerFrequency,
@@ -123,7 +124,7 @@ namespace RBJ {
 			    double bandWidth);
 	};
 
-	struct DllExport AllPass : RBJbase
+	struct DllExport AllPass : RBJbase<DEFAULT_STATE>
 	{
 		void setup (double sampleRate,
 			    double phaseFrequency,
