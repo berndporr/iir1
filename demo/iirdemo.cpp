@@ -68,5 +68,21 @@ int main (int,char**)
 	fclose(fbs);
 	
 
+	// RBJ highpass filter
+	Iir::RBJ::HighPass hp;
+	const float hp_cutoff_frequency = 100;
+	const float hp_qfactor = 5;
+	hp.setup (samplingrate, hp_cutoff_frequency, hp_qfactor);
+	FILE *fhp = fopen("hp.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		float a=0;
+		if (i==10) a = 1;
+		float b = hp.filter(a);
+		fprintf(fhp,"%f\n",b);
+	}
+	fclose(fhp);
+	
+
 
 }
