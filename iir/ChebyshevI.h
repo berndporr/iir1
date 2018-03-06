@@ -43,11 +43,9 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/**
  * Filters with Chebyshev response characteristics
- *
- */
-
+ **/
 namespace ChebyshevI {
 
 // Half-band analog prototypes (s-plane)
@@ -151,43 +149,91 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //------------------------------------------------------------------------------
 
 //
-// Raw filters
+// Userland filters
 //
 
+/**
+ * ChebyshevI lowpass filter. Init with "setup (int order,
+ * double sampleRate,
+ * double cutoffFrequency,
+ * double rippleDb);"
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
-{
-};
+	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
+	{
+	};
 
+/**
+ * ChebyshevI highpass filter. Init with "setup(int order,
+ *             double sampleRate,
+ *             double cutoffFrequency,
+ *             double rippleDb);"
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
-{
-};
+	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
+	{
+	};
 
+/**
+ * ChebyshevI bandpass filter. Init with "setup (int order,
+ *             double sampleRate,
+ *             double centerFrequency,
+ *             double widthFrequency,
+ *             double rippleDb);"
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
-{
-};
+	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
+	{
+	};
 
+/**
+ * ChebyshevI bandstop filter. Init with "setup (int order,
+ *             double sampleRate,
+ *             double centerFrequency,
+ *             double widthFrequency,
+ *             double rippleDb);"
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
-{
-};
+	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+	{
+	};
 
+/**
+ * ChebyshevI low shelf filter. Init with "setup (int order,
+ *             double sampleRate,
+ *             double cutoffFrequency,
+ *             double gainDb,
+ *             double rippleDb);"
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
-{
-};
+	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
+	{
+	};
 
+/**
+ * ChebyshevI high shelf filter. Init with "setup (int order,
+ *             double sampleRate,
+ *             double cutoffFrequency,
+ *             double gainDb,
+ *             double rippleDb);"
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
-{
-};
+	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
+	{
+	};
 
+/**
+ * ChebyshevI bandshelf filter. Init with "setup (int order,
+ *             double sampleRate,
+ *             double centerFrequency,
+ *             double widthFrequency,
+ *             double gainDb,
+ *             double rippleDb);
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
-{
-};
+	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
+	{
+	};
 
 }
 

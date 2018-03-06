@@ -44,11 +44,10 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/**
  * Filters with Bessel response characteristics
  *
- */
-
+ **/
 namespace Bessel {
 
 // A Workspace is necessary to find roots
@@ -161,94 +160,92 @@ struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 //------------------------------------------------------------------------------
 
 //
-// Raw filters
+// Userland filters
 //
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
-  void setup (int order,
-              double sampleRate,
-              double cutoffFrequency)
-  {
-    Workspace <MaxOrder> w;
-    LowPassBase::setup (order,
-                        sampleRate,
-                        cutoffFrequency,
-                        &w);
-  }
+	void setup (int order,
+		    double sampleRate,
+		    double cutoffFrequency)
+	{
+		Workspace <MaxOrder> w;
+		LowPassBase::setup (order,
+				    sampleRate,
+				    cutoffFrequency,
+				    &w);
+	}
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
-{
-  void setup (int order,
-              double sampleRate,
-              double cutoffFrequency)
-  {
-    Workspace <MaxOrder> w;
-    HighPassBase::setup (order,
-                         sampleRate,
-                         cutoffFrequency,
-                         &w);
-  }
+	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
+	{
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency)
+		{
+			Workspace <MaxOrder> w;
+			HighPassBase::setup (order,
+					     sampleRate,
+					     cutoffFrequency,
+					     &w);
+		}
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
-{
-  void setup (int order,
-              double sampleRate,
-              double centerFrequency,
-              double widthFrequency)
-  {
-    Workspace <MaxOrder> w;
-    BandPassBase::setup (order,
-                         sampleRate,
-                         centerFrequency,
-                         widthFrequency,
-                         &w);
-  }
-};
+	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
+	{
+		void setup (int order,
+			    double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency)
+		{
+			Workspace <MaxOrder> w;
+			BandPassBase::setup (order,
+					     sampleRate,
+					     centerFrequency,
+					     widthFrequency,
+					     &w);
+		}
+	};
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
-{
-  void setup (int order,
-              double sampleRate,
-              double centerFrequency,
-              double widthFrequency)
-  {
-    Workspace <MaxOrder> w;
-    BandStopBase::setup (order,
-                         sampleRate,
-                         centerFrequency,
-                         widthFrequency,
-                         &w);
-  }
-};
+	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+	{
+		void setup (int order,
+			    double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency)
+		{
+			Workspace <MaxOrder> w;
+			BandStopBase::setup (order,
+					     sampleRate,
+					     centerFrequency,
+					     widthFrequency,
+					     &w);
+		}
+	};
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder, MaxOrder*2>
-{
-  void setup (int order,
-              double sampleRate,
-              double cutoffFrequency,
-              double gainDb)
-  {
-    Workspace <MaxOrder> w;
-    LowShelfBase::setup (order,
-                         sampleRate,
-                         cutoffFrequency,
-                         gainDb,
-                         &w);
-  }
-};
+	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder, MaxOrder*2>
+	{
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb)
+		{
+			Workspace <MaxOrder> w;
+			LowShelfBase::setup (order,
+					     sampleRate,
+					     cutoffFrequency,
+					     gainDb,
+					     &w);
+		}
+	};
 
 }
 
 }
 
 #endif
-
-/* This is a test of svn:external */

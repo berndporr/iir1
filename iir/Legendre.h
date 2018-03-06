@@ -44,11 +44,9 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/**
  * Filters with Legendre / "Optimum-L" response characteristics
- *
- */
-
+ **/
 namespace Legendre {
 
 // Numerical computation of Legendre "Optimum-L" polynomials

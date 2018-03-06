@@ -42,13 +42,12 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/**
  * Filter realizations based on Robert Bristol-Johnson formulae:
  *
  * http://www.musicdsp.org/files/Audio-EQ-Cookbook.txt
  *
- */
-
+ **/
 namespace RBJ {
 
 	template <class StateType>
@@ -77,17 +76,17 @@ namespace RBJ {
 			    double q);
 	};
 
+	/// (constant skirt gain, peak gain = Q)
 	struct DllExport BandPass1 : RBJbase<DEFAULT_STATE>
 	{
-		// (constant skirt gain, peak gain = Q)
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
 	};
 
+	/// (constant 0 dB peak gain)
 	struct DllExport BandPass2 : RBJbase<DEFAULT_STATE>
 	{
-		// (constant 0 dB peak gain)
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);

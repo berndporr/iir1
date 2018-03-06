@@ -43,11 +43,9 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/**
  * Filters with Butterworth response characteristics
- *
- */
-
+ **/
 namespace Butterworth {
 
 // Half-band analog prototypes (s-plane)
@@ -139,39 +137,82 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //------------------------------------------------------------------------------
 
 //
-// Raw filters
+// Filters for the user
 //
 
+/** 
+ * Butterworth Lowpass filter. Call the method "setup(int order,
+ *             double sampleRate,
+ *             double cutoffFrequency);".
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
 };
 
+/** 
+ * Butterworth Highpass filter. 
+ * Call the method "void setup (int order,
+ *             double sampleRate,
+ *             double cutoffFrequency);".
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
 };
 
+/**
+ * Butterworth  Bandpass filter.
+ * Call the method "setup (int order,
+ *             double sampleRate,
+ *             double centerFrequency,
+ *             double widthFrequency);".
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
 };
 
+
+/**
+ * Butterworth Bandstop filter. Call the method "setup (int order,
+ *             double sampleRate,
+ *             double cutoffFrequency);".
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 {
 };
 
+/**
+ * Butterworth low shelf filter. Call the method "setup(int order,
+ *             double sampleRate,
+ *             double cutoffFrequency,
+ *             double gainDb);
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 {
 };
 
+/**
+ * Butterhworth high shelf filter. Call the method "setup (int order,
+ *             double sampleRate,
+ *             double cutoffFrequency,
+ *             double gainDb);"
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 {
 };
 
+/**
+ * Butterworth band shelf filter. Call the method "setup (int order,
+ *             double sampleRate,
+ *             double centerFrequency,
+ *             double widthFrequency,
+ *             double gainDb);"
+ */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
 {

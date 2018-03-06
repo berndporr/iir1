@@ -43,11 +43,9 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/**
  * Filters with Elliptic response characteristics
- *
- */
-
+ **/
 namespace Elliptic {
 
 // Solves for Jacobi elliptics
