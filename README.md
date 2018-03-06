@@ -4,7 +4,7 @@ This is a powerful C++ filter library for Linux, Mac OSX
 and Windows which implements all standard IIR filters such as
 Bessel, Butterworth, Elliptic and Chebychev.
 
-The data format is floating-point (double) throughout.
+The data format is (double) floating-point throughout.
 
 There is no need to resort to MATLAB/OCTAVE/Python to calculate
 the filter coefficients because the library does it
@@ -37,7 +37,7 @@ sudo add-apt-repository ppa:berndporr/usbdux
 
 ## Compilation from source
 
-Generally the build tool is `cmake` which generates the make or project
+The build tool is `cmake` which generates the make- or project
 files for the different platforms. `cmake` is available for Linux, Windows
 and Mac.
 
@@ -70,9 +70,15 @@ the DLL and the LIB files.
 
 Usage is very simple. A demo program is in the `demo` directory which
 sets up a lowpass and a bandstop filter. A delta pulse is sent into
-the filters and saved as a gnuplot/octave file.
+the filters and saved as a gnuplot/octave file. Also the directory
+containing the unit tests contains examples for every filter
+type.
 
-For the full documentation have a look at Documentation.txt.
+For an overview of the class structure and general concepts have a look at Documentation.txt.
+
+Run `doxygen` to generate the documented class hierachy on the basis of
+the comments in the header files. The file format is HTML and will be
+stored in the `doc` subdirectory.
 
 ## Credits
 
