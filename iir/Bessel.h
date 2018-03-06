@@ -115,7 +115,7 @@ private:
 
 // Factored implementations to reduce template instantiations
 
-struct LowPassBase : PoleFilterBase <AnalogLowPass>
+struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double sampleRate,
@@ -123,7 +123,7 @@ struct LowPassBase : PoleFilterBase <AnalogLowPass>
               WorkspaceBase* w);
 };
 
-struct HighPassBase : PoleFilterBase <AnalogLowPass>
+struct DllExport HighPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double sampleRate,
@@ -131,7 +131,7 @@ struct HighPassBase : PoleFilterBase <AnalogLowPass>
               WorkspaceBase* w);
 };
 
-struct BandPassBase : PoleFilterBase <AnalogLowPass>
+struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double sampleRate,
@@ -140,7 +140,7 @@ struct BandPassBase : PoleFilterBase <AnalogLowPass>
               WorkspaceBase* w);
 };
 
-struct BandStopBase : PoleFilterBase <AnalogLowPass>
+struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double sampleRate,
@@ -149,7 +149,7 @@ struct BandStopBase : PoleFilterBase <AnalogLowPass>
               WorkspaceBase* w);
 };
 
-struct LowShelfBase : PoleFilterBase <AnalogLowShelf>
+struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
               double sampleRate,
