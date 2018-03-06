@@ -38,6 +38,7 @@ THE SOFTWARE.
 
 #include "Common.h"
 #include "Biquad.h"
+#include "State.h"
 
 namespace Iir {
 
@@ -50,80 +51,88 @@ namespace Iir {
 
 namespace RBJ {
 
-//
-// Raw filters
-//
+	struct DllExport RBJbase : BiquadBase
+	{
+	public:
+		template <typename Sample>
+			inline Sample filter(Sample s) {
+			return state.filter(s,*this);
+		}
+	private:
+		DEFAULT_STATE state;
+	};
 
-struct DllExport LowPass : BiquadBase
-{
-  void setup (double sampleRate,
-              double cutoffFrequency,
-              double q);
-};
+	struct DllExport LowPass : RBJbase
+	{
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double q);
+	};
 
-struct DllExport HighPass : BiquadBase
-{
-  void setup (double sampleRate,
-              double cutoffFrequency,
-              double q);
-};
+	struct DllExport HighPass : RBJbase
+	{
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double q);
+	};
 
-struct DllExport BandPass1 : BiquadBase
-{
-  // (constant skirt gain, peak gain = Q)
-  void setup (double sampleRate,
-              double centerFrequency,
-              double bandWidth);
-};
+	struct DllExport BandPass1 : RBJbase
+	{
+		// (constant skirt gain, peak gain = Q)
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double bandWidth);
+	};
 
-struct DllExport BandPass2 : BiquadBase
-{
-  // (constant 0 dB peak gain)
-  void setup (double sampleRate,
-              double centerFrequency,
-              double bandWidth);
-};
+	struct DllExport BandPass2 : RBJbase
+	{
+		// (constant 0 dB peak gain)
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double bandWidth);
+	};
 
-struct DllExport BandStop : BiquadBase
-{
-  void setup (double sampleRate,
-              double centerFrequency,
-              double bandWidth);
-};
+	struct DllExport BandStop : RBJbase
+	{
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double bandWidth);
+	};
 
-struct DllExport LowShelf : BiquadBase
-{
-  void setup (double sampleRate,
-              double cutoffFrequency,
-              double gainDb,
-              double shelfSlope);
-};
+	struct DllExport LowShelf : RBJbase
+	{
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double shelfSlope);
+	};
 
-struct DllExport HighShelf : BiquadBase
-{
-  void setup (double sampleRate,
-              double cutoffFrequency,
-              double gainDb,
-              double shelfSlope);
-};
+	struct DllExport HighShelf : RBJbase
+	{
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double shelfSlope);
+	};
 
-struct DllExport BandShelf : BiquadBase
-{
-  void setup (double sampleRate,
-              double centerFrequency,
-              double gainDb,
-              double bandWidth);
-};
+	struct DllExport BandShelf : RBJbase
+	{
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double gainDb,
+			    double bandWidth);
+	};
 
-struct DllExport AllPass : BiquadBase
-{
-  void setup (double sampleRate,
-              double phaseFrequency,
-              double q);
-};
-
+	struct DllExport AllPass : RBJbase
+	{
+		void setup (double sampleRate,
+			    double phaseFrequency,
+			    double q);
+	};
+	
 }
 
 }
+
 
 #endif

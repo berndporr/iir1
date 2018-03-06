@@ -78,8 +78,8 @@ public:
   }
 
   template <typename Sample>
-  inline Sample process1 (const Sample in,
-                          const BiquadBase& s)
+  inline Sample filter(const Sample in,
+		       const BiquadBase& s)
   {
     double out = s.m_b0*in + s.m_b1*m_x1 + s.m_b2*m_x2
                            - s.m_a1*m_y1 - s.m_a2*m_y2;
@@ -124,8 +124,8 @@ public:
   }
 
   template <typename Sample>
-  Sample process1 (const Sample in,
-                   const BiquadBase& s)
+  Sample filter(const Sample in,
+		const BiquadBase& s)
   {
     double w   = in - s.m_a1*m_v1 - s.m_a2*m_v2;
     double out =      s.m_b0*w    + s.m_b1*m_v1 + s.m_b2*m_v2;
@@ -173,10 +173,10 @@ public:
     m_s4 = 0;
     m_s4_1 = 0;
   }
-
+  
   template <typename Sample>
-  inline Sample process1 (const Sample in,
-                          const BiquadBase& s)
+	  inline Sample filter(const Sample in,
+			       const BiquadBase& s)
   {
     double out;
 
@@ -227,7 +227,7 @@ public:
   }
 
   template <typename Sample>
-  inline Sample process1 (const Sample in,
+  inline Sample filter(const Sample in,
                           const BiquadBase& s)
   {
     double out;

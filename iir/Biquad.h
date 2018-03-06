@@ -58,9 +58,9 @@ public:
   struct State : StateType
   {
     template <typename Sample>
-    inline Sample process (const Sample in, const BiquadBase& b)
+    inline Sample filter(const Sample in, const BiquadBase& b)
     {
-      return static_cast<Sample> (StateType::process1 (in, b));
+      return static_cast<Sample> (StateType::filter(in, b));
     }
   };
 
@@ -81,7 +81,7 @@ public:
   template <class StateType, typename Sample>
   Sample filter(Sample s, StateType& state) const
   {
-	  return state.process (s, *this);
+	  return state.filter(s, *this);
   }
 
 protected:

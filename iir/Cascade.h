@@ -123,7 +123,7 @@ public:
       StateType* state = m_states;
       Biquad const* stage = m_stages;
       for (int i = MaxStages; --i >= 0; ++state, ++stage)
-      out = state->process1 (out, *stage);
+      out = state->filter(out, *stage);
       return static_cast<Sample> (out);
     }
 
