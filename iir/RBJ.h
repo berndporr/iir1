@@ -50,26 +50,37 @@ namespace Iir {
  **/
 namespace RBJ {
 
-	template <class StateType>
+	/// The base class of all RBJ filters
 	struct DllExport RBJbase : BiquadBase
 	{
 	public:
+		/// filter operation
 		template <typename Sample>
 			inline Sample filter(Sample s) {
 			return state.filter(s,*this);
 		}
+		/// resets the delay lines to zero
+		void reset() {
+			state.reset();
+		}
+		/// gets the delay lines (=state) of the filter
+		const DirectFormI& getState() {
+			return state;
+		}
 	private:
-		StateType state;
+		DirectFormI state;
 	};
 
-	struct DllExport LowPass : RBJbase<DEFAULT_STATE>
+	// The Q factor determines the resonance peak at the cutoff
+	struct DllExport LowPass : RBJbase
 	{
 		void setup(double sampleRate,
-			    double cutoffFrequency,
-			    double q);
+			   double cutoffFrequency,
+			   double q);
 	};
 
-	struct DllExport HighPass : RBJbase<DEFAULT_STATE>
+	// The Q factor determines the resonance peak at the cutoff
+	struct DllExport HighPass : RBJbase
 	{
 		void setup (double sampleRate,
 			    double cutoffFrequency,
@@ -77,7 +88,7 @@ namespace RBJ {
 	};
 
 	/// (constant skirt gain, peak gain = Q)
-	struct DllExport BandPass1 : RBJbase<DEFAULT_STATE>
+	struct DllExport BandPass1 : RBJbase
 	{
 		void setup (double sampleRate,
 			    double centerFrequency,
@@ -85,21 +96,21 @@ namespace RBJ {
 	};
 
 	/// (constant 0 dB peak gain)
-	struct DllExport BandPass2 : RBJbase<DEFAULT_STATE>
+	struct DllExport BandPass2 : RBJbase
 	{
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
 	};
 
-	struct DllExport BandStop : RBJbase<DEFAULT_STATE>
+	struct DllExport BandStop : RBJbase
 	{
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
 	};
 
-	struct DllExport LowShelf : RBJbase<DEFAULT_STATE>
+	struct DllExport LowShelf : RBJbase
 	{
 		void setup (double sampleRate,
 			    double cutoffFrequency,
@@ -107,7 +118,7 @@ namespace RBJ {
 			    double shelfSlope);
 	};
 
-	struct DllExport HighShelf : RBJbase<DEFAULT_STATE>
+	struct DllExport HighShelf : RBJbase
 	{
 		void setup (double sampleRate,
 			    double cutoffFrequency,
@@ -115,7 +126,7 @@ namespace RBJ {
 			    double shelfSlope);
 	};
 
-	struct DllExport BandShelf : RBJbase<DEFAULT_STATE>
+	struct DllExport BandShelf : RBJbase
 	{
 		void setup (double sampleRate,
 			    double centerFrequency,
@@ -123,7 +134,7 @@ namespace RBJ {
 			    double bandWidth);
 	};
 
-	struct DllExport AllPass : RBJbase<DEFAULT_STATE>
+	struct DllExport AllPass : RBJbase
 	{
 		void setup (double sampleRate,
 			    double phaseFrequency,

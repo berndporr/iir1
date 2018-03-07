@@ -13,10 +13,10 @@
 
 int main (int,char**)
 {
-	const int order = 3;
+	const int order = 4;
 	Iir::Butterworth::LowPass<order> f;
 	const float samplingrate = 1000; // Hz
-	const float cutoff_frequency = 5; // Hz
+	const float cutoff_frequency = 100; // Hz
 	f.setup (order, samplingrate, cutoff_frequency);
 	f.reset ();
 	FILE *fimpulse = fopen("lp.dat","wt");
@@ -69,9 +69,13 @@ int main (int,char**)
 	
 
 	// RBJ highpass filter
+	// The Q factor determines the resonance at the
+	// cutoff frequency. If Q=1/sqrt(2) then the transition
+	// has no resonance. The higher the Q-factor the higher
+	// the resonance.
 	Iir::RBJ::HighPass hp;
 	const float hp_cutoff_frequency = 100;
-	const float hp_qfactor = 5;
+	const float hp_qfactor = 2;
 	hp.setup (samplingrate, hp_cutoff_frequency, hp_qfactor);
 	FILE *fhp = fopen("hp.dat","wt");
 	for(int i=0;i<1000;i++) 
