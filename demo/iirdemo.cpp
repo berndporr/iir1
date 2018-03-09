@@ -6,9 +6,6 @@
 // This is the only include you need
 #include "Iir.h"
 
-#include <sstream>
-#include <iostream>
-#include <iomanip>
 #include <stdio.h>
 
 int main (int,char**)
@@ -18,56 +15,32 @@ int main (int,char**)
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 100; // Hz
 	f.setup (order, samplingrate, cutoff_frequency);
-	f.reset ();
 	FILE *fimpulse = fopen("lp.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
-		float a=0;
+		double a=0;
 		if (i==10) a = 1;
-		float b = f.filter(a);
-		fprintf(fimpulse,"%f\n",b);
+		double b = f.filter(a);
+		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);
 	
-	// calculate response at frequency 440 Hz
-	Iir::complex_t response = f.response (440./44100);
-	
-	std::ostringstream os;
-
-	// coefficients
-	int n = f.getNumStages();
-	os << "numStages = " << n << "\n";
-	for(int i=0; i<n; i++)
-	{
-		os << "a0[" << i << "] = " << f[i].getA0 () << "\n"
-		   << "a1[" << i << "] = " << f[i].getA1 () << "\n"
-		   << "a2[" << i << "] = " << f[i].getA2 () << "\n"
-		   << "b0[" << i << "] = " << f[i].getB0 () << "\n"
-		   << "b1[" << i << "] = " << f[i].getB1 () << "\n"
-		   << "b2[" << i << "] = " << f[i].getB2 () << "\n";
-	}
-	
-	std::cout << os.str();
-
-
 	// bandstop filter
 	// here the "direct form I" is chosen for the number crunching
 	Iir::Butterworth::BandStop<order,Iir::DirectFormI> bs;
 	const float center_frequency = 50;
 	const float frequency_width = 5;
 	bs.setup (order, samplingrate, center_frequency, frequency_width);
-	bs.reset ();
-	FILE *fbs = fopen("bs.dat","wt");
+	fimpulse = fopen("bs.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
-		float a=0;
+		double a=0;
 		if (i==10) a = 1;
-		float b = bs.filter(a);
-		fprintf(fbs,"%f\n",b);
+		double b = bs.filter(a);
+		fprintf(fimpulse,"%e\n",b);
 	}
-	fclose(fbs);
+	fclose(fimpulse);
 	
-
 	// RBJ highpass filter
 	// The Q factor determines the resonance at the
 	// cutoff frequency. If Q=1/sqrt(2) then the transition
@@ -77,16 +50,63 @@ int main (int,char**)
 	const float hp_cutoff_frequency = 100;
 	const float hp_qfactor = 2;
 	hp.setup (samplingrate, hp_cutoff_frequency, hp_qfactor);
-	FILE *fhp = fopen("hp.dat","wt");
+	fimpulse = fopen("hp_rbj.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
-		float a=0;
+		double a=0;
 		if (i==10) a = 1;
-		float b = hp.filter(a);
-		fprintf(fhp,"%f\n",b);
+		double b = hp.filter(a);
+		fprintf(fimpulse,"%e\n",b);
 	}
-	fclose(fhp);
-	
+	fclose(fimpulse);
 
+	Iir::Elliptic::LowPass<order> lp_elliptic;
+	const float pass_ripple_db = 5; // dB
+	const float rolloff = 0.1;
+	lp_elliptic.setup (order,
+			   samplingrate,
+			   cutoff_frequency,
+			   pass_ripple_db,
+			   rolloff);
+	fimpulse = fopen("lp_elliptic.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = lp_elliptic.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+
+	Iir::ChebyshevI::LowPass<order> lp_cheby1;
+	lp_cheby1.setup (order,
+			 samplingrate,
+			 cutoff_frequency,
+			 pass_ripple_db);
+	fimpulse = fopen("lp_cheby1.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = lp_cheby1.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+
+	Iir::ChebyshevII::LowPass<order> lp_cheby2;
+	double stop_ripple_dB = 60;
+	lp_cheby2.setup (order,
+			 samplingrate,
+			 cutoff_frequency,
+			 stop_ripple_dB);
+	fimpulse = fopen("lp_cheby2.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = lp_cheby2.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
 
 }

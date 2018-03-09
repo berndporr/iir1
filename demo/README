@@ -1,0 +1,7 @@
+This demo shows how the filter is set up, how data is
+processed sample by sample and how the frequency responses
+look like with the help of a python script.
+
+Run:
+./iirdemo
+python3 plot_impulse_fresponse.py
