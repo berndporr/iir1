@@ -1,5 +1,7 @@
 # IIR1
 
+![alt tag](cheby1.png)
+
 This is a powerful C++ filter library for Linux, Mac OSX
 and Windows which implements all standard IIR filters such as
 Bessel, Butterworth, Elliptic and Chebychev.
