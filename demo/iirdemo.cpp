@@ -48,7 +48,7 @@ int main (int,char**)
 	// the resonance.
 	Iir::RBJ::HighPass hp;
 	const float hp_cutoff_frequency = 100;
-	const float hp_qfactor = 2;
+	const float hp_qfactor = 5;
 	hp.setup (samplingrate, hp_cutoff_frequency, hp_qfactor);
 	fimpulse = fopen("hp_rbj.dat","wt");
 	for(int i=0;i<1000;i++) 
@@ -94,7 +94,7 @@ int main (int,char**)
 	fclose(fimpulse);
 
 	Iir::ChebyshevII::LowPass<order> lp_cheby2;
-	double stop_ripple_dB = 60;
+	double stop_ripple_dB = 20;
 	lp_cheby2.setup (order,
 			 samplingrate,
 			 cutoff_frequency,

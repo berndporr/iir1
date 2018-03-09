@@ -69,7 +69,7 @@ the DLL and the LIB files.
 ## Usage / Documentation
 
 Usage is very simple. A demo program is in the `demo` directory which
-sets up a lowpass and a bandstop filter. A delta pulse is sent into
+sets up different filters. A delta pulse is sent into
 the filters and saved as a gnuplot/octave file. Also the directory
 containing the unit tests contains examples for every filter
 type.
