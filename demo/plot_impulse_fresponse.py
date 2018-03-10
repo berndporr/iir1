@@ -19,6 +19,8 @@ def plot_if(figno,name,figtitle):
     plt.plot(scipy.linspace(0,fs,len(yf)),20*np.log10(abs(yf)))
     plt.xlim(0,fs/2)
     plt.title("Frequency response")
+    plt.xlabel("f/Hz")
+    plt.ylabel("gain/dB")
 
 plot_if(1,"bs.dat","Butterworth bandstop")
 
