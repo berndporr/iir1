@@ -6,7 +6,9 @@ This is a powerful C++ filter library for Linux, Mac OSX
 and Windows which implements all standard IIR filters such as
 Bessel, Butterworth, Elliptic and Chebychev.
 
-The data format is (double) floating-point throughout.
+Filtering can be done with either float or double numbers and the internal
+filter arithmetic is automatically adjusted according to the input
+data type thanks to C++ templates.
 
 There is no need to resort to MATLAB/OCTAVE/Python to calculate
 the filter coefficients because the library does it
