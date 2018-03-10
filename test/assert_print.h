@@ -7,4 +7,7 @@ inline void assert_print(int b, const char* t) {
 	abort();
 }
 
+// placed there so that it only affects the cpp files
+using namespace std;
+
 #endif
