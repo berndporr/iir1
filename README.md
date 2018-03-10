@@ -2,13 +2,12 @@
 
 ![alt tag](cheby1.png)
 
-This is a powerful C++ filter library for Linux, Mac OSX
+A powerful C++ filter library for Linux, Mac OSX
 and Windows which implements all standard IIR filters such as
-Bessel, Butterworth, Elliptic and Chebychev.
+Bessel, Butterworth, Elliptic, RBJ and Chebychev.
 
-Filtering can be done with either float or double numbers and the internal
-filter arithmetic is automatically adjusted according to the input
-data type thanks to C++ templates.
+Filtering can be done with either float or double numbers
+thanks to C++ templates working in the background.
 
 There is no need to resort to MATLAB/OCTAVE/Python to calculate
 the filter coefficients because the library does it
@@ -16,7 +15,12 @@ by itself. Just provide the sampling rate, cutoff
 frequency, filter order and the filter is
 ready to be used. For example for a lowpass:
 
-## Init
+## How to use the filter
+The following example shows the setup of an Butterworth
+lowpass and then the realtime data can be filtered as
+it arrives from the ADC.
+
+### Set the filterparameters
 ```
 #define order 4
 Iir::Butterworth::LowPass<order> f;
@@ -25,7 +29,7 @@ const float cutoff_frequency = 5; // Hz
 f.setup (order, samplingrate, cutoff_frequency);
 ```
        
-## Realtime filtering sample by sample
+### Realtime filtering sample by sample
 ```
 float y = f.filter(x);
 ```
