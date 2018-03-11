@@ -4,10 +4,11 @@
 
 A powerful C++ filter library for Linux, Mac OSX
 and Windows which implements all standard IIR filters such as
-Bessel, Butterworth, Elliptic, RBJ and Chebychev.
+Bessel, Butterworth, Elliptic, RBJ and Chebychev (which is shown above).
 
-Filtering can be done with either float or double numbers
-thanks to C++ templates working in the background.
+Filtering can be done with either float or double numbers and are
+automatically converted to the internal representation which is
+double.
 
 There is no need to resort to MATLAB/OCTAVE/Python to calculate
 the filter coefficients because the library does it
@@ -78,11 +79,12 @@ the DLL and the LIB files.
 
 ## Usage / Documentation
 
-Usage is very simple. A demo program is in the `demo` directory which
-sets up different filters. A delta pulse is sent into
-the filters and saved as a gnuplot/octave file. Also the directory
-containing the unit tests contains examples for every filter
-type.
+The easiest way to learn is from examples.  A demo program is in the
+`demo` directory which sets up different filters. A delta pulse as a
+test signal is sent into the filters and saved as a gnuplot/octave
+file. With the Python script `plot_impulse_fresponse.py` you can plot
+the frequency responses.  Also the directory containing the unit tests
+provides examples for every filter type.
 
 For an overview of the class structure and general concepts have a look at Documentation.txt.
 
