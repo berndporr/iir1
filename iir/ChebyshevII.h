@@ -44,7 +44,10 @@ THE SOFTWARE.
 namespace Iir {
 
 /**
- * Filters with Inverse Chebyshev response characteristics
+ * Filters with ChebyshevII response characteristics. The last parameter "minimumStopBandRejectionInDB"
+ * defines the minimal stopband rejection requested. Generally there will be frequencies where
+ * the rejection is much better but this parameter guarantees that the rejection is at least
+ * "minimumStopBandRejectionInDB".
  *
  **/
 namespace ChebyshevII {
@@ -168,7 +171,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
  * ChebyshevI highpass filter. Init with "setup(int order,
  *             double sampleRate,
  *             double cutoffFrequency,
- *             double stopbandDb);"
+ *             double minimumStopBandRejectionInDB);"
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
@@ -180,7 +183,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
- *             double stopbandDb);"
+ *             double minimumStopBandRejectionInDB);"
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
@@ -192,7 +195,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
- *             double stopbandDb);"
+ *             double minimumStopBandRejectionInDB);"
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
@@ -204,7 +207,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double gainDb,
- *             double stopbandDb);"
+ *             double minimumStopBandRejectionInDB);"
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
@@ -216,7 +219,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double gainDb,
- *             double stopbandDb);"
+ *             double minimumStopBandRejectionInDB);"
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
@@ -229,7 +232,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
  *             double centerFrequency,
  *             double widthFrequency,
  *             double gainDb,
- *             double stopbandDb);
+ *             double minimumStopBandRejectionInDB);
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>

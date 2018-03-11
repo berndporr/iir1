@@ -18,7 +18,9 @@ ready to be used. For example for a lowpass:
 ## How to use the filter
 The following example shows the setup of an Butterworth
 lowpass and then the realtime data can be filtered as
-it arrives from the ADC.
+it arrives from the ADC. The full documentation can be
+generated with doxygen or check out the header files in
+the `iir` subdirectory.
 
 ### Set the filterparameters
 ```

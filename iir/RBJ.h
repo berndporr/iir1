@@ -47,6 +47,13 @@ namespace Iir {
  *
  * http://www.musicdsp.org/files/Audio-EQ-Cookbook.txt
  *
+ * These are all 2nd order filters which are tuned with the Q (or Quality factor).
+ * The Q factor causes a resonance at the cutoff frequency. The higher the Q
+ * factor the higher the responance. If 0.5 < Q < 1/sqrt(2) then there is no resonance peak.
+ * Above 1/sqrt(2) the peak becomes more and more pronounced. For bandpass and stopband
+ * the Q factor is replaced by the width of the filter. The higher Q the more narrow
+ * the bandwidth of the notch or bandpass.
+ *
  **/
 namespace RBJ {
 
