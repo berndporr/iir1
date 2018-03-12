@@ -6,22 +6,18 @@ A powerful C++ filter library for Linux, Mac OSX
 and Windows which implements all standard IIR filters such as
 Bessel, Butterworth, Elliptic, RBJ and Chebychev (which is shown above).
 
-Filtering can be done with either float or double numbers and are
+The filter accepts both float and double numbers which are
 automatically converted to the internal representation which is
 double.
 
-There is no need to resort to MATLAB/OCTAVE/Python to calculate
-the filter coefficients because the library does it
-by itself. Just provide the sampling rate, cutoff
-frequency, filter order and the filter is
-ready to be used. For example for a lowpass:
+There is no need to resort to MATLAB/OCTAVE/Python to calculate the
+filter coefficients because the library does it by itself. Just
+provide the sampling rate, cutoff frequency, filter order and the
+filter is ready to be used. For example for a lowpass:
 
 ## How to use the filter
-The following example shows the setup of an Butterworth
-lowpass and then the realtime data can be filtered as
-it arrives from the ADC. The full documentation can be
-generated with doxygen or check out the header files in
-the `iir` subdirectory.
+Usage is straightforward: first the filter parameters are set and
+then it can used for sample by sample realtime filtering.
 
 ### Set the filterparameters
 ```
@@ -39,7 +35,7 @@ float y = f.filter(x);
 
 ## Packages for Ubuntu
 
-If you have Ubuntu xenial, artful or lucid then you can
+If you have Ubuntu xenial or artful then you can
 install it as a pre-compiled package:
 
 ```
@@ -79,14 +75,16 @@ the DLL and the LIB files.
 
 ## Usage / Documentation
 
-The easiest way to learn is from examples.  A demo program is in the
-`demo` directory which sets up different filters. A delta pulse as a
-test signal is sent into the filters and saved as a gnuplot/octave
-file. With the Python script `plot_impulse_fresponse.py` you can plot
-the frequency responses.  Also the directory containing the unit tests
-provides examples for every filter type.
+The easiest way to learn is from the examples which are in the `demo`
+directory. A delta pulse as a test signal is sent into the different
+filters and saved as a file. With the Python script
+`plot_impulse_fresponse.py` you can then plot the frequency responses.
 
-For an overview of the class structure and general concepts have a look at Documentation.txt.
+Also the directory containing the unit tests provides examples for
+every filter type.
+
+For an overview of the class structure and general concepts have a
+look at Documentation.txt.
 
 Run `doxygen` to generate the documented class hierachy on the basis of
 the comments in the header files. The file format is HTML and will be
