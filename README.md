@@ -74,8 +74,8 @@ the DLL and the LIB files.
 ### Unit tests
 
 You can run unit tests by typing `make test` or just `ctest`.
-These test if after a delta pulse all filers relax to zero and
-that their outouts never become NaN.
+These test if after a delta pulse all filters relax to zero and
+that their outputs never become NaN.
 
 ## Usage / Documentation
 
