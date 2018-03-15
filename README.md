@@ -2,9 +2,9 @@
 
 ![alt tag](cheby1.png)
 
-A powerful C++ filter library for Linux, Mac OSX
-and Windows which implements all standard IIR filters such as
-Bessel, Butterworth, Elliptic, RBJ and Chebychev (which is shown above).
+A powerful C++ filter library for Linux, Mac OSX and Windows which
+implements all standard IIR filters such as Bessel, Butterworth, RBJ
+and Chebychev (which is shown above).
 
 The filter accepts both float and double numbers which are
 automatically converted to the internal representation which is
@@ -17,9 +17,9 @@ filter is ready to be used. For example for a lowpass:
 
 ## How to use the filter
 Usage is straightforward: first the filter parameters are set and
-then it can used for sample by sample realtime filtering.
+then it's ready to be used for sample by sample realtime filtering.
 
-### Set the filterparameters
+### Setting the filterparameters
 ```
 #define order 4
 Iir::Butterworth::LowPass<order> f;
@@ -35,7 +35,7 @@ float y = f.filter(x);
 
 ## Packages for Ubuntu
 
-If you have Ubuntu xenial or artful then you can
+If you have Ubuntu xenial or artful then
 install it as a pre-compiled package:
 
 ```
@@ -73,7 +73,7 @@ the DLL and the LIB files.
 
 ### Unit tests
 
-You can run unit tests by typing `make test` or just `ctest`.
+Run unit tests by typing `make test` or just `ctest`.
 These test if after a delta pulse all filters relax to zero and
 that their outputs never become NaN.
 
