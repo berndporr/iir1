@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+	set(CMAKE_BUILD_TYPE "Release")
+endif()
+
 project(iir VERSION 1.2.1 LANGUAGES CXX)
 include(GNUInstallDirs)
 add_subdirectory(test)
