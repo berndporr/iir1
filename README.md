@@ -35,7 +35,7 @@ float y = f.filter(x);
 
 ## Packages for Ubuntu
 
-If you have Ubuntu xenial or artful then
+If you have Ubuntu xenial, artful or bionic then
 install it as a pre-compiled package:
 
 ```
