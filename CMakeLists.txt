@@ -46,7 +46,6 @@ set(LIBINCLUDE
   iir/Utilities.h) 
 
 add_library(iir
-  SHARED
   ${LIBSRC}
   )
 
@@ -65,22 +64,3 @@ install(TARGETS iir
   PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
 
 configure_file(iir.pc.in iir.pc @ONLY)
-
-add_library(iir_static
-  STATIC
-  ${LIBSRC}
-  )
-
-target_include_directories(iir_static PRIVATE iir)
-
-set_target_properties(iir_static PROPERTIES
-  VERSION ${PROJECT_VERSION}
-  PUBLIC_HEADER Iir.h
-  PRIVATE_HEADER "${LIBINCLUDE}")
-
-install(TARGETS iir_static
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-  PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
-
