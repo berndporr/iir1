@@ -52,7 +52,6 @@ add_library(iir
 target_include_directories(iir PRIVATE iir)
 
 set_target_properties(iir PROPERTIES
-  SOVERSION 1
   VERSION ${PROJECT_VERSION}
   PUBLIC_HEADER Iir.h
   PRIVATE_HEADER "${LIBINCLUDE}")
