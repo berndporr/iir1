@@ -2,18 +2,28 @@
 
 ![alt tag](cheby1.png)
 
-A powerful C++ filter library for Linux, Mac OSX and Windows which
+A powerful realtime C++ filter library for Linux, Mac OSX and Windows which
 implements all standard IIR filters such as Bessel, Butterworth, RBJ
-and Chebychev (which is shown above).
+and Chebychev as low/high/band or stopband filter.
 
-The filter accepts both float and double numbers which are
+The filter processes the data sample by sample as it arrives and
+accepts both float and double numbers which are
 automatically converted to the internal representation which is
 double.
 
-There is no need to resort to MATLAB/OCTAVE/Python to calculate the
-filter coefficients because the library does it by itself. Just
-provide the sampling rate, cutoff frequency, filter order and the
-filter is ready to be used. For example for a lowpass:
+Because the processng is sample by sample it's possible to simply
+cascade different filters to create more complex responses.
+
+The filter uses templates so that the filter can be completely
+specified at compile time and is ready to be used when the software
+starts without any additional memory allocation. This guarantees
+maximum performance and won't need malloc/new on embedded systems.
+
+In terms of the coefficients there is no need to resort to
+MATLAB/OCTAVE/Python to calculate them because the
+library does it by itself. Just provide the sampling rate, cutoff
+frequency, filter order and the filter is ready to be used. For
+example for a lowpass:
 
 ## How to use the filter
 Usage is straightforward: first the filter parameters are set and
@@ -45,8 +55,9 @@ sudo add-apt-repository ppa:berndporr/usbdux
 ## Compilation from source
 
 The build tool is `cmake` which generates the make- or project
-files for the different platforms. `cmake` is available for Linux, Windows
-and Mac.
+files for the different platforms. `cmake` is available for
+Linux, Windows and Mac. It also compiles directly on a
+Raspberry PI.
 
 ### Linux / Mac
 
@@ -69,7 +80,8 @@ cmake -G "Visual Studio 15 2017 Win64" .
 
 See `cmake` for the different build-options. Above is for a 64 bit build.
 Then start Visual C++ and open the solution. This will create
-the DLL and the LIB files.
+the DLL and the LIB files. Under Windows it's highly recommended
+to use the static library and link it into the application program.
 
 ### Unit tests
 
@@ -98,7 +110,13 @@ stored in the `doc` subdirectory.
 
 This library has been adapted form Vinnie Falco's
 original work which can be found here:
+
 https://github.com/vinniefalco/DSPFilters
+
+While his original library processes audio arrays this
+library has been adapted to do realtime processing sample
+by sample. The filter design routines are identical to
+DSPFilters.
 
 Enjoy!
 
