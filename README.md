@@ -11,13 +11,14 @@ accepts both float and double numbers which are
 automatically converted to the internal representation which is
 double.
 
-Because the processng is sample by sample it's possible to simply
-cascade different filters to create more complex responses.
+Because the processing is sample by sample it's straightforward to
+cascade different filters to create more complex responses at low
+latencies.
 
-The filter uses templates so that the filter can be completely
+The filter uses templates so that it can be completely
 specified at compile time and is ready to be used when the software
 starts without any additional memory allocation. This guarantees
-maximum performance and won't need malloc/new on embedded systems.
+maximum performance and won't require malloc/new on embedded systems.
 
 In terms of the coefficients there is no need to resort to
 MATLAB/OCTAVE/Python to calculate them because the
