@@ -64,7 +64,7 @@ Raspberry PI.
 
 Run
 ```
-cmake -DCMAKE_BUILD_TYPE=Release .
+cmake .
 ```
 which generates the Makefile. Then run:
 ```
