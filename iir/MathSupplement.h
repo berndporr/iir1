@@ -43,12 +43,11 @@ THE SOFTWARE.
 
 namespace Iir {
 
-const double doublePi		=3.1415926535897932384626433832795028841971;
+const double doublePi	=3.1415926535897932384626433832795028841971;
 const double doublePi_2	=1.5707963267948966192313216916397514420986;
-const double doubleLn2  =0.69314718055994530941723212145818;//?????
-const double doubleLn10	=2.3025850929940456840179914546844;//??????
+const double doubleLn2  =0.69314718055994530941723212145818;
+const double doubleLn10	=2.3025850929940456840179914546844;
 
-template<> class DllExport std::complex<double>;
 typedef std::complex<double> complex_t;
 typedef std::pair<complex_t, complex_t> complex_pair_t;
 
