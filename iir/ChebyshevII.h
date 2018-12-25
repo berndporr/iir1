@@ -158,14 +158,17 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 
 /**
- * ChebyshevII lowpass filter. Init with "setup (
- * double sampleRate,
- * double cutoffFrequency,
- * double stopbandDb);"
+ * ChebyshevII lowpass filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param cutoffFrequency Cutoff frequency.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double stopBandDb) {
@@ -188,14 +191,17 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 };
 
 /**
- * ChebyshevI highpass filter. Init with "setup(
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double minimumStopBandRejectionInDB);"
+ * ChebyshevII highpass filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param cutoffFrequency Cutoff frequency.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double stopBandDb) {
@@ -218,15 +224,18 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 };
 
 /**
- * ChebyshevII bandpass filter. Init with "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double minimumStopBandRejectionInDB);"
+ * ChebyshevII bandpass filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Center frequency of the bandpass
+         * \param widthFrequency Width of the bandpass
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,
@@ -261,6 +270,13 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Center frequency of the bandstop
+         * \param widthFrequency Width of the bandstop
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,

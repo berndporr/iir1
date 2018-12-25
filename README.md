@@ -20,17 +20,16 @@ specified at compile time and is ready to be used when the software
 starts without any additional memory allocation. This guarantees
 maximum performance and won't require malloc/new on embedded systems.
 
-In terms of the coefficients there is no need to resort to
-MATLAB/OCTAVE/Python to calculate them because the
-library does it by itself. Just provide the sampling rate, cutoff
-frequency, filter order and the filter is ready to be used. For
-example for a lowpass:
-
 ## How to use the filter
 Usage is straightforward: first the filter parameters are set and
 then it's ready to be used for sample by sample realtime filtering.
 
 ### Setting the filter parameters
+All filters are vailable as lowpass, highpass, bandpass and bandstop
+filters. See the header files or the documentation for the arguments
+for the `setup` commands. The examples below are for lowpass filters.
+
+1. Butterworth
 ```
 const int order = 4; // 4th order (=2 biquads)
 Iir::Butterworth::LowPass<order> f;
@@ -38,7 +37,44 @@ const float samplingrate = 1000; // Hz
 const float cutoff_frequency = 5; // Hz
 f.setup (samplingrate, cutoff_frequency);
 ```
-       
+
+2. Chebyshev Type I
+```
+Iir::ChebyshevI::LowPass<order> f;
+const float passband_ripple_in_db = 5;
+f.setup (samplingrate,
+         cutoff_frequency,
+         passband_ripple_in_dB);
+```
+
+3. Chebyshev Type II
+```
+Iir::ChebyshevII::LowPass<order> f;
+double stopband_ripple_in_dB = 20;
+f.setup (samplingrate,
+         cutoff_frequency,
+         stopband_ripple_in_dB);
+```
+
+4. RBJ (2nd order with cutoff and Q factor)
+```
+Iir::RBJ::LowPass f;
+const float cutoff_frequency = 100;
+const float Q_factor = 5;
+f.setup (samplingrate, cutoff_frequency, Q_factor);
+```
+
+5. Elliptic
+```
+Iir::Elliptic::LowPass<order> f;
+const float pass_ripple_db = 5; // dB
+const float rolloff = 0.1;
+f.setup (samplingrate,
+         cutoff_frequency,
+         passband_ripple_db,
+         rolloff);
+```
+
 ### Realtime filtering sample by sample
 ```
 float y = f.filter(x);
@@ -106,8 +142,8 @@ For an overview of the class structure and general concepts have a
 look at Documentation.txt.
 
 Run `doxygen` to generate the documented class hierachy on the basis of
-the comments in the header files. The file format is HTML and will be
-stored in the `doc` subdirectory.
+the comments in the header files. The file format is HTML and PDF and will be
+generated in the `doc` subdirectory.
 
 ## Credits
 

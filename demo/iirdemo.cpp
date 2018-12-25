@@ -13,26 +13,16 @@ int main (int,char**)
 	// 4th order for all filters shown here
 	const int order = 4;
 
-	// 1st up: Butterworth lowpass
-	Iir::Butterworth::LowPass<order> f;
-	const float samplingrate = 1000; // Hz
-	const float cutoff_frequency = 100; // Hz
-	f.setup (samplingrate, cutoff_frequency);
-	FILE *fimpulse = fopen("lp.dat","wt");
-	for(int i=0;i<1000;i++) 
-	{
-		double a=0;
-		if (i==10) a = 1;
-		double b = f.filter(a);
-		fprintf(fimpulse,"%e\n",b);
-	}
-	fclose(fimpulse);
-	
-	// Bandstop filter:
+	// sampling rate here 1kHz as an example
+	const float samplingrate = 1000;
+
+	FILE *fimpulse = NULL;
+
+	// Bandstop filter
 	// Here the "direct form I" is chosen for the number crunching
 	Iir::Butterworth::BandStop<order,Iir::DirectFormI> bs;
-	const float center_frequency = 50;
-	const float frequency_width = 5;
+	const float center_frequency = 100;
+	const float frequency_width = 20;
 	bs.setup (samplingrate, center_frequency, frequency_width);
 	fimpulse = fopen("bs.dat","wt");
 	for(int i=0;i<1000;i++) 
@@ -40,6 +30,21 @@ int main (int,char**)
 		double a=0;
 		if (i==10) a = 1;
 		double b = bs.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+	
+	// Butterworth lowpass with gain ("LowShelf" instead of "LowPass")
+	Iir::Butterworth::LowShelf<order> f;
+	const float cutoff_frequency = 100; // Hz
+	const float passband_gain = 10; // db
+	f.setup (samplingrate, cutoff_frequency,passband_gain);
+	fimpulse = fopen("lp.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = f.filter(a);
 		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);
@@ -108,6 +113,20 @@ int main (int,char**)
 		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);
+
+	Iir::Bessel::BandPass<order> bp_bessel;
+	bp_bessel.setup (samplingrate,
+			 center_frequency, frequency_width);
+	fimpulse = fopen("bp_bessel.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = bp_bessel.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+
 	printf("finished!\n");
 	printf("Now run `plot_impulse_fresponse.py` to display the impulse/frequency responses.\n");
 }

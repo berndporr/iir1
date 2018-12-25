@@ -156,6 +156,13 @@ struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param cutoffFrequency Cutoff frequency.
+	 * \param rippleDb Permitted ripples in dB in the passband
+         * \param rolloff Rolloff from the pass- to stopband
+	 **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double rippleDb,
@@ -184,6 +191,13 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param cutoffFrequency Cutoff frequency.
+	 * \param rippleDb Permitted ripples in dB in the passband
+         * \param rolloff Rolloff from the pass- to stopband
+	 **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double rippleDb,
@@ -211,6 +225,14 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Centre frequency of the bandpass
+	 * \param widthFrequency Frequency width of the bandpass
+         * \param rippleDb Permitted ripples in dB in the passband
+         * \param rolloff Rolloff from the pass- to stopband
+	 **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,
@@ -243,6 +265,14 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Centre frequency of the bandstop
+	 * \param widthFrequency Frequency width of the bandstop
+         * \param rippleDb Permitted ripples in dB in the passband
+         * \param rolloff Rolloff from the pass- to stopband
+	 **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,

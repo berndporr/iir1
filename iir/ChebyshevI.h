@@ -155,14 +155,17 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 
 /**
- * ChebyshevI lowpass filter. Init with "setup (
- * double sampleRate,
- * double cutoffFrequency,
- * double passbandRippleInDecibel);"
+ * ChebyshevI lowpass filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param cutoffFrequency Cutoff frequency.
+                 * \param rippleDb Permitted ripples in dB in the passband
+                 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
@@ -184,14 +187,17 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI highpass filter. Init with "setup(
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double passbandRippleInDecibel);"
+ * ChebyshevI highpass filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param cutoffFrequency Cutoff frequency.
+                 * \param rippleDb Permitted ripples in dB in the passband
+                 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
@@ -213,15 +219,18 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI bandpass filter. Init with "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double passbandRippleInDecibel);"
+ * ChebyshevI bandpass filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the bandpass
+                 * \param widthFrequency Frequency with of the passband
+                 * \param rippleDb Permitted ripples in dB in the passband
+                 **/
       		void setup (double sampleRate,
 			    double centerFrequency,
 			    double widthFrequency,
@@ -247,15 +256,18 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI bandstop filter. Init with "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double passbandRippleInDecibel);"
+ * ChebyshevI bandstop filter
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the notch
+                 * \param widthFrequency Frequency with of the notch
+                 * \param rippleDb Permitted ripples in dB in the passband
+                 **/
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double widthFrequency,
@@ -282,15 +294,18 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI low shelf filter. Init with "setup (
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double gainDb,
- *             double passbandRippleInDecibel);"
+ * ChebyshevI low shelf filter
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param cutoffFrequency Cutoff frequency.
+                 * \param gainDb Gain in the passband
+                 * \param rippleDb Permitted ripples in dB in the passband
+                 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double gainDb,
@@ -316,11 +331,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI high shelf filter. Init with "setup (
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double gainDb,
- *             double passbandRippleInDecibel);"
+ * ChebyshevI high shelf filter
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
@@ -351,12 +362,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI bandshelf filter. Init with "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double gainDb,
- *             double passbandRippleInDecibel);
+ * ChebyshevI bandshelf filter
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>

@@ -12,6 +12,7 @@ See Documentation.cpp for contact information, notes, and bibliography.
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2009 by Vinnie Falco
+Copyright (c) 2011 by Bernd Porr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -78,40 +79,81 @@ namespace RBJ {
 		DirectFormI state;
 	};
 
-	// The Q factor determines the resonance peak at the cutoff
+	/**
+         * Lowpass.
+         **/
 	struct DllExport LowPass : RBJbase
 	{
+		/**
+                 * Calculates the coefficients
+                 * \param sampleRate Sampling rate
+                 * \param cutoffFrequency Cutoff frequency
+                 * \param q Q factor determines the resonance peak at the cutoff.
+                 **/
 		void setup(double sampleRate,
 			   double cutoffFrequency,
 			   double q);
 	};
 
-	// The Q factor determines the resonance peak at the cutoff
+	/**
+         * Highpass.
+         **/
 	struct DllExport HighPass : RBJbase
 	{
+		/**
+                 * Calculates the coefficients
+                 * \param sampleRate Sampling rate
+                 * \param cutoffFrequency Cutoff frequency
+                 * \param q Q factor determines the resonance peak at the cutoff.
+                 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double q);
 	};
 
-	/// (constant skirt gain, peak gain = Q)
+	/**
+         * Bandpass with constant skirt gain
+         **/
 	struct DllExport BandPass1 : RBJbase
 	{
+		/**
+                 * Calculates the coefficients
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the bandpass
+                 * \param bandWidth Bandwidth of the bandpass
+                 **/
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
 	};
 
-	/// (constant 0 dB peak gain)
+	/**
+         * Bandpass with constant 0 dB peak gain
+         **/
 	struct DllExport BandPass2 : RBJbase
 	{
+		/**
+                 * Calculates the coefficients
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the bandpass
+                 * \param bandWidth Bandwidth of the bandpass
+                 **/
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
 	};
 
+	/**
+         * Bandstop
+         **/
 	struct DllExport BandStop : RBJbase
 	{
+		/**
+                 * Calculates the coefficients
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the bandpass
+                 * \param bandWidth Bandwidth of the bandpass
+                 **/
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);

@@ -164,11 +164,26 @@ struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 // Userland filters
 //
 /**
- * Bessel Lowpass: Init with setup(sampleRate, cutoffFrequency)
+ * Bessel Lowpass
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
+	/**
+         * Calculate the coefficients
+         * \param sampleRate Sampling rate
+         * \param cutoffFrequency Cutoff frequency
+         **/
+	void setup (double sampleRate,
+		    double cutoffFrequency)
+	{
+		Workspace <MaxOrder> w;
+		LowPassBase::setup (MaxOrder,
+				    sampleRate,
+				    cutoffFrequency,
+				    &w);
+	}
+	
 	void setup (int order,
 		    double sampleRate,
 		    double cutoffFrequency)
@@ -180,139 +195,117 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 				    &w);
 	}
 	
+};
+
+/**
+ * Bessel Highpass.
+ **/
+template <int MaxOrder, class StateType = DEFAULT_STATE>
+	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
+{
+	/**
+         * Calculate the coefficients
+         * \param sampleRate Sampling rate
+         * \param cutoffFrequency Cutoff frequency
+         **/
 	void setup (double sampleRate,
 		    double cutoffFrequency)
 	{
 		Workspace <MaxOrder> w;
-		LowPassBase::setup (MaxOrder,
-				    sampleRate,
-				    cutoffFrequency,
-				    &w);
+		HighPassBase::setup (MaxOrder,
+				     sampleRate,
+				     cutoffFrequency,
+				     &w);
+	}
+
+	void setup (int order,
+		    double sampleRate,
+		    double cutoffFrequency)
+	{
+		Workspace <MaxOrder> w;
+		HighPassBase::setup (order,
+				     sampleRate,
+				     cutoffFrequency,
+				     &w);
+	}
+
+};
+
+/**
+ * Bessel bandpass.
+ **/
+template <int MaxOrder, class StateType = DEFAULT_STATE>
+	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
+{
+	/**
+	 * Calculate the coefficients
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Center frequency of the bandpass in Hz
+         * \param widthFrequency Width of the bandpass in Hz
+	 **/
+	void setup (double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency) {
+		BandPass::setup (MaxOrder,
+				 sampleRate,
+				 centerFrequency,
+				 widthFrequency);
+	}
+	
+	void setup (int order,
+		    double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency)
+	{
+		Workspace <MaxOrder> w;
+		BandPassBase::setup (order,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     &w);
 	}
 	
 };
 
-/**
- * Bessel Highpass. Init with setup(sampleRate,cutOffFrequency)
- **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
-	{
-		void setup (int order,
-			    double sampleRate,
-			    double cutoffFrequency)
-		{
-			Workspace <MaxOrder> w;
-			HighPassBase::setup (order,
-					     sampleRate,
-					     cutoffFrequency,
-					     &w);
-		}
-
-		void setup (double sampleRate,
-			    double cutoffFrequency)
-		{
-			Workspace <MaxOrder> w;
-			HighPassBase::setup (MaxOrder,
-					     sampleRate,
-					     cutoffFrequency,
-					     &w);
-		}
-
-};
 
 /**
- * Bessel bandpass. Init with setup(sampleRate,centerFrequency,widthFrequency).
- **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
-	{
-		void setup (int order,
-			    double sampleRate,
-			    double centerFrequency,
-			    double widthFrequency)
-		{
-			Workspace <MaxOrder> w;
-			BandPassBase::setup (order,
-					     sampleRate,
-					     centerFrequency,
-					     widthFrequency,
-					     &w);
-		}
-
-		void setup (double sampleRate,
-			    double centerFrequency,
-			    double widthFrequency) {
-			BandPass::setup (MaxOrder,
-					 sampleRate,
-					 centerFrequency,
-					 widthFrequency);
-		}
-
-	};
-
-
-/**
- * Bessel bandstop. Init with setup(sampleRate,centerFrequency,widthFrequency).
+ * Bessel bandstop.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+{
+	/**
+	 * Calculate the coefficients
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Center frequency of the bandpass in Hz
+         * \param widthFrequency Width of the bandpass in Hz
+	 **/
+	void setup (double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency)
 	{
-		void setup (int order,
-			    double sampleRate,
-			    double centerFrequency,
-			    double widthFrequency)
-		{
-			Workspace <MaxOrder> w;
-			BandStopBase::setup (order,
-					     sampleRate,
-					     centerFrequency,
-					     widthFrequency,
-					     &w);
-		}
+		Workspace <MaxOrder> w;
+		BandStopBase::setup (MaxOrder,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     &w);
+	}
 
-		void setup (double sampleRate,
-			    double centerFrequency,
-			    double widthFrequency)
-		{
-			Workspace <MaxOrder> w;
-			BandStopBase::setup (MaxOrder,
-					     sampleRate,
-					     centerFrequency,
-					     widthFrequency,
-					     &w);
-		}
-	};
-
-
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder, MaxOrder*2>
+	void setup (int order,
+		    double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency)
 	{
-		void setup (int order,
-			    double sampleRate,
-			    double cutoffFrequency,
-			    double gainDb)
-		{
-			Workspace <MaxOrder> w;
-			LowShelfBase::setup (order,
-					     sampleRate,
-					     cutoffFrequency,
-					     gainDb,
-					     &w);
-		}
-
-		void setup (double sampleRate,
-			    double cutoffFrequency,
-			    double gainDb)
-		{
-			Workspace <MaxOrder> w;
-			LowShelfBase::setup (MaxOrder,
-					     sampleRate,
-					     cutoffFrequency,
-					     gainDb,
-					     &w);
-		}
-	};
+		Workspace <MaxOrder> w;
+		BandStopBase::setup (order,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     &w);
+	}
+	
+};
 
 }
 

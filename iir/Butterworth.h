@@ -142,13 +142,16 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 
 /** 
- * Butterworth Lowpass filter. Call the method "setup(
- *             double sampleRate,
- *             double cutoffFrequency);".
+ * Butterworth Lowpass filter.
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param cutoffFrequency Cutoff
+         **/
 	void setup (double sampleRate,
 		    double cutoffFrequency) {
 		LowPassBase::setup (MaxOrder,
@@ -166,13 +169,15 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 
 /** 
  * Butterworth Highpass filter. 
- * Call the method "void setup (
- *             double sampleRate,
- *             double cutoffFrequency);".
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param cutoffFrequency Cutoff
+         **/
 	void setup (double sampleRate,
 		    double cutoffFrequency) {
 		HighPassBase::setup (MaxOrder,
@@ -190,14 +195,16 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 
 /**
  * Butterworth  Bandpass filter.
- * Call the method "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency);".
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param centerFrequency Centre frequency of the bandpass
+         * \param widthFrequency Width of the bandpass
+         **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
@@ -220,13 +227,17 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 
 
 /**
- * Butterworth Bandstop filter. Call the method "setup (
- *             double sampleRate,
- *             double cutoffFrequency);".
+ * Butterworth Bandstop filter.
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param centerFrequency Centre frequency of the bandstop
+         * \param widthFrequency Width of the bandstop
+         **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
@@ -249,14 +260,17 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
 };
 
 /**
- * Butterworth low shelf filter (LP with gain). Call the method "setup(
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double gainDb);
+ * Butterworth low shelf filter (LP with gain).
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param cutoffFrequency Cutoff
+         * \param gainDb Gain in dB of the filter in the passband
+         **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb) {
@@ -287,6 +301,12 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param cutoffFrequency Cutoff
+         * \param gainDb Gain in dB of the filter in the passband
+         **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb) {
@@ -308,15 +328,18 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 };
 
 /**
- * Butterworth band shelf filter. Call the method "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double gainDb);"
+ * Butterworth Bandshelf filter.
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients
+         * \param sampleRate Sampling rate
+         * \param centerFrequency Centre frequency of the bandstop
+         * \param widthFrequency Width of the bandstop
+         * \param gainDb The gain in the passband
+         **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,
