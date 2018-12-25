@@ -65,9 +65,9 @@ Using these filters is easy:
 
 {{{
     // Create a Chebyshev type I Band Stop filter of order 3
-    Dsp::ChebyshevI::BandStop <3> f;
-    f.setup (3,    // order
-             44100,// sample rate
+    const int order = 3;
+    Dsp::ChebyshevI::BandStop <order> f;
+    f.setup (44100,// sample rate
              4000, // center frequency
              880,  // band width
              1);   // ripple dB
