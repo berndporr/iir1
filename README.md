@@ -44,14 +44,16 @@ f.setup (samplingrate, cutoff_frequency);
 float y = f.filter(x);
 ```
 
-## Packages for Ubuntu
+## Packages for Ubuntu (xenial / bionic):
 
-If you have Ubuntu xenial, artful or bionic then
+If you have Ubuntu xenial or bionic then
 install it as a pre-compiled package:
 
 ```
 sudo add-apt-repository ppa:berndporr/usbdux
 ```
+
+It's available for 32,64 bit PC and 32,64 bit ARM ( = Raspberry PI)
 
 ## Compilation from source
 
