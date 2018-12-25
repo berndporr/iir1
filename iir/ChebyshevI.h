@@ -12,6 +12,7 @@ See Documentation.cpp for contact information, notes, and bibliography.
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2009 by Vinnie Falco
+Copyright (c) 2011 by Bernd Porr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -154,7 +155,7 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 
 /**
- * ChebyshevI lowpass filter. Init with "setup (int order,
+ * ChebyshevI lowpass filter. Init with "setup (
  * double sampleRate,
  * double cutoffFrequency,
  * double passbandRippleInDecibel);"
@@ -162,10 +163,28 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 	{
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency,
+			    double rippleDb) {
+			LowPassBase::setup (order,
+					    sampleRate,
+					    cutoffFrequency,
+					    rippleDb);
+		}
+
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double rippleDb) {
+			LowPassBase::setup (MaxOrder,
+					    sampleRate,
+					    cutoffFrequency,
+					    rippleDb);
+		}
 	};
 
 /**
- * ChebyshevI highpass filter. Init with "setup(int order,
+ * ChebyshevI highpass filter. Init with "setup(
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double passbandRippleInDecibel);"
@@ -173,10 +192,28 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 	{
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency,
+			    double rippleDb) {
+			HighPassBase::setup (order,
+					     sampleRate,
+					     cutoffFrequency,
+					     rippleDb);
+		}
+
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double rippleDb) {
+			HighPassBase::setup (MaxOrder,
+					     sampleRate,
+					     cutoffFrequency,
+					     rippleDb);
+		}
 	};
 
 /**
- * ChebyshevI bandpass filter. Init with "setup (int order,
+ * ChebyshevI bandpass filter. Init with "setup (
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
@@ -185,10 +222,32 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 	{
+		void setup (int order,
+			    double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double rippleDb) {
+			BandPassBase::setup (order,
+			       sampleRate,
+			       centerFrequency,
+			       widthFrequency,
+			       rippleDb);
+		}
+		
+      		void setup (double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double rippleDb) {
+			BandPassBase::setup (MaxOrder,
+			       sampleRate,
+			       centerFrequency,
+			       widthFrequency,
+			       rippleDb);
+		}
 	};
 
 /**
- * ChebyshevI bandstop filter. Init with "setup (int order,
+ * ChebyshevI bandstop filter. Init with "setup (
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
@@ -197,10 +256,33 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 	{
+		void setup (int order,
+			    double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double rippleDb) {
+			BandStopBase::setup (order,
+					     sampleRate,
+					     centerFrequency,
+					     widthFrequency,
+					     rippleDb);
+		}
+
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double rippleDb) {
+			BandStopBase::setup (MaxOrder,
+					     sampleRate,
+					     centerFrequency,
+					     widthFrequency,
+					     rippleDb);
+		}
+
 	};
 
 /**
- * ChebyshevI low shelf filter. Init with "setup (int order,
+ * ChebyshevI low shelf filter. Init with "setup (
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double gainDb,
@@ -209,10 +291,32 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 	{
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			LowShelfBase::setup (order,
+					     sampleRate,
+					     cutoffFrequency,
+					     gainDb,
+					     rippleDb);
+		}
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			LowShelfBase::setup (MaxOrder,
+					     sampleRate,
+					     cutoffFrequency,
+					     gainDb,
+					     rippleDb);
+		}
+	
 	};
 
 /**
- * ChebyshevI high shelf filter. Init with "setup (int order,
+ * ChebyshevI high shelf filter. Init with "setup (
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double gainDb,
@@ -221,6 +325,28 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 	{
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			HighShelfBase::setup (order,
+			       sampleRate,
+			       cutoffFrequency,
+			       gainDb,
+			       rippleDb);
+		}
+		
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			HighShelfBase::setup (MaxOrder,
+			       sampleRate,
+			       cutoffFrequency,
+			       gainDb,
+			       rippleDb);
+		}
 	};
 
 /**

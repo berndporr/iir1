@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 "A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco and adapted for Unix by Bernd Porr
+ By Vinnie Falco and Bernd Porr
 
 Official project location:
 https://github.com/vinniefalco/DSPFilters
@@ -12,6 +12,7 @@ See Documentation.cpp for contact information, notes, and bibliography.
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2009 by Vinnie Falco
+Copyright (c) 2011 by Bernd Porr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -162,7 +163,9 @@ struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 // Userland filters
 //
-
+/**
+ * Bessel Lowpass: Init with setup(sampleRate, cutoffFrequency)
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
@@ -176,8 +179,22 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 				    cutoffFrequency,
 				    &w);
 	}
+	
+	void setup (double sampleRate,
+		    double cutoffFrequency)
+	{
+		Workspace <MaxOrder> w;
+		LowPassBase::setup (MaxOrder,
+				    sampleRate,
+				    cutoffFrequency,
+				    &w);
+	}
+	
 };
 
+/**
+ * Bessel Highpass. Init with setup(sampleRate,cutOffFrequency)
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 	{
@@ -191,8 +208,22 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 					     cutoffFrequency,
 					     &w);
 		}
+
+		void setup (double sampleRate,
+			    double cutoffFrequency)
+		{
+			Workspace <MaxOrder> w;
+			HighPassBase::setup (MaxOrder,
+					     sampleRate,
+					     cutoffFrequency,
+					     &w);
+		}
+
 };
 
+/**
+ * Bessel bandpass. Init with setup(sampleRate,centerFrequency,widthFrequency).
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 	{
@@ -208,8 +239,22 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 					     widthFrequency,
 					     &w);
 		}
+
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency) {
+			BandPass::setup (MaxOrder,
+					 sampleRate,
+					 centerFrequency,
+					 widthFrequency);
+		}
+
 	};
 
+
+/**
+ * Bessel bandstop. Init with setup(sampleRate,centerFrequency,widthFrequency).
+ **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 	{
@@ -225,7 +270,20 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 					     widthFrequency,
 					     &w);
 		}
+
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency)
+		{
+			Workspace <MaxOrder> w;
+			BandStopBase::setup (MaxOrder,
+					     sampleRate,
+					     centerFrequency,
+					     widthFrequency,
+					     &w);
+		}
 	};
+
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder, MaxOrder*2>
@@ -237,6 +295,18 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		{
 			Workspace <MaxOrder> w;
 			LowShelfBase::setup (order,
+					     sampleRate,
+					     cutoffFrequency,
+					     gainDb,
+					     &w);
+		}
+
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb)
+		{
+			Workspace <MaxOrder> w;
+			LowShelfBase::setup (MaxOrder,
 					     sampleRate,
 					     cutoffFrequency,
 					     gainDb,
