@@ -28,8 +28,10 @@ Usage is straightforward: first the filter parameters are set and
 then it's ready to be used for sample by sample realtime filtering.
 
 ### Setting the filter parameters
-All filters are vailable as lowpass, highpass, bandpass and bandstop
-filters. See the header files or the documentation for the arguments
+All filters are available as lowpass, highpass, bandpass and bandstop
+filters. Butterworth / Chebyshev offer also low/high/band-shelves with
+specified passband gain and 0dB in the stopband. 
+See the header files or the documentation for the arguments
 for the `setup` commands. The examples below are for lowpass filters.
 
 1. Butterworth
