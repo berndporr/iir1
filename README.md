@@ -4,7 +4,10 @@
 
 A powerful realtime C++ filter library for Linux, Mac OSX and Windows which
 implements all standard IIR filters such as Bessel, Butterworth, RBJ
-and Chebychev as low/high/band or stopband filter.
+and Chebychev as low/high/band or stopband filter. The Butterworth
+and Chebychev filters have also low/high/band shelves which have a
+specified gain in the passband and 0 dB in the stopband to emphasise/dampen
+certain frequencies as often needed in audio.
 
 The filter processes the data sample by sample as it arrives and
 accepts both float and double numbers which are
