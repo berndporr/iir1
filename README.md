@@ -172,4 +172,4 @@ DSPFilters.
 
 Enjoy!
 
-Bernd Porr
+Bernd Porr -- http://www.berndporr.me.uk
