@@ -9,9 +9,9 @@ which implements Bessel, Butterworth, RBJ and Chebychev filters.
 The filter processes the data sample by sample for realtime
 processing.
 
-The filter uses templates so that its memory requirements are
-completely specified at compile time. This guarantees maximum
-performance and won't require malloc/new on embedded systems.
+It uses templates to allocate the required memory so that
+it can run without any malloc / new commands for example
+on embedded systems.
 
 ## How to use the filter
 First the filter is instantiated, then the
