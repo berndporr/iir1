@@ -1,4 +1,4 @@
-# IIR1 -- Realtime C++ IIR filter library
+# IIR1 -- Realtime C++ filter library
 
 ![alt tag](cheby1.png)
 
