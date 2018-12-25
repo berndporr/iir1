@@ -18,33 +18,38 @@ int main (int,char**)
 
 	FILE *fimpulse = NULL;
 
-	// Bandstop filter
-	// Here the "direct form I" is chosen for the number crunching
-	Iir::Butterworth::BandStop<order,Iir::DirectFormI> bs;
-	const float center_frequency = 100;
-	const float frequency_width = 20;
-	bs.setup (samplingrate, center_frequency, frequency_width);
-	fimpulse = fopen("bs.dat","wt");
-	for(int i=0;i<1000;i++) 
-	{
-		double a=0;
-		if (i==10) a = 1;
-		double b = bs.filter(a);
-		fprintf(fimpulse,"%e\n",b);
-	}
-	fclose(fimpulse);
-	
-	// Butterworth lowpass with gain ("LowShelf" instead of "LowPass")
-	Iir::Butterworth::LowShelf<order> f;
+	// Butterworth lowpass
+	Iir::Butterworth::LowPass<order> f;
 	const float cutoff_frequency = 100; // Hz
 	const float passband_gain = 10; // db
-	f.setup (samplingrate, cutoff_frequency,passband_gain);
+	f.setup (samplingrate, cutoff_frequency);
 	fimpulse = fopen("lp.dat","wt");
+	// let's simulated date streaming in
 	for(int i=0;i<1000;i++) 
 	{
 		double a=0;
 		if (i==10) a = 1;
 		double b = f.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+	
+	// Bandpass shelf filter (default 0dB execpt 10 dB in the passband)
+	// Here the "direct form I" is chosen for the number crunching
+	Iir::Butterworth::BandShelf<order,Iir::DirectFormI> bp;
+	const float center_frequency = 100;
+	const float frequency_width = 20;
+	const float gain_in_passband = 10;
+	bp.setup (samplingrate,
+		  center_frequency,
+		  frequency_width,
+		  gain_in_passband);
+	fimpulse = fopen("bp.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = bp.filter(a);
 		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);

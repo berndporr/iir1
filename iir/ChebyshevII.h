@@ -45,10 +45,10 @@ THE SOFTWARE.
 namespace Iir {
 
 /**
- * Filters with ChebyshevII response characteristics. The last parameter "minimumStopBandRejectionInDB"
+ * Filters with ChebyshevII response characteristics. The last parameter
  * defines the minimal stopband rejection requested. Generally there will be frequencies where
  * the rejection is much better but this parameter guarantees that the rejection is at least
- * "minimumStopBandRejectionInDB".
+ * as specified.
  *
  **/
 namespace ChebyshevII {
@@ -261,11 +261,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 };
 
 /**
- * ChebyshevII bandstop filter. Init with "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double minimumStopBandRejectionInDB);"
+ * ChebyshevII bandstop filter.
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
@@ -302,15 +298,18 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
 };
 
 /**
- * ChebyshevII low shelf filter. Init with "setup (
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double gainDb,
- *             double minimumStopBandRejectionInDB);"
+ * ChebyshevII low shelf filter. Specified gain in the passband and 0dB in the stopband.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param cutoffFrequency Cutoff frequency.
+         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb,
@@ -337,15 +336,18 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 };
 
 /**
- * ChebyshevII high shelf filter. Init with "setup (int order,
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double gainDb,
- *             double minimumStopBandRejectionInDB);"
+ * ChebyshevII high shelf filter. Specified gain in the passband and 0dB in the stopband.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param cutoffFrequency Cutoff frequency.
+         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb,
@@ -372,16 +374,19 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 };
 
 /**
- * ChebyshevII bandshelf filter. Init with "setup (
- *             double sampleRate,
- *             double centerFrequency,
- *             double widthFrequency,
- *             double gainDb,
- *             double minimumStopBandRejectionInDB);
+ * ChebyshevII bandshelf filter. Bandpass with specified gain and 0 dB gain in the stopband.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
 {
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param sampleRate Sampling rate
+	 * \param centerFrequency Center frequency of the bandpass
+         * \param widthFrequency Width of the bandpass
+         * \param gainDb Gain in the passband. The stopband has always 0dB.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,

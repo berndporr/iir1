@@ -45,7 +45,7 @@ THE SOFTWARE.
 namespace Iir {
 
 /**
- * Filters with Chebyshev response characteristics. The last parameter "passbandRippleInDecibel"
+ * Filters with Chebyshev response characteristics. The last parameter
  * defines the passband ripple in decibel.
  **/
 namespace ChebyshevI {
@@ -294,7 +294,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI low shelf filter
+ * ChebyshevI low shelf filter. Specified gain in the passband. Otherwise 0 dB.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
@@ -331,11 +331,18 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI high shelf filter
+ * ChebyshevI high shelf filter. Specified gain in the passband. Otherwise 0 dB.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param cutoffFrequency Cutoff frequency.
+                 * \param gainDb Gain in the passband
+                 * \param rippleDb Permitted ripples in dB in the passband
+                 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double gainDb,
@@ -362,11 +369,19 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	};
 
 /**
- * ChebyshevI bandshelf filter
+ * ChebyshevI bandshelf filter. Specified gain in the passband. Otherwise 0 dB.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
 	{
+		/**
+		 * Calculates the coefficients of the filter
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the passband
+                 * \param widthFrequency Width of the passband.
+                 * \param gainDb Gain in the passband. The stopband has 0 dB.
+                 * \param rippleDb Permitted ripples in dB in the passband.
+                 **/
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double widthFrequency,

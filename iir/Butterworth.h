@@ -260,7 +260,8 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
 };
 
 /**
- * Butterworth low shelf filter (LP with gain).
+ * Butterworth low shelf filter: below the cutoff it has
+ * a specified gain and above the cutoff the gain is 0 dB.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
@@ -292,11 +293,10 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 
 };
 
+
 /**
- * Butterhworth high shelf filter. Call the method "setup (int order,
- *             double sampleRate,
- *             double cutoffFrequency,
- *             double gainDb);"
+ * Butterworth high shelf filter. Above the cutoff the filter has
+ * a specified gain and below it has 0 dB.
  **/
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
@@ -327,8 +327,10 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 	}
 };
 
+
 /**
- * Butterworth Bandshelf filter.
+ * Butterworth Bandshelf filter: it is a bandpass filter which amplifies at a specified
+ * gain in dB the frequencies in the passband.
  */
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
@@ -336,8 +338,8 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, Max
 	/**
 	 * Calculates the coefficients
          * \param sampleRate Sampling rate
-         * \param centerFrequency Centre frequency of the bandstop
-         * \param widthFrequency Width of the bandstop
+         * \param centerFrequency Centre frequency of the passband
+         * \param widthFrequency Width of the passband
          * \param gainDb The gain in the passband
          **/
 	void setup (double sampleRate,
