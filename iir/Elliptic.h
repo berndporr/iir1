@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 "A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco adapted for Linux by Bernd Porr
+ By Vinnie Falco and Bernd Porr
 
 Official project location:
 https://github.com/vinniefalco/DSPFilters
@@ -156,6 +156,17 @@ struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
+	void setup (double sampleRate,
+		    double cutoffFrequency,
+		    double rippleDb,
+		    double rolloff) {
+		LowPassBase::setup (MaxOrder,
+				    sampleRate,
+				    cutoffFrequency,
+				    rippleDb,
+				    rolloff);
+	}
+
 	void setup (int order,
 		    double sampleRate,
 		    double cutoffFrequency,
@@ -167,21 +178,23 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 				    rippleDb,
 				    rolloff);
 	}
-	void setup (double sampleRate,
-		    double cutoffFrequency,
-		    double rippleDb,
-		    double rolloff) {
-		LowPassBase::setup (MaxOrder,
-				    sampleRate,
-				    cutoffFrequency,
-				    rippleDb,
-				    rolloff);
-	}
+
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
+	void setup (double sampleRate,
+		    double cutoffFrequency,
+		    double rippleDb,
+		    double rolloff) {
+		HighPassBase::setup (MaxOrder,
+				     sampleRate,
+				     cutoffFrequency,
+				     rippleDb,
+				     rolloff);
+	}
+
 	void setup (int order,
 		    double sampleRate,
 		    double cutoffFrequency,
@@ -193,21 +206,24 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 				     rippleDb,
 				     rolloff);
 	}
-	void setup (double sampleRate,
-		    double cutoffFrequency,
-		    double rippleDb,
-		    double rolloff) {
-		HighPassBase::setup (MaxOrder,
-				     sampleRate,
-				     cutoffFrequency,
-				     rippleDb,
-				     rolloff);
-	}
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
+	void setup (double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double rippleDb,
+		    double rolloff) {
+		BandPassBase::setup (MaxOrder,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     rippleDb,
+				     rolloff);
+	}
+
 	void setup (int order,
 		    double sampleRate,
 		    double centerFrequency,
@@ -222,12 +238,17 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 				     rolloff);
 	}
 
+};
+
+template <int MaxOrder, class StateType = DEFAULT_STATE>
+struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+{
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency,
 		    double rippleDb,
 		    double rolloff) {
-		BandPassBase::setup (MaxOrder,
+		BandStopBase::setup (MaxOrder,
 				     sampleRate,
 				     centerFrequency,
 				     widthFrequency,
@@ -235,11 +256,6 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 				     rolloff);
 	}
 
-};
-
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
-{
 	void setup (int order,
 		    double sampleRate,
 		    double centerFrequency,
@@ -254,18 +270,6 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
 				     rolloff);
 	}
 
-	void setup (double sampleRate,
-		    double centerFrequency,
-		    double widthFrequency,
-		    double rippleDb,
-		    double rolloff) {
-		BandStopBase::setup (MaxOrder,
-				     sampleRate,
-				     centerFrequency,
-				     widthFrequency,
-				     rippleDb,
-				     rolloff);
-	}
 };
 
 }

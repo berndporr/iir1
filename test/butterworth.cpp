@@ -6,12 +6,20 @@
 
 int main (int,char**)
 {
+	// setting up non-optimal order to test how an
+	// underutilised filter deals with it.
 	const int order = 3;
+
+	// create the filter structure for 3rd order
 	Iir::Butterworth::LowPass<order> f;
+
+	// filter parameters
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 5; // Hz
+
+	// calc the coefficients
 	f.setup (samplingrate, cutoff_frequency);
-	f.reset ();
+	
 	double b;
 	for(int i=0;i<10000;i++) 
 	{

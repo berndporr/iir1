@@ -6,11 +6,15 @@
 
 int main (int,char**)
 {
+	// setting up non-optimal order to test how an
+	// underutilised filter deals with it.
 	const int order = 3;
+	
 	Iir::ChebyshevII::LowPass<order> f;
+	
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 5; // Hz
-	f.setup (order, samplingrate, cutoff_frequency, 20);
+	f.setup (samplingrate, cutoff_frequency, 20);
 	f.reset ();
 	double b;
 	for(int i=0;i<10000;i++) 
@@ -26,7 +30,7 @@ int main (int,char**)
 	Iir::ChebyshevII::BandStop<order,Iir::DirectFormI> bs;
 	const float center_frequency = 50;
 	const float frequency_width = 5;
-	bs.setup (order, samplingrate, center_frequency, frequency_width, 20);
+	bs.setup (samplingrate, center_frequency, frequency_width, 20);
 	bs.reset ();
 	for(int i=0;i<10000;i++) 
 	{

@@ -163,20 +163,20 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 	{
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double rippleDb) {
+			LowPassBase::setup (MaxOrder,
+					    sampleRate,
+					    cutoffFrequency,
+					    rippleDb);
+		}
+		
 		void setup (int order,
 			    double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
 			LowPassBase::setup (order,
-					    sampleRate,
-					    cutoffFrequency,
-					    rippleDb);
-		}
-
-		void setup (double sampleRate,
-			    double cutoffFrequency,
-			    double rippleDb) {
-			LowPassBase::setup (MaxOrder,
 					    sampleRate,
 					    cutoffFrequency,
 					    rippleDb);
@@ -192,20 +192,20 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 	{
-		void setup (int order,
-			    double sampleRate,
+		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			HighPassBase::setup (order,
+			HighPassBase::setup (MaxOrder,
 					     sampleRate,
 					     cutoffFrequency,
 					     rippleDb);
 		}
 
-		void setup (double sampleRate,
+		void setup (int order,
+			    double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			HighPassBase::setup (MaxOrder,
+			HighPassBase::setup (order,
 					     sampleRate,
 					     cutoffFrequency,
 					     rippleDb);
@@ -222,23 +222,23 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 	{
+      		void setup (double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double rippleDb) {
+			BandPassBase::setup (MaxOrder,
+			       sampleRate,
+			       centerFrequency,
+			       widthFrequency,
+			       rippleDb);
+		}
+
 		void setup (int order,
 			    double sampleRate,
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
 			BandPassBase::setup (order,
-			       sampleRate,
-			       centerFrequency,
-			       widthFrequency,
-			       rippleDb);
-		}
-		
-      		void setup (double sampleRate,
-			    double centerFrequency,
-			    double widthFrequency,
-			    double rippleDb) {
-			BandPassBase::setup (MaxOrder,
 			       sampleRate,
 			       centerFrequency,
 			       widthFrequency,
@@ -256,23 +256,23 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 	{
-		void setup (int order,
-			    double sampleRate,
+		void setup (double sampleRate,
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			BandStopBase::setup (order,
+			BandStopBase::setup (MaxOrder,
 					     sampleRate,
 					     centerFrequency,
 					     widthFrequency,
 					     rippleDb);
 		}
 
-		void setup (double sampleRate,
+		void setup (int order,
+			    double sampleRate,
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			BandStopBase::setup (MaxOrder,
+			BandStopBase::setup (order,
 					     sampleRate,
 					     centerFrequency,
 					     widthFrequency,
@@ -291,17 +291,6 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 	{
-		void setup (int order,
-			    double sampleRate,
-			    double cutoffFrequency,
-			    double gainDb,
-			    double rippleDb) {
-			LowShelfBase::setup (order,
-					     sampleRate,
-					     cutoffFrequency,
-					     gainDb,
-					     rippleDb);
-		}
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double gainDb,
@@ -313,6 +302,17 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 					     rippleDb);
 		}
 	
+		void setup (int order,
+			    double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			LowShelfBase::setup (order,
+					     sampleRate,
+					     cutoffFrequency,
+					     gainDb,
+					     rippleDb);
+		}
 	};
 
 /**
@@ -325,6 +325,17 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 	{
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			HighShelfBase::setup (MaxOrder,
+			       sampleRate,
+			       cutoffFrequency,
+			       gainDb,
+			       rippleDb);
+		}
+
 		void setup (int order,
 			    double sampleRate,
 			    double cutoffFrequency,
@@ -337,20 +348,10 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 			       rippleDb);
 		}
 		
-		void setup (double sampleRate,
-			    double cutoffFrequency,
-			    double gainDb,
-			    double rippleDb) {
-			HighShelfBase::setup (MaxOrder,
-			       sampleRate,
-			       cutoffFrequency,
-			       gainDb,
-			       rippleDb);
-		}
 	};
 
 /**
- * ChebyshevI bandshelf filter. Init with "setup (int order,
+ * ChebyshevI bandshelf filter. Init with "setup (
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
@@ -360,6 +361,35 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
 	{
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			BandShelfBase::setup (MaxOrder,
+					      sampleRate,
+					      centerFrequency,
+					      widthFrequency,
+					      gainDb,
+					      rippleDb);
+			
+		}
+		
+		void setup (int order,
+			    double sampleRate,
+			    double centerFrequency,
+			    double widthFrequency,
+			    double gainDb,
+			    double rippleDb) {
+			BandShelfBase::setup (order,
+					      sampleRate,
+					      centerFrequency,
+					      widthFrequency,
+					      gainDb,
+					      rippleDb);
+
+		}
+
 	};
 
 }
