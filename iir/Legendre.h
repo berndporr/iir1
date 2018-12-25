@@ -197,7 +197,7 @@ struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 //------------------------------------------------------------------------------
 
 //
-// Raw filters
+// Userland filters
 //
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
@@ -213,6 +213,16 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
                         cutoffFrequency,
                         &w);
   }
+
+  void setup (double sampleRate,
+              double cutoffFrequency)
+  {
+    Workspace <MaxOrder> w;
+    LowPassBase::setup (MaxOrder,
+                        sampleRate,
+                        cutoffFrequency,
+                        &w);
+  }
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
@@ -224,6 +234,16 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
   {
     Workspace <MaxOrder> w;
     HighPassBase::setup (order,
+                         sampleRate,
+                         cutoffFrequency,
+                         &w);
+  }
+
+  void setup (double sampleRate,
+              double cutoffFrequency)
+  {
+    Workspace <MaxOrder> w;
+    HighPassBase::setup (MaxOrder,
                          sampleRate,
                          cutoffFrequency,
                          &w);
@@ -245,6 +265,18 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
                          widthFrequency,
                          &w);
   }
+
+  void setup (double sampleRate,
+              double centerFrequency,
+              double widthFrequency)
+  {
+    Workspace <MaxOrder> w;
+    BandPassBase::setup (MaxOrder,
+                         sampleRate,
+                         centerFrequency,
+                         widthFrequency,
+                         &w);
+  }
 };
 
 template <int MaxOrder, class StateType = DEFAULT_STATE>
@@ -257,6 +289,18 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
   {
     Workspace <MaxOrder> w;
     BandStopBase::setup (order,
+                         sampleRate,
+                         centerFrequency,
+                         widthFrequency,
+                         &w);
+  }
+
+  void setup (double sampleRate,
+              double centerFrequency,
+              double widthFrequency)
+  {
+    Workspace <MaxOrder> w;
+    BandStopBase::setup (MaxOrder,
                          sampleRate,
                          centerFrequency,
                          widthFrequency,

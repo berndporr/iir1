@@ -10,7 +10,10 @@
 
 int main (int,char**)
 {
+	// 4th order for all filters shown here
 	const int order = 4;
+
+	// 1st up: Butterworth lowpass
 	Iir::Butterworth::LowPass<order> f;
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 100; // Hz
@@ -25,8 +28,8 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 	
-	// bandstop filter
-	// here the "direct form I" is chosen for the number crunching
+	// Bandstop filter:
+	// Here the "direct form I" is chosen for the number crunching
 	Iir::Butterworth::BandStop<order,Iir::DirectFormI> bs;
 	const float center_frequency = 50;
 	const float frequency_width = 5;
@@ -63,8 +66,7 @@ int main (int,char**)
 	Iir::Elliptic::LowPass<order> lp_elliptic;
 	const float pass_ripple_db = 5; // dB
 	const float rolloff = 0.1;
-	lp_elliptic.setup (order,
-			   samplingrate,
+	lp_elliptic.setup (samplingrate,
 			   cutoff_frequency,
 			   pass_ripple_db,
 			   rolloff);
@@ -79,8 +81,7 @@ int main (int,char**)
 	fclose(fimpulse);
 
 	Iir::ChebyshevI::LowPass<order> lp_cheby1;
-	lp_cheby1.setup (order,
-			 samplingrate,
+	lp_cheby1.setup (samplingrate,
 			 cutoff_frequency,
 			 pass_ripple_db);
 	fimpulse = fopen("lp_cheby1.dat","wt");
@@ -95,8 +96,7 @@ int main (int,char**)
 
 	Iir::ChebyshevII::LowPass<order> lp_cheby2;
 	double stop_ripple_dB = 20;
-	lp_cheby2.setup (order,
-			 samplingrate,
+	lp_cheby2.setup (samplingrate,
 			 cutoff_frequency,
 			 stop_ripple_dB);
 	fimpulse = fopen("lp_cheby2.dat","wt");
@@ -108,5 +108,6 @@ int main (int,char**)
 		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);
-
+	printf("finished!\n");
+	printf("Now run `plot_impulse_fresponse.py` to display the impulse/frequency responses.\n");
 }

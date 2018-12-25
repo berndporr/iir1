@@ -12,6 +12,7 @@ See Documentation.cpp for contact information, notes, and bibliography.
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2009 by Vinnie Falco
+Copyrgith (c) 2011 by Bernd Porr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -157,7 +158,7 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 
 /**
- * ChebyshevII lowpass filter. Init with "setup (int order,
+ * ChebyshevII lowpass filter. Init with "setup (
  * double sampleRate,
  * double cutoffFrequency,
  * double stopbandDb);"
@@ -165,10 +166,29 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 {
+
+	void setup (int order,
+		    double sampleRate,
+		    double cutoffFrequency,
+		    double stopBandDb) {
+		LowPassBase::setup (order,
+				    sampleRate,
+				    cutoffFrequency,
+				    stopBandDb);
+	}
+
+	void setup (double sampleRate,
+		    double cutoffFrequency,
+		    double stopBandDb) {
+		LowPassBase::setup (MaxOrder,
+				    sampleRate,
+				    cutoffFrequency,
+				    stopBandDb);
+	}
 };
 
 /**
- * ChebyshevI highpass filter. Init with "setup(int order,
+ * ChebyshevI highpass filter. Init with "setup(
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double minimumStopBandRejectionInDB);"
@@ -176,10 +196,28 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 {
+	void setup (int order,
+		    double sampleRate,
+		    double cutoffFrequency,
+		    double stopBandDb) {
+		HighPassBase::setup (order,
+				     sampleRate,
+				     cutoffFrequency,
+				     stopBandDb);
+	}
+
+	void setup (double sampleRate,
+		    double cutoffFrequency,
+		    double stopBandDb) {
+		HighPassBase::setup (MaxOrder,
+				     sampleRate,
+				     cutoffFrequency,
+				     stopBandDb);
+	}
 };
 
 /**
- * ChebyshevII bandpass filter. Init with "setup (int order,
+ * ChebyshevII bandpass filter. Init with "setup (
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
@@ -188,10 +226,31 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
 {
+	void setup (int order,
+		    double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		BandPassBase::setup (order,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     stopBandDb);
+	}
+	void setup (double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		BandPassBase::setup (MaxOrder,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     stopBandDb);
+	}
 };
 
 /**
- * ChebyshevII bandstop filter. Init with "setup (int order,
+ * ChebyshevII bandstop filter. Init with "setup (
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
@@ -200,10 +259,31 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOr
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
 {
+	void setup (int order,
+		    double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		BandStopBase::setup (order,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     stopBandDb);
+	}
+	void setup (double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		BandStopBase::setup (MaxOrder,
+				     sampleRate,
+				     centerFrequency,
+				     widthFrequency,
+				     stopBandDb);
+	}
 };
 
 /**
- * ChebyshevII low shelf filter. Init with "setup (int order,
+ * ChebyshevII low shelf filter. Init with "setup (
  *             double sampleRate,
  *             double cutoffFrequency,
  *             double gainDb,
@@ -212,6 +292,29 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOr
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 {
+	void setup (int order,
+		    double sampleRate,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		LowShelfBase::setup (order,
+				     sampleRate,
+				     cutoffFrequency,
+				     gainDb,
+				     stopBandDb);
+	}
+	
+	void setup (double sampleRate,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		LowShelfBase::setup (MaxOrder,
+				     sampleRate,
+				     cutoffFrequency,
+				     gainDb,
+				     stopBandDb);
+	}
+	
 };
 
 /**
@@ -224,10 +327,33 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 {
+	void setup (int order,
+		    double sampleRate,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		HighShelfBase::setup (order,
+				      sampleRate,
+				      cutoffFrequency,
+				      gainDb,
+				      stopBandDb);
+	}
+	
+	void setup (double sampleRate,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		HighShelfBase::setup (MaxOrder,
+				      sampleRate,
+				      cutoffFrequency,
+				      gainDb,
+				      stopBandDb);
+	}
+	
 };
 
 /**
- * ChebyshevII bandshelf filter. Init with "setup (int order,
+ * ChebyshevII bandshelf filter. Init with "setup (
  *             double sampleRate,
  *             double centerFrequency,
  *             double widthFrequency,
@@ -237,6 +363,35 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
 template <int MaxOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
 {
+	void setup (int order,
+		    double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		BandShelfBase::setup (order,
+				      sampleRate,
+				      centerFrequency,
+				      widthFrequency,
+				      gainDb,
+				      stopBandDb);
+	}
+	  
+
+	void setup (double sampleRate,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		BandShelfBase::setup (MaxOrder,
+				      sampleRate,
+				      centerFrequency,
+				      widthFrequency,
+				      gainDb,
+				      stopBandDb);
+	}
+	  
+
 };
 
 }

@@ -30,13 +30,13 @@ example for a lowpass:
 Usage is straightforward: first the filter parameters are set and
 then it's ready to be used for sample by sample realtime filtering.
 
-### Setting the filterparameters
+### Setting the filter parameters
 ```
-#define order 4
+const int order = 4; // 4th order (=2 biquads)
 Iir::Butterworth::LowPass<order> f;
 const float samplingrate = 1000; // Hz
 const float cutoff_frequency = 5; // Hz
-f.setup (order, samplingrate, cutoff_frequency);
+f.setup (samplingrate, cutoff_frequency);
 ```
        
 ### Realtime filtering sample by sample
