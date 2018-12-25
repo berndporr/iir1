@@ -1,8 +1,9 @@
-# IIR1
+# IIR1 -- Realtime C++ IIR filter library
 
 ![alt tag](cheby1.png)
 
-A powerful realtime C++ filter library for Linux, Mac OSX and Windows
+An infinite impulse response (IIR) filter library for
+Linux, Mac OSX and Windows
 which implements Bessel, Butterworth, RBJ and Chebychev filters.
 
 The filter processes the data sample by sample for realtime
