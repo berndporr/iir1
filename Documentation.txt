@@ -3,7 +3,7 @@
 "A Collection of Useful C++ Classes for Digital Signal Processing"
  By Vinnie Falco
 
- Adadpted for Linux by Bernd Porr, mail@berndporr.me.uk
+ Adadpted by Bernd Porr for realtime processing, mail@berndporr.me.uk
 
 The original project location of the Windows implementation:
 https://github.com/vinniefalco/DSPFilters
@@ -12,6 +12,7 @@ https://github.com/vinniefalco/DSPFilters
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2009 by Vinnie Falco
+Copyright (c) 2011 by Bernd Porr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -48,6 +49,7 @@ Building on the work of cherished luminaries such as Sophocles Orfanidis, Andrea
 Classes are designed as independent re-usable building blocks. Use some or all of the provided features, or extend the functionality by writing your own objects that plug into the robust framework. Only the code that you need will get linked into your application. Here's a list of features:
 
 	* Exclusive focus on IIR filters
+	* Causal/realtime processing with single sample in and signal sample out filter functions
 	* Complete implementation of all "RBJ Biquad" Cookbook filter formulas
 	* Butterworth, Chebyshev, Elliptic, Bessel, Legendre designs
 	* Low Pass, High Pass, Band Pass, Band Stop transformations
@@ -83,7 +85,7 @@ Credits
   Some filter ideas are based on a java applet (http://www.falstad.com/dfilter/)
   developed by Paul Falstad.
 
-  This code has been adapted for Unix and realtime processing
+  This code has been adapted for realtime processing
   by Bernd Porr <www.berndporr.me.uk>.
 
 Bibliography
@@ -120,7 +122,7 @@ Filter family namespaces
 
 <class FilterClass>
 
-  Within each namespace we have a set of "raw filters" (each one is an example
+  Within each namespace we have a set of "user filters" (each one is an example
   of a FilterClass). For example, the raw filters in the Butterworth namespace are:
 
   Butterworth::LowPass
@@ -132,32 +134,10 @@ Filter family namespaces
   Butterworth::BandShelf
 
   When a class template (such as SimpleFilter) requires a FilterClass, it is
-  expecting an identifier of a raw filter. For example, Legendre::LowPass. The
-  raw filters do not have any support for introspection or the Params style of
+  expecting an identifier of a user filter. For example, Legendre::LowPass. The
+  user filters do not have any support for introspection or the Params style of
   changing filter settings. All they offer is a setup() function for updating
   the IIR coefficients to a given set of parameters.
-
-<class DesignClass>
-
-  Each filter family namespace also has the nested namespace "Design". Inside
-  this namespace we have all of the raw filter names repeated, except that
-  these classes additional provide the Design interface, which adds
-  introspection, polymorphism, the Params style of changing filter settings,
-  and in general all of the features necessary to interoperate with the Filter
-  virtual base class and its derived classes. For example, the design filters
-  from the Butterworth namespace are:
-
-  Butterworth::Design::LowPass
-  Butterworth::Design::HighPass
-  Butterworth::Design::BandPass
-  Butterworth::Design::BandStop
-  Butterworth::Design::LowShelf
-  Butterworth::Design::HighShelf
-  Butterworth::Design::BandShelf
-
-  For any class template that expects a DesignClass, you must pass a suitable
-  object from the Design namespace of the desired filter family. For example,
-  ChebyshevI::Design::BandPass.
 
 2nd order IIR implementations which are cascaded to perform
 the actual number crunching (default is DirectFormII):
