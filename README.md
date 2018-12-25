@@ -2,37 +2,30 @@
 
 ![alt tag](cheby1.png)
 
-A powerful realtime C++ filter library for Linux, Mac OSX and Windows which
-implements all standard IIR filters such as Bessel, Butterworth, RBJ
-and Chebychev as low/high/band or stopband filter. The Butterworth
-and Chebychev filters have also low/high/band shelves which have a
-specified gain in the passband and 0 dB in the stopband to emphasise/dampen
-certain frequencies as often needed in audio.
+A powerful realtime C++ filter library for Linux, Mac OSX and Windows
+which implements Bessel, Butterworth, RBJ and Chebychev filters.
 
-The filter processes the data sample by sample as it arrives and
-accepts both float and double numbers which are
-automatically converted to the internal representation which is
-double.
+The filter processes the data sample by sample for realtime
+processing.
 
-Because the processing is sample by sample it's straightforward to
-cascade different filters to create more complex responses at low
-latencies.
-
-The filter uses templates so that it can be completely
-specified at compile time and is ready to be used when the software
-starts without any additional memory allocation. This guarantees
-maximum performance and won't require malloc/new on embedded systems.
+The filter uses templates so that its memory requirements are
+completely specified at compile time. This guarantees maximum
+performance and won't require malloc/new on embedded systems.
 
 ## How to use the filter
-Usage is straightforward: first the filter parameters are set and
+First the filter is instantiated, then the
+parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
 ### Setting the filter parameters
 All filters are available as lowpass, highpass, bandpass and bandstop
 filters. Butterworth / Chebyshev offer also low/high/band-shelves with
-specified passband gain and 0dB in the stopband. 
-See the header files or the documentation for the arguments
-for the `setup` commands. The examples below are for lowpass filters.
+specified passband gain and 0dB gain in the stopband.
+
+See the header files in `\iir` or the documentation for the arguments
+of the `setup` commands.
+
+The examples below are for lowpass filters:
 
 1. Butterworth
 ```
@@ -94,7 +87,7 @@ install it as a pre-compiled package:
 sudo add-apt-repository ppa:berndporr/usbdux
 ```
 
-It's available for 32,64 bit PC and 32,64 bit ARM ( = Raspberry PI)
+It's available for 32,64 bit PC and 32,64 bit ARM (Raspberry PI etc)
 
 ## Compilation from source
 
@@ -116,6 +109,8 @@ sudo make install
 ```
 which installs it under `/usr/local/lib` and `/usr/local/include`.
 
+Both gcc and clang have been tested.
+
 ### Windows
 
 ```
@@ -133,22 +128,26 @@ Run unit tests by typing `make test` or just `ctest`.
 These test if after a delta pulse all filters relax to zero and
 that their outputs never become NaN.
 
-## Usage / Documentation
+## Documentation
 
+### Overview
+For an overview of the class structure and general concepts have a
+look at Documentation.txt.
+
+### Learn from the demos
 The easiest way to learn is from the examples which are in the `demo`
 directory. A delta pulse as a test signal is sent into the different
-filters and saved as a file. With the Python script
+filters and saved in a file. With the Python script
 `plot_impulse_fresponse.py` you can then plot the frequency responses.
 
 Also the directory containing the unit tests provides examples for
 every filter type.
 
-For an overview of the class structure and general concepts have a
-look at Documentation.txt.
+### Detailed documentation
+A PDF of all classes, methods and in particular `setup` functions
+is in the `doc/pdf` directory.
 
-Run `doxygen` to generate the documented class hierachy on the basis of
-the comments in the header files. The file format is HTML and PDF and will be
-generated in the `doc` subdirectory.
+Run `doxygen` to generate the HTML documentation.
 
 ## Credits
 
@@ -159,7 +158,9 @@ https://github.com/vinniefalco/DSPFilters
 
 While his original library processes audio arrays this
 library has been adapted to do realtime processing sample
-by sample. The filter design routines are identical to
+by sample. Also, in contrast to the original library the `setup`
+command won't require the filter order.
+The filter design routines are identical to
 DSPFilters.
 
 Enjoy!
