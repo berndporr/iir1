@@ -26,7 +26,7 @@ def plot_if(figno,name,figtitle):
 
 plot_if(1,"bs.dat","Butterworth bandstop")
 
-plot_if(2,"lp.dat","Butterworth lowpass")
+plot_if(2,"lp.dat","Butterworth low shelf")
 
 plot_if(3,"hp_rbj.dat","RBJ highpass")
 

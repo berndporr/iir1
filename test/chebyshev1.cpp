@@ -7,11 +7,10 @@
 int main (int,char**)
 {
 	const int order = 3;
-	Iir::ChebyshevI::LowPass<order> f;
+	Iir::ChebyshevI::HighPass<order> f;
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 5; // Hz
 	f.setup (samplingrate, cutoff_frequency, 1);
-	f.reset ();
 	double b;
 	for(int i=0;i<10000;i++) 
 	{

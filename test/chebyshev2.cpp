@@ -10,11 +10,10 @@ int main (int,char**)
 	// underutilised filter deals with it.
 	const int order = 3;
 	
-	Iir::ChebyshevII::LowPass<order> f;
+	Iir::ChebyshevII::BandPass<order> f;
 	
 	const float samplingrate = 1000; // Hz
-	const float cutoff_frequency = 5; // Hz
-	f.setup (samplingrate, cutoff_frequency, 20);
+	f.setup (samplingrate, 100, 10, 20);
 	f.reset ();
 	double b;
 	for(int i=0;i<10000;i++) 
