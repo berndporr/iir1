@@ -14,7 +14,7 @@ int main (int,char**)
 	Iir::Butterworth::LowPass<order> f;
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 100; // Hz
-	f.setup (order, samplingrate, cutoff_frequency);
+	f.setup (samplingrate, cutoff_frequency);
 	FILE *fimpulse = fopen("lp.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
@@ -30,7 +30,7 @@ int main (int,char**)
 	Iir::Butterworth::BandStop<order,Iir::DirectFormI> bs;
 	const float center_frequency = 50;
 	const float frequency_width = 5;
-	bs.setup (order, samplingrate, center_frequency, frequency_width);
+	bs.setup (samplingrate, center_frequency, frequency_width);
 	fimpulse = fopen("bs.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
