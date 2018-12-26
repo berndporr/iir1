@@ -1,55 +1,57 @@
-/*******************************************************************************
+/**
+ *
+ * "A Collection of Useful C++ Classes for Digital Signal Processing"
+ * By Vinnie Falco and Bernd Porr
+ *
+ * Official project location:
+ * https://github.com/berndporr/iir1
+ *
+ * See Documentation.cpp for contact information, notes, and bibliography.
+ * 
+ * -----------------------------------------------------------------
+ *
+ * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * Copyright (c) 2009 by Vinnie Falco
+ * Copyright (c) 2011 by Bernd Porr
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ **/
 
-"A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco adapted for Linux by Bernd Porr
-
-Official project location:
-https://github.com/vinniefalco/DSPFilters
-
-See Documentation.cpp for contact information, notes, and bibliography.
-
---------------------------------------------------------------------------------
-
-License: MIT License (http://www.opensource.org/licenses/mit-license.php)
-Copyright (c) 2009 by Vinnie Falco
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-*******************************************************************************/
-
-#ifndef DSPFILTERS_UTILITIES_H
-#define DSPFILTERS_UTILITIES_H
+#ifndef IIR1_UTILITIES_H
+#define IIR1_UTILITIES_H
 
 #include "Common.h"
 
 namespace Iir {
 
-/*
+/**
  * Utilities
  *
  * These routines are handy for manipulating buffers of samples.
  *
- */
+ **/
 
 //------------------------------------------------------------------------------
 
-// Add src samples to dest, without clip or overflow checking.
+/**
+ * Add src samples to dest, without clip or overflow checking.
+ **/
 template <class Td,
           class Ts>
 void add (int samples,
@@ -76,7 +78,9 @@ void add (int samples,
   }
 }
 
-// Multichannel add
+/**
+ * Multichannel add
+ **/
 template <typename Td,
           typename Ts>
 void add (int channels,
@@ -90,8 +94,10 @@ void add (int channels,
 
 //--------------------------------------------------------------------------
 
-// Copy samples from src to dest, which may not overlap. Performs an implicit
-// type conversion if Ts and Td are different (for example, float to double).
+/**
+ * Copy samples from src to dest, which may not overlap. Performs an implicit
+ * type conversion if Ts and Td are different (for example, float to double).
+ **/
 template <typename Td,
           typename Ts>
 void copy (int samples,

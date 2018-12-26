@@ -1,40 +1,40 @@
-/*******************************************************************************
+/**
+ *
+ * "A Collection of Useful C++ Classes for Digital Signal Processing"
+ * By Vinnie Falco and Bernd Porr
+ *
+ * Official project location:
+ * https://github.com/berndporr/iir1
+ *
+ * See Documentation.cpp for contact information, notes, and bibliography.
+ * 
+ * -----------------------------------------------------------------
+ *
+ * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * Copyright (c) 2009 by Vinnie Falco
+ * Copyright (c) 2011 by Bernd Porr
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ **/
 
-"A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco adapted for Linux by Bernd Porr
-
-Official project location:
-https://github.com/vinniefalco/DSPFilters
-
-See Documentation.cpp for contact information, notes, and bibliography.
-
---------------------------------------------------------------------------------
-
-License: MIT License (http://www.opensource.org/licenses/mit-license.php)
-Copyright (c) 2009 by Vinnie Falco
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-*******************************************************************************/
-
-#ifndef DSPFILTERS_STATE_H
-#define DSPFILTERS_STATE_H
+#ifndef IIR1_STATE_H
+#define IIR1_STATE_H
 
 #include "Common.h"
 #include "Biquad.h"
@@ -51,16 +51,16 @@ namespace Iir {
  *
  */
 
-//------------------------------------------------------------------------------
+//---------------------------------------------------------------------
 
-/*
+/**
  * State for applying a second order section to a sample using Direct Form I
  *
  * Difference equation:
  *
  *  y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2]
  *                      - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]  
- */
+ **/
 class DllExport DirectFormI
 {
 public:
@@ -100,7 +100,7 @@ protected:
 
 //------------------------------------------------------------------------------
 
-/*
+/**
  * State for applying a second order section to a sample using Direct Form II
  *
  * Difference equation:
@@ -108,7 +108,7 @@ protected:
  *  v[n] =         x[n] - (a1/a0)*v[n-1] - (a2/a0)*v[n-2]
  *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
  *
- */
+ **/
 class DllExport DirectFormII
 {
 public:
@@ -141,72 +141,6 @@ private:
   double m_v2; // v[-2]
 };
 
-//------------------------------------------------------------------------------
-
-/*
- * Transposed Direct Form I and II
- * by lubomir i. ivanov (neolit123 [at] gmail)
- *
- * Reference:
- * http://www.kvraudio.com/forum/viewtopic.php?p=4430351
- *
- */
-
-// I think this one is broken
-class DllExport TransposedDirectFormI
-{
-public:
-  TransposedDirectFormI ()
-  {
-    reset ();
-  }
-
-  void reset ()
-  {
-    m_v = 0;
-    m_s1 = 0;
-    m_s1_1 = 0;
-    m_s2 = 0;
-    m_s2_1 = 0;
-    m_s3 = 0;
-    m_s3_1 = 0;
-    m_s4 = 0;
-    m_s4_1 = 0;
-  }
-  
-  template <typename Sample>
-	  inline Sample filter(const Sample in,
-			       const BiquadBase& s)
-  {
-    double out;
-
-    // can be: in += m_s1_1;
-    m_v = in + m_s1_1;
-    out = s.m_b0*m_v + m_s3_1;
-    m_s1 = m_s2_1 - s.m_a1*m_v;
-    m_s2 = -s.m_a2*m_v;
-    m_s3 = s.m_b1*m_v + m_s4_1;
-    m_s4 = s.m_b2*m_v; 
-
-    m_s4_1 = m_s4;
-    m_s3_1 = m_s3;
-    m_s2_1 = m_s2;
-    m_s1_1 = m_s1;
-
-    return static_cast<Sample> (out);
-  }
-
-private:
-  double m_v;
-  double m_s1;
-  double m_s1_1;
-  double m_s2;
-  double m_s2_1;
-  double m_s3;
-  double m_s3_1;
-  double m_s4;
-  double m_s4_1;
-};
 
 //------------------------------------------------------------------------------
 

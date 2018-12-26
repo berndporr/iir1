@@ -1,40 +1,40 @@
-/*******************************************************************************
+/**
+ *
+ * "A Collection of Useful C++ Classes for Digital Signal Processing"
+ * By Vinnie Falco and Bernd Porr
+ *
+ * Official project location:
+ * https://github.com/berndporr/iir1
+ *
+ * See Documentation.cpp for contact information, notes, and bibliography.
+ * 
+ * -----------------------------------------------------------------
+ *
+ * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * Copyright (c) 2009 by Vinnie Falco
+ * Copyright (c) 2011 by Bernd Porr
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ **/
 
-"A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco adapted by Bernd Porr for Linux
-
-Official project location:
-https://github.com/vinniefalco/DSPFilters
-
-See Documentation.cpp for contact information, notes, and bibliography.
-
---------------------------------------------------------------------------------
-
-License: MIT License (http://www.opensource.org/licenses/mit-license.php)
-Copyright (c) 2009 by Vinnie Falco
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-*******************************************************************************/
-
-#ifndef DSPFILTERS_POLEFILTER_H
-#define DSPFILTERS_POLEFILTER_H
+#ifndef IIR1_POLEFILTER_H
+#define IIR1_POLEFILTER_H
 
 #include "Common.h"
 #include "MathSupplement.h"
@@ -43,7 +43,7 @@ THE SOFTWARE.
 
 namespace Iir {
 
-/*
+/***
  * Base for filters designed via algorithmic placement of poles and zeros.
  *
  * Typically, the filter is first designed as a half-band low pass or
@@ -51,9 +51,11 @@ namespace Iir {
  * as the ones from Constantinides, the poles and zeros of the analog filter
  * are calculated in the z-plane.
  *
- */
+ ***/
 
-// Factored implementations to reduce template instantiations
+/**
+ * Factored implementations to reduce template instantiations
+ **/
 class DllExport PoleFilterBase2 : public Cascade
 {
 public:
@@ -83,8 +85,11 @@ protected:
   LayoutBase m_digitalProto;
 };
 
-// Serves a container to hold the analog prototype
-// and the digital pole/zero layout.
+
+/**
+ * Serves a container to hold the analog prototype
+ * and the digital pole/zero layout.
+ **/
 template <class AnalogPrototype>
 class DllExport PoleFilterBase : public PoleFilterBase2
 {
@@ -102,7 +107,9 @@ protected:
 
 //------------------------------------------------------------------------------
 
-// Storage for pole filters
+/**
+ * Storage for pole filters
+ **/
 template <class BaseClass,
 	  class StateType,
           int MaxAnalogPoles,
@@ -125,7 +132,7 @@ private:
 
 //------------------------------------------------------------------------------
 
-/*
+/**
  * s-plane to z-plane transforms
  *
  * For pole filters, an analog prototype is created via placement of
@@ -134,9 +141,11 @@ private:
  * and normalization parameters are transformed into the z-plane
  * using variants of the bilinear transformation.
  *
- */
+ **/
 
-// low pass to low pass 
+/** 
+ * low pass to low pass 
+ **/
 class DllExport LowPassTransform
 {
 public:
@@ -152,7 +161,9 @@ private:
 
 //------------------------------------------------------------------------------
 
-// low pass to high pass
+/**
+ * low pass to high pass
+ **/
 class DllExport HighPassTransform
 {
 public:
@@ -168,7 +179,9 @@ private:
 
 //------------------------------------------------------------------------------
 
-// low pass to band pass transform
+/**
+ * low pass to band pass transform
+ **/
 class DllExport BandPassTransform
 {
 
@@ -193,7 +206,9 @@ private:
 
 //------------------------------------------------------------------------------
 
-// low pass to band stop transform
+/** 
+ * low pass to band stop transform
+ **/
 class DllExport BandStopTransform
 {
 public:
