@@ -75,15 +75,15 @@ f.setup (samplingrate,
 ```
 
 ### Realtime filtering sample by sample
-A sample `x` is processed by the filter with the `filter`
-command and then saved in `y`. The type can be either
+Samples are processed one by one. In the example below
+a sample `x` is processed with the `filter`
+command and then saved in `y`. The type of `x` can either be
 float or double:
 ```
 float y = f.filter(x);
 ```
-This is executed at the sampling rate in an endless
+This is then repeated for every incoming sample in a
 loop or event handler.
-
 
 ## Packages for Ubuntu (xenial / bionic):
 
