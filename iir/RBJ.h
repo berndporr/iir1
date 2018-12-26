@@ -150,8 +150,8 @@ namespace RBJ {
 		/**
                  * Calculates the coefficients
                  * \param sampleRate Sampling rate
-                 * \param centerFrequency Center frequency of the bandpass
-                 * \param bandWidth Bandwidth of the bandpass
+                 * \param centerFrequency Center frequency of the bandstop
+                 * \param bandWidth Bandwidth of the bandstop
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
