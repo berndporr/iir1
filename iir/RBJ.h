@@ -163,15 +163,14 @@ namespace RBJ {
 
 	/**
          * Bandstop with Q factor: the higher the Q factor the more narrow is
-         * the notch. The goal is to have an as narrow as possible notch.
-         * However, a narrow notch as a long impulse response ( = ringing)
+         * the notch. 
+         * However, a narrow notch has a long impulse response ( = ringing)
          * and numerical problems might prevent perfect damping. Practical values
          * of the Q factor are about Q = 10 to 20. In terms of the design
          * the Q factor defines the radius of the
-         * pole as r = exp(- pi*(centerFrequency/sampleRate)/q_factor) whereas
-         * the angle of the pole/zero defines the bandstop frequency. The higher
-         * Q is the closer r moves towards the unit circle. This is equivalent
-         * of an analogue Q factor.
+         * poles as r = exp(- pi*(centerFrequency/sampleRate)/q_factor) whereas
+         * the angles of the poles/zeros define the bandstop frequency. The higher
+         * Q the closer r moves towards the unit circle.
          **/
 	struct DllExport IIRNotch : RBJbase
 	{
