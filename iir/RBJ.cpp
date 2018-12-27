@@ -125,6 +125,22 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 	
+	void IIRNotch::setup (double sampleRate,
+			      double centerFrequency,
+			      double q_factor)
+	{
+		double w0 = 2 * doublePi * centerFrequency / sampleRate;
+		double cs = cos (w0);
+		double r = exp(-(w0/2) / q_factor);
+		double b0 =  1;
+		double b1 = -2 * cs;
+		double b2 =  1;
+		double a0 =  1;
+		double a1 = -2 * r * cs;
+		double a2 =  r * r;
+		setCoefficients (a0, a1, a2, b0, b1, b2);
+	}
+	
 	void LowShelf::setup (double sampleRate,
 			      double cutoffFrequency,
 			      double gainDb,

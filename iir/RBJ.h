@@ -143,7 +143,8 @@ namespace RBJ {
 	};
 
 	/**
-         * Bandstop
+         * Bandstop filter. Warning: the bandwidth might not be accurate
+         * for narrow notches.
          **/
 	struct DllExport BandStop : RBJbase
 	{
@@ -156,6 +157,31 @@ namespace RBJ {
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double bandWidth);
+	};
+
+	/**
+         * Bandstop with Q factor: the higher the Q factor the more narrow is
+         * the notch. The goal is to have an as narrow as possible notch.
+         * However, a narrow notch as a long impulse response ( = ringing)
+         * and numerical problems might prevent perfect damping. Practical values
+         * of the Q factor are about Q = 10. In terms of the design
+         * the Q factor defines the radius of the
+         * pole as r = exp(- pi*(centerFrequency/sampleRate)/q_factor) whereas
+         * the angle of the pole/zero defines the bandstop frequency. The higher
+         * Q is the closer r moves towards the unit circle. This is equivalent
+         * of an analogue Q factor.
+         **/
+	struct DllExport IIRNotch : RBJbase
+	{
+		/**
+                 * Calculates the coefficients
+                 * \param sampleRate Sampling rate
+                 * \param centerFrequency Center frequency of the bandstop
+                 * \param Q factor of the bandstop
+                 **/
+		void setup (double sampleRate,
+			    double centerFrequency,
+			    double q_factor);
 	};
 
 	struct DllExport LowShelf : RBJbase

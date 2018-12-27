@@ -132,6 +132,27 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
+	// Digital bandstop filter
+        // This is a filter which as infinite damping
+	// at the notch frequency because the zero of the
+	// filter is placed there. A resonance at the notch
+	// then tunes the width of the filter.
+	// The higher the Q factor the narrow the notch
+	// but the longer its impulse response (=ringing).
+	Iir::RBJ::IIRNotch bsn;
+	const float bs_frequency = 50;
+	const float bs_q = 10;
+	bsn.setup (samplingrate, bs_frequency, bs_q);
+	fimpulse = fopen("bs_rbj.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = bsn.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+
 	printf("finished!\n");
 	printf("Now run `plot_impulse_fresponse.py` to display the impulse/frequency responses.\n");
 }

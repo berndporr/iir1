@@ -38,4 +38,6 @@ plot_if(6,"lp_cheby2.dat","ChebyshevII lowpass")
 
 plot_if(7,"bp_bessel.dat","Bessel bandpass")
 
+plot_if(8,"bs_rbj.dat","RBJ bandstop (digital notch)")
+
 plt.show()
