@@ -75,7 +75,7 @@ int main (int,char**)
 
 	Iir::Elliptic::LowPass<order> lp_elliptic;
 	const float pass_ripple_db = 5; // dB
-	const float rolloff = 0.1;
+	const float rolloff = 0.1F;
 	lp_elliptic.setup (samplingrate,
 			   cutoff_frequency,
 			   pass_ripple_db,

@@ -47,6 +47,7 @@
 // This exports the classes/structures to the windows DLL
 #ifdef _WIN32
 #define DllExport   __declspec( dllexport )
+#define _CRT_SECURE_NO_WARNINGS
 #else
 #define DllExport
 #endif
@@ -62,12 +63,5 @@
 #include <string>
 #include <limits>
 #include <vector>
-
-#ifdef _MSC_VER
-namespace tr1 = std::tr1;
-#else
-namespace tr1 = std;
-#endif
-
 
 #endif
