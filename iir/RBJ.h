@@ -176,8 +176,8 @@ namespace RBJ {
 		/**
                  * Calculates the coefficients
                  * \param sampleRate Sampling rate
-                 * \param centerFrequency Center frequency of the bandstop
-                 * \param Q factor of the bandstop
+                 * \param centerFrequency Center frequency of the notch
+                 * \param q_factor Q factor of the notch (1 to ~20)
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,

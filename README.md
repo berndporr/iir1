@@ -19,7 +19,7 @@ parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
 ### Setting the filter parameters
-All filters are available as lowpass, highpass, bandpass and bandstop
+All filters are available as lowpass, highpass, bandpass and bandstop/notch
 filters. Butterworth / Chebyshev offer also low/high/band-shelves with
 specified passband gain and 0dB gain in the stopband.
 
