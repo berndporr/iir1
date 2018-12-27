@@ -40,6 +40,11 @@
 
 #include<complex>
 
+#ifdef _MSC_VER
+ // Under Unix these have already default instantiations but not under Vis Studio
+template class DllExport std::complex<double>;
+template class DllExport std::complex<float>;
+#endif
 
 namespace Iir {
 
@@ -47,12 +52,6 @@ const double doublePi	=3.1415926535897932384626433832795028841971;
 const double doublePi_2	=1.5707963267948966192313216916397514420986;
 const double doubleLn2  =0.69314718055994530941723212145818;
 const double doubleLn10	=2.3025850929940456840179914546844;
-
-#ifdef _MSC_VER
-// Under Unix these have already default instantiations but not under Vis Studio
-template class DllExport std::complex<double>;
-template class DllExport std::complex<float>;
-#endif
 
 typedef std::complex<double> complex_t;
 typedef std::pair<complex_t, complex_t> complex_pair_t;
