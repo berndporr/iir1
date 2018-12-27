@@ -39,13 +39,12 @@
 #include "Common.h"
 #include "MathSupplement.h"
 
-namespace Iir {
-
 /**
  * Describes a filter as a collection of poles and zeros along with
  * normalization information to achieve a specified gain at a specified
  * frequency. The poles and zeros may lie either in the s or the z plane.
  **/
+namespace Iir {
 
 /**
  * Base uses pointers to reduce template instantiations

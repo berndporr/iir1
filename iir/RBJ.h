@@ -57,7 +57,9 @@ namespace Iir {
  **/
 namespace RBJ {
 
-	/// The base class of all RBJ filters
+	/** 
+         * The base class of all RBJ filters
+         **/
 	struct DllExport RBJbase : BiquadBase
 	{
 	public:
@@ -164,7 +166,7 @@ namespace RBJ {
          * the notch. The goal is to have an as narrow as possible notch.
          * However, a narrow notch as a long impulse response ( = ringing)
          * and numerical problems might prevent perfect damping. Practical values
-         * of the Q factor are about Q = 10. In terms of the design
+         * of the Q factor are about Q = 10 to 20. In terms of the design
          * the Q factor defines the radius of the
          * pole as r = exp(- pi*(centerFrequency/sampleRate)/q_factor) whereas
          * the angle of the pole/zero defines the bandstop frequency. The higher
