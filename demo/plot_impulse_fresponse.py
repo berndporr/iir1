@@ -30,14 +30,12 @@ plot_if(2,"bp.dat","Butterworth bandpass (shelf)")
 
 plot_if(3,"hp_rbj.dat","RBJ highpass")
 
-plot_if(4,"lp_elliptic.dat","Elliptic lowpass")
+plot_if(4,"lp_cheby1.dat","ChebyshevI lowpass")
 
-plot_if(5,"lp_cheby1.dat","ChebyshevI lowpass")
+plot_if(5,"lp_cheby2.dat","ChebyshevII lowpass")
 
-plot_if(6,"lp_cheby2.dat","ChebyshevII lowpass")
+plot_if(6,"bp_bessel.dat","Bessel bandpass")
 
-plot_if(7,"bp_bessel.dat","Bessel bandpass")
-
-plot_if(8,"bs_rbj.dat","RBJ bandstop (digital notch)")
+plot_if(7,"bs_rbj.dat","Digital notch")
 
 plt.show()

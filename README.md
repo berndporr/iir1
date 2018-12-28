@@ -71,18 +71,6 @@ f.setup (samplingrate, cutoff_frequency, Q_factor);
 ```
 
 
-5. Elliptic -- `Elliptic.h`
-With permissible passband ripple and rolloff.
-```
-Iir::Elliptic::LowPass<order> f;
-const float pass_ripple_db = 5; // dB
-const float rolloff = 0.1;
-f.setup (samplingrate,
-         cutoff_frequency,
-         passband_ripple_db,
-         rolloff);
-```
-
 ### Realtime filtering sample by sample
 Samples are processed one by one. In the example below
 a sample `x` is processed with the `filter`
@@ -177,7 +165,6 @@ in the `/demo/` directory and then plotted with `plot_impulse_fresponse.py`.
 ![alt tag](demo/5.png)
 ![alt tag](demo/6.png)
 ![alt tag](demo/7.png)
-![alt tag](demo/8.png)
 
 ## Credits
 

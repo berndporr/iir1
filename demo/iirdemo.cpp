@@ -10,8 +10,7 @@
 
 int main (int,char**)
 {
-	// 4th order for all filters shown here
-	const int order = 4;
+	const int order = 8;
 
 	// sampling rate here 1kHz as an example
 	const float samplingrate = 1000;
@@ -36,7 +35,7 @@ int main (int,char**)
 	
 	// Bandpass shelf filter (default 0dB execpt 10 dB in the passband)
 	// Here the "direct form I" is chosen for the number crunching
-	Iir::Butterworth::BandShelf<order,Iir::DirectFormI> bp;
+	Iir::Butterworth::BandShelf<4,Iir::DirectFormI> bp;
 	const float center_frequency = 100;
 	const float frequency_width = 20;
 	const float gain_in_passband = 10;
@@ -73,27 +72,11 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
-	Iir::Elliptic::LowPass<order> lp_elliptic;
-	const float pass_ripple_db = 5; // dB
-	const float rolloff = 0.1F;
-	lp_elliptic.setup (samplingrate,
-			   cutoff_frequency,
-			   pass_ripple_db,
-			   rolloff);
-	fimpulse = fopen("lp_elliptic.dat","wt");
-	for(int i=0;i<1000;i++) 
-	{
-		double a=0;
-		if (i==10) a = 1;
-		double b = lp_elliptic.filter(a);
-		fprintf(fimpulse,"%e\n",b);
-	}
-	fclose(fimpulse);
-
-	Iir::ChebyshevI::LowPass<order> lp_cheby1;
+	Iir::ChebyshevI::LowPass<8> lp_cheby1;
+	const float pass_ripple_db2 = 1; // dB
 	lp_cheby1.setup (samplingrate,
 			 cutoff_frequency,
-			 pass_ripple_db);
+			 pass_ripple_db2);
 	fimpulse = fopen("lp_cheby1.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
@@ -104,8 +87,8 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
-	Iir::ChebyshevII::LowPass<order> lp_cheby2;
-	double stop_ripple_dB = 20;
+	Iir::ChebyshevII::LowPass<8> lp_cheby2;
+	double stop_ripple_dB = 60;
 	lp_cheby2.setup (samplingrate,
 			 cutoff_frequency,
 			 stop_ripple_dB);
@@ -119,7 +102,7 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
-	Iir::Bessel::BandPass<order> bp_bessel;
+	Iir::Bessel::BandPass<6> bp_bessel;
 	bp_bessel.setup (samplingrate,
 			 center_frequency, frequency_width);
 	fimpulse = fopen("bp_bessel.dat","wt");
