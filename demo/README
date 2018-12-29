@@ -2,6 +2,10 @@ This demo shows how the filter is set up, how data is
 processed sample by sample and how the frequency responses
 look like with the help of a python script.
 
-Run:
+Impulse responses of different filters:
 ./iirdemo
 python3 plot_impulse_fresponse.py
+
+50Hz removal from an ECG:
+./ecg50hzfilt
+python3 plot_ecg_filt.py
