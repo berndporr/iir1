@@ -69,8 +69,6 @@ void AnalogLowPass::design (int numPoles,
       double a = sinh_v0 * cos (k * doublePi / n2);
       double b = cosh_v0 * sin (k * doublePi / n2);
 
-      //addPoleZero (complex_t (a, b), infinity());
-      //addPoleZero (complex_t (a, -b), infinity());
       addPoleZeroConjugatePairs (complex_t (a, b), infinity());
     }
 

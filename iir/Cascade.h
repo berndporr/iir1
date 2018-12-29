@@ -103,16 +103,40 @@ private:
 
 //------------------------------------------------------------------------------
 
-// Storage for Cascade
+/**
+ * Storage for Cascade: This holds a chain of 2nd order filters
+ * with its coefficients.
+ **/
 template <int MaxStages,class StateType>
-class DllExport CascadeStages
-{
+class DllExport CascadeStages {
 public:
-    void reset ()
-    {
-      StateType* state = m_states;
-      for (int i = MaxStages; --i >= 0; ++state)
-        state->reset();
+	/**
+         * Resets all biquads
+         **/
+	void reset ()
+	{
+		StateType* state = m_states;
+		for (int i = MaxStages; --i >= 0; ++state)
+			state->reset();
+	}
+
+public:
+	/**
+         * Sets the coefficients of the whole chain of
+         * biquads.
+         * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
+         **/
+    void setup (const double sosCoefficients[][6]) {
+	    for (int i = 0; i < MaxStages; i++) {
+		    m_states[i].reset();
+		    m_stages[i].setCoefficients(
+			    sosCoefficients[i][3],
+			    sosCoefficients[i][4],
+			    sosCoefficients[i][5],
+			    sosCoefficients[i][0],
+			    sosCoefficients[i][1],
+			    sosCoefficients[i][2]);
+	    }
     }
 
 public:

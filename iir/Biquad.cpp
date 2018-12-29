@@ -81,6 +81,10 @@ BiquadPoleState::BiquadPoleState (const BiquadBase& s)
 
 //------------------------------------------------------------------------------
 
+/**
+ * Gets the frequency response of the Biquad
+ * \param normalizedFrequency Normalised frequency (0 to 0.5)
+ **/
 complex_t BiquadBase::response (double normalizedFrequency) const
 {
   const double a0 = getA0 ();

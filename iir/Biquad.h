@@ -49,8 +49,6 @@ struct DllExport BiquadPoleState;
  * digital filter. This is the building block for all IIR filters.
  *
  */
-
-// Factored interface to prevent outsiders from fiddling
 class DllExport BiquadBase
 {
 public:
@@ -84,11 +82,7 @@ public:
 	  return state.filter(s, *this);
   }
 
-protected:
-  //
-  // These are protected so you can't mess with RBJ biquads
-  //
-
+public:
   void setCoefficients (double a0, double a1, double a2,
                         double b0, double b1, double b2);
 
@@ -123,8 +117,10 @@ public:
 
 //------------------------------------------------------------------------------
 
-// Expresses a biquad as a pair of pole/zeros, with gain
-// values so that the coefficients can be reconstructed precisely.
+/** 
+ * Expresses a biquad as a pair of pole/zeros, with gain
+ * values so that the coefficients can be reconstructed precisely.
+ **/
 struct DllExport BiquadPoleState : PoleZeroPair
 {
   BiquadPoleState () { }
@@ -143,8 +139,6 @@ public:
   explicit Biquad (const BiquadPoleState& bps);
 
 public:
-  // Export these as public
-
   void setOnePole (complex_t pole, complex_t zero)
   {
     BiquadBase::setOnePole (pole, zero);

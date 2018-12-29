@@ -38,6 +38,10 @@
 
 #include "Common.h"
 #include "Biquad.h"
+#include "Cascade.h"
+#include "PoleFilter.h"
+#include "State.h"
+
 
 namespace Iir {
 
@@ -55,19 +59,40 @@ namespace Custom {
 
 struct OnePole : Biquad
 {
-  void setup (double scale,
-              double pole,
-              double zero);
+	void setup (double scale,
+		    double pole,
+		    double zero);
 };
 
 struct TwoPole : Biquad
 {
-  void setup (double scale,
-              double poleRho,
-              double poleTheta,
-              double zeroRho,
-              double zeroTheta);
+	void setup (double scale,
+		    double poleRho,
+		    double poleTheta,
+		    double zeroRho,
+		    double zeroTheta);
 };
+
+/**
+ * A custom cascade of 2nd order (SOS) filters.
+ **/
+template <int NSOS, class StateType = DEFAULT_STATE>
+struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
+{
+	/**
+         * Python scipy.signal friendly setting of coefficients.
+	 * Sets the coefficients of the whole chain of
+	 * biquads. The arguments ia a 2D array where the 1st
+         * dimenstion holds an array of 2nd order biquad coefficients.
+         * The sos coefficients are ordered "Python" style with first
+         * the FIR coefficients (B) and then the IIR coefficients (A).
+	 * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
+	 **/
+	void setup (const double sosCoefficients[NSOS][6]) {
+		CascadeStages<NSOS,StateType>::setup(sosCoefficients);
+	}
+};
+
 
 }
 

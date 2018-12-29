@@ -67,10 +67,6 @@ public:
   // of pole/zeros for parameter modulation, since a pole
   // filter already has them calculated
 
-#if 1
-  // Commenting this out will pass the call to the Cascade,
-  // which tries to compute the poles and zeros from the biquad
-  // coefficients.
   std::vector<PoleZeroPair> getPoleZeros () const
   {
     std::vector<PoleZeroPair> vpz;
@@ -79,7 +75,6 @@ public:
       vpz.push_back (m_digitalProto[i]);
     return vpz;
   }
-#endif
 
 protected:
   LayoutBase m_digitalProto;

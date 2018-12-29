@@ -136,6 +136,36 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
+	
+	Iir::Custom::SOSCascade<2> cust;
+	// generated with: "elliptic_design.py"
+	const double coeff[][6] = {
+		{1.665623674062209972e-02,
+		 -3.924801366970616552e-03,
+		 1.665623674062210319e-02,
+		 1.000000000000000000e+00,
+		 -1.715403014004022175e+00,
+		 8.100474793174089472e-01},
+		{1.000000000000000000e+00,
+		 -1.369778997100624895e+00,
+		 1.000000000000000222e+00,
+		 1.000000000000000000e+00,
+		 -1.605878925999785656e+00,
+		 9.538657786383895054e-01}
+	};
+	cust.setup(coeff);
+	fimpulse = fopen("ellip.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = cust.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+
+	
+
 	printf("finished!\n");
 	printf("Now run `plot_impulse_fresponse.py` to display the impulse/frequency responses.\n");
 }
