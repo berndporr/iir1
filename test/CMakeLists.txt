@@ -21,10 +21,6 @@ add_executable (test_chebyshev2 chebyshev2.cpp)
 target_link_libraries(test_chebyshev2 iir_static)
 add_test(TestChebyshev2 test_chebyshev2)
 
-add_executable (test_elliptic elliptic.cpp)
-target_link_libraries(test_elliptic iir_static)
-add_test(TestElliptic test_elliptic)
-
 add_executable (test_rbj rbj.cpp)
 target_link_libraries(test_rbj iir_static)
 add_test(TestRBJ test_rbj)

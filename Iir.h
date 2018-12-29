@@ -52,8 +52,6 @@
 #include "iir/ChebyshevI.h"
 #include "iir/ChebyshevII.h"
 #include "iir/Custom.h"
-#include "iir/Elliptic.h"
-#include "iir/Legendre.h"
 #include "iir/RBJ.h"
 
 #endif

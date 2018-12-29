@@ -176,9 +176,8 @@ https://github.com/vinniefalco/DSPFilters
 While his original library processes audio arrays this
 library has been adapted to do realtime processing sample
 by sample. Also, in contrast to the original library the `setup`
-command won't require the filter order.
-The filter design routines are identical to
-DSPFilters.
+command won't require the filter order and instead remembers
+it from the template argument.
 
 Enjoy!
 

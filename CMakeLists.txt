@@ -4,7 +4,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	set(CMAKE_BUILD_TYPE "Release")
 endif()
 
-project(iir VERSION 1.3.2 LANGUAGES CXX)
+project(iir VERSION 1.4.0 LANGUAGES CXX)
 include(GNUInstallDirs)
 add_subdirectory(test)
 add_subdirectory(demo)
@@ -18,8 +18,6 @@ set(LIBSRC
   iir/ChebyshevI.cpp
   iir/ChebyshevII.cpp
   iir/Custom.cpp
-  iir/Elliptic.cpp
-  iir/Legendre.cpp
   iir/PoleFilter.cpp
   iir/RBJ.cpp
   iir/RootFinder.cpp
@@ -34,9 +32,7 @@ set(LIBINCLUDE
   iir/ChebyshevII.h
   iir/Common.h
   iir/Custom.h
-  iir/Elliptic.h
   iir/Layout.h
-  iir/Legendre.h
   iir/MathSupplement.h
   iir/PoleFilter.h
   iir/RBJ.h
