@@ -124,8 +124,7 @@ int main (int,char**)
 	// but the longer its impulse response (=ringing).
 	Iir::RBJ::IIRNotch bsn;
 	const float bs_frequency = 50;
-	const float bs_q = 10;
-	bsn.setup (samplingrate, bs_frequency, bs_q);
+	bsn.setup (samplingrate, bs_frequency);
 	fimpulse = fopen("bs_rbj.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{

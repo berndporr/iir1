@@ -182,7 +182,7 @@ namespace RBJ {
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
-			    double q_factor);
+			    double q_factor = 10);
 	};
 
 	struct DllExport LowShelf : RBJbase
