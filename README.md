@@ -192,6 +192,7 @@ in the `/demo/` directory and then plotted with `plot_impulse_fresponse.py`.
 ![alt tag](demo/5.png)
 ![alt tag](demo/6.png)
 ![alt tag](demo/7.png)
+![alt tag](demo/8.png)
 
 ## Credits
 
