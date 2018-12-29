@@ -86,9 +86,10 @@ struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
          * dimension holds an array of 2nd order biquad coefficients.
          * The sos coefficients are ordered "Python" style with first
          * the FIR coefficients (B) and then the IIR coefficients (A).
-	 * \param sosCoefficients 2D array in Python style sos[][6] indexing: 0-2: FIR, 3-5: IIR coefficients.
+         * The const double array needs to have exactly the size [NSOS][6].
+	 * \param sosCoefficients 2D array Python style sos[NSOS][6]. Indexing: 0-2: FIR, 3-5: IIR coefficients.
 	 **/
-	void setup (const double sosCoefficients[NSOS][6]) {
+	void setup (const double (&sosCoefficients)[NSOS][6]) {
 		CascadeStages<NSOS,StateType>::setup(sosCoefficients);
 	}
 };

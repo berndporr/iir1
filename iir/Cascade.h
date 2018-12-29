@@ -126,7 +126,7 @@ public:
          * biquads.
          * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
          **/
-    void setup (const double sosCoefficients[][6]) {
+	void setup (const double (&sosCoefficients)[MaxStages][6]) {
 	    for (int i = 0; i < MaxStages; i++) {
 		    m_states[i].reset();
 		    m_stages[i].setCoefficients(
