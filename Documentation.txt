@@ -44,14 +44,14 @@ has remained shrouded in secrecy with little publicly available source
 code....until now."_
 
 ----
-Building on the work of cherished luminaries such as Sophocles Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this library harnesses the power of C++ templates to solve a useful problem in digital signal processing: the realization of multichannel IIR filters of arbitrary order and prescribed specifications with various properties such as Butterworth, Chebyshev, Elliptic, and Optimum-L (Legendre) responses. The library is provided under the MIT license and is therefore fully compatible with proprietary usage.
+Building on the work of cherished luminaries such as Sophocles Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this library harnesses the power of C++ templates to solve a useful problem in digital signal processing: the realization of multichannel IIR filters of arbitrary order and prescribed specifications with various properties such as Butterworth, Chebyshev, Elliptic, and Python based coefficients. The library is provided under the MIT license and is therefore fully compatible with proprietary usage.
 
 Classes are designed as independent re-usable building blocks. Use some or all of the provided features, or extend the functionality by writing your own objects that plug into the robust framework. Only the code that you need will get linked into your application. Here's a list of features:
 
 	* Exclusive focus on IIR filters
 	* Causal/realtime processing with single sample in and signal sample out filter functions
 	* Complete implementation of all "RBJ Biquad" Cookbook filter formulas
-	* Butterworth, Chebyshev, Elliptic, Bessel, Legendre designs
+	* Butterworth, Chebyshev and Bessel designs
 	* Low Pass, High Pass, Band Pass, Band Stop transformations
 	* Low, High, and Band Shelf filter implementations for most types
 	* Smooth interpolation of filter settings, pole/zeros, and biquad coefficients to achieve seamless parameter changes
@@ -111,14 +111,12 @@ Filter family namespaces
   Each family of filters is given its own namespace. Currently these namespaces
   include:
 
-  RBJ:          Filters from the RBJ Cookbook
+  RBJ:          Filters from the RBJ Cookbook and IIRNotch
   Butterworth:  Filters with Butterworth response
   ChebyshevI:   Filters using Chebyshev polynomials (ripple in the passband)
   ChebyshevII:  "Inverse Chebyshev" filters (ripple in the stopband)
-  Elliptic:     Filters with ripple in both the passband and stopband
   Bessel:       Uses Bessel polynomials, theoretically with linear phase
-  Legendre:     "Optimum-L" filters with steepest transition and monotonic passband.
-  Custom:       Simple filters that allow poles and zeros to be specified directly
+  Custom:       Coefficients provided by Python's scipy and simple pole/zero filters.
 
 <class FilterClass>
 
