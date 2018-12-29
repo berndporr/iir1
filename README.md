@@ -194,6 +194,11 @@ in the `/demo/` directory and then plotted with `plot_impulse_fresponse.py`.
 ![alt tag](demo/7.png)
 ![alt tag](demo/8.png)
 
+### Combined bandstop and lowpass filtering
+Calculated with `ecg50hzfilt` and then plotted with `plot_ecg_filt.py`.
+![alt tag](demo/ecg1.png)
+![alt tag](demo/ecg2.png)
+
 ## Credits
 
 This library has been adapted form Vinnie Falco's
