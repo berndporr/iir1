@@ -75,11 +75,11 @@ f.setup (samplingrate, cutoff_frequency, Q_factor);
 When using the filter design commands in Python use the option
 `output='sos'` to generate a 2D array of 2nd order biquad stages:
 ```
+# Python
 sos = signal.ellip(order, pr, sr, f0/fs*2, 'low', output='sos')
 print(sos)
-```
-Put these into a 2D C++ array and call `setup(coeff)`:
-```
+
+// C++
 Iir::Custom::SOSCascade<2> cust;
 // generated with: "elliptic_design.py"
 const double coeff[][6] = {
