@@ -13,16 +13,17 @@ def plot_if(figno,name,figtitle):
     y = np.loadtxt(name);
     plt.subplot(211)
     plt.title("Signal")
+    plt.ylim(1500,3500)
     plt.plot(y);
     #
     # Fourier Transform
-    yf = scipy.fft(y)
+    yf = scipy.fft(y) / len(y)
     plt.subplot(212)
     plt.plot(scipy.linspace(0,fs,len(yf)),20*np.log10(abs(yf)))
     plt.xlim(0,fs/2)
     plt.title("Frequency spectrum")
     plt.xlabel("f/Hz")
-    plt.ylabel("gain/dB")
+    plt.ylabel("amplitude/dB")
 
 plot_if(1,"ecg50hz.dat","ECG with 50Hz noise")
 
