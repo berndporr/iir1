@@ -10,17 +10,19 @@ def plot_if(figno,name,figtitle):
     plt.figure(figno)
     plt.suptitle(figtitle)
     fs = 1000
-    y = np.loadtxt(name);
+    y = np.loadtxt(name) / 1000
+    y2 = y - np.mean(y)
     plt.subplot(211)
     plt.title("Signal")
-    plt.ylim(1500,3500)
-    plt.plot(y);
+    plt.ylim(-1,1)
+    plt.plot(y2);
     #
     # Fourier Transform
     yf = scipy.fft(y) / len(y)
     plt.subplot(212)
-    plt.plot(scipy.linspace(0,fs,len(yf)),20*np.log10(abs(yf)))
+    plt.plot(scipy.linspace(0,fs,len(yf)),20*np.log10(np.abs(yf)))
     plt.xlim(0,fs/2)
+    plt.ylim(-130,-10)
     plt.title("Frequency spectrum")
     plt.xlabel("f/Hz")
     plt.ylabel("amplitude/dB")

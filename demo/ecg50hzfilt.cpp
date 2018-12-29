@@ -12,7 +12,7 @@ int main (int,char**)
 	iirnotch.setup(fs,mains);
 
         const float ecg_max_f = 100;
-	Iir::Butterworth::LowPass<6> lp;
+	Iir::Butterworth::LowPass<4> lp;
 	lp.setup(fs,ecg_max_f);
 
 	FILE *finput = fopen("ecg50hz.dat","rt");
@@ -22,6 +22,7 @@ int main (int,char**)
 	{
 		float a;
 		if (fscanf(finput,"%f\n",&a)<1) break;
+		a = a - 2250;
 		a = lp.filter(a);
 		a = iirnotch.filter(a);
 		fprintf(foutput,"%f\n",a);
