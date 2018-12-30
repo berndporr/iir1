@@ -6,7 +6,7 @@
  * Official project location:
  * https://github.com/berndporr/iir1
  *
- * See Documentation.cpp for contact information, notes, and bibliography.
+ * See Documentation.txt for contact information, notes, and bibliography.
  * 
  * -----------------------------------------------------------------
  *

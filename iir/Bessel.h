@@ -6,7 +6,7 @@
  * Official project location:
  * https://github.com/berndporr/iir1
  *
- * See Documentation.cpp for contact information, notes, and bibliography.
+ * See Documentation.txt for contact information, notes, and bibliography.
  * 
  * -----------------------------------------------------------------
  *
@@ -66,7 +66,7 @@ private:
   WorkspaceBase& operator= (WorkspaceBase&);
 };
 
-template <int MaxOrder>
+template <int FilterOrder>
 struct Workspace : WorkspaceBase
 {
   Workspace ()
@@ -75,7 +75,7 @@ struct Workspace : WorkspaceBase
   }
 
 private:
-  RootFinder <MaxOrder> m_roots;
+  RootFinder <FilterOrder> m_roots;
 };
 
 //------------------------------------------------------------------------------
@@ -164,9 +164,11 @@ struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 //
 /**
  * Bessel Lowpass
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 {
 	/**
          * Calculate the coefficients
@@ -176,8 +178,8 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 	void setup (double sampleRate,
 		    double cutoffFrequency)
 	{
-		Workspace <MaxOrder> w;
-		LowPassBase::setup (MaxOrder,
+		Workspace <FilterOrder> w;
+		LowPassBase::setup (FilterOrder,
 				    sampleRate,
 				    cutoffFrequency,
 				    &w);
@@ -187,7 +189,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 		    double sampleRate,
 		    double cutoffFrequency)
 	{
-		Workspace <MaxOrder> w;
+		Workspace <FilterOrder> w;
 		LowPassBase::setup (order,
 				    sampleRate,
 				    cutoffFrequency,
@@ -198,9 +200,11 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
 
 /**
  * Bessel Highpass.
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 {
 	/**
          * Calculate the coefficients
@@ -210,8 +214,8 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	void setup (double sampleRate,
 		    double cutoffFrequency)
 	{
-		Workspace <MaxOrder> w;
-		HighPassBase::setup (MaxOrder,
+		Workspace <FilterOrder> w;
+		HighPassBase::setup (FilterOrder,
 				     sampleRate,
 				     cutoffFrequency,
 				     &w);
@@ -221,7 +225,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		    double sampleRate,
 		    double cutoffFrequency)
 	{
-		Workspace <MaxOrder> w;
+		Workspace <FilterOrder> w;
 		HighPassBase::setup (order,
 				     sampleRate,
 				     cutoffFrequency,
@@ -232,9 +236,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * Bessel bandpass.
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, FilterOrder*2>
 {
 	/**
 	 * Calculate the coefficients
@@ -245,7 +251,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 	void setup (double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
-		BandPass::setup (MaxOrder,
+		BandPass::setup (FilterOrder,
 				 sampleRate,
 				 centerFrequency,
 				 widthFrequency);
@@ -256,7 +262,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		    double centerFrequency,
 		    double widthFrequency)
 	{
-		Workspace <MaxOrder> w;
+		Workspace <FilterOrder> w;
 		BandPassBase::setup (order,
 				     sampleRate,
 				     centerFrequency,
@@ -269,9 +275,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * Bessel bandstop.
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, FilterOrder*2>
 {
 	/**
 	 * Calculate the coefficients
@@ -283,8 +291,8 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		    double centerFrequency,
 		    double widthFrequency)
 	{
-		Workspace <MaxOrder> w;
-		BandStopBase::setup (MaxOrder,
+		Workspace <FilterOrder> w;
+		BandStopBase::setup (FilterOrder,
 				     sampleRate,
 				     centerFrequency,
 				     widthFrequency,
@@ -296,7 +304,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		    double centerFrequency,
 		    double widthFrequency)
 	{
-		Workspace <MaxOrder> w;
+		Workspace <FilterOrder> w;
 		BandStopBase::setup (order,
 				     sampleRate,
 				     centerFrequency,

@@ -6,7 +6,7 @@
  * Official project location:
  * https://github.com/berndporr/iir1
  *
- * See Documentation.cpp for contact information, notes, and bibliography.
+ * See Documentation.txt for contact information, notes, and bibliography.
  * 
  * -----------------------------------------------------------------
  *
@@ -155,9 +155,11 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 
 /**
  * ChebyshevI lowpass filter
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, MaxOrder>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -168,7 +170,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			LowPassBase::setup (MaxOrder,
+			LowPassBase::setup (FilterOrder,
 					    sampleRate,
 					    cutoffFrequency,
 					    rippleDb);
@@ -187,9 +189,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * ChebyshevI highpass filter
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, MaxOrder>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -200,7 +204,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			HighPassBase::setup (MaxOrder,
+			HighPassBase::setup (FilterOrder,
 					     sampleRate,
 					     cutoffFrequency,
 					     rippleDb);
@@ -219,9 +223,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * ChebyshevI bandpass filter
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, MaxOrder, MaxOrder*2>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, FilterOrder*2>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -234,7 +240,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			BandPassBase::setup (MaxOrder,
+			BandPassBase::setup (FilterOrder,
 			       sampleRate,
 			       centerFrequency,
 			       widthFrequency,
@@ -256,9 +262,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * ChebyshevI bandstop filter
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, MaxOrder, MaxOrder*2>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, FilterOrder*2>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -271,7 +279,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			BandStopBase::setup (MaxOrder,
+			BandStopBase::setup (FilterOrder,
 					     sampleRate,
 					     centerFrequency,
 					     widthFrequency,
@@ -294,9 +302,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * ChebyshevI low shelf filter. Specified gain in the passband. Otherwise 0 dB.
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, MaxOrder>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -309,7 +319,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			LowShelfBase::setup (MaxOrder,
+			LowShelfBase::setup (FilterOrder,
 					     sampleRate,
 					     cutoffFrequency,
 					     gainDb,
@@ -331,9 +341,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * ChebyshevI high shelf filter. Specified gain in the passband. Otherwise 0 dB.
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, MaxOrder>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -346,7 +358,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			HighShelfBase::setup (MaxOrder,
+			HighShelfBase::setup (FilterOrder,
 			       sampleRate,
 			       cutoffFrequency,
 			       gainDb,
@@ -369,9 +381,11 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 
 /**
  * ChebyshevI bandshelf filter. Specified gain in the passband. Otherwise 0 dB.
+ * \param FilterOrder The order of the filter.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int MaxOrder, class StateType = DEFAULT_STATE>
-	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, MaxOrder, MaxOrder*2>
+template <int FilterOrder, class StateType = DEFAULT_STATE>
+	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, FilterOrder*2>
 	{
 		/**
 		 * Calculates the coefficients of the filter
@@ -386,7 +400,7 @@ template <int MaxOrder, class StateType = DEFAULT_STATE>
 			    double widthFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			BandShelfBase::setup (MaxOrder,
+			BandShelfBase::setup (FilterOrder,
 					      sampleRate,
 					      centerFrequency,
 					      widthFrequency,

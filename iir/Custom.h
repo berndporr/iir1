@@ -6,7 +6,7 @@
  * Official project location:
  * https://github.com/berndporr/iir1
  *
- * See Documentation.cpp for contact information, notes, and bibliography.
+ * See Documentation.txt for contact information, notes, and bibliography.
  * 
  * -----------------------------------------------------------------
  *
@@ -75,6 +75,8 @@ struct TwoPole : Biquad
 
 /**
  * A custom cascade of 2nd order (SOS) filters.
+ * \param NSOS The number of 2nd order filters.
+ * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int NSOS, class StateType = DEFAULT_STATE>
 struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
