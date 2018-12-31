@@ -122,7 +122,11 @@ install it as a pre-compiled package:
 sudo add-apt-repository ppa:berndporr/usbdux
 ```
 
-It's available for 32,64 bit PC and 32,64 bit ARM (Raspberry PI etc)
+It's available for 32,64 bit PC and 32,64 bit ARM (Raspberry PI etc).
+The documentation and the example programs are in:
+```
+/usr/share/doc/iir1-dev/
+```
 
 ## Compilation from source
 
