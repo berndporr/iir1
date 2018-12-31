@@ -60,7 +60,7 @@ complex_t Cascade::response (double normalizedFrequency) const
   complex_t ch (1);
   complex_t cbot (1);
 
-  const BiquadBase* stage = m_stageArray;
+  const Biquad* stage = m_stageArray;
   for (int i = m_numStages; --i >=0; ++stage)
   {
     complex_t cb (1);
@@ -81,7 +81,7 @@ std::vector<PoleZeroPair> Cascade::getPoleZeros () const
   std::vector<PoleZeroPair> vpz;
   vpz.reserve (m_numStages);
 
-  const BiquadBase* stage = m_stageArray;
+  const Biquad* stage = m_stageArray;
   for (int i = m_numStages; --i >=0;)
   {
     BiquadPoleState bps (*stage++);
@@ -107,7 +107,7 @@ void Cascade::setLayout (const LayoutBase& proto)
   m_numStages = (numPoles + 1)/ 2;
   assert (m_numStages <= m_maxStages);
 
-  BiquadBase* stage = m_stageArray;
+  Biquad* stage = m_stageArray;
   for (int i = 0; i < m_numStages; ++i, ++stage)
     stage->setPoleZeroPair (proto[i]);
   

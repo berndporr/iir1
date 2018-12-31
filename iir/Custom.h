@@ -59,7 +59,7 @@ namespace Custom {
  * \param pole Position of the pole on the real axis
  * \param zero Position of the zero on the real axis
  **/
-struct OnePole : public BiquadBase
+struct OnePole : public Biquad
 {
 	void setup (double scale,
 		    double pole,
@@ -73,7 +73,7 @@ struct OnePole : public BiquadBase
  * \param zeroRho Radius of the zero
  * \param zeroTheta Angle of the zero
  **/
-struct TwoPole : public BiquadBase
+struct TwoPole : public Biquad
 {
 	void setup (double scale,
 		    double poleRho,

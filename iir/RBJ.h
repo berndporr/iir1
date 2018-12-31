@@ -60,7 +60,7 @@ namespace RBJ {
 	/** 
          * The base class of all RBJ filters
          **/
-	struct DllExport RBJbase : BiquadBase
+	struct DllExport RBJbase : Biquad
 	{
 	public:
 		/// filter operation

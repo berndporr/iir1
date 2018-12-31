@@ -49,7 +49,7 @@ namespace Iir {
  * digital filter. This is the building block for all IIR filters.
  *
  */
-	class DllExport BiquadBase
+	class DllExport Biquad
 	{
 	public:
 		/**
@@ -163,9 +163,6 @@ namespace Iir {
 
 //------------------------------------------------------------------------------
 
-
-
-
 	
 /** 
  * Expresses a biquad as a pair of pole/zeros, with gain
@@ -175,7 +172,7 @@ namespace Iir {
 	{
 		BiquadPoleState () { }
 
-		explicit BiquadPoleState (const BiquadBase& s);
+		explicit BiquadPoleState (const Biquad& s);
 
 		double gain;
 	};

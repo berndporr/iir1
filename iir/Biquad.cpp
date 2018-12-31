@@ -39,7 +39,7 @@
 
 namespace Iir {
 
-	BiquadPoleState::BiquadPoleState (const BiquadBase& s)
+	BiquadPoleState::BiquadPoleState (const Biquad& s)
 	{
 		const double a0 = s.getA0 ();
 		const double a1 = s.getA1 ();
@@ -85,7 +85,7 @@ namespace Iir {
  * Gets the frequency response of the Biquad
  * \param normalizedFrequency Normalised frequency (0 to 0.5)
  **/
-	complex_t BiquadBase::response (double normalizedFrequency) const
+	complex_t Biquad::response (double normalizedFrequency) const
 	{
 		const double a0 = getA0 ();
 		const double a1 = getA1 ();
@@ -112,7 +112,7 @@ namespace Iir {
 		return ch / cbot;
 	}
 
-	std::vector<PoleZeroPair> BiquadBase::getPoleZeros () const
+	std::vector<PoleZeroPair> Biquad::getPoleZeros () const
 	{
 		std::vector<PoleZeroPair> vpz;
 		BiquadPoleState bps (*this);
@@ -120,7 +120,7 @@ namespace Iir {
 		return vpz;
 	}
 
-	void BiquadBase::setCoefficients (double a0, double a1, double a2,
+	void Biquad::setCoefficients (double a0, double a1, double a2,
 					  double b0, double b1, double b2)
 	{
 		if (Iir::is_nan (a0)) throw std::invalid_argument("a0 is NaN");
@@ -138,7 +138,7 @@ namespace Iir {
 		m_b2 = b2/a0;
 	}
 
-	void BiquadBase::setOnePole (complex_t pole, complex_t zero)
+	void Biquad::setOnePole (complex_t pole, complex_t zero)
 	{
 		if (pole.imag() != 0) throw std::invalid_argument("Imaginary part of pole is non-zero.");
 		if (zero.imag() != 0) throw std::invalid_argument("Imaginary part of zero is non-zero.");
@@ -153,7 +153,7 @@ namespace Iir {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 
-	void BiquadBase::setTwoPole (complex_t pole1, complex_t zero1,
+	void Biquad::setTwoPole (complex_t pole1, complex_t zero1,
 				     complex_t pole2, complex_t zero2)
 	{
 		const double a0 = 1;
@@ -200,18 +200,18 @@ namespace Iir {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 
-	void BiquadBase::setPoleZeroForm (const BiquadPoleState& bps)
+	void Biquad::setPoleZeroForm (const BiquadPoleState& bps)
 	{
 		setPoleZeroPair (bps);
 		applyScale (bps.gain);
 	}
 
-	void BiquadBase::setIdentity ()
+	void Biquad::setIdentity ()
 	{
 		setCoefficients (1, 0, 0, 1, 0, 0);
 	}
 
-	void BiquadBase::applyScale (double scale)
+	void Biquad::applyScale (double scale)
 	{
 		m_b0 *= scale;
 		m_b1 *= scale;

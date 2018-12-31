@@ -60,14 +60,14 @@ namespace Iir {
                  * \param maxStages_ Number of biquads
                  * \param stageArray_ The array of the Biquads
                  **/
-		Storage (int maxStages_, BiquadBase* stageArray_)
+		Storage (int maxStages_, Biquad* stageArray_)
 			: maxStages (maxStages_)
 			, stageArray (stageArray_)
 		{
 		}
 
 		int maxStages;
-		BiquadBase* stageArray;
+		Biquad* stageArray;
 	};
 
 	/**
@@ -81,7 +81,7 @@ namespace Iir {
 	/**
          * returns the points to a biquad
          **/
-	const BiquadBase& operator[] (int index)
+	const Biquad& operator[] (int index)
 	{
 		assert (index >= 0 && index <= m_numStages);
 		return m_stageArray[index];
@@ -110,7 +110,7 @@ namespace Iir {
 	private:
 	int m_numStages;
 	int m_maxStages;
-	BiquadBase* m_stageArray;
+	Biquad* m_stageArray;
 	};
 
 //------------------------------------------------------------------------------
@@ -140,7 +140,6 @@ namespace Iir {
 		 **/
 		void setup (const double (&sosCoefficients)[MaxStages][6]) {
 			for (int i = 0; i < MaxStages; i++) {
-				m_states[i].reset();
 				m_stages[i].setCoefficients(
 					sosCoefficients[i][3],
 					sosCoefficients[i][4],
@@ -161,7 +160,7 @@ namespace Iir {
 		{
 			double out = in;
 			StateType* state = m_states;
-			BiquadBase const* stage = m_stages;
+			Biquad const* stage = m_stages;
 			for (int i = MaxStages; --i >= 0; ++state, ++stage)
 				out = state->filter(out, *stage);
 			return static_cast<Sample> (out);
@@ -173,7 +172,7 @@ namespace Iir {
 		}
 
 	private:
-		BiquadBase m_stages[MaxStages];
+		Biquad m_stages[MaxStages];
 		StateType m_states[MaxStages];
 	};
 
