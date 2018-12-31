@@ -42,124 +42,194 @@
 
 namespace Iir {
 
-struct DllExport BiquadPoleState;
+	struct DllExport BiquadPoleState;
 
 /*
  * Holds coefficients for a second order Infinite Impulse Response
  * digital filter. This is the building block for all IIR filters.
  *
  */
-class DllExport BiquadBase
-{
-public:
-  template <class StateType>
-  struct State : StateType
-  {
-    template <typename Sample>
-    inline Sample filter(const Sample in, const BiquadBase& b)
-    {
-      return static_cast<Sample> (StateType::filter(in, b));
-    }
-  };
+	class DllExport BiquadBase
+	{
+	public:
+		/**
+		 * Calculate filter response at the given normalized frequency.
+		 **/
+		complex_t response (double normalizedFrequency) const;
 
-public:
-  // Calculate filter response at the given normalized frequency.
-  complex_t response (double normalizedFrequency) const;
+		/**
+                 * Returns the pole / zero Pairs as a vector
+                 **/
+		std::vector<PoleZeroPair> getPoleZeros () const;
 
-  std::vector<PoleZeroPair> getPoleZeros () const;
+		/**
+                 * Returns 1st IIR coefficient (usually one)
+                 **/
+		double getA0 () const { return m_a0; }
 
-  double getA0 () const { return m_a0; }
-  double getA1 () const { return m_a1*m_a0; }
-  double getA2 () const { return m_a2*m_a0; }
-  double getB0 () const { return m_b0*m_a0; }
-  double getB1 () const { return m_b1*m_a0; }
-  double getB2 () const { return m_b2*m_a0; }
+		/**
+                 * Returns 2nd IIR coefficient
+                 **/
+		double getA1 () const { return m_a1*m_a0; }
 
-  // Process a sample in the given form
-  template <class StateType, typename Sample>
-  Sample filter(Sample s, StateType& state) const
-  {
-	  return state.filter(s, *this);
-  }
+		/**
+                 * Returns 3rd IIR coefficient
+                 **/
+		double getA2 () const { return m_a2*m_a0; }
 
-public:
-  void setCoefficients (double a0, double a1, double a2,
-                        double b0, double b1, double b2);
+		/**
+                 * Returns 1st FIR coefficient
+                 **/
+		double getB0 () const { return m_b0*m_a0; }
 
-  void setOnePole (complex_t pole, complex_t zero);
+		/**
+                 * Returns 2nd FIR coefficient
+                 **/
+		double getB1 () const { return m_b1*m_a0; }
 
-  void setTwoPole (complex_t pole1, complex_t zero1,
-                   complex_t pole2, complex_t zero2);
+		/**
+                 * Returns 3rd FIR coefficient
+                 **/
+		double getB2 () const { return m_b2*m_a0; }
 
-  void setPoleZeroPair (const PoleZeroPair& pair)
-  {
-    if (pair.isSinglePole ())
-      setOnePole (pair.poles.first, pair.zeros.first);
-    else
-      setTwoPole (pair.poles.first, pair.zeros.first,
-                  pair.poles.second, pair.zeros.second);
-  }
+		/** 
+                 * Filter a sample with the coefficients provided here and the State provided as an argument.
+                 * \param s The sample to be filtered.
+                 * \param state The Delay lines (instance of a state from State.h)
+                 **/
+		template <class StateType, typename Sample>
+			Sample filter(Sample s, StateType& state) const
+		{
+			return state.filter(s, *this);
+		}
 
-  void setPoleZeroForm (const BiquadPoleState& bps);
+	public:
+		/**
+                 * Sets all coefficients
+                 * \param a0 1st IIR coefficient
+                 * \param a1 2nd IIR coefficient
+                 * \param a2 3rd IIR coefficient
+                 * \param b0 1st FIR coefficient
+                 * \param b1 2nd FIR coefficient
+                 * \param b2 3rd FIR coefficient
+                 **/
+		void setCoefficients (double a0, double a1, double a2,
+				      double b0, double b1, double b2);
 
-  void setIdentity ();
+		/**
+                 * Sets one (real) pole and zero. Throws exception if imaginary components.
+                 **/
+		void setOnePole (complex_t pole, complex_t zero);
 
-  void applyScale (double scale);
+		/**
+                 * Sets two poles/zoes as a pair. Needs to be complex conjugate.
+                 **/
+		void setTwoPole (complex_t pole1, complex_t zero1,
+				 complex_t pole2, complex_t zero2);
 
-public:
-  double m_a0;
-  double m_a1;
-  double m_a2;
-  double m_b1;
-  double m_b2;
-  double m_b0;
-};
+		/**
+		 * Sets a complex conjugate pair
+                 **/
+		void setPoleZeroPair (const PoleZeroPair& pair)
+		{
+			if (pair.isSinglePole ())
+				setOnePole (pair.poles.first, pair.zeros.first);
+			else
+				setTwoPole (pair.poles.first, pair.zeros.first,
+					    pair.poles.second, pair.zeros.second);
+		}
+
+		void setPoleZeroForm (const BiquadPoleState& bps);
+
+		/**
+                 * Sets the coefficiens as pass through. (b0=1,a0=1, rest zero)
+                 **/
+		void setIdentity ();
+
+		/**
+                 * Performs scaling operation on the FIR coefficients
+                 * \param scale Mulitplies the coefficients b0,b1,b2 with the scaling factor scale.
+                 **/
+		void applyScale (double scale);
+
+	public:
+		double m_a0;
+		double m_a1;
+		double m_a2;
+		double m_b1;
+		double m_b2;
+		double m_b0;
+	};
 
 //------------------------------------------------------------------------------
 
+
+
+
+	
 /** 
  * Expresses a biquad as a pair of pole/zeros, with gain
  * values so that the coefficients can be reconstructed precisely.
  **/
-struct DllExport BiquadPoleState : PoleZeroPair
-{
-  BiquadPoleState () { }
+	struct DllExport BiquadPoleState : PoleZeroPair
+	{
+		BiquadPoleState () { }
 
-  explicit BiquadPoleState (const BiquadBase& s);
+		explicit BiquadPoleState (const BiquadBase& s);
 
-  double gain;
-};
+		double gain;
+	};
 
-// More permissive interface for fooling around
-class DllExport Biquad : public BiquadBase
-{
-public:
-  Biquad ();
 
-  explicit Biquad (const BiquadPoleState& bps);
 
-public:
-  void setOnePole (complex_t pole, complex_t zero)
-  {
-    BiquadBase::setOnePole (pole, zero);
-  }
+/**
+ * More permissive interface of Biquad
+ **/
+	class DllExport Biquad : public BiquadBase
+	{
+	public:
+		Biquad ();
 
-  void setTwoPole (complex_t pole1, complex_t zero1,
-                   complex_t pole2, complex_t zero2)
-  {
-    BiquadBase::setTwoPole (pole1, zero1, pole2, zero2);
-  }
+                /**
+                 * Construct a second order section from a pair of poles and zeroes
+                 **/
+		explicit Biquad (const BiquadPoleState& bps);
+		
+	public:
+		/**
+                 * Sets one (real) pole and zero. Throws exception if imaginary components.
+                 **/
+		void setOnePole (complex_t pole, complex_t zero)
+		{
+			BiquadBase::setOnePole (pole, zero);
+		}
 
-  void setPoleZeroPair (const PoleZeroPair& pair)
-  {
-    BiquadBase::setPoleZeroPair (pair);
-  }
+		/**
+                 * Sets two poles/zoes as a pair. Needs to be complex conjugate.
+                 **/
+		void setTwoPole (complex_t pole1, complex_t zero1,
+				 complex_t pole2, complex_t zero2)
+		{
+			BiquadBase::setTwoPole (pole1, zero1, pole2, zero2);
+		}
 
-  void applyScale (double scale)
-  {
-    BiquadBase::applyScale (scale);
-  }
-};
+		/**
+                 * Sets two poles/zoes pair. Needs to be complex conjugate.
+                 **/
+		void setPoleZeroPair (const PoleZeroPair& pair)
+		{
+			BiquadBase::setPoleZeroPair (pair);
+		}
+
+		/**
+                 * Performs scaling operation on the FIR coefficients
+                 * \param scale Mulitplies the coefficients b0,b1,b2 with the scaling factor scale.
+                 **/
+		void applyScale (double scale)
+		{
+			BiquadBase::applyScale (scale);
+		}
+	};
 
 }
 

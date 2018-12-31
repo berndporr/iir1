@@ -45,14 +45,6 @@
 
 namespace Iir {
 
-/*
- * Various forms of state information required to
- * process channels of actual sample data.
- *
- */
-
-//---------------------------------------------------------------------
-
 /**
  * State for applying a second order section to a sample using Direct Form I
  *
@@ -61,42 +53,42 @@ namespace Iir {
  *  y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2]
  *                      - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]  
  **/
-class DllExport DirectFormI
-{
-public:
-  DirectFormI ()
-  {
-    reset();
-  }
+	class DllExport DirectFormI
+	{
+	public:
+		DirectFormI ()
+		{
+			reset();
+		}
 
-  void reset ()
-  {
-    m_x1 = 0;
-    m_x2 = 0;
-    m_y1 = 0;
-    m_y2 = 0;
-  }
+		void reset ()
+		{
+			m_x1 = 0;
+			m_x2 = 0;
+			m_y1 = 0;
+			m_y2 = 0;
+		}
 
-  template <typename Sample>
-  inline Sample filter(const Sample in,
-		       const BiquadBase& s)
-  {
-    double out = s.m_b0*in + s.m_b1*m_x1 + s.m_b2*m_x2
-                           - s.m_a1*m_y1 - s.m_a2*m_y2;
-    m_x2 = m_x1;
-    m_y2 = m_y1;
-    m_x1 = in;
-    m_y1 = out;
+		template <typename Sample>
+			inline Sample filter(const Sample in,
+					     const BiquadBase& s)
+		{
+			double out = s.m_b0*in + s.m_b1*m_x1 + s.m_b2*m_x2
+				- s.m_a1*m_y1 - s.m_a2*m_y2;
+			m_x2 = m_x1;
+			m_y2 = m_y1;
+			m_x1 = in;
+			m_y1 = out;
 
-    return static_cast<Sample> (out);
-  }
+			return static_cast<Sample> (out);
+		}
 
-protected:
-  double m_x2; // x[n-2]
-  double m_y2; // y[n-2]
-  double m_x1; // x[n-1]
-  double m_y1; // y[n-1]
-};
+	protected:
+		double m_x2; // x[n-2]
+		double m_y2; // y[n-2]
+		double m_x1; // x[n-1]
+		double m_y1; // y[n-1]
+	};
 
 //------------------------------------------------------------------------------
 
@@ -109,78 +101,78 @@ protected:
  *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
  *
  **/
-class DllExport DirectFormII
-{
-public:
-  DirectFormII ()
-  {
-    reset ();
-  }
+	class DllExport DirectFormII
+	{
+	public:
+		DirectFormII ()
+		{
+			reset ();
+		}
 
-  void reset ()
-  {
-    m_v1 = 0;
-    m_v2 = 0;
-  }
+		void reset ()
+		{
+			m_v1 = 0;
+			m_v2 = 0;
+		}
 
-  template <typename Sample>
-  Sample filter(const Sample in,
-		const BiquadBase& s)
-  {
-    double w   = in - s.m_a1*m_v1 - s.m_a2*m_v2;
-    double out =      s.m_b0*w    + s.m_b1*m_v1 + s.m_b2*m_v2;
+		template <typename Sample>
+			Sample filter(const Sample in,
+				      const BiquadBase& s)
+		{
+			double w   = in - s.m_a1*m_v1 - s.m_a2*m_v2;
+			double out =      s.m_b0*w    + s.m_b1*m_v1 + s.m_b2*m_v2;
 
-    m_v2 = m_v1;
-    m_v1 = w;
+			m_v2 = m_v1;
+			m_v1 = w;
 
-    return static_cast<Sample> (out);
-  }
+			return static_cast<Sample> (out);
+		}
 
-private:
-  double m_v1; // v[-1]
-  double m_v2; // v[-2]
-};
+	private:
+		double m_v1; // v[-1]
+		double m_v2; // v[-2]
+	};
 
 
 //------------------------------------------------------------------------------
 
-class DllExport TransposedDirectFormII
-{
-public:
-  TransposedDirectFormII ()
-  {
-    reset ();
-  }
+	class DllExport TransposedDirectFormII
+	{
+	public:
+		TransposedDirectFormII ()
+		{
+			reset ();
+		}
 
-  void reset ()
-  {
-    m_s1 = 0;
-    m_s1_1 = 0;
-    m_s2 = 0;
-    m_s2_1 = 0;
-  }
+		void reset ()
+		{
+			m_s1 = 0;
+			m_s1_1 = 0;
+			m_s2 = 0;
+			m_s2_1 = 0;
+		}
 
-  template <typename Sample>
-  inline Sample filter(const Sample in,
-                          const BiquadBase& s)
-  {
-    double out;
+		template <typename Sample>
+			inline Sample filter(const Sample in,
+					     const BiquadBase& s)
+		{
+			double out;
 
-    out = m_s1_1 + s.m_b0*in;
-    m_s1 = m_s2_1 + s.m_b1*in - s.m_a1*out;
-    m_s2 = s.m_b2*in - s.m_a2*out;
-    m_s1_1 = m_s1;
-    m_s2_1 = m_s2;
+			out = m_s1_1 + s.m_b0*in;
+			m_s1 = m_s2_1 + s.m_b1*in - s.m_a1*out;
+			m_s2 = s.m_b2*in - s.m_a2*out;
+			m_s1_1 = m_s1;
+			m_s2_1 = m_s2;
 
-    return static_cast<Sample> (out);
-  }
+			return static_cast<Sample> (out);
+		}
 
-private:
-  double m_s1;
-  double m_s1_1;
-  double m_s2;
-  double m_s2_1;
-};
+	private:
+		double m_s1;
+		double m_s1_1;
+		double m_s2;
+		double m_s2_1;
+	};
 
 }
 
