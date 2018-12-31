@@ -50,14 +50,6 @@ namespace Iir {
 	class DllExport Cascade
 	{
 
-	public:
-		/**
-		 * Alias for Biquad
-                 **/
-		struct DllExport Stage : Biquad
-	{
-	};
-
 	/**
          * Pointer to an array of Biquads
          **/
@@ -68,14 +60,14 @@ namespace Iir {
                  * \param maxStages_ Number of biquads
                  * \param stageArray_ The array of the Biquads
                  **/
-		Storage (int maxStages_, Stage* stageArray_)
+		Storage (int maxStages_, BiquadBase* stageArray_)
 			: maxStages (maxStages_)
 			, stageArray (stageArray_)
 		{
 		}
 
 		int maxStages;
-		Stage* stageArray;
+		BiquadBase* stageArray;
 	};
 
 	/**
@@ -89,7 +81,7 @@ namespace Iir {
 	/**
          * returns the points to a biquad
          **/
-	const Stage& operator[] (int index)
+	const BiquadBase& operator[] (int index)
 	{
 		assert (index >= 0 && index <= m_numStages);
 		return m_stageArray[index];
@@ -118,7 +110,7 @@ namespace Iir {
 	private:
 	int m_numStages;
 	int m_maxStages;
-	Stage* m_stageArray;
+	BiquadBase* m_stageArray;
 	};
 
 //------------------------------------------------------------------------------
@@ -169,7 +161,7 @@ namespace Iir {
 		{
 			double out = in;
 			StateType* state = m_states;
-			Biquad const* stage = m_stages;
+			BiquadBase const* stage = m_stages;
 			for (int i = MaxStages; --i >= 0; ++state, ++stage)
 				out = state->filter(out, *stage);
 			return static_cast<Sample> (out);
@@ -181,7 +173,7 @@ namespace Iir {
 		}
 
 	private:
-		Cascade::Stage m_stages[MaxStages];
+		BiquadBase m_stages[MaxStages];
 		StateType m_states[MaxStages];
 	};
 

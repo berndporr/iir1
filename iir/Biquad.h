@@ -180,57 +180,6 @@ namespace Iir {
 		double gain;
 	};
 
-
-
-/**
- * More permissive interface of Biquad
- **/
-	class DllExport Biquad : public BiquadBase
-	{
-	public:
-		Biquad ();
-
-                /**
-                 * Construct a second order section from a pair of poles and zeroes
-                 **/
-		explicit Biquad (const BiquadPoleState& bps);
-		
-	public:
-		/**
-                 * Sets one (real) pole and zero. Throws exception if imaginary components.
-                 **/
-		void setOnePole (complex_t pole, complex_t zero)
-		{
-			BiquadBase::setOnePole (pole, zero);
-		}
-
-		/**
-                 * Sets two poles/zoes as a pair. Needs to be complex conjugate.
-                 **/
-		void setTwoPole (complex_t pole1, complex_t zero1,
-				 complex_t pole2, complex_t zero2)
-		{
-			BiquadBase::setTwoPole (pole1, zero1, pole2, zero2);
-		}
-
-		/**
-                 * Sets two poles/zoes pair. Needs to be complex conjugate.
-                 **/
-		void setPoleZeroPair (const PoleZeroPair& pair)
-		{
-			BiquadBase::setPoleZeroPair (pair);
-		}
-
-		/**
-                 * Performs scaling operation on the FIR coefficients
-                 * \param scale Mulitplies the coefficients b0,b1,b2 with the scaling factor scale.
-                 **/
-		void applyScale (double scale)
-		{
-			BiquadBase::applyScale (scale);
-		}
-	};
-
 }
-
+	
 #endif

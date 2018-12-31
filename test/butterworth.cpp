@@ -20,15 +20,19 @@ int main (int,char**)
 	// calc the coefficients
 	f.setup (samplingrate, cutoff_frequency);
 	
-	double b;
-	for(int i=0;i<10000;i++) 
+	double b = 0;
+	double b2 = 0;
+	for(int i=0;i<1000000;i++) 
 	{
 		float a=0;
 		if (i==10) a = 1;
+		b2 = b;
 		b = f.filter(a);
 		assert_print(!isnan(b),"Lowpass output is NAN\n");
+		if ((i>20) && (i<100))
+			assert_print((b != 0) || (b2 != 0),
+				     "Lowpass output is zero\n");
 	}
-	//fprintf(stderr,"%e\n",b);
 	assert_print(fabs(b) < 1E-30,"Lowpass value for t->inf to high!");
 
 	Iir::Butterworth::BandStop<order,Iir::DirectFormI> bs;

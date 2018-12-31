@@ -53,18 +53,27 @@ namespace Iir {
 
 namespace Custom {
 
-//
-// Raw filters
-//
-
-struct OnePole : Biquad
+/**
+ * Setting up a filter with with one real pole, real zero and scale it by the scale factor
+ * \param scale Scale the FIR coefficients by this factor
+ * \param pole Position of the pole on the real axis
+ * \param zero Position of the zero on the real axis
+ **/
+struct OnePole : public BiquadBase
 {
 	void setup (double scale,
 		    double pole,
 		    double zero);
 };
 
-struct TwoPole : Biquad
+/**
+ * Set a pole/zero pair in polar coordinates and scale the FIR filter coefficients
+ * \param poleRho Radius of the pole
+ * \param poleTheta Angle of the pole
+ * \param zeroRho Radius of the zero
+ * \param zeroTheta Angle of the zero
+ **/
+struct TwoPole : public BiquadBase
 {
 	void setup (double scale,
 		    double poleRho,
