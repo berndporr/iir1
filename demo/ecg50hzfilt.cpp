@@ -11,7 +11,7 @@ int main (int,char**)
 	Iir::RBJ::IIRNotch iirnotch;
 	iirnotch.setup(fs,mains);
 
-        const float ecg_max_f = 100;
+        const float ecg_max_f = -1;
 	Iir::Butterworth::LowPass<4> lp;
 	lp.setup(fs,ecg_max_f);
 
