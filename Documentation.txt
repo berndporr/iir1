@@ -79,11 +79,12 @@ Using these filters is easy:
 
 Credits
 
-  The initial code was written by the author Vinnie Falco and then
-  further developed by Bernd Porr <www.berndporr.me.uk>.
+  The initial code was written by the author Vinnie Falco
+  (https://github.com/vinniefalco/DSPFilters)
+  and then further developed by Bernd Porr (www.berndporr.me.uk).
 
-  Some filter ideas are based on a java applet (http://www.falstad.com/dfilter/)
-  developed by Paul Falstad.
+  Some filter ideas are based on a java applet
+  (http://www.falstad.com/dfilter/) developed by Paul Falstad.
 
 
 Bibliography
