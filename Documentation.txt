@@ -1,9 +1,6 @@
-/*******************************************************************************
+IIR1 -- Realtime C++ filter library
 
-"A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco and further developed by Bernd Porr.
-
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2009 by Vinnie Falco
@@ -27,10 +24,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-********************************************************************************
-
-="A Collection of Useful C++ Classes for Digital Signal Processing"=
-_By Vincent Falco -- adapted by Bernd Porr_
+------------------------------------------------------------------------------
 
 "Techniques for digital signal processing are well guarded and held
 close to the chest, as they have valuable applications for multimedia
