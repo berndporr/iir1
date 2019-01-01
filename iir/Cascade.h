@@ -49,6 +49,7 @@ namespace Iir {
  */
 	class DllExport Cascade
 	{
+	public:
 
 	/**
          * Pointer to an array of Biquads
