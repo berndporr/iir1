@@ -3,9 +3,6 @@
 "A Collection of Useful C++ Classes for Digital Signal Processing"
  By Vinnie Falco and further developed by Bernd Porr.
 
-The original project location of the Windows implementation:
-https://github.com/vinniefalco/DSPFilters
-
 --------------------------------------------------------------------------------
 
 License: MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -33,18 +30,28 @@ THE SOFTWARE.
 ********************************************************************************
 
 ="A Collection of Useful C++ Classes for Digital Signal Processing"=
-_By Vincent Falco - adapted for Linux by Bernd Porr_
+_By Vincent Falco -- adapted by Bernd Porr_
 
-_"Techniques for digital signal processing are well guarded and held
+"Techniques for digital signal processing are well guarded and held
 close to the chest, as they have valuable applications for multimedia
 content. The black art of Infinite Impulse Response ("IIR") filtering
 has remained shrouded in secrecy with little publicly available source
-code....until now."_
+code....until now."
 
-----
-Building on the work of cherished luminaries such as Sophocles Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this library harnesses the power of C++ templates to solve a useful problem in digital signal processing: the realization of IIR filters of arbitrary order and prescribed specifications with various properties such as Butterworth, Chebyshev and Python based coefficients. The library is provided under the MIT license and is therefore fully compatible with proprietary usage.
+Building on the work of cherished luminaries such as Sophocles
+Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this
+library harnesses the power of C++ templates to solve a useful problem
+in digital signal processing: the realization of IIR filters of
+arbitrary order and prescribed specifications with various properties
+such as Butterworth, Chebyshev and Python based coefficients. The
+library is provided under the MIT license and is therefore fully
+compatible with proprietary usage.
 
-Classes are designed as independent re-usable building blocks. Use some or all of the provided features, or extend the functionality by writing your own objects that plug into the robust framework. Only the code that you need will get linked into your application. Here's a list of features:
+Classes are designed as independent re-usable building blocks. Use
+some or all of the provided features, or extend the functionality by
+writing your own objects that plug into the robust framework. Only the
+code that you need will get linked into your application. Here's a
+list of features:
 
 	* Exclusive focus on IIR filters
 	* Causal/realtime processing with single sample in and signal sample out filter functions
@@ -76,8 +83,6 @@ Using these filters is easy:
     a = f.filter(a);
 }}}
 
-********************************************************************************
-
 Credits
 
   The initial code was written by the author Vinnie Falco and then
@@ -99,25 +104,30 @@ Bibliography
    A. G. Constantinides, B.Sc.(Eng.) Ph.D.
    (Proceedings of the IEEE, vol. 117, pp. 1585-1590, August 1970)
 
-********************************************************************************
 
 DOCUMENTATION
 
-All symbols are in the Dsp namespace.
+The doc directory contains the full class/function documentation as a PDF.
+Run doxygen to generate the HTML manual. It's strongly recommended to
+check out the examples in the demo directory.
+
+Here is a brief summary:
+
+All symbols are in the Iir namespace.
 
 Filter family namespaces
 
   Each family of filters is given its own namespace. Currently these namespaces
   include:
 
-  RBJ:          Filters from the RBJ Cookbook and IIRNotch
   Butterworth:  Filters with Butterworth response
   ChebyshevI:   Filters using Chebyshev polynomials (ripple in the passband)
   ChebyshevII:  "Inverse Chebyshev" filters (ripple in the stopband)
   Bessel:       Uses Bessel polynomials, theoretically with linear phase
+  RBJ:          Filters from the RBJ Cookbook and IIRNotch
   Custom:       Coefficients provided by Python's scipy and simple pole/zero filters.
 
-<class FilterClass>
+User filters / filter classes
 
   Within each namespace we have a set of "user filters" (each one is an example
   of a FilterClass). For example, the raw filters in the Butterworth namespace are:
@@ -136,13 +146,15 @@ Filter family namespaces
   changing filter settings. All they offer is a setup() function for updating
   the IIR coefficients to a given set of parameters.
 
-2nd order IIR implementations which are cascaded to perform
-the actual number crunching (default is DirectFormII):
+2nd Order Biquads
 
- DirectFormI
- *  y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2]
- *                      - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]  
+  2nd order IIR implementations, called Biquads, are cascaded to perform
+  the actual number crunching:
 
- DirectFormII
- *  v[n] =         x[n] - (a1/a0)*v[n-1] - (a2/a0)*v[n-2]
- *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
+  DirectFormI (RBJ)
+  *  y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2]
+  *                      - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]  
+
+  DirectFormII (default)
+  *  v[n] =         x[n] - (a1/a0)*v[n-1] - (a2/a0)*v[n-2]
+  *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
