@@ -1,9 +1,7 @@
 /*******************************************************************************
 
 "A Collection of Useful C++ Classes for Digital Signal Processing"
- By Vinnie Falco
-
- Adadpted by Bernd Porr for realtime processing, mail@berndporr.me.uk
+ By Vinnie Falco and further developed by Bernd Porr.
 
 The original project location of the Windows implementation:
 https://github.com/vinniefalco/DSPFilters
@@ -44,7 +42,7 @@ has remained shrouded in secrecy with little publicly available source
 code....until now."_
 
 ----
-Building on the work of cherished luminaries such as Sophocles Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this library harnesses the power of C++ templates to solve a useful problem in digital signal processing: the realization of multichannel IIR filters of arbitrary order and prescribed specifications with various properties such as Butterworth, Chebyshev, Elliptic, and Python based coefficients. The library is provided under the MIT license and is therefore fully compatible with proprietary usage.
+Building on the work of cherished luminaries such as Sophocles Orfanidis, Andreas Antoniou, Martin Holters, and Udo Zolzer, this library harnesses the power of C++ templates to solve a useful problem in digital signal processing: the realization of IIR filters of arbitrary order and prescribed specifications with various properties such as Butterworth, Chebyshev and Python based coefficients. The library is provided under the MIT license and is therefore fully compatible with proprietary usage.
 
 Classes are designed as independent re-usable building blocks. Use some or all of the provided features, or extend the functionality by writing your own objects that plug into the robust framework. Only the code that you need will get linked into your application. Here's a list of features:
 
@@ -68,11 +66,13 @@ Using these filters is easy:
 {{{
     // Create a Chebyshev type I Band Stop filter of order 3
     const int order = 3;
-    Dsp::ChebyshevI::BandStop <order> f;
+    Iir::ChebyshevI::BandStop <order> f;
     f.setup (44100,// sample rate
              4000, // center frequency
              880,  // band width
              1);   // ripple dB
+	     
+    // sample by sample	     
     a = f.filter(a);
 }}}
 
@@ -80,13 +80,12 @@ Using these filters is easy:
 
 Credits
 
-  All of this code was written by the author Vinnie Falco except where marked.
+  The initial code was written by the author Vinnie Falco and then
+  further developed by Bernd Porr <www.berndporr.me.uk>.
 
   Some filter ideas are based on a java applet (http://www.falstad.com/dfilter/)
   developed by Paul Falstad.
 
-  This code has been adapted for realtime processing
-  by Bernd Porr <www.berndporr.me.uk>.
 
 Bibliography
 
@@ -132,7 +131,7 @@ Filter family namespaces
   Butterworth::BandShelf
 
   When a class template (such as SimpleFilter) requires a FilterClass, it is
-  expecting an identifier of a user filter. For example, Legendre::LowPass. The
+  expecting an identifier of a user filter. For example, Butterworth::LowPass. The
   user filters do not have any support for introspection or the Params style of
   changing filter settings. All they offer is a setup() function for updating
   the IIR coefficients to a given set of parameters.
@@ -147,6 +146,3 @@ the actual number crunching (default is DirectFormII):
  DirectFormII
  *  v[n] =         x[n] - (a1/a0)*v[n-1] - (a2/a0)*v[n-2]
  *  y(n) = (b0/a0)*v[n] + (b1/a0)*v[n-1] + (b2/a0)*v[n-2]
-
- TransposedDirectFormI
- TransposedDirectFormII
