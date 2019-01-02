@@ -56,7 +56,7 @@ namespace Iir {
  *
  **/
 
-#define ONESQRT (1/sqrt(2))
+#define ONESQRT2 (1/sqrt(2))
 	
 namespace RBJ {
 
@@ -96,7 +96,7 @@ namespace RBJ {
                  **/
 		void setup(double sampleRate,
 			   double cutoffFrequency,
-			   double q = ONESQRT);
+			   double q = ONESQRT2);
 	};
 
 	/**
@@ -112,7 +112,7 @@ namespace RBJ {
                  **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
-			    double q = ONESQRT);
+			    double q = ONESQRT2);
 	};
 
 	/**
