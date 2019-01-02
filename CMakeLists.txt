@@ -4,7 +4,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	set(CMAKE_BUILD_TYPE "Release")
 endif()
 
-project(iir VERSION 1.5.1 LANGUAGES CXX)
+project(iir VERSION 1.5.2 LANGUAGES CXX)
 include(GNUInstallDirs)
 add_subdirectory(test)
 add_subdirectory(demo)
