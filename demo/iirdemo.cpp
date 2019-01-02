@@ -135,7 +135,7 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
-	
+	// We have two 2nd order filters (order = 4)
 	Iir::Custom::SOSCascade<2> cust;
 	// generated with: "elliptic_design.py"
 	const double coeff[][6] = {
