@@ -55,6 +55,9 @@ namespace Iir {
  * the bandwidth of the notch or bandpass.
  *
  **/
+
+#define ONESQRT (1/sqrt(2))
+	
 namespace RBJ {
 
 	/** 
@@ -93,7 +96,7 @@ namespace RBJ {
                  **/
 		void setup(double sampleRate,
 			   double cutoffFrequency,
-			   double q);
+			   double q = ONESQRT);
 	};
 
 	/**
@@ -109,7 +112,7 @@ namespace RBJ {
                  **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
-			    double q);
+			    double q = ONESQRT);
 	};
 
 	/**
@@ -121,7 +124,7 @@ namespace RBJ {
                  * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the bandpass
-                 * \param bandWidth Bandwidth of the bandpass
+                 * \param bandWidth Bandwidth in octaves
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
@@ -137,7 +140,7 @@ namespace RBJ {
                  * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the bandpass
-                 * \param bandWidth Bandwidth of the bandpass
+                 * \param bandWidth Bandwidth in octaves
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
@@ -154,7 +157,7 @@ namespace RBJ {
                  * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the bandstop
-                 * \param bandWidth Bandwidth of the bandstop
+                 * \param bandWidth Bandwidth in octaves
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
@@ -185,24 +188,54 @@ namespace RBJ {
 			    double q_factor = 10);
 	};
 
+	/**
+         * Low shelf: 0db in the stopband and gainDb in the passband.
+         **/
 	struct DllExport LowShelf : RBJbase
 	{
+		/**
+		 * Calculates the coefficients
+		 * \param sampleRate Sampling rate
+		 * \param cutoffFrequency Cutoff frequency
+		 * \param gainDb Gain in the passband
+                 * \param shelfSlope Slope between stop/passband. 1 = as steep as it can.
+		 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double gainDb,
-			    double shelfSlope);
+			    double shelfSlope = 1);
 	};
 
+	/**
+         * High shelf: 0db in the stopband and gainDb in the passband.
+         **/
 	struct DllExport HighShelf : RBJbase
 	{
+		/**
+		 * Calculates the coefficients
+		 * \param sampleRate Sampling rate
+		 * \param cutoffFrequency Cutoff frequency
+		 * \param gainDb Gain in the passband
+                 * \param shelfSlope Slope between stop/passband. 1 = as steep as it can.
+		 **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double gainDb,
-			    double shelfSlope);
+			    double shelfSlope = 1);
 	};
 
+	/**
+         * Band shelf: 0db in the stopband and gainDb in the passband.
+         **/
 	struct DllExport BandShelf : RBJbase
 	{
+		/**
+		 * Calculates the coefficients
+		 * \param sampleRate Sampling rate
+		 * \param centerFrequency frequency
+		 * \param gainDb Gain in the passband
+                 * \param bandWidth Bandwidth in octaves
+		 **/
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double gainDb,
