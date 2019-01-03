@@ -33,26 +33,6 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 	
-	// Bandpass shelf filter (default 0dB execpt 10 dB in the passband)
-	// Here the "direct form I" is chosen for the number crunching
-	Iir::Butterworth::BandShelf<4,Iir::DirectFormI> bp;
-	const float center_frequency = 100;
-	const float frequency_width = 20;
-	const float gain_in_passband = 10;
-	bp.setup (samplingrate,
-		  center_frequency,
-		  frequency_width,
-		  gain_in_passband);
-	fimpulse = fopen("bp.dat","wt");
-	for(int i=0;i<1000;i++) 
-	{
-		double a=0;
-		if (i==10) a = 1;
-		double b = bp.filter(a);
-		fprintf(fimpulse,"%e\n",b);
-	}
-	fclose(fimpulse);
-	
 	// RBJ highpass filter
 	// The Q factor determines the resonance at the
 	// cutoff frequency. If Q=1/sqrt(2) then the transition
@@ -98,19 +78,6 @@ int main (int,char**)
 		double a=0;
 		if (i==10) a = 1;
 		double b = lp_cheby2.filter(a);
-		fprintf(fimpulse,"%e\n",b);
-	}
-	fclose(fimpulse);
-
-	Iir::Bessel::BandPass<6> bp_bessel;
-	bp_bessel.setup (samplingrate,
-			 center_frequency, frequency_width);
-	fimpulse = fopen("bp_bessel.dat","wt");
-	for(int i=0;i<1000;i++) 
-	{
-		double a=0;
-		if (i==10) a = 1;
-		double b = bp_bessel.filter(a);
 		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);
