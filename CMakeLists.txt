@@ -4,14 +4,13 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	set(CMAKE_BUILD_TYPE "Release")
 endif()
 
-project(iir VERSION 1.5.2 LANGUAGES CXX)
+project(iir VERSION 1.6.0 LANGUAGES CXX)
 include(GNUInstallDirs)
 add_subdirectory(test)
 add_subdirectory(demo)
 enable_testing ()
 
 set(LIBSRC
-  iir/Bessel.cpp
   iir/Biquad.cpp
   iir/Butterworth.cpp
   iir/Cascade.cpp
@@ -20,11 +19,9 @@ set(LIBSRC
   iir/Custom.cpp
   iir/PoleFilter.cpp
   iir/RBJ.cpp
-  iir/RootFinder.cpp
   iir/State.cpp)
 
 set(LIBINCLUDE
-  iir/Bessel.h
   iir/Biquad.h
   iir/Butterworth.h
   iir/Cascade.h
@@ -36,7 +33,6 @@ set(LIBINCLUDE
   iir/MathSupplement.h
   iir/PoleFilter.h
   iir/RBJ.h
-  iir/RootFinder.h
   iir/State.h
   iir/Types.h
   iir/Utilities.h) 

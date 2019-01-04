@@ -47,7 +47,6 @@
 #include "iir/State.h"
 #include "iir/Utilities.h"
 
-#include "iir/Bessel.h"
 #include "iir/Butterworth.h"
 #include "iir/ChebyshevI.h"
 #include "iir/ChebyshevII.h"

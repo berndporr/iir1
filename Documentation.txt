@@ -50,10 +50,9 @@ list of features:
 	* Exclusive focus on IIR filters
 	* Causal/realtime processing with single sample in and signal sample out filter functions
 	* Complete implementation of all "RBJ Biquad" Cookbook filter formulas
-	* Butterworth, Chebyshev and Bessel designs
+	* Butterworth and Chebyshev designs
 	* Low Pass, High Pass, Band Pass, Band Stop transformations
 	* Low, High, and Band Shelf filter implementations for most types
-	* Smooth interpolation of filter settings, pole/zeros, and biquad coefficients to achieve seamless parameter changes
 	* Representation of digital filters using poles and zeros
 	* Realization using Direct Form I, Direct Form II, or user provided class
 	* Fully factored to minimize template instantiations
@@ -65,8 +64,8 @@ list of features:
 Using these filters is easy:
 
 {{{
-    // Create a Chebyshev type I Band Stop filter of order 3
-    const int order = 3;
+    // Create a Chebyshev type I Band Stop filter of order 4
+    const int order = 4;
     Iir::ChebyshevI::BandStop <order> f;
     f.setup (44100,// sample rate
              4000, // center frequency
@@ -118,7 +117,6 @@ Filter family namespaces
   Butterworth:  Filters with Butterworth response
   ChebyshevI:   Filters using Chebyshev polynomials (ripple in the passband)
   ChebyshevII:  "Inverse Chebyshev" filters (ripple in the stopband)
-  Bessel:       Uses Bessel polynomials, theoretically with linear phase
   RBJ:          Filters from the RBJ Cookbook and IIRNotch
   Custom:       Coefficients provided by Python's scipy and simple pole/zero filters.
 
