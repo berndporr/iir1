@@ -6,7 +6,6 @@
 
 int main (int,char**)
 {
-	const int order = 3;
 	Iir::RBJ::LowPass f;
 	const float samplingrate = 1000; // Hz
 	const float cutoff_frequency = 5; // Hz
@@ -22,7 +21,7 @@ int main (int,char**)
 		assert_print(!isnan(b),"Lowpass output is NAN\n");
 	}
 	fprintf(stderr,"%e\n",b);
-	assert_print(fabs(b) < 1E-30,"Lowpass value for t->inf to high!");
+	assert_print(fabs(b) < 1E-15,"Lowpass value for t->inf to high!");
 
 	Iir::RBJ::BandStop bs;
 	const float center_frequency = 50;
@@ -37,6 +36,6 @@ int main (int,char**)
 		//fprintf(stderr,"%e\n",b);
 	}
 	fprintf(stderr,"%e\n",b);
-	assert_print(fabs(b) < 1E-30,"Bandstop value for t->inf to high!");
+	assert_print(fabs(b) < 1E-15,"Bandstop value for t->inf to high!");
 	return 0;
 }
