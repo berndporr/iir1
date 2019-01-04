@@ -46,127 +46,149 @@
  **/
 namespace Iir {
 
+	static const char errPoleisNaN[] = "Pole to add is NaN.";
+	static const char errZeroisNaN[] = "Zero to add is NaN.";
+
+	static const char errCantAdd2ndOrder[] = "Can't add 2nd order after a 1st order filter.";
+
+	static const char errPolesNotComplexConj[] = "Poles not complex conjugate.";
+	static const char errZerosNotComplexConj[] = "Zeros not complex conjugate.";
+
+	static const char pairIndexOutOfBounds[] = "Pair index out of bounds.";
+
 /**
  * Base uses pointers to reduce template instantiations
  **/
-class DllExport LayoutBase
-{
-public:
-  LayoutBase ()
-    : m_numPoles (0)
-    , m_maxPoles (0)
-  {
-  }
+	class DllExport LayoutBase
+	{
+	public:
+		LayoutBase ()
+			: m_numPoles (0)
+			, m_maxPoles (0)
+		{
+		}
 
-  LayoutBase (int maxPoles, PoleZeroPair* pairs)
-    : m_numPoles (0)
-    , m_maxPoles (maxPoles)
-    , m_pair (pairs)
-  {
-  }
+		LayoutBase (int maxPoles, PoleZeroPair* pairs)
+			: m_numPoles (0)
+			, m_maxPoles (maxPoles)
+			, m_pair (pairs)
+		{
+		}
 
-  void setStorage (const LayoutBase& other)
-  {
-    m_numPoles = 0;
-    m_maxPoles = other.m_maxPoles;
-    m_pair = other.m_pair;
-  }
+		void setStorage (const LayoutBase& other)
+		{
+			m_numPoles = 0;
+			m_maxPoles = other.m_maxPoles;
+			m_pair = other.m_pair;
+		}
 
-  void reset ()
-  {
-    m_numPoles = 0;
-  }
+		void reset ()
+		{
+			m_numPoles = 0;
+		}
 
-  int getNumPoles () const
-  {
-    return m_numPoles;
-  }
+		int getNumPoles () const
+		{
+			return m_numPoles;
+		}
 
-  int getMaxPoles () const
-  {
-    return m_maxPoles;
-  }
+		int getMaxPoles () const
+		{
+			return m_maxPoles;
+		}
 
-  void add (const complex_t& pole, const complex_t& zero)
-  {
-    assert (!(m_numPoles&1)); // single comes last
-    assert (!Iir::is_nan (pole));
-    m_pair[m_numPoles/2] = PoleZeroPair (pole, zero);
-    ++m_numPoles;
-  }
+		void add (const complex_t& pole, const complex_t& zero)
+		{
+			if (m_numPoles&1)
+				throw std::invalid_argument(errCantAdd2ndOrder);
+			if (Iir::is_nan(pole))
+				throw std::invalid_argument(errPoleisNaN);
+			if (Iir::is_nan(zero))
+				throw std::invalid_argument(errZeroisNaN);
+			m_pair[m_numPoles/2] = PoleZeroPair (pole, zero);
+			++m_numPoles;
+		}
 
-  void addPoleZeroConjugatePairs (const complex_t pole,
-                                  const complex_t zero)
-  {
-    assert (!(m_numPoles&1)); // single comes last
-    assert (!Iir::is_nan (pole));
-    m_pair[m_numPoles/2] = PoleZeroPair (
-      pole, zero, std::conj (pole), std::conj (zero));
-    m_numPoles += 2;
-  }
+		void addPoleZeroConjugatePairs (const complex_t pole,
+						const complex_t zero)
+		{
+			if (m_numPoles&1)
+				throw std::invalid_argument(errCantAdd2ndOrder);
+			if (Iir::is_nan(pole))
+				throw std::invalid_argument(errPoleisNaN);
+			if (Iir::is_nan(zero))
+				throw std::invalid_argument(errZeroisNaN);
+			m_pair[m_numPoles/2] = PoleZeroPair (
+				pole, zero, std::conj (pole), std::conj (zero));
+			m_numPoles += 2;
+		}
 
-  void add (const ComplexPair& poles, const ComplexPair& zeros)
-  {
-    assert (!(m_numPoles&1)); // single comes last
-    assert (poles.isMatchedPair ());
-    assert (zeros.isMatchedPair ());
-    m_pair[m_numPoles/2] = PoleZeroPair (poles.first, zeros.first,
-                                         poles.second, zeros.second);
-    m_numPoles += 2;
-  }
+		void add (const ComplexPair& poles, const ComplexPair& zeros)
+		{
+			if (m_numPoles&1)
+				throw std::invalid_argument(errCantAdd2ndOrder);
+			if (!poles.isMatchedPair ())
+				throw std::invalid_argument(errPolesNotComplexConj);
+			if (!zeros.isMatchedPair ())
+				throw std::invalid_argument(errZerosNotComplexConj);
+			m_pair[m_numPoles/2] = PoleZeroPair (poles.first, zeros.first,
+							     poles.second, zeros.second);
+			m_numPoles += 2;
+		}
 
-  const PoleZeroPair& getPair (int pairIndex) const
-  {
-    assert (pairIndex >= 0 && pairIndex < (m_numPoles+1)/2);
-    return m_pair[pairIndex];
-  }
+		const PoleZeroPair& getPair (int pairIndex) const
+		{
+			if ((pairIndex < 0) || (pairIndex >= (m_numPoles+1)/2))
+				throw std::invalid_argument(pairIndexOutOfBounds);
+			return m_pair[pairIndex];
+		}
 
-  const PoleZeroPair& operator[] (int pairIndex) const
-  {
-    return getPair (pairIndex);
-  }
+		const PoleZeroPair& operator[] (int pairIndex) const
+		{
+			return getPair (pairIndex);
+		}
 
-  double getNormalW () const
-  {
-    return m_normalW;
-  }
+		double getNormalW () const
+		{
+			return m_normalW;
+		}
 
-  double getNormalGain () const
-  {
-    return m_normalGain;
-  }
+		double getNormalGain () const
+		{
+			return m_normalGain;
+		}
 
-  void setNormal (double w, double g)
-  {
-    m_normalW = w;
-    m_normalGain = g;
-  }
+		void setNormal (double w, double g)
+		{
+			m_normalW = w;
+			m_normalGain = g;
+		}
 
-private:
-  int m_numPoles;
-  int m_maxPoles;
-  PoleZeroPair* m_pair;
-  double m_normalW;
-  double m_normalGain;
-};
+	private:
+		int m_numPoles;
+		int m_maxPoles;
+		PoleZeroPair* m_pair;
+		double m_normalW;
+		double m_normalGain;
+	};
 
 //------------------------------------------------------------------------------
 
 /**
  * Storage for Layout
  **/
-template <int MaxPoles>
-class DllExport Layout
-{
-public:
-  operator LayoutBase ()
-  {
-    return LayoutBase (MaxPoles, m_pairs);
-  }
+	template <int MaxPoles>
+		class DllExport Layout
+	{
+	public:
+		operator LayoutBase ()
+		{
+			return LayoutBase (MaxPoles, m_pairs);
+		}
 
-private:
-  PoleZeroPair m_pairs[(MaxPoles+1)/2];
-};
+	private:
+		PoleZeroPair m_pairs[(MaxPoles+1)/2];
+	};
 
 }
 
