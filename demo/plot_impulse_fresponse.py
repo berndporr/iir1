@@ -46,4 +46,6 @@ plot_if(5,"bs_rbj.dat","Digital notch")
 
 plot_if(6,"ellip.dat","Elliptic filter (Coefficients from Python)")
 
+plot_if(7,"bessel.dat","Bessel filter (Coefficients from Python)")
+
 plt.show()

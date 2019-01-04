@@ -132,6 +132,28 @@ int main (int,char**)
 
 	
 
+	// We have three 2nd order filters (order = 6)
+	const int nSOS = 6/2;
+	Iir::Custom::SOSCascade<nSOS> cust2;
+	// generated with: "bessel_design.py"
+	const double coeff2[][6] = {
+{2.920503346420688542e-04,5.841006692841377084e-04,2.920503346420688542e-04,1.000000000000000000e+00,-1.080977903549440899e+00,2.972760361591921807e-01},
+{1.000000000000000000e+00,2.000000000000000000e+00,1.000000000000000000e+00,1.000000000000000000e+00,-1.109677060197390652e+00,3.586665760324884156e-01},
+{1.000000000000000000e+00,2.000000000000000000e+00,1.000000000000000000e+00,1.000000000000000000e+00,-1.179438547708672624e+00,5.264979795433866183e-01},
+	};
+	cust2.setup(coeff2);
+	fimpulse = fopen("bessel.dat","wt");
+	for(int i=0;i<1000;i++) 
+	{
+		double a=0;
+		if (i==10) a = 1;
+		double b = cust2.filter(a);
+		fprintf(fimpulse,"%e\n",b);
+	}
+	fclose(fimpulse);
+
+	
+
 	printf("finished!\n");
 	printf("Now run `plot_impulse_fresponse.py` to display the impulse/frequency responses.\n");
 }
