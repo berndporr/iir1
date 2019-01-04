@@ -98,7 +98,7 @@ namespace Iir {
                  * \param state The Delay lines (instance of a state from State.h)
                  **/
 		template <class StateType, typename Sample>
-			Sample filter(Sample s, StateType& state) const
+			inline Sample filter(Sample s, StateType& state) const
 		{
 			return state.filter(s, *this);
 		}

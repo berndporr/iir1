@@ -34,8 +34,7 @@ set(LIBINCLUDE
   iir/PoleFilter.h
   iir/RBJ.h
   iir/State.h
-  iir/Types.h
-  iir/Utilities.h) 
+  iir/Types.h) 
 
 add_library(iir
   SHARED

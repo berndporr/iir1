@@ -80,11 +80,12 @@ namespace Iir {
 	}
 
 	/**
-         * returns the points to a biquad
+         * returns a reference to a biquad
          **/
 	const Biquad& operator[] (int index)
 	{
-		assert (index >= 0 && index <= m_numStages);
+		if ((index < 0) || (index >= m_numStages))
+			throw std::invalid_argument("Index out of bounds.");
 		return m_stageArray[index];
 	}
 

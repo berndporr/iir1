@@ -193,7 +193,8 @@ namespace RBJ {
 		double cs = cos(w0);
 		double sn = sin(w0);
 		double AL = sn * sinh( doubleLn2/2 * bandWidth * w0/sn );
-		assert (!Iir::is_nan (AL));
+		if (Iir::is_nan (AL))
+			throw std::invalid_argument("No solution available for these parameters.\n");
 		double b0 =  1 + AL * A;
 		double b1 = -2 * cs;
 		double b2 =  1 - AL * A;

@@ -52,7 +52,6 @@
 #define DllExport
 #endif
 
-//#include <assert.h>
 #include <stdlib.h>
 
 #include <cassert>
