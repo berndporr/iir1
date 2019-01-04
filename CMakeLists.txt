@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-	set(CMAKE_BUILD_TYPE "Release")
+	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
 project(iir VERSION 1.6.0 LANGUAGES CXX)
