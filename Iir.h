@@ -45,7 +45,6 @@
 #include "iir/Cascade.h"
 #include "iir/PoleFilter.h"
 #include "iir/State.h"
-#include "iir/Utilities.h"
 
 #include "iir/Butterworth.h"
 #include "iir/ChebyshevI.h"
