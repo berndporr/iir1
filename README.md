@@ -17,15 +17,17 @@ so that there is never the risk of memory leaks.
 
 ## CMake setup
 If you use cmake as your build system then just add
-to your `CMakeLists.txt` file the following lines:
+to your `CMakeLists.txt` the following lines:
 ```
 find_package(iir)
 target_link_libraries(... iir::iir)
 ```
-or
+for the dynamic library or:
 ```
+find_package(iir)
 target_link_libraries(... iir::iir_static)
 ```
+for the static library.
 
 ## How to use the filter
 First the filter is instantiated, then the
