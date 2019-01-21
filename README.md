@@ -11,9 +11,21 @@ The filter processes the data sample by sample for realtime
 processing.
 
 It uses templates to allocate the required memory so that
-it can run without any malloc / new commands for example
-on embedded systems. Memory is allocated at compile time
+it can run without any malloc / new commands.
+Memory is allocated at compile time
 so that there is never the risk of memory leaks.
+
+## CMake setup
+If you use cmake as your build system then just add
+to your `CMakeLists.txt` file the following lines:
+```
+find_package(iir)
+target_link_libraries(... iir::iir)
+```
+or
+```
+target_link_libraries(... iir::iir_static)
+```
 
 ## How to use the filter
 First the filter is instantiated, then the
