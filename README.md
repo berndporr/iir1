@@ -29,6 +29,16 @@ target_link_libraries(... iir::iir_static)
 ```
 for the static library.
 
+## Generic setup
+In your C++ program add the following include statement:
+```
+#include "Iir.h"
+```
+and then link it against the dynamic library
+(Unix/Mac: `-liir`, Windows: `iir.lib`)
+or the static library (Unix/Mac: `libiir_static.a`,
+Windows: `libiir_static.lib`).
+
 ## How to use the filter
 First the filter is instantiated, then the
 parameters are set with the function `setup` and
