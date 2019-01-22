@@ -16,14 +16,13 @@ Memory is allocated at compile time
 so that there is never the risk of memory leaks.
 
 ## C++ code
-Add the following include statement:
+Add the following include statement to your code:
 ```
 #include "Iir.h"
 ```
-which then inludes all neccessary functions.
 
 The general coding approach is that first the filter is
-instantiated with the help of templates as a one off, then the
+instantiated specifying its order, then the
 parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
@@ -126,17 +125,16 @@ loop or event handler.
 
 ### CMake setup
 If you use cmake as your build system then just add
-to your `CMakeLists.txt` the following lines:
+to your `CMakeLists.txt` the following lines for the dynamic library:
 ```
 find_package(iir)
 target_link_libraries(... iir::iir)
 ```
-for the dynamic library or:
+or for the static one:
 ```
 find_package(iir)
 target_link_libraries(... iir::iir_static)
 ```
-for the static library.
 
 ### Generic linker setup
 Link it against the dynamic library
