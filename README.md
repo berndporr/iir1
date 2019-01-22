@@ -15,32 +15,15 @@ it can run without any malloc / new commands.
 Memory is allocated at compile time
 so that there is never the risk of memory leaks.
 
-## CMake setup
-If you use cmake as your build system then just add
-to your `CMakeLists.txt` the following lines:
-```
-find_package(iir)
-target_link_libraries(... iir::iir)
-```
-for the dynamic library or:
-```
-find_package(iir)
-target_link_libraries(... iir::iir_static)
-```
-for the static library.
-
-## Generic setup
-In your C++ program add the following include statement:
+## C++ code
+Add the following include statement:
 ```
 #include "Iir.h"
 ```
-and then link it against the dynamic library
-(Unix/Mac: `-liir`, Windows: `iir.lib`)
-or the static library (Unix/Mac: `libiir_static.a`,
-Windows: `libiir_static.lib`).
+which then inludes all neccessary functions.
 
-## How to use the filter
-First the filter is instantiated, then the
+The general coding approach is that first the filter is
+instantiated with the help of templates as a one off, then the
 parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
@@ -137,6 +120,31 @@ float y = f.filter(x);
 ```
 This is then repeated for every incoming sample in a
 loop or event handler.
+
+
+## Linking
+
+### CMake setup
+If you use cmake as your build system then just add
+to your `CMakeLists.txt` the following lines:
+```
+find_package(iir)
+target_link_libraries(... iir::iir)
+```
+for the dynamic library or:
+```
+find_package(iir)
+target_link_libraries(... iir::iir_static)
+```
+for the static library.
+
+### Generic linker setup
+Link it against the dynamic library
+(Unix/Mac: `-liir`, Windows: `iir.lib`)
+or the static library (Unix/Mac: `libiir_static.a`,
+Windows: `libiir_static.lib`).
+
+
 
 ## Packages for Ubuntu (xenial / bionic):
 
