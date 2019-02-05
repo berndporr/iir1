@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
@@ -34,7 +34,7 @@ set(LIBINCLUDE
   iir/PoleFilter.h
   iir/RBJ.h
   iir/State.h
-  iir/Types.h) 
+  iir/Types.h)
 
 add_library(iir
   SHARED
