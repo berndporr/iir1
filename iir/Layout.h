@@ -7,7 +7,7 @@
  * https://github.com/berndporr/iir1
  *
  * See Documentation.cpp for contact information, notes, and bibliography.
- * 
+ *
  * -----------------------------------------------------------------
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -38,6 +38,7 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
+#include <stdexcept>
 
 /**
  * Describes a filter as a collection of poles and zeros along with
@@ -48,12 +49,12 @@ namespace Iir {
 
 	static const char errPoleisNaN[] = "Pole to add is NaN.";
 	static const char errZeroisNaN[] = "Zero to add is NaN.";
-	
+
 	static const char errCantAdd2ndOrder[] = "Can't add 2nd order after a 1st order filter.";
 
 	static const char errPolesNotComplexConj[] = "Poles not complex conjugate.";
 	static const char errZerosNotComplexConj[] = "Zeros not complex conjugate.";
-	
+
 	static const char pairIndexOutOfBounds[] = "Pair index out of bounds.";
 
 /**
