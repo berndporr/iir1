@@ -7,7 +7,7 @@
  * https://github.com/berndporr/iir1
  *
  * See Documentation.cpp for contact information, notes, and bibliography.
- * 
+ *
  * -----------------------------------------------------------------
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -38,6 +38,7 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
+#include <stdexcept>
 
 namespace Iir {
 

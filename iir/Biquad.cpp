@@ -7,7 +7,7 @@
  * https://github.com/berndporr/iir1
  *
  * See Documentation.cpp for contact information, notes, and bibliography.
- * 
+ *
  * -----------------------------------------------------------------
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -36,6 +36,7 @@
 #include "Common.h"
 #include "MathSupplement.h"
 #include "Biquad.h"
+#include <stdexcept>
 
 namespace Iir {
 
@@ -142,14 +143,14 @@ namespace Iir {
 	{
 		if (pole.imag() != 0) throw std::invalid_argument("Imaginary part of pole is non-zero.");
 		if (zero.imag() != 0) throw std::invalid_argument("Imaginary part of zero is non-zero.");
-	
+
 		const double a0 = 1;
 		const double a1 = -pole.real();
 		const double a2 = 0;
 		const double b0 = -zero.real();
 		const double b1 = 1;
 		const double b2 = 0;
-	
+
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 
