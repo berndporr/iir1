@@ -234,7 +234,7 @@ in the `/demo/` directory and then plotted with `plot_impulse_fresponse.py`.
 
 ## Credits
 
-This library has been adapted form Vinnie Falco's
+This library has been adapted from Vinnie Falco's
 original work which can be found here:
 
 https://github.com/vinniefalco/DSPFilters
