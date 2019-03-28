@@ -121,6 +121,13 @@ This is then repeated for every incoming sample in a
 loop or event handler.
 
 
+### Error handling
+Invalid values provided to `setup()` will throw
+an exception. Parameters provided to `setup()` which
+result in coefficients being NAN will also
+throw an exception.
+
+
 ## Linking
 
 ### CMake setup
