@@ -69,8 +69,7 @@ namespace Iir {
 			m_y2 = 0;
 		}
 
-		template <typename Sample>
-			inline Sample filter(const Sample in,
+			inline double filter(const double in,
 					     const Biquad& s)
 		{
 			double out = s.m_b0*in + s.m_b1*m_x1 + s.m_b2*m_x2
@@ -80,7 +79,7 @@ namespace Iir {
 			m_x1 = in;
 			m_y1 = out;
 
-			return static_cast<Sample> (out);
+			return out;
 		}
 
 	protected:
@@ -115,8 +114,7 @@ namespace Iir {
 			m_v2 = 0;
 		}
 
-		template <typename Sample>
-			Sample filter(const Sample in,
+			double filter(const double in,
 				      const Biquad& s)
 		{
 			double w   = in - s.m_a1*m_v1 - s.m_a2*m_v2;
@@ -125,7 +123,7 @@ namespace Iir {
 			m_v2 = m_v1;
 			m_v1 = w;
 
-			return static_cast<Sample> (out);
+			return out;
 		}
 
 	private:
@@ -152,8 +150,7 @@ namespace Iir {
 			m_s2_1 = 0;
 		}
 
-		template <typename Sample>
-			inline Sample filter(const Sample in,
+			inline double filter(const double in,
 					     const Biquad& s)
 		{
 			double out;
@@ -164,7 +161,7 @@ namespace Iir {
 			m_s1_1 = m_s1;
 			m_s2_1 = m_s2;
 
-			return static_cast<Sample> (out);
+			return out;
 		}
 
 	private:
