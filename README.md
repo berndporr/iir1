@@ -112,10 +112,11 @@ cust.setup(coeff);
 ### Realtime filtering sample by sample
 Samples are processed one by one. In the example below
 a sample `x` is processed with the `filter`
-command and then saved in `y`. The type of `x` can either be
-float or double:
+command and then saved in `y`. The types of `x` and `y` can either be
+float or double
+(integer is also allowed but is still processed internally as floating point):
 ```
-float y = f.filter(x);
+y = f.filter(x);
 ```
 This is then repeated for every incoming sample in a
 loop or event handler.
