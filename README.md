@@ -238,16 +238,22 @@ in the `/demo/` directory and then plotted with `plot_impulse_fresponse.py`.
 
 ## Credits
 
-This library has been adapted from Vinnie Falco's
-original work which can be found here:
+This library has been further developed from Vinnie Falco's
+great original work which can be found here:
 
 https://github.com/vinniefalco/DSPFilters
 
-While his original library processes audio arrays this
-library has been adapted to do realtime processing sample
-by sample. Also, in contrast to the original library the `setup`
+While the original library processes audio arrays this
+library has been adapted to do fast realtime processing sample
+by sample. The `setup`
 command won't require the filter order and instead remembers
-it from the template argument.
+it from the template argument. The class structure has
+been simplified and all functions documented for doxygen.
+Instead of having assert() statements this libary throws
+exceptions in case a parameter is wrong. Any filter design
+requiring optimisation (for example Ellipic filters) has
+been removed and instead a function has been added which can import easily
+coefficients from scipy.
 
 ## Bibliography
 
@@ -255,11 +261,7 @@ it from the template argument.
   "High-Order Digital Parametric Equalizer Design"
    Sophocles J. Orfanidis
    (Journal of the Audio Engineering Society, vol 53. pp 1026-1046)
-```
 
-  http://crca.ucsd.edu/~msp/techniques/v0.08/book-html/node1.html
-
-```
   "Spectral Transformations for digital filters"
    A. G. Constantinides, B.Sc.(Eng.) Ph.D.
    (Proceedings of the IEEE, vol. 117, pp. 1585-1590, August 1970)
