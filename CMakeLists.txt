@@ -4,7 +4,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-project(iir VERSION 1.7.3 LANGUAGES CXX)
+project(iir VERSION 1.7.4 LANGUAGES CXX)
 include(GNUInstallDirs)
 add_subdirectory(test)
 add_subdirectory(demo)
