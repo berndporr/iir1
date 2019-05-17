@@ -15,6 +15,12 @@ add_subdirectory(test)
 add_subdirectory(demo)
 enable_testing ()
 
+if (MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wconversion -Wextra -pedantic)
+endif()
+
 set(LIBSRC
   iir/Biquad.cpp
   iir/Butterworth.cpp

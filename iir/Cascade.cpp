@@ -79,7 +79,7 @@ namespace Iir {
 	std::vector<PoleZeroPair> Cascade::getPoleZeros () const
 	{
 		std::vector<PoleZeroPair> vpz;
-		vpz.reserve (m_numStages);
+		vpz.reserve ((unsigned long)m_numStages);
 
 		const Biquad* stage = m_stageArray;
 		for (int i = m_numStages; --i >=0;)

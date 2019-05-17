@@ -112,13 +112,21 @@ cust.setup(coeff);
 ### Realtime filtering sample by sample
 Samples are processed one by one. In the example below
 a sample `x` is processed with the `filter`
-command and then saved in `y`. The type of `x` can either be
-float or double:
+command and then saved in `y`. The types of `x` and `y` can either be
+float or double
+(integer is also allowed but is still processed internally as floating point):
 ```
-float y = f.filter(x);
+y = f.filter(x);
 ```
 This is then repeated for every incoming sample in a
 loop or event handler.
+
+
+### Error handling
+Invalid values provided to `setup()` will throw
+an exception. Parameters provided to `setup()` which
+result in coefficients being NAN will also
+throw an exception.
 
 
 ## Linking
@@ -200,10 +208,6 @@ that their outputs never become NaN.
 
 ## Documentation
 
-### Overview
-For an overview of the class structure and general concepts have a
-look at Documentation.txt.
-
 ### Learn from the demos
 The easiest way to learn is from the examples which are in the `demo`
 directory. A delta pulse as a test signal is sent into the different
@@ -234,16 +238,34 @@ in the `/demo/` directory and then plotted with `plot_impulse_fresponse.py`.
 
 ## Credits
 
-This library has been adapted form Vinnie Falco's
-original work which can be found here:
+This library has been further developed from Vinnie Falco's
+great original work which can be found here:
 
 https://github.com/vinniefalco/DSPFilters
 
-While his original library processes audio arrays this
-library has been adapted to do realtime processing sample
-by sample. Also, in contrast to the original library the `setup`
+While the original library processes audio arrays this
+library has been adapted to do fast realtime processing sample
+by sample. The `setup`
 command won't require the filter order and instead remembers
-it from the template argument.
+it from the template argument. The class structure has
+been simplified and all functions documented for doxygen.
+Instead of having assert() statements this libary throws
+exceptions in case a parameter is wrong. Any filter design
+requiring optimisation (for example Ellipic filters) has
+been removed and instead a function has been added which can import easily
+coefficients from scipy.
+
+## Bibliography
+
+```
+  "High-Order Digital Parametric Equalizer Design"
+   Sophocles J. Orfanidis
+   (Journal of the Audio Engineering Society, vol 53. pp 1026-1046)
+
+  "Spectral Transformations for digital filters"
+   A. G. Constantinides, B.Sc.(Eng.) Ph.D.
+   (Proceedings of the IEEE, vol. 117, pp. 1585-1590, August 1970)
+```
 
 Enjoy!
 
