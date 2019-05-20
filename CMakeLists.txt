@@ -1,10 +1,16 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.8)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-project(iir VERSION 1.7.4 LANGUAGES CXX)
+if(${CMAKE_VERSION} VERSION_LESS "3.0.0")
+	set(PROJECT_VERSION 1.7.3)
+	project(iir)
+else()
+	cmake_policy(SET CMP0048 NEW) # set VERSION in project()
+	project(iir VERSION 1.7.3 LANGUAGES CXX)
+endif()
 include(GNUInstallDirs)
 add_subdirectory(test)
 add_subdirectory(demo)
