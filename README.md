@@ -91,7 +91,6 @@ print(sos) # copy/paste the coefficients over & replace [] with {}
 ///////
 // C++
 // part of "iirdemo.cpp"
-Iir::Custom::SOSCascade<2> cust;
 const double coeff[][6] = {
 		{1.665623674062209972e-02,
 		 -3.924801366970616552e-03,
@@ -106,6 +105,8 @@ const double coeff[][6] = {
 		 -1.605878925999785656e+00,
 		 9.538657786383895054e-01}
 	};
+const int nSOS = sizeof(coeff) / sizeof(coeff[0]); // here: nSOS = 2
+Iir::Custom::SOSCascade<nSOS> cust;
 cust.setup(coeff);
 ```
 
