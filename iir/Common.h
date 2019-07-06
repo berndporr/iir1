@@ -63,6 +63,6 @@
 #include <limits>
 #include <vector>
 
-static const char orderTooHigh[] = "Requested order is too high. Reserve more space in the constructor.";
+static const char orderTooHigh[] = "Requested order is too high. Provide a higher order for the template.";
 
 #endif

@@ -146,7 +146,7 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 
 /** 
  * Butterworth Lowpass filter.
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -172,7 +172,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	void setup (int reqOrder,
 		    double sampleRate,
 		    double cutoffFrequency) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		LowPassBase::setup (reqOrder,
 				    sampleRate,
 				    cutoffFrequency);
@@ -181,7 +181,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 
 /** 
  * Butterworth Highpass filter. 
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -207,7 +207,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	void setup (int reqOrder,
 		    double sampleRate,
 		    double cutoffFrequency) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		HighPassBase::setup (reqOrder,
 				     sampleRate,
 				     cutoffFrequency);
@@ -216,7 +216,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 
 /**
  * Butterworth  Bandpass filter.
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder  Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -248,7 +248,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
 		    double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		BandPassBase::setup(reqOrder,
 				    sampleRate,
 				    centerFrequency,
@@ -259,7 +259,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
 
 /**
  * Butterworth Bandstop filter.
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -291,7 +291,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
 		    double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		BandStopBase::setup (reqOrder,
 				     sampleRate,
 				     centerFrequency,
@@ -303,7 +303,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
 /**
  * Butterworth low shelf filter: below the cutoff it has
  * a specified gain and above the cutoff the gain is 0 dB.
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -335,7 +335,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 		    double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		LowShelfBase::setup (reqOrder,
 				     sampleRate,
 				     cutoffFrequency,
@@ -348,7 +348,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 /**
  * Butterworth high shelf filter. Above the cutoff the filter has
  * a specified gain and below it has 0 dB.
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -380,7 +380,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 		    double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		HighShelfBase::setup (reqOrder,
 				      sampleRate,
 				      cutoffFrequency,
@@ -392,7 +392,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 /**
  * Butterworth Bandshelf filter: it is a bandpass filter which amplifies at a specified
  * gain in dB the frequencies in the passband.
- * \param FilterOrder The order of the filter.
+ * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder, class StateType = DEFAULT_STATE>
@@ -429,7 +429,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
 		    double centerFrequency,
 		    double widthFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		BandShelfBase::setup (reqOrder,
 				      sampleRate,
 				      centerFrequency,
