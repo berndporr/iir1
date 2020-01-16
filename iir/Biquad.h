@@ -174,7 +174,7 @@ namespace Iir {
 
 		explicit BiquadPoleState (const Biquad& s);
 
-		double gain;
+		double gain = 1;
 	};
 
 }
