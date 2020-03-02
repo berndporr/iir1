@@ -106,6 +106,10 @@ namespace Iir {
 			throw std::invalid_argument("Number of stages is larger than the max stages.");
 
 		Biquad* stage = m_stageArray;
+		for (int i = 0; i < m_maxStages; ++i, ++stage)
+			stage->setIdentity();
+  
+		stage = m_stageArray;
 		for (int i = 0; i < m_numStages; ++i, ++stage)
 			stage->setPoleZeroPair (proto[i]);
   
