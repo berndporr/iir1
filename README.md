@@ -172,7 +172,7 @@ The documentation and the example programs are in:
 
 Make sure you have the homebrew package manager installed: https://brew.sh/
 
-Add the homebrew tap which then adds it to the list of available packages:
+Add the homebrew tap:
 
 ```
 brew tap berndporr/berndporr
