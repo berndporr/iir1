@@ -168,6 +168,24 @@ The documentation and the example programs are in:
 /usr/share/doc/iir1-dev/
 ```
 
+## Package for MacOS
+
+Make sure you have the homebrew package manager installed: https://brew.sh/
+
+Add the homebrew tap which then adds it to the list of available packages:
+
+```
+brew tap berndporr/berndporr
+```
+
+and then install the iir filter package with:
+
+```
+brew install iir
+```
+
+
+
 ## Compilation from source
 
 The build tool is `cmake` which generates the make- or project
