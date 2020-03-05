@@ -159,7 +159,7 @@ If you have Ubuntu xenial or bionic then
 install it as a pre-compiled package:
 
 ```
-sudo add-apt-repository ppa:berndporr/usbdux
+sudo add-apt-repository ppa:berndporr/dsp
 ```
 
 It's available for 32,64 bit PC and 32,64 bit ARM (Raspberry PI etc).
