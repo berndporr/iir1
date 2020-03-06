@@ -153,9 +153,9 @@ Windows: `libiir_static.lib`).
 
 
 
-## Packages for Ubuntu (xenial / bionic):
+## Packages for Ubuntu (xenial / bionic / focal):
 
-If you have Ubuntu xenial or bionic then
+If you have Ubuntu's LTS distros xenial, bionic or focal then
 install it as a pre-compiled package:
 
 ```
