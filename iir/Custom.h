@@ -86,7 +86,7 @@ struct TwoPole : public Biquad
  * \param NSOS The number of 2nd order filters / biquads.
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int NSOS, class StateType = DEFAULT_STATE>
+template <unsigned int NSOS, class StateType = DEFAULT_STATE>
 struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
 {
 	/**

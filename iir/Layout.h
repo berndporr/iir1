@@ -178,7 +178,7 @@ namespace Iir {
 /**
  * Storage for Layout
  **/
-	template <int MaxPoles>
+	template <unsigned int MaxPoles>
 		class DllExport Layout
 	{
 	public:

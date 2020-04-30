@@ -107,8 +107,8 @@ protected:
  **/
 template <class BaseClass,
 	  class StateType,
-          int MaxAnalogPoles,
-	  int MaxDigitalPoles = MaxAnalogPoles>
+          unsigned int MaxAnalogPoles,
+	  unsigned int MaxDigitalPoles = MaxAnalogPoles>
 	struct PoleFilter : BaseClass
 	, CascadeStages <(MaxDigitalPoles + 1) / 2 , StateType>
 {
