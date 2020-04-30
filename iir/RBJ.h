@@ -69,7 +69,7 @@ namespace RBJ {
 		/// filter operation
 		template <typename Sample>
 			inline Sample filter(Sample s) {
-			return static_cast<Sample>(state.filter((double)s,*this));
+			return static_cast<Sample>(state.filter(static_cast<double>(s),*this));
 		}
 		/// resets the delay lines to zero
 		void reset() {

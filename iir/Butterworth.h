@@ -149,7 +149,7 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
  * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 {
 	/**
@@ -184,7 +184,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
  * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 {
 	/**
@@ -219,7 +219,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
  * \param FilterOrder  Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, FilterOrder*2>
 {
 	/**
@@ -262,7 +262,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
  * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, FilterOrder*2>
 {
 	/**
@@ -306,7 +306,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
  * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 {
 	/**
@@ -351,7 +351,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
  * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 {
 	/**
@@ -395,7 +395,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
  * \param FilterOrder Reserves memory for a filter of the order FilterOrder
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
-template <int FilterOrder, class StateType = DEFAULT_STATE>
+template <unsigned int FilterOrder, class StateType = DEFAULT_STATE>
 struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, FilterOrder*2>
 {
 	/**

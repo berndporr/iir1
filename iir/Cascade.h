@@ -122,7 +122,7 @@ namespace Iir {
  * Storage for Cascade: This holds a chain of 2nd order filters
  * with its coefficients.
  **/
-	template <int MaxStages,class StateType>
+	template <unsigned int MaxStages,class StateType>
 		class DllExport CascadeStages {
 	public:
 		/**
