@@ -51,7 +51,7 @@ set(LIBINCLUDE
 add_library(iir
   SHARED
   ${LIBSRC}
-  )
+)
 
 target_include_directories(iir PRIVATE iir)
 
@@ -72,7 +72,7 @@ configure_file(iir.pc.in iir.pc @ONLY)
 add_library(iir_static
   STATIC
   ${LIBSRC}
-  )
+)
 
 target_include_directories(iir_static PRIVATE iir)
 
