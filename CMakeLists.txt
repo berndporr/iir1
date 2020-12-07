@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 2.8)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
+  set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
 if(${CMAKE_VERSION} VERSION_LESS "3.0.0")
-	set(PROJECT_VERSION 1.7.8)
-	project(iir)
+  set(PROJECT_VERSION 1.7.8)
+  project(iir)
 else()
-	cmake_policy(SET CMP0048 NEW) # set VERSION in project()
-	project(iir VERSION 1.7.8 LANGUAGES CXX)
+  cmake_policy(SET CMP0048 NEW) # set VERSION in project()
+  project(iir VERSION 1.7.8 LANGUAGES CXX)
 endif()
 include(GNUInstallDirs)
 add_subdirectory(test)
@@ -17,9 +17,9 @@ add_subdirectory(demo)
 enable_testing ()
 
 if (MSVC)
-    add_compile_options(/W4)
+  add_compile_options(/W4)
 else()
-    add_compile_options(-Wall -Wconversion -Wextra -pedantic)
+  add_compile_options(-Wall -Wconversion -Wextra -pedantic)
 endif()
 
 set(LIBSRC
@@ -51,7 +51,7 @@ set(LIBINCLUDE
 add_library(iir
   SHARED
   ${LIBSRC}
-)
+  )
 
 target_include_directories(iir PRIVATE iir)
 
@@ -73,7 +73,7 @@ configure_file(iir.pc.in iir.pc @ONLY)
 add_library(iir_static
   STATIC
   ${LIBSRC}
-)
+  )
 
 target_include_directories(iir_static PRIVATE iir)
 
@@ -93,4 +93,4 @@ install(EXPORT iir-targets
   DESTINATION lib/cmake/iir
   NAMESPACE iir::
   FILE iir-config.cmake
-)
+  )
