@@ -38,6 +38,7 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
+#include "Types.h"
 #include <stdexcept>
 
 /**
