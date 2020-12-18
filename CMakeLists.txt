@@ -36,8 +36,7 @@ set(LIBSRC
   iir/ChebyshevII.cpp
   iir/Custom.cpp
   iir/PoleFilter.cpp
-  iir/RBJ.cpp
-  iir/State.cpp)
+  iir/RBJ.cpp)
 
 set(LIBINCLUDE
   iir/Biquad.h
