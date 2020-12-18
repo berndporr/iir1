@@ -12,6 +12,11 @@ else()
   cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
   project(iir VERSION 1.7.8 LANGUAGES CXX)
 endif()
+
+if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.1.0")
+  set(CMAKE_CXX_STANDARD 11)
+endif()
+
 include(GNUInstallDirs)
 add_subdirectory(test)
 add_subdirectory(demo)
