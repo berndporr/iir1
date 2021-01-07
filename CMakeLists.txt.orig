@@ -1,16 +1,19 @@
 cmake_minimum_required(VERSION 2.8.12)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
+  set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
 if(${CMAKE_VERSION} VERSION_LESS "3.0.0")
-	set(PROJECT_VERSION 1.7.8)
-	project(iir)
+  set(PROJECT_VERSION 1.7.8)
+  project(iir)
 else()
-	cmake_policy(SET CMP0048 NEW) # set VERSION in project()
+  cmake_policy(SET CMP0048 NEW) # set VERSION in project()
+<<<<<<< HEAD
+=======
   cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
-	project(iir VERSION 1.7.8 LANGUAGES CXX)
+>>>>>>> upstream/master
+  project(iir VERSION 1.7.8 LANGUAGES CXX)
 endif()
 
 if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.1.0")
@@ -23,9 +26,9 @@ add_subdirectory(demo)
 enable_testing ()
 
 if (MSVC)
-    add_compile_options(/W4)
+  add_compile_options(/W4)
 else()
-    add_compile_options(-Wall -Wconversion -Wextra -pedantic)
+  add_compile_options(-Wall -Wconversion -Wextra -pedantic)
 endif()
 
 set(LIBSRC
@@ -98,4 +101,4 @@ install(EXPORT iir-targets
   DESTINATION lib/cmake/iir
   NAMESPACE iir::
   FILE iir-config.cmake
-)
+  )
