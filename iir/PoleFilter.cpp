@@ -41,7 +41,7 @@ namespace Iir {
 //------------------------------------------------------------------------------
 
 
-static const char cutoffError[] = "The cutoff frequency needs to be below or equal to the Nyquist frequency.";
+static const char cutoffError[] = "The cutoff frequency needs to be below the Nyquist frequency.";
 static const char cutoffNeg[] = "Cutoff frequency is negative.";
 
 complex_t LowPassTransform::transform (complex_t c)
@@ -61,7 +61,7 @@ LowPassTransform::LowPassTransform (double fc,
                                     LayoutBase const& analog)
 {
 
-	if (fc > 0.5) throw std::invalid_argument(cutoffError);
+	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
 	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
 	
 	digital.reset ();
@@ -107,7 +107,7 @@ HighPassTransform::HighPassTransform (double fc,
                                       LayoutBase& digital,
                                       LayoutBase const& analog)
 {
-	if (fc > 0.5) throw std::invalid_argument(cutoffError);
+	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
 	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
 	
 	digital.reset ();
@@ -142,7 +142,7 @@ BandPassTransform::BandPassTransform (double fc,
                                       LayoutBase& digital,
                                       LayoutBase const& analog)
 {
-	if (fc > 0.5) throw std::invalid_argument(cutoffError);
+	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
 	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
 
 	digital.reset ();
@@ -226,7 +226,7 @@ BandStopTransform::BandStopTransform (double fc,
                                       LayoutBase& digital,
                                       LayoutBase const& analog)
 {
-	if (fc > 0.5) throw std::invalid_argument(cutoffError);
+	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
 	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
 
 	digital.reset ();
