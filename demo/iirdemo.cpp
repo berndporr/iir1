@@ -19,8 +19,8 @@ int main (int,char**)
 
 	// Butterworth lowpass
 	Iir::Butterworth::LowPass<order> f;
-	const float cutoff_frequency = 100; // Hz
-	const float passband_gain = 10; // db
+	double cutoff_frequency = 100; // Hz
+	double passband_gain = 10; // db
 	f.setup (samplingrate, cutoff_frequency);
 	fimpulse = fopen("lp.dat","wt");
 	// let's simulated date streaming in
@@ -39,8 +39,8 @@ int main (int,char**)
 	// has no resonance. The higher the Q-factor the higher
 	// the resonance.
 	Iir::RBJ::HighPass hp;
-	const float hp_cutoff_frequency = 100;
-	const float hp_qfactor = 5;
+	const double hp_cutoff_frequency = 100;
+	const double hp_qfactor = 5;
 	hp.setup (samplingrate, hp_cutoff_frequency, hp_qfactor);
 	fimpulse = fopen("hp_rbj.dat","wt");
 	for(int i=0;i<1000;i++) 
