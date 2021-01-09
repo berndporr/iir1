@@ -20,3 +20,7 @@ add_test(TestChebyshev2 test_chebyshev2)
 add_executable (test_rbj rbj.cpp)
 target_link_libraries(test_rbj iir_static)
 add_test(TestRBJ test_rbj)
+
+add_executable (test_badparam badparam.cpp)
+target_link_libraries(test_badparam iir_static)
+add_test(TestBadParam test_badparam)
