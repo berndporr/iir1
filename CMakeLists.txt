@@ -58,7 +58,12 @@ add_library(iir
   ${LIBSRC}
   )
 
-target_include_directories(iir PRIVATE iir)
+target_include_directories(iir 
+  PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>      # for Iir.h
+  PRIVATE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
+)
 
 set_target_properties(iir PROPERTIES
   SOVERSION 1
@@ -80,7 +85,12 @@ add_library(iir_static
   ${LIBSRC}
   )
 
-target_include_directories(iir_static PRIVATE iir)
+  target_include_directories(iir_static
+  PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>      # for Iir.h
+  PRIVATE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
+)
 
 set_target_properties(iir_static PROPERTIES
   VERSION ${PROJECT_VERSION}
