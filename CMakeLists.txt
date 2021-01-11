@@ -53,12 +53,10 @@ set(LIBINCLUDE
   iir/State.h
   iir/Types.h)
 
-add_library(iir
-  SHARED
-  ${LIBSRC}
-  )
+add_library(iir SHARED ${LIBSRC})
+add_library(iir::iir ALIAS iir)
 
-target_include_directories(iir 
+target_include_directories(iir
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>      # for Iir.h
   PRIVATE
@@ -80,12 +78,10 @@ install(TARGETS iir EXPORT iir-targets
 
 configure_file(iir.pc.in iir.pc @ONLY)
 
-add_library(iir_static
-  STATIC
-  ${LIBSRC}
-  )
+add_library(iir_static STATIC ${LIBSRC})
+add_library(iir::iir_static ALIAS iir_static)
 
-  target_include_directories(iir_static
+target_include_directories(iir_static
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>      # for Iir.h
   PRIVATE
