@@ -18,9 +18,9 @@ def plot_if(figno,name,figtitle):
     plt.plot(y2);
     #
     # Fourier Transform
-    yf = scipy.fft(y) / len(y)
+    yf = np.fft.fft(y) / len(y)
     plt.subplot(212)
-    plt.plot(scipy.linspace(0,fs,len(yf)),20*np.log10(np.abs(yf)))
+    plt.plot(np.linspace(0,fs,len(yf)),20*np.log10(np.abs(yf)))
     plt.xlim(0,fs/2)
     plt.ylim(-130,-10)
     plt.title("Frequency spectrum")
