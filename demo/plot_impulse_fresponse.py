@@ -16,9 +16,9 @@ def plot_if(figno,name,figtitle):
     plt.plot(y);
     #
     # Fourier Transform
-    yf = scipy.fft(y)
+    yf = np.fft.fft(y)
     plt.subplot(312)
-    fx = scipy.linspace(0,fs,len(yf))
+    fx = np.linspace(0,fs,len(yf))
     plt.plot(fx,20*np.log10(abs(yf)))
     plt.xlim(0,fs/2)
     plt.title("Frequency response")
@@ -27,7 +27,7 @@ def plot_if(figno,name,figtitle):
 
     plt.subplot(313)
     p = -np.diff(np.unwrap(np.angle(yf))) / np.diff(fx * 2 * np.pi)
-    plt.plot(scipy.linspace(0,fs,len(yf)-1),p)
+    plt.plot(np.linspace(0,fs,len(yf)-1),p)
     plt.xlim(0,fs/2)
     plt.ylim(-0.075,0.075)
     plt.title("Phase response")
