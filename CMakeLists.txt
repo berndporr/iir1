@@ -5,12 +5,12 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 if(${CMAKE_VERSION} VERSION_LESS "3.0.0")
-  set(PROJECT_VERSION 1.7.9)
+  set(PROJECT_VERSION 1.8.0)
   project(iir)
 else()
   cmake_policy(SET CMP0048 NEW) # set VERSION in project()
   cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
-  project(iir VERSION 1.7.9 LANGUAGES CXX)
+  project(iir VERSION 1.8.0 LANGUAGES CXX)
 endif()
 
 if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.1.0")
