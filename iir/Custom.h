@@ -90,6 +90,24 @@ template <int NSOS, class StateType = DEFAULT_STATE>
 struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
 {
 	/**
+	 * Default constructor which creates a unity gain filter of NSOS biquads.
+	 * Set the filter coefficients later with the setup() method.
+	 **/
+	SOSCascade();
+	/**
+         * Python scipy.signal-friendly setting of coefficients.
+	 * Initialises the coefficients of the whole chain of
+	 * biquads / SOS. The argument is a 2D array where the 1st
+         * dimension holds an array of 2nd order biquad / SOS coefficients.
+         * The six SOS coefficients are ordered "Python" style with first
+         * the FIR coefficients (B) and then the IIR coefficients (A).
+         * The 2D const double array needs to have exactly the size [NSOS][6].
+	 * \param sosCoefficients 2D array Python style sos[NSOS][6]. Indexing: 0-2: FIR-, 3-5: IIR-coefficients.
+	 **/
+	SOSCascade(const double (&sosCoefficients)[NSOS][6]) {
+		CascadeStages<NSOS,StateType>::setup(sosCoefficients);
+	};
+	/**
          * Python scipy.signal-friendly setting of coefficients.
 	 * Sets the coefficients of the whole chain of
 	 * biquads / SOS. The argument is a 2D array where the 1st
@@ -103,7 +121,6 @@ struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
 		CascadeStages<NSOS,StateType>::setup(sosCoefficients);
 	}
 };
-
 
 }
 
