@@ -105,9 +105,8 @@ const double coeff[][6] = {
 		 -1.605878925999785656e+00,
 		 9.538657786383895054e-01}
 	};
-const int nSOS = sizeof(coeff) / sizeof(coeff[0]); // here: nSOS = 2
-Iir::Custom::SOSCascade<nSOS> cust;
-cust.setup(coeff);
+const int nSOS = sizeof(coeff) / sizeof(coeff[0]); // here: nSOS = 2 = order / 2
+Iir::Custom::SOSCascade<nSOS> cust(coeff);
 ```
 
 ### Realtime filtering sample by sample
