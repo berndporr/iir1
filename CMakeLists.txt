@@ -1,21 +1,15 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.1.0)
+
+project(iir VERSION 1.8.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 11)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-if(${CMAKE_VERSION} VERSION_LESS "3.0.0")
-  set(PROJECT_VERSION 1.8.0)
-  project(iir)
-else()
-  cmake_policy(SET CMP0048 NEW) # set VERSION in project()
-  cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
-  project(iir VERSION 1.8.0 LANGUAGES CXX)
-endif()
-
-if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.1.0")
-  set(CMAKE_CXX_STANDARD 11)
-endif()
+cmake_policy(SET CMP0048 NEW) # set VERSION in project()
+cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 
 include(GNUInstallDirs)
 add_subdirectory(test)

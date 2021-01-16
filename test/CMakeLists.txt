@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.1.0)
+
+set(CMAKE_CXX_STANDARD 11)
+
 enable_testing()
 include_directories(
   ..
