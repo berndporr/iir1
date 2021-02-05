@@ -20,7 +20,6 @@ int main (int,char**)
 	// Butterworth lowpass
 	Iir::Butterworth::LowPass<order> f;
 	double cutoff_frequency = 100; // Hz
-	double passband_gain = 10; // db
 	f.setup (samplingrate, cutoff_frequency);
 	fimpulse = fopen("lp.dat","wt");
 	// let's simulated date streaming in

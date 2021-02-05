@@ -4,6 +4,14 @@ cmake_minimum_required(VERSION 3.1.0)
 
 set(CMAKE_CXX_STANDARD 11)
 
+if (MSVC)
+    add_compile_options(/W4 /WX)
+else()
+    # compile with native processor support so that he headers
+    # are compiled as fast as possible
+    add_compile_options(-Wall -Wextra -pedantic -Werror -march=native)
+endif()
+
 add_executable (iirdemo iirdemo.cpp)
 target_link_libraries(iirdemo iir_static)
 target_include_directories(iirdemo PRIVATE ..)
