@@ -9,7 +9,7 @@ if (MSVC)
 else()
     # compile with native processor support so that he headers
     # are compiled as fast as possible
-    add_compile_options(-Wall -Wextra -pedantic -Werror -march=native)
+    add_compile_options(-Wall -Wextra -pedantic -Werror)
 endif()
 
 add_executable (iirdemo iirdemo.cpp)
