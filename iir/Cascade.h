@@ -130,9 +130,8 @@ namespace Iir {
 		 **/
 		void reset ()
 		{
-			StateType* state = m_states;
-			for (int i = MaxStages; --i >= 0; ++state)
-				state->reset();
+			for (auto &state: m_states)
+				state.reset();
 		}
 
 	public:
@@ -163,9 +162,8 @@ namespace Iir {
 		{
 			double out = in;
 			StateType* state = m_states;
-			Biquad const* stage = m_stages;
-			for (int i = MaxStages; --i >= 0; ++state, ++stage)
-				out = state->filter(out, *stage);
+			for (auto &stage: m_stages)
+				out = (state++)->filter(out, stage);
 			return static_cast<Sample> (out);
 		}
 
