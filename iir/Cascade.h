@@ -162,7 +162,7 @@ namespace Iir {
 		{
 			double out = in;
 			StateType* state = m_states;
-			for (auto &stage: m_stages)
+			for (const auto &stage: m_stages)
 				out = (state++)->filter(out, stage);
 			return static_cast<Sample> (out);
 		}
