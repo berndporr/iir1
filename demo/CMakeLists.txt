@@ -6,10 +6,12 @@ set(CMAKE_CXX_STANDARD 11)
 
 if (MSVC)
     add_compile_options(/W4 /WX)
-else()
-    # compile with native processor support so that he headers
-    # are compiled as fast as possible
-    add_compile_options(-Wall -Wextra -pedantic -Werror)
+  else()
+    add_compile_options(-Wall -Wextra -pedantic -Werror -O3)
+    # Add -march=native if possible as it speeds
+    # up computation by approx factor 2. -O3 brings also
+    # a drastic improvement against -O2:
+    # add_compile_options(-Wall -Wextra -pedantic -Werror -O3 -march=native)
 endif()
 
 add_executable (iirdemo iirdemo.cpp)
