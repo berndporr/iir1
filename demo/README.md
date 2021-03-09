@@ -25,5 +25,3 @@ using:
 ```
 add_compile_options(-O3 -march=native)
 ```
-as this will create ultra fast code for your local processor which
-can be up to 5 times faster than the standard `-O2` optimisation.
