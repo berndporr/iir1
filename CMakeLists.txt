@@ -4,6 +4,9 @@ project(iir VERSION 1.8.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
+option(IIR_BUILD_TESTS "Turn ON to build iir test(s)." ON)
+option(IIR_BUILD_DEMOS "Turn ON to build iir demo(s)." ON)
+
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
@@ -12,8 +15,12 @@ cmake_policy(SET CMP0048 NEW) # set VERSION in project()
 cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 
 include(GNUInstallDirs)
-add_subdirectory(test)
-add_subdirectory(demo)
+if (IIR_BUILD_TESTS)
+  add_subdirectory(test)
+endif()
+if (IIR_BUILD_DEMOS)
+  add_subdirectory(demo)
+endif()
 enable_testing ()
 
 if (MSVC)
