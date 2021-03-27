@@ -21,7 +21,3 @@ target_include_directories(iirdemo PRIVATE ..)
 add_executable (ecg50hzfilt ecg50hzfilt.cpp)
 target_link_libraries(ecg50hzfilt iir_static)
 target_include_directories(ecg50hzfilt PRIVATE ..)
-
-add_executable (benchmark benchmark.cpp)
-target_link_libraries(benchmark iir_static)
-target_include_directories(benchmark PRIVATE ..)
