@@ -239,7 +239,7 @@ every filter type.
 A PDF of all classes, methods and in particular `setup` functions
 is in the `doc/pdf` directory.
 
-Run `doxygen` to generate the HTML documentation.
+The online documentation is here: http://berndporr.github.io/iir1
 
 ## Example filter responses
 
