@@ -237,7 +237,7 @@ every filter type.
 
 ### Detailed documentation
 A PDF of all classes, methods and in particular `setup` functions
-is in the `doc/pdf` directory.
+is in the `docs/pdf` directory.
 
 The online documentation is here: http://berndporr.github.io/iir1
 

@@ -12,7 +12,7 @@
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
  * Copyright (c) 2009 by Vinnie Falco
- * Copyright (c) 2011 by Bernd Porr
+ * Copyright (c) 2011-2021 by Bernd Porr
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -43,15 +43,14 @@
 #include <stdexcept>
 
 namespace Iir {
-
-/*
+	
+/**
  * Holds coefficients for a cascade of second order sections.
- *
- */
+ **/
 	class DllExport Cascade
 	{
 	public:
-
+	
 	/**
          * Pointer to an array of Biquads
          **/
@@ -81,7 +80,7 @@ namespace Iir {
 	}
 
 	/**
-         * returns a reference to a biquad
+         * Returns a reference to a biquad
          **/
 	const Biquad& operator[] (int index)
 	{
@@ -116,67 +115,71 @@ namespace Iir {
 	Biquad* m_stageArray;
 	};
 
-//------------------------------------------------------------------------------
 
+	
+//------------------------------------------------------------------------------
+	
 /**
  * Storage for Cascade: This holds a chain of 2nd order filters
  * with its coefficients.
  **/
 	template <int MaxStages,class StateType>
-		class DllExport CascadeStages {
+	class DllExport CascadeStages {
 	public:
-		/**
-		 * Resets all biquads (i.e. the delay lines but not the coefficients)
-		 **/
-		void reset ()
-		{
-			for (auto &state: m_states)
-				state.reset();
+	/**
+	 * Resets all biquads (i.e. the delay lines but not the coefficients)
+	 **/
+	void reset ()
+	{
+		for (auto &state: m_states)
+			state.reset();
+	}
+	
+	public:
+	/**
+	 * Sets the coefficients of the whole chain of
+	 * biquads.
+	 * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
+	 **/
+	void setup (const double (&sosCoefficients)[MaxStages][6]) {
+		for (int i = 0; i < MaxStages; i++) {
+			m_stages[i].setCoefficients(
+				sosCoefficients[i][3],
+				sosCoefficients[i][4],
+				sosCoefficients[i][5],
+				sosCoefficients[i][0],
+				sosCoefficients[i][1],
+				sosCoefficients[i][2]);
 		}
+	}
 
 	public:
-		/**
-		 * Sets the coefficients of the whole chain of
-		 * biquads.
-		 * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
-		 **/
-		void setup (const double (&sosCoefficients)[MaxStages][6]) {
-			for (int i = 0; i < MaxStages; i++) {
-				m_stages[i].setCoefficients(
-					sosCoefficients[i][3],
-					sosCoefficients[i][4],
-					sosCoefficients[i][5],
-					sosCoefficients[i][0],
-					sosCoefficients[i][1],
-					sosCoefficients[i][2]);
-			}
-		}
-
-	public:
-		/**
-                 * Filters one sample through the whole chain of biquads and return the result
-                 * \param in Sample to be filtered
-                 **/
-		template <typename Sample>
-			inline Sample filter(const Sample in)
-		{
-			double out = in;
-			StateType* state = m_states;
-			for (const auto &stage: m_stages)
-				out = (state++)->filter(out, stage);
-			return static_cast<Sample> (out);
-		}
-
-		Cascade::Storage getCascadeStorage()
-		{
-			return Cascade::Storage (MaxStages, m_stages);
-		}
-
+	/**
+	 * Filters one sample through the whole chain of biquads and return the result
+	 * \param in Sample to be filtered
+	 * \return filtered sample
+	 **/
+	template <typename Sample>
+	inline Sample filter(const Sample in)
+	{
+		double out = in;
+		StateType* state = m_states;
+		for (const auto &stage: m_stages)
+			out = (state++)->filter(out, stage);
+		return static_cast<Sample> (out);
+	}
+	
+	Cascade::Storage getCascadeStorage()
+	{
+		return Cascade::Storage (MaxStages, m_stages);
+	}
+	
+	
 	private:
-		Biquad m_stages[MaxStages];
-		StateType m_states[MaxStages];
+	Biquad m_stages[MaxStages];
+	StateType m_states[MaxStages];
 	};
-
+	
 }
 
 #endif
