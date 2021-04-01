@@ -1,4 +1,4 @@
-# IIR1 -- Realtime C++ filter library
+# DSP IIR Realtime C++ filter library
 
 ![alt tag](title.png)
 
