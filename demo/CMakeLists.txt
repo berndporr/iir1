@@ -8,10 +8,6 @@ if (MSVC)
     add_compile_options(/W4 /WX)
   else()
     add_compile_options(-Wall -Wextra -pedantic -Werror)
-    # Add -march=native if possible as it speeds
-    # up computation by approx factor 2. -O3 brings also
-    # a drastic improvement against -O2:
-    # add_compile_options(-Wall -Wextra -pedantic -Werror -O3 -march=native)
 endif()
 
 add_executable (iirdemo iirdemo.cpp)
