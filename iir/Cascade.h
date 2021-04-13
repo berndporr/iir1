@@ -50,7 +50,7 @@ namespace Iir {
         class DllExport Cascade
         {
         public:
-        
+
         /**
          * Pointer to an array of Biquads
          **/
@@ -116,14 +116,14 @@ namespace Iir {
         };
 
 
-        
+
 //------------------------------------------------------------------------------
-        
+
 /**
  * Storage for Cascade: This holds a chain of 2nd order filters
  * with its coefficients.
  **/
-        template <int MaxStages,class StateType>
+        template <unsigned int MaxStages,class StateType>
         class DllExport CascadeStages {
         public:
         /**
@@ -134,7 +134,7 @@ namespace Iir {
                 for (auto &state: m_states)
                         state.reset();
         }
-        
+
         public:
         /**
          * Sets the coefficients of the whole chain of
@@ -142,7 +142,7 @@ namespace Iir {
          * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
          **/
         void setup (const double (&sosCoefficients)[MaxStages][6]) {
-                for (int i = 0; i < MaxStages; i++) {
+                for (unsigned int i = 0; i < MaxStages; i++) {
                         m_stages[i].setCoefficients(
                                 sosCoefficients[i][3],
                                 sosCoefficients[i][4],
@@ -168,18 +168,18 @@ namespace Iir {
                         out = (state++)->filter(out, stage);
                 return static_cast<Sample> (out);
         }
-        
+
         Cascade::Storage getCascadeStorage()
         {
                 return Cascade::Storage (MaxStages, m_stages);
         }
-        
-        
+
+
         private:
         Biquad m_stages[MaxStages];
         StateType m_states[MaxStages];
         };
-        
+
 }
 
 #endif
