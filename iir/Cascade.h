@@ -43,143 +43,143 @@
 #include <stdexcept>
 
 namespace Iir {
-	
+
 /**
  * Holds coefficients for a cascade of second order sections.
  **/
-	class DllExport Cascade
-	{
-	public:
-	
-	/**
+        class DllExport Cascade
+        {
+        public:
+        
+        /**
          * Pointer to an array of Biquads
          **/
-	struct DllExport Storage
-	{
-		/**
+        struct DllExport Storage
+        {
+                /**
                  * Constructor which receives the pointer to the Biquad array and the number of Biquads
                  * \param maxStages_ Number of biquads
                  * \param stageArray_ The array of the Biquads
                  **/
-		Storage (int maxStages_, Biquad* stageArray_)
-			: maxStages (maxStages_)
-			, stageArray (stageArray_)
-		{
-		}
+                Storage (int maxStages_, Biquad* stageArray_)
+                : maxStages (maxStages_)
+                , stageArray (stageArray_)
+                {
+                }
 
-		int maxStages;
-		Biquad* stageArray;
-	};
+                int maxStages;
+                Biquad* stageArray;
+        };
 
-	/**
+        /**
          * Returns the number of Biquads kept here
          **/
-	int getNumStages () const
-	{
-		return m_numStages;
-	}
+        int getNumStages () const
+        {
+                return m_numStages;
+        }
 
-	/**
+        /**
          * Returns a reference to a biquad
          **/
-	const Biquad& operator[] (int index)
-	{
-		if ((index < 0) || (index >= m_numStages))
-			throw std::invalid_argument("Index out of bounds.");
-		return m_stageArray[index];
-	}
+        const Biquad& operator[] (int index)
+        {
+                if ((index < 0) || (index >= m_numStages))
+                        throw std::invalid_argument("Index out of bounds.");
+                return m_stageArray[index];
+        }
 
-	/**
+        /**
          * Calculate filter response at the given normalized frequency
          * \param normalizedFrequency Frequency from 0 to 0.5 (Nyquist)
          **/
-	complex_t response (double normalizedFrequency) const;
+        complex_t response (double normalizedFrequency) const;
 
-	/**
+        /**
          * Returns a vector with all pole/zero pairs of the whole Biqad cascade
          **/
-	std::vector<PoleZeroPair> getPoleZeros () const;
+        std::vector<PoleZeroPair> getPoleZeros () const;
 
-	protected:
-	Cascade ();
+        protected:
+        Cascade ();
 
-	void setCascadeStorage (const Storage& storage);
+        void setCascadeStorage (const Storage& storage);
 
-	void applyScale (double scale);
+        void applyScale (double scale);
 
-	void setLayout (const LayoutBase& proto);
+        void setLayout (const LayoutBase& proto);
 
-	private:
-	int m_numStages;
-	int m_maxStages;
-	Biquad* m_stageArray;
-	};
+        private:
+        int m_numStages;
+        int m_maxStages;
+        Biquad* m_stageArray;
+        };
 
 
-	
+        
 //------------------------------------------------------------------------------
-	
+        
 /**
  * Storage for Cascade: This holds a chain of 2nd order filters
  * with its coefficients.
  **/
-	template <int MaxStages,class StateType>
-	class DllExport CascadeStages {
-	public:
-	/**
-	 * Resets all biquads (i.e. the delay lines but not the coefficients)
-	 **/
-	void reset ()
-	{
-		for (auto &state: m_states)
-			state.reset();
-	}
-	
-	public:
-	/**
-	 * Sets the coefficients of the whole chain of
-	 * biquads.
-	 * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
-	 **/
-	void setup (const double (&sosCoefficients)[MaxStages][6]) {
-		for (int i = 0; i < MaxStages; i++) {
-			m_stages[i].setCoefficients(
-				sosCoefficients[i][3],
-				sosCoefficients[i][4],
-				sosCoefficients[i][5],
-				sosCoefficients[i][0],
-				sosCoefficients[i][1],
-				sosCoefficients[i][2]);
-		}
-	}
+        template <int MaxStages,class StateType>
+        class DllExport CascadeStages {
+        public:
+        /**
+         * Resets all biquads (i.e. the delay lines but not the coefficients)
+         **/
+        void reset ()
+        {
+                for (auto &state: m_states)
+                        state.reset();
+        }
+        
+        public:
+        /**
+         * Sets the coefficients of the whole chain of
+         * biquads.
+         * \param sosCoefficients 2D array in Python style sos ordering: 0-2: FIR, 3-5: IIR coeff.
+         **/
+        void setup (const double (&sosCoefficients)[MaxStages][6]) {
+                for (int i = 0; i < MaxStages; i++) {
+                        m_stages[i].setCoefficients(
+                                sosCoefficients[i][3],
+                                sosCoefficients[i][4],
+                                sosCoefficients[i][5],
+                                sosCoefficients[i][0],
+                                sosCoefficients[i][1],
+                                sosCoefficients[i][2]);
+                }
+        }
 
-	public:
-	/**
-	 * Filters one sample through the whole chain of biquads and return the result
-	 * \param in Sample to be filtered
-	 * \return filtered sample
-	 **/
-	template <typename Sample>
-	inline Sample filter(const Sample in)
-	{
-		double out = in;
-		StateType* state = m_states;
-		for (const auto &stage: m_stages)
-			out = (state++)->filter(out, stage);
-		return static_cast<Sample> (out);
-	}
-	
-	Cascade::Storage getCascadeStorage()
-	{
-		return Cascade::Storage (MaxStages, m_stages);
-	}
-	
-	
-	private:
-	Biquad m_stages[MaxStages];
-	StateType m_states[MaxStages];
-	};
-	
+        public:
+        /**
+         * Filters one sample through the whole chain of biquads and return the result
+         * \param in Sample to be filtered
+         * \return filtered sample
+         **/
+        template <typename Sample>
+        inline Sample filter(const Sample in)
+        {
+                double out = in;
+                StateType* state = m_states;
+                for (const auto &stage: m_stages)
+                        out = (state++)->filter(out, stage);
+                return static_cast<Sample> (out);
+        }
+        
+        Cascade::Storage getCascadeStorage()
+        {
+                return Cascade::Storage (MaxStages, m_stages);
+        }
+        
+        
+        private:
+        Biquad m_stages[MaxStages];
+        StateType m_states[MaxStages];
+        };
+        
 }
 
 #endif
