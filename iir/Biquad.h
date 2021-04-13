@@ -53,12 +53,13 @@ namespace Iir {
 	{
 	public:
 		/**
-		 * Calculate filter response at the given normalized frequency.
+		 * Calculate filter response at the given normalized frequency
+		 * and return the complex response.
 		 **/
 		complex_t response (double normalizedFrequency) const;
 
 		/**
-                 * Returns the pole / zero Pairs as a vector
+                 * Returns the pole / zero Pairs as a vector.
                  **/
 		std::vector<PoleZeroPair> getPoleZeros () const;
 
@@ -96,6 +97,7 @@ namespace Iir {
                  * Filter a sample with the coefficients provided here and the State provided as an argument.
                  * \param s The sample to be filtered.
                  * \param state The Delay lines (instance of a state from State.h)
+		 * \return The filtered sample.
                  **/
 		template <class StateType>
 			inline double filter(double s, StateType& state) const

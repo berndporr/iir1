@@ -19,8 +19,7 @@ int main (int,char**)
 
 	// Butterworth lowpass
 	Iir::Butterworth::LowPass<order> f;
-	const float cutoff_frequency = 100; // Hz
-	const float passband_gain = 10; // db
+	double cutoff_frequency = 100; // Hz
 	f.setup (samplingrate, cutoff_frequency);
 	fimpulse = fopen("lp.dat","wt");
 	// let's simulated date streaming in
@@ -39,8 +38,8 @@ int main (int,char**)
 	// has no resonance. The higher the Q-factor the higher
 	// the resonance.
 	Iir::RBJ::HighPass hp;
-	const float hp_cutoff_frequency = 100;
-	const float hp_qfactor = 5;
+	const double hp_cutoff_frequency = 100;
+	const double hp_qfactor = 5;
 	hp.setup (samplingrate, hp_cutoff_frequency, hp_qfactor);
 	fimpulse = fopen("hp_rbj.dat","wt");
 	for(int i=0;i<1000;i++) 
@@ -118,8 +117,7 @@ int main (int,char**)
 		 9.538657786383895054e-01}
 	};
 	const int nSOS = sizeof(coeff) / sizeof(coeff[0]);
-	Iir::Custom::SOSCascade<nSOS> cust;
-	cust.setup(coeff);
+	Iir::Custom::SOSCascade<nSOS> cust(coeff);
 	fimpulse = fopen("ellip.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
@@ -139,8 +137,7 @@ int main (int,char**)
 {1.000000000000000000e+00,2.000000000000000000e+00,1.000000000000000000e+00,1.000000000000000000e+00,-1.179438547708672624e+00,5.264979795433866183e-01},
 	};
 	const int nSOS2 = sizeof(coeff2) / sizeof(coeff2[0]);
-	Iir::Custom::SOSCascade<nSOS2> cust2;
-	cust2.setup(coeff2);
+	Iir::Custom::SOSCascade<nSOS2> cust2(coeff2);
 	fimpulse = fopen("bessel.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{

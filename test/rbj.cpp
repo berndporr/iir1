@@ -31,7 +31,7 @@ int main (int,char**)
 	{
 		float a=0;
 		if (i==10) a = 1;
-		//b = bs.filter1(a);
+		b = bs.filter(a);
 		assert_print(!isnan(b),"Bandstop output is NAN\n");
 		//fprintf(stderr,"%e\n",b);
 	}

@@ -1,4 +1,4 @@
-# IIR1 -- Realtime C++ filter library
+# DSP IIR Realtime C++ filter library
 
 ![alt tag](title.png)
 
@@ -105,9 +105,8 @@ const double coeff[][6] = {
 		 -1.605878925999785656e+00,
 		 9.538657786383895054e-01}
 	};
-const int nSOS = sizeof(coeff) / sizeof(coeff[0]); // here: nSOS = 2
-Iir::Custom::SOSCascade<nSOS> cust;
-cust.setup(coeff);
+const int nSOS = sizeof(coeff) / sizeof(coeff[0]); // here: nSOS = 2 = order / 2
+Iir::Custom::SOSCascade<nSOS> cust(coeff);
 ```
 
 ### Realtime filtering sample by sample
@@ -238,9 +237,9 @@ every filter type.
 
 ### Detailed documentation
 A PDF of all classes, methods and in particular `setup` functions
-is in the `doc/pdf` directory.
+is in the `docs/pdf` directory.
 
-Run `doxygen` to generate the HTML documentation.
+The online documentation is here: http://berndporr.github.io/iir1
 
 ## Example filter responses
 
