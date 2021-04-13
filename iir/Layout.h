@@ -169,7 +169,7 @@ namespace Iir {
 		int m_numPoles;
 		int m_maxPoles;
 		PoleZeroPair* m_pair;
-		double m_normalW;
+		double m_normalW = 0;
 		double m_normalGain = 1;
 	};
 
