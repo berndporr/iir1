@@ -8,8 +8,8 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-  cmake_policy(SET CMP0048 NEW) # set VERSION in project()
-  cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
+cmake_policy(SET CMP0048 NEW) # set VERSION in project()
+cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 
 include(GNUInstallDirs)
 add_subdirectory(test)
@@ -55,7 +55,7 @@ target_include_directories(iir
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>      # for Iir.h
   PRIVATE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
-  )
+)
 
 set_target_properties(iir PROPERTIES
   SOVERSION 1
@@ -80,7 +80,7 @@ target_include_directories(iir_static
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>      # for Iir.h
   PRIVATE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
-  )
+)
 
 set_target_properties(iir_static PROPERTIES
   VERSION ${PROJECT_VERSION}
