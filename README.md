@@ -32,13 +32,12 @@ filters. Butterworth / Chebyshev offer also low/high/band-shelves with
 specified passband gain and 0dB gain in the stopband.
 
 The frequencies can either be analogue ones against the sampling rate
-or as normalised frequencies between 0..1/2 where 1/2 is the Nyquist frequency. Note
+or normalised ones between 0..1/2 where 1/2 is the Nyquist frequency. Note
 that normalised frequencies are simply f = F/Fs and are in units of 1/samples.
-Internally the library works with normalised frequencies and the setup commands
-simply divide by the sampling rate if given. Thus there setup()
-methods for analogue frequencies with a sampling rate and setup methods for normalised frequencies:
-1. Specify the sampling rate and the analogue cutoff frequency
-2. Specify the normalised frequency in 1/samples between f = 0..1/2 where 1/2 = Nyquist.
+Internally the library uses normalised frequencies and the setup commands
+simply divide by the sampling rate if given. 
+1. `setup`: sampling rate and the analogue cutoff frequencies
+2. `setupN`: normalised frequencies in 1/samples between f = 0..1/2 where 1/2 = Nyquist.
 
 See the header files in `\iir` or the documentation for the arguments
 of the `setup` commands.

@@ -12,7 +12,7 @@
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
  * Copyright (c) 2009 by Vinnie Falco
- * Copyright (c) 2011 by Bernd Porr
+ * Copyright (c) 2011-2021 by Bernd Porr
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -90,13 +90,23 @@ namespace RBJ {
 	{
 		/**
                  * Calculates the coefficients
+                 * \param cutoffFrequency Normalised cutoff frequency
+                 * \param q Q factor determines the resonance peak at the cutoff.
+                 **/
+		void setupN(double cutoffFrequency,
+			    double q = ONESQRT2);
+		
+		/**
+                 * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param cutoffFrequency Cutoff frequency
                  * \param q Q factor determines the resonance peak at the cutoff.
                  **/
 		void setup(double sampleRate,
 			   double cutoffFrequency,
-			   double q = ONESQRT2);
+			   double q = ONESQRT2) {
+			setupN(cutoffFrequency / sampleRate, q);
+		}
 	};
 
 	/**
@@ -106,13 +116,22 @@ namespace RBJ {
 	{
 		/**
                  * Calculates the coefficients
+                 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+                 * \param q Q factor determines the resonance peak at the cutoff.
+                 **/
+		void setupN(double cutoffFrequency,
+			    double q = ONESQRT2);
+		/**
+                 * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param cutoffFrequency Cutoff frequency
                  * \param q Q factor determines the resonance peak at the cutoff.
                  **/
 		void setup (double sampleRate,
 			    double cutoffFrequency,
-			    double q = ONESQRT2);
+			    double q = ONESQRT2) {
+			setupN(cutoffFrequency / sampleRate, q);
+		}
 	};
 
 	/**
@@ -122,13 +141,22 @@ namespace RBJ {
 	{
 		/**
                  * Calculates the coefficients
+                 * \param centerFrequency Center frequency of the bandpass
+                 * \param bandWidth Bandwidth in octaves
+                 **/
+		void setupN(double centerFrequency,
+			    double bandWidth);
+		/**
+                 * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the bandpass
                  * \param bandWidth Bandwidth in octaves
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
-			    double bandWidth);
+			    double bandWidth) {
+			setupN(centerFrequency / sampleRate, bandWidth);
+		}
 	};
 
 	/**
@@ -138,13 +166,22 @@ namespace RBJ {
 	{
 		/**
                  * Calculates the coefficients
+                 * \param centerFrequency Normalised centre frequency of the bandpass
+                 * \param bandWidth Bandwidth in octaves
+                 **/
+		void setupN(double centerFrequency,
+			    double bandWidth);
+		/**
+                 * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the bandpass
                  * \param bandWidth Bandwidth in octaves
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
-			    double bandWidth);
+			    double bandWidth) {
+			setupN(centerFrequency / sampleRate, bandWidth);
+		}
 	};
 
 	/**
@@ -155,13 +192,22 @@ namespace RBJ {
 	{
 		/**
                  * Calculates the coefficients
+                 * \param centerFrequency Normalised Centre frequency of the bandstop
+                 * \param bandWidth Bandwidth in octaves
+                 **/
+		void setupN(double centerFrequency,
+			    double bandWidth);
+		/**
+                 * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the bandstop
                  * \param bandWidth Bandwidth in octaves
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
-			    double bandWidth);
+			    double bandWidth) {
+			setupN(centerFrequency / sampleRate, bandWidth);
+		}
 	};
 
 	/**
@@ -179,13 +225,22 @@ namespace RBJ {
 	{
 		/**
                  * Calculates the coefficients
+                 * \param centerFrequency Normalised centre frequency of the notch
+                 * \param q_factor Q factor of the notch (1 to ~20)
+                 **/
+		void setupN(double centerFrequency,
+			    double q_factor = 10);
+		/**
+                 * Calculates the coefficients
                  * \param sampleRate Sampling rate
                  * \param centerFrequency Center frequency of the notch
                  * \param q_factor Q factor of the notch (1 to ~20)
                  **/
 		void setup (double sampleRate,
 			    double centerFrequency,
-			    double q_factor = 10);
+			    double q_factor = 10) {
+			setupN(centerFrequency / sampleRate, q_factor);
+		}
 	};
 
 	/**
@@ -195,22 +250,13 @@ namespace RBJ {
 	{
 		/**
 		 * Calculates the coefficients
-		 * \param sampleRate Sampling rate
-		 * \param cutoffFrequency Cutoff frequency
+		 * \param cutoffFrequency Normalised cutoff frequency
 		 * \param gainDb Gain in the passband
                  * \param shelfSlope Slope between stop/passband. 1 = as steep as it can.
 		 **/
-		void setup (double sampleRate,
-			    double cutoffFrequency,
+		void setupN(double cutoffFrequency,
 			    double gainDb,
 			    double shelfSlope = 1);
-	};
-
-	/**
-         * High shelf: 0db in the stopband and gainDb in the passband.
-         **/
-	struct DllExport HighShelf : RBJbase
-	{
 		/**
 		 * Calculates the coefficients
 		 * \param sampleRate Sampling rate
@@ -221,7 +267,38 @@ namespace RBJ {
 		void setup (double sampleRate,
 			    double cutoffFrequency,
 			    double gainDb,
+			    double shelfSlope = 1) {
+			setupN(	cutoffFrequency / sampleRate, gainDb, shelfSlope);
+		}
+	};
+
+	/**
+         * High shelf: 0db in the stopband and gainDb in the passband.
+         **/
+	struct DllExport HighShelf : RBJbase
+	{
+		/**
+		 * Calculates the coefficients
+		 * \param cutoffFrequency Normalised cutoff frequency
+		 * \param gainDb Gain in the passband
+                 * \param shelfSlope Slope between stop/passband. 1 = as steep as it can.
+		 **/
+		void setupN(double cutoffFrequency,
+			    double gainDb,
 			    double shelfSlope = 1);
+		/**
+		 * Calculates the coefficients
+		 * \param sampleRate Sampling rate
+		 * \param cutoffFrequency Cutoff frequency
+		 * \param gainDb Gain in the passband
+                 * \param shelfSlope Slope between stop/passband. 1 = as steep as it can.
+		 **/
+		void setup (double sampleRate,
+			    double cutoffFrequency,
+			    double gainDb,
+			    double shelfSlope = 1) {
+			setupN(	cutoffFrequency / sampleRate, gainDb, shelfSlope);
+		}
 	};
 
 	/**
@@ -229,6 +306,15 @@ namespace RBJ {
          **/
 	struct DllExport BandShelf : RBJbase
 	{
+		/**
+		 * Calculates the coefficients
+		 * \param centerFrequency Normalised centre frequency
+		 * \param gainDb Gain in the passband
+                 * \param bandWidth Bandwidth in octaves
+		 **/
+		void setupN(double centerFrequency,
+			    double gainDb,
+			    double bandWidth);
 		/**
 		 * Calculates the coefficients
 		 * \param sampleRate Sampling rate
@@ -239,14 +325,24 @@ namespace RBJ {
 		void setup (double sampleRate,
 			    double centerFrequency,
 			    double gainDb,
-			    double bandWidth);
+			    double bandWidth) {
+			setupN(centerFrequency / sampleRate, gainDb, bandWidth);
+		}
 	};
 
+	/**
+	 * Allpass filter
+	 **/
 	struct DllExport AllPass : RBJbase
 	{
+		void setupN(double phaseFrequency,
+			    double q  = ONESQRT2);
+		
 		void setup (double sampleRate,
 			    double phaseFrequency,
-			    double q);
+			    double q  = ONESQRT2) {
+			setupN(	phaseFrequency / sampleRate, q);
+		}
 	};
 	
 }

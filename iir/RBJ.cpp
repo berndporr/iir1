@@ -40,11 +40,10 @@ namespace Iir {
 
 namespace RBJ {
 
-	void LowPass::setup(double sampleRate,
-			    double cutoffFrequency,
+	void LowPass::setupN(double cutoffFrequency,
 			    double q)
 	{
-		double w0 = 2 * doublePi * cutoffFrequency / sampleRate;
+		double w0 = 2 * doublePi * cutoffFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / (2 * q);
@@ -57,11 +56,10 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 
-	void HighPass::setup (double sampleRate,
-			      double cutoffFrequency,
+	void HighPass::setupN (double cutoffFrequency,
 			      double q)
 	{
-		double w0 = 2 * doublePi * cutoffFrequency / sampleRate;
+		double w0 = 2 * doublePi * cutoffFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / ( 2 * q );
@@ -74,11 +72,10 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 
-	void BandPass1::setup (double sampleRate,
-			       double centerFrequency,
+	void BandPass1::setupN (double centerFrequency,
 			       double bandWidth)
 	{
-		double w0 = 2 * doublePi * centerFrequency / sampleRate;
+		double w0 = 2 * doublePi * centerFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / ( 2 * bandWidth );
@@ -91,11 +88,10 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 	
-	void BandPass2::setup (double sampleRate,
-			       double centerFrequency,
+	void BandPass2::setupN (double centerFrequency,
 			       double bandWidth)
 	{
-		double w0 = 2 * doublePi * centerFrequency / sampleRate;
+		double w0 = 2 * doublePi * centerFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / ( 2 * bandWidth );
@@ -108,11 +104,10 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 	
-	void BandStop::setup (double sampleRate,
-			      double centerFrequency,
+	void BandStop::setupN (double centerFrequency,
 			      double bandWidth)
 	{
-		double w0 = 2 * doublePi * centerFrequency / sampleRate;
+		double w0 = 2 * doublePi * centerFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / ( 2 * bandWidth );
@@ -125,11 +120,10 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 	
-	void IIRNotch::setup (double sampleRate,
-			      double centerFrequency,
+	void IIRNotch::setupN (double centerFrequency,
 			      double q_factor)
 	{
-		double w0 = 2 * doublePi * centerFrequency / sampleRate;
+		double w0 = 2 * doublePi * centerFrequency;
 		double cs = cos (w0);
 		double r = exp(-(w0/2) / q_factor);
 		double b0 =  1;
@@ -141,13 +135,12 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 	
-	void LowShelf::setup (double sampleRate,
-			      double cutoffFrequency,
+	void LowShelf::setupN (double cutoffFrequency,
 			      double gainDb,
 			      double shelfSlope)
 	{
 		double A  = pow (10, gainDb/40);
-		double w0 = 2 * doublePi * cutoffFrequency / sampleRate;
+		double w0 = 2 * doublePi * cutoffFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / 2 * ::std::sqrt ((A + 1/A) * (1/shelfSlope - 1) + 2);
@@ -162,13 +155,12 @@ namespace RBJ {
 	}
 	
 	
-	void HighShelf::setup (double sampleRate,
-			       double cutoffFrequency,
+	void HighShelf::setupN (double cutoffFrequency,
 			       double gainDb,
 			       double shelfSlope)
 	{
 		double A  = pow (10, gainDb/40);
-		double w0 = 2 * doublePi * cutoffFrequency / sampleRate;
+		double w0 = 2 * doublePi * cutoffFrequency;
 		double cs = cos (w0);
 		double sn = sin (w0);
 		double AL = sn / 2 * ::std::sqrt ((A + 1/A) * (1/shelfSlope - 1) + 2);
@@ -183,13 +175,12 @@ namespace RBJ {
 	}
 	
 	
-	void BandShelf::setup (double sampleRate,
-			       double centerFrequency,
+	void BandShelf::setupN (double centerFrequency,
 			       double gainDb,
 			       double bandWidth)
 	{
 		double A  = pow (10, gainDb/40);
-		double w0 = 2 * doublePi * centerFrequency / sampleRate;
+		double w0 = 2 * doublePi * centerFrequency;
 		double cs = cos(w0);
 		double sn = sin(w0);
 		double AL = sn * sinh( doubleLn2/2 * bandWidth * w0/sn );
@@ -204,11 +195,10 @@ namespace RBJ {
 		setCoefficients (a0, a1, a2, b0, b1, b2);
 	}
 	
-void AllPass::setup (double sampleRate,
-                     double phaseFrequency,
+void AllPass::setupN (double phaseFrequency,
                      double q)
 {
-	double w0 = 2 * doublePi * phaseFrequency / sampleRate;
+	double w0 = 2 * doublePi * phaseFrequency;
 	double cs = cos (w0);
 	double sn = sin (w0);
 	double AL = sn / ( 2 * q );

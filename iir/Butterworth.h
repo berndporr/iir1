@@ -173,7 +173,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	 * Calculates the coefficients
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
-	void setup (double cutoffFrequency) {
+	void setupN(double cutoffFrequency) {
 		LowPassBase::setup (FilterOrder,
 				    cutoffFrequency);
 	}
@@ -183,7 +183,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
          * \param reqOrder The actual order which can be less than the instantiated one
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		LowPassBase::setup (reqOrder,
@@ -228,7 +228,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	 * Calculates the coefficients with the filter order provided by the instantiation
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
-	void setup (double cutoffFrequency) {
+	void setupN(double cutoffFrequency) {
 		HighPassBase::setup (FilterOrder,
 				     cutoffFrequency);
 	}
@@ -237,7 +237,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
          * \param reqOrder The actual order which can be less than the instantiated one
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		HighPassBase::setup (reqOrder,
@@ -291,7 +291,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
          * \param centerFrequency Normalised centre frequency (0..1/2) of the bandpass
          * \param widthFrequency Width of the bandpass in normalised freq
          **/
-	void setup (double centerFrequency,
+	void setupN(double centerFrequency,
 		    double widthFrequency) {
 		BandPassBase::setup(FilterOrder,
 				    centerFrequency,
@@ -304,7 +304,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
          * \param centerFrequency Normalised centre frequency (0..1/2) of the bandpass
          * \param widthFrequency Width of the bandpass in normalised freq
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -344,7 +344,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
          * \param centerFrequency Centre frequency of the bandstop
          * \param widthFrequency Width of the bandstop
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
@@ -361,7 +361,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
          * \param centerFrequency Normalised centre frequency (0..1/2) of the bandstop
          * \param widthFrequency Normalised width of the bandstop
          **/
-	void setup (double centerFrequency,
+	void setupN(double centerFrequency,
 		    double widthFrequency) {
 		BandStopBase::setup (FilterOrder,
 				     centerFrequency,
@@ -374,7 +374,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
          * \param centerFrequency Normalised centre frequency (0..1/2) of the bandstop
          * \param widthFrequency Normalised width of the bandstop
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -433,7 +433,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          * \param gainDb Gain in dB of the filter in the passband
          **/
-	void setup (double cutoffFrequency,
+	void setupN(double cutoffFrequency,
 		    double gainDb) {
 		LowShelfBase::setup (FilterOrder,
 				     cutoffFrequency,
@@ -446,7 +446,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          * \param gainDb Gain in dB of the filter in the passband
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double gainDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -505,7 +505,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          * \param gainDb Gain in dB of the filter in the passband
          **/
-	void setup (double cutoffFrequency,
+	void setupN(double cutoffFrequency,
 		    double gainDb) {
 		HighShelfBase::setup (FilterOrder,
 				      cutoffFrequency,
@@ -518,7 +518,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          * \param gainDb Gain in dB of the filter in the passband
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double gainDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -583,7 +583,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
          * \param widthFrequency Width of the passband
          * \param gainDb The gain in the passband
          **/
-	void setup (double centerFrequency,
+	void setupN(double centerFrequency,
 		    double widthFrequency,
 		    double gainDb) {
 		BandShelfBase::setup (FilterOrder,
@@ -599,7 +599,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
          * \param widthFrequency Width of the passband
          * \param gainDb The gain in the passband
          **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency,
 		    double gainDb) {

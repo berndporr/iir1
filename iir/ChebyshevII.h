@@ -197,7 +197,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double cutoffFrequency,
+	void setupN(double cutoffFrequency,
 		    double stopBandDb) {
 		LowPassBase::setup (FilterOrder,
 				    cutoffFrequency,
@@ -210,7 +210,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -268,7 +268,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double cutoffFrequency,
+	void setupN(double cutoffFrequency,
 		    double stopBandDb) {
 		HighPassBase::setup (FilterOrder,
 				     cutoffFrequency,
@@ -281,7 +281,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -346,7 +346,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
          * \param widthFrequency Width of the bandpass
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double centerFrequency,
+	void setupN(double centerFrequency,
 		    double widthFrequency,
 		    double stopBandDb) {
 		BandPassBase::setup (FilterOrder,
@@ -362,7 +362,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
          * \param widthFrequency Width of the bandpass
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency,
 		    double stopBandDb) {
@@ -428,7 +428,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
          * \param widthFrequency Width of the bandstop
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double centerFrequency,
+	void setupN(double centerFrequency,
 		    double widthFrequency,
 		    double stopBandDb) {
 		BandStopBase::setup (FilterOrder,
@@ -444,7 +444,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
          * \param widthFrequency Width of the bandstop
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency,
 		    double stopBandDb) {
@@ -511,7 +511,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
          * \param gainDb Gain of the passbard. The stopband has 0 dB gain.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double cutoffFrequency,
+	void setupN(double cutoffFrequency,
 		    double gainDb,
 		    double stopBandDb) {
 		LowShelfBase::setup (FilterOrder,
@@ -527,7 +527,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
          * \param gainDb Gain the passbard. The stopband has 0 dB gain.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double gainDb,
 		    double stopBandDb) {
@@ -596,7 +596,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
          * \param gainDb Gain the passbard. The stopband has 0 dB gain.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double cutoffFrequency,
+	void setupN(double cutoffFrequency,
 		    double gainDb,
 		    double stopBandDb) {
 		HighShelfBase::setup (FilterOrder,
@@ -612,7 +612,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
          * \param gainDb Gain the passbard. The stopband has 0 dB gain.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double gainDb,
 		    double stopBandDb) {
@@ -690,7 +690,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
          * \param gainDb Gain in the passband. The stopband has always 0dB.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (double centerFrequency,
+	void setupN(double centerFrequency,
 		    double widthFrequency,
 		    double gainDb,
 		    double stopBandDb) {
@@ -710,7 +710,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
          * \param gainDb Gain in the passband. The stopband has always 0dB.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
-	void setup (int reqOrder,
+	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency,
 		    double gainDb,

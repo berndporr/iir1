@@ -74,7 +74,7 @@ int main (int,char**)
 	double stop_ripple_dB = 60;
 	// Setting cutoff to normalised f=0.1
 	double normalised_cutoff_freq = 0.1;
-	lp_cheby2.setup (normalised_cutoff_freq,
+	lp_cheby2.setupN(normalised_cutoff_freq,
 			 stop_ripple_dB);
 	fimpulse = fopen("lp_cheby2.dat","wt");
 	for(int i=0;i<1000;i++) 

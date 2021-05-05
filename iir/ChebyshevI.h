@@ -192,7 +192,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (double cutoffFrequency,
+		void setupN(double cutoffFrequency,
 			    double rippleDb) {
 			LowPassBase::setup (FilterOrder,
 					    cutoffFrequency,
@@ -205,7 +205,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double cutoffFrequency,
 			    double rippleDb) {
 			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -261,7 +261,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (double cutoffFrequency,
+		void setupN(double cutoffFrequency,
 			    double rippleDb) {
 			HighPassBase::setup (FilterOrder,
 					     cutoffFrequency,
@@ -274,7 +274,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double cutoffFrequency,
 			    double rippleDb) {
 			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
@@ -337,7 +337,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param widthFrequency Frequency with of the passband
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-      		void setup (double centerFrequency,
+      		void setupN(double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
 			BandPassBase::setup (FilterOrder,
@@ -353,7 +353,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param widthFrequency Frequency with of the passband
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
@@ -418,7 +418,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param widthFrequency Frequency width of the notch
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (double centerFrequency,
+		void setupN(double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
 			BandStopBase::setup (FilterOrder,
@@ -434,7 +434,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param widthFrequency Frequency width of the notch
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
@@ -500,7 +500,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param gainDb Gain in the passband
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (double cutoffFrequency,
+		void setupN(double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
 			LowShelfBase::setup (FilterOrder,
@@ -516,7 +516,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param gainDb Gain in the passband
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
@@ -582,7 +582,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param gainDb Gain in the passband
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (double cutoffFrequency,
+		void setupN(double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
 			HighShelfBase::setup (FilterOrder,
@@ -598,7 +598,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param gainDb Gain in the passband
                  * \param rippleDb Permitted ripples in dB in the passband
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
@@ -674,7 +674,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param gainDb Gain in the passband. The stopband has 0 dB.
                  * \param rippleDb Permitted ripples in dB in the passband.
                  **/
-		void setup (double centerFrequency,
+		void setupN(double centerFrequency,
 			    double widthFrequency,
 			    double gainDb,
 			    double rippleDb) {
@@ -694,7 +694,7 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
                  * \param gainDb Gain in the passband. The stopband has 0 dB.
                  * \param rippleDb Permitted ripples in dB in the passband.
                  **/
-		void setup (int reqOrder,
+		void setupN(int reqOrder,
 			    double centerFrequency,
 			    double widthFrequency,
 			    double gainDb,
