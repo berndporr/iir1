@@ -91,10 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6fc4ac9b61747fb4cfb6d1ee7c775f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415aac5f061addfcabe198bb017742de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html#a415aac5f061addfcabe198bb017742de">setup</a> (int reqOrder, double sampleRate, double cutoffFrequency, double stopBandDb)</td></tr>
 <tr class="separator:a415aac5f061addfcabe198bb017742de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa86bf4f909cf87c75ba8b60e941efa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html#aafa86bf4f909cf87c75ba8b60e941efa">setup</a> (double cutoffFrequency, double stopBandDb)</td></tr>
-<tr class="separator:aafa86bf4f909cf87c75ba8b60e941efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00df9952776f3ed0b7c23a2b683b4289"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html#a00df9952776f3ed0b7c23a2b683b4289">setup</a> (int reqOrder, double cutoffFrequency, double stopBandDb)</td></tr>
-<tr class="separator:a00df9952776f3ed0b7c23a2b683b4289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1e4fe46e854bdfa9f1c26e901fcafbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html#aa1e4fe46e854bdfa9f1c26e901fcafbd">setupN</a> (double cutoffFrequency, double stopBandDb)</td></tr>
+<tr class="separator:aa1e4fe46e854bdfa9f1c26e901fcafbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7a7015cd832b4bd99f002389fbc8e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html#a8e7a7015cd832b4bd99f002389fbc8e0">setupN</a> (int reqOrder, double cutoffFrequency, double stopBandDb)</td></tr>
+<tr class="separator:a8e7a7015cd832b4bd99f002389fbc8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIir_1_1CascadeStages"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIir_1_1CascadeStages')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIir_1_1CascadeStages.html">Iir::CascadeStages&lt;(MaxAnalogPoles+1)/2, DirectFormII &gt;</a></td></tr>
 <tr class="memitem:ae5253fde0be7ccfa459a3f70fe8e3e31 inherit pub_methods_classIir_1_1CascadeStages"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIir_1_1CascadeStages.html#ae5253fde0be7ccfa459a3f70fe8e3e31">reset</a> ()</td></tr>
 <tr class="separator:ae5253fde0be7ccfa459a3f70fe8e3e31 inherit pub_methods_classIir_1_1CascadeStages"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,53 +115,8 @@ struct Iir::ChebyshevII::HighPass&lt; FilterOrder, StateType &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aafa86bf4f909cf87c75ba8b60e941efa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafa86bf4f909cf87c75ba8b60e941efa">&#9670;&nbsp;</a></span>setup() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html">Iir::ChebyshevII::HighPass</a>&lt; FilterOrder, StateType &gt;::setup </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cutoffFrequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>stopBandDb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Calculates the coefficients of the filter </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cutoffFrequency</td><td>Normalised cutoff frequency (0..1/2) </td></tr>
-    <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a6fc4ac9b61747fb4cfb6d1ee7c775f31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fc4ac9b61747fb4cfb6d1ee7c775f31">&#9670;&nbsp;</a></span>setup() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc4ac9b61747fb4cfb6d1ee7c775f31">&#9670;&nbsp;</a></span>setup() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,58 +160,6 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
   <table class="params">
     <tr><td class="paramname">sampleRate</td><td>Sampling rate </td></tr>
     <tr><td class="paramname">cutoffFrequency</td><td>Cutoff frequency. </td></tr>
-    <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a00df9952776f3ed0b7c23a2b683b4289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00df9952776f3ed0b7c23a2b683b4289">&#9670;&nbsp;</a></span>setup() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html">Iir::ChebyshevII::HighPass</a>&lt; FilterOrder, StateType &gt;::setup </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>reqOrder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cutoffFrequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>stopBandDb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Calculates the coefficients of the filter </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">reqOrder</td><td>Requested order which can be less than the instantiated one </td></tr>
-    <tr><td class="paramname">cutoffFrequency</td><td>Normalised cutoff frequency (0..1/2) </td></tr>
     <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
   </table>
   </dd>
@@ -265,7 +168,7 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
 </div>
 </div>
 <a id="a415aac5f061addfcabe198bb017742de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a415aac5f061addfcabe198bb017742de">&#9670;&nbsp;</a></span>setup() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a415aac5f061addfcabe198bb017742de">&#9670;&nbsp;</a></span>setup() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,6 +219,103 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
     <tr><td class="paramname">reqOrder</td><td>Requested order which can be less than the instantiated one </td></tr>
     <tr><td class="paramname">sampleRate</td><td>Sampling rate </td></tr>
     <tr><td class="paramname">cutoffFrequency</td><td>Cutoff frequency. </td></tr>
+    <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1e4fe46e854bdfa9f1c26e901fcafbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1e4fe46e854bdfa9f1c26e901fcafbd">&#9670;&nbsp;</a></span>setupN() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html">Iir::ChebyshevII::HighPass</a>&lt; FilterOrder, StateType &gt;::setupN </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cutoffFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stopBandDb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the coefficients of the filter </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cutoffFrequency</td><td>Normalised cutoff frequency (0..1/2) </td></tr>
+    <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e7a7015cd832b4bd99f002389fbc8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7a7015cd832b4bd99f002389fbc8e0">&#9670;&nbsp;</a></span>setupN() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevII_1_1HighPass.html">Iir::ChebyshevII::HighPass</a>&lt; FilterOrder, StateType &gt;::setupN </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reqOrder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cutoffFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stopBandDb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the coefficients of the filter </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reqOrder</td><td>Requested order which can be less than the instantiated one </td></tr>
+    <tr><td class="paramname">cutoffFrequency</td><td>Normalised cutoff frequency (0..1/2) </td></tr>
     <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
   </table>
   </dd>
@@ -329,7 +329,7 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 5 2021 22:56:36 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 6 2021 00:14:41 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

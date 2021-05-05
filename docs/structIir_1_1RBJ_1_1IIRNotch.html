@@ -87,6 +87,8 @@ Inheritance diagram for Iir::RBJ::IIRNotch:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a824ce85d420097081e71b3888acb7862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1RBJ_1_1IIRNotch.html#a824ce85d420097081e71b3888acb7862">setupN</a> (double centerFrequency, double q_factor=10)</td></tr>
+<tr class="separator:a824ce85d420097081e71b3888acb7862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedecb6358bc0a907742c56d5235d35df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1RBJ_1_1IIRNotch.html#aedecb6358bc0a907742c56d5235d35df">setup</a> (double sampleRate, double centerFrequency, double q_factor=10)</td></tr>
 <tr class="separator:aedecb6358bc0a907742c56d5235d35df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structIir_1_1RBJ_1_1RBJbase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structIir_1_1RBJ_1_1RBJbase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structIir_1_1RBJ_1_1RBJbase.html">Iir::RBJ::RBJbase</a></td></tr>
@@ -144,6 +146,9 @@ const <a class="el" href="classIir_1_1DirectFormI.html">DirectFormI</a> &amp;&#1
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Iir::RBJ::IIRNotch::setup </td>
@@ -169,11 +174,51 @@ const <a class="el" href="classIir_1_1DirectFormI.html">DirectFormI</a> &amp;&#1
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Calculates the coefficients </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sampleRate</td><td>Sampling rate </td></tr>
     <tr><td class="paramname">centerFrequency</td><td>Center frequency of the notch </td></tr>
+    <tr><td class="paramname">q_factor</td><td>Q factor of the notch (1 to ~20) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a824ce85d420097081e71b3888acb7862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824ce85d420097081e71b3888acb7862">&#9670;&nbsp;</a></span>setupN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Iir::RBJ::IIRNotch::setupN </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>centerFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>q_factor</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculates the coefficients </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency of the notch </td></tr>
     <tr><td class="paramname">q_factor</td><td>Q factor of the notch (1 to ~20) </td></tr>
   </table>
   </dd>
@@ -188,7 +233,7 @@ const <a class="el" href="classIir_1_1DirectFormI.html">DirectFormI</a> &amp;&#1
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 5 2021 22:56:39 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 6 2021 00:14:44 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

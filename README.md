@@ -35,9 +35,9 @@ The frequencies can either be analogue ones against the sampling rate
 or normalised ones between 0..1/2 where 1/2 is the Nyquist frequency. Note
 that normalised frequencies are simply f = F/Fs and are in units of 1/samples.
 Internally the library uses normalised frequencies and the setup commands
-simply divide by the sampling rate if given. 
-1. `setup`: sampling rate and the analogue cutoff frequencies
-2. `setupN`: normalised frequencies in 1/samples between f = 0..1/2 where 1/2 = Nyquist.
+simply divide by the sampling rate if given. Choose between:
+ 1. `setup`: sampling rate and the analogue cutoff frequencies
+ 2. `setupN`: normalised frequencies in 1/samples between f = 0..1/2 where 1/2 = Nyquist.
 
 See the header files in `\iir` or the documentation for the arguments
 of the `setup` commands.

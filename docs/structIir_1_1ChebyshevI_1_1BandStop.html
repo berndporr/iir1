@@ -91,10 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af269e777d9c7bae864571bd0db1db6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78e0e02cc47abebbd2271345605b12a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html#a78e0e02cc47abebbd2271345605b12a2">setup</a> (int reqOrder, double sampleRate, double centerFrequency, double widthFrequency, double rippleDb)</td></tr>
 <tr class="separator:a78e0e02cc47abebbd2271345605b12a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf50c26460c7de2a09f2b9b0e0a9e225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html#acf50c26460c7de2a09f2b9b0e0a9e225">setup</a> (double centerFrequency, double widthFrequency, double rippleDb)</td></tr>
-<tr class="separator:acf50c26460c7de2a09f2b9b0e0a9e225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af40a50c202a9c81481acced8fedf3e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html#af40a50c202a9c81481acced8fedf3e62">setup</a> (int reqOrder, double centerFrequency, double widthFrequency, double rippleDb)</td></tr>
-<tr class="separator:af40a50c202a9c81481acced8fedf3e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2391183ce4dda61f2feab75af3587af5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html#a2391183ce4dda61f2feab75af3587af5">setupN</a> (double centerFrequency, double widthFrequency, double rippleDb)</td></tr>
+<tr class="separator:a2391183ce4dda61f2feab75af3587af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add75db747d3b2ce89394337927603997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html#add75db747d3b2ce89394337927603997">setupN</a> (int reqOrder, double centerFrequency, double widthFrequency, double rippleDb)</td></tr>
+<tr class="separator:add75db747d3b2ce89394337927603997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIir_1_1CascadeStages"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIir_1_1CascadeStages')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIir_1_1CascadeStages.html">Iir::CascadeStages&lt;(MaxDigitalPoles+1)/2, DirectFormII &gt;</a></td></tr>
 <tr class="memitem:ae5253fde0be7ccfa459a3f70fe8e3e31 inherit pub_methods_classIir_1_1CascadeStages"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIir_1_1CascadeStages.html#ae5253fde0be7ccfa459a3f70fe8e3e31">reset</a> ()</td></tr>
 <tr class="separator:ae5253fde0be7ccfa459a3f70fe8e3e31 inherit pub_methods_classIir_1_1CascadeStages"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,60 +115,8 @@ struct Iir::ChebyshevI::BandStop&lt; FilterOrder, StateType &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acf50c26460c7de2a09f2b9b0e0a9e225"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf50c26460c7de2a09f2b9b0e0a9e225">&#9670;&nbsp;</a></span>setup() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html">Iir::ChebyshevI::BandStop</a>&lt; FilterOrder, StateType &gt;::setup </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>centerFrequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>widthFrequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rippleDb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Calculates the coefficients of the filter at the order FilterOrder </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency (0..1/2) of the notch </td></tr>
-    <tr><td class="paramname">widthFrequency</td><td>Frequency width of the notch </td></tr>
-    <tr><td class="paramname">rippleDb</td><td>Permitted ripples in dB in the passband </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="af269e777d9c7bae864571bd0db1db6ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af269e777d9c7bae864571bd0db1db6ea">&#9670;&nbsp;</a></span>setup() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af269e777d9c7bae864571bd0db1db6ea">&#9670;&nbsp;</a></span>setup() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,65 +167,6 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
     <tr><td class="paramname">sampleRate</td><td>Sampling rate </td></tr>
     <tr><td class="paramname">centerFrequency</td><td>Center frequency of the notch </td></tr>
     <tr><td class="paramname">widthFrequency</td><td>Frequency with of the notch </td></tr>
-    <tr><td class="paramname">rippleDb</td><td>Permitted ripples in dB in the passband </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af40a50c202a9c81481acced8fedf3e62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af40a50c202a9c81481acced8fedf3e62">&#9670;&nbsp;</a></span>setup() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html">Iir::ChebyshevI::BandStop</a>&lt; FilterOrder, StateType &gt;::setup </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>reqOrder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>centerFrequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>widthFrequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rippleDb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Calculates the coefficients of the filter at specified order </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">reqOrder</td><td>Actual order for the filter calculations </td></tr>
-    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency (0..1/2) of the notch </td></tr>
-    <tr><td class="paramname">widthFrequency</td><td>Frequency width of the notch </td></tr>
     <tr><td class="paramname">rippleDb</td><td>Permitted ripples in dB in the passband </td></tr>
   </table>
   </dd>
@@ -286,7 +175,7 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
 </div>
 </div>
 <a id="a78e0e02cc47abebbd2271345605b12a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78e0e02cc47abebbd2271345605b12a2">&#9670;&nbsp;</a></span>setup() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e0e02cc47abebbd2271345605b12a2">&#9670;&nbsp;</a></span>setup() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,6 +233,117 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
     <tr><td class="paramname">sampleRate</td><td>Sampling rate </td></tr>
     <tr><td class="paramname">centerFrequency</td><td>Center frequency of the notch </td></tr>
     <tr><td class="paramname">widthFrequency</td><td>Frequency with of the notch </td></tr>
+    <tr><td class="paramname">rippleDb</td><td>Permitted ripples in dB in the passband </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2391183ce4dda61f2feab75af3587af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2391183ce4dda61f2feab75af3587af5">&#9670;&nbsp;</a></span>setupN() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html">Iir::ChebyshevI::BandStop</a>&lt; FilterOrder, StateType &gt;::setupN </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>centerFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>widthFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rippleDb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the coefficients of the filter at the order FilterOrder </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency (0..1/2) of the notch </td></tr>
+    <tr><td class="paramname">widthFrequency</td><td>Frequency width of the notch </td></tr>
+    <tr><td class="paramname">rippleDb</td><td>Permitted ripples in dB in the passband </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add75db747d3b2ce89394337927603997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add75db747d3b2ce89394337927603997">&#9670;&nbsp;</a></span>setupN() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevI_1_1BandStop.html">Iir::ChebyshevI::BandStop</a>&lt; FilterOrder, StateType &gt;::setupN </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reqOrder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>centerFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>widthFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rippleDb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the coefficients of the filter at specified order </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reqOrder</td><td>Actual order for the filter calculations </td></tr>
+    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency (0..1/2) of the notch </td></tr>
+    <tr><td class="paramname">widthFrequency</td><td>Frequency width of the notch </td></tr>
     <tr><td class="paramname">rippleDb</td><td>Permitted ripples in dB in the passband </td></tr>
   </table>
   </dd>
@@ -357,7 +357,7 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 5 2021 22:56:32 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 6 2021 00:14:38 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
