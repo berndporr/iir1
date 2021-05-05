@@ -53,9 +53,9 @@ const float samplingrate = 1000; // Hz
 const float cutoff_frequency = 5; // Hz
 f.setup (samplingrate, cutoff_frequency);
 ```
-or specify normalised a normalised frequency between 0..1/2:
+or specify a normalised frequency between 0..1/2:
 ```
-f.setup (norm_cutoff_frequency);
+f.setupN(norm_cutoff_frequency);
 ```
 
 2. Chebyshev Type I -- `ChebyshevI.h`
@@ -67,9 +67,9 @@ f.setup (samplingrate,
          cutoff_frequency,
          passband_ripple_in_dB);
 ```
-or specify normalised a normalised frequency between 0..1/2:
+or specify a normalised frequency between 0..1/2:
 ```
-f.setup (norm_cutoff_frequency,passband_ripple_in_dB);
+f.setupN(norm_cutoff_frequency,passband_ripple_in_dB);
 ```
 
 
@@ -82,9 +82,9 @@ f.setup (samplingrate,
          cutoff_frequency,
          stopband_ripple_in_dB);
 ```
-or specify normalised a normalised frequency between 0..1/2:
+or specify a normalised frequency between 0..1/2:
 ```
-f.setup (norm_cutoff_frequency,stopband_ripple_in_dB);
+f.setupN(norm_cutoff_frequency,stopband_ripple_in_dB);
 ```
 
 4. RBJ -- `RBJ.h`
@@ -95,9 +95,9 @@ const float cutoff_frequency = 100;
 const float Q_factor = 5;
 f.setup (samplingrate, cutoff_frequency, Q_factor);
 ```
-or specify normalised a normalised frequency between 0..1/2:
+or specify a normalised frequency between 0..1/2:
 ```
-f.setup (norm_cutoff_frequency, Q_factor);
+f.setupN(norm_cutoff_frequency, Q_factor);
 ```
 
 5. Designing filters with Python's scipy.signal -- `Custom.h`
