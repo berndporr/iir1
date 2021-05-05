@@ -95,6 +95,10 @@ const float cutoff_frequency = 100;
 const float Q_factor = 5;
 f.setup (samplingrate, cutoff_frequency, Q_factor);
 ```
+or specify normalised a normalised frequency between 0..1/2:
+```
+f.setup (norm_cutoff_frequency, Q_factor);
+```
 
 5. Designing filters with Python's scipy.signal -- `Custom.h`
 ```
