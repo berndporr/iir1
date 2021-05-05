@@ -12,7 +12,7 @@
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
  * Copyright (c) 2009 by Vinnie Falco
- * Copyright (c) 2011 by Bernd Porr
+ * Copyright (c) 2011-2021 by Bernd Porr
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -157,13 +157,12 @@ void AnalogLowShelf::design (int numPoles,
 //------------------------------------------------------------------------------
 
 void LowPassBase::setup (int order,
-                         double sampleRate,
                          double cutoffFrequency,
                          double rippleDb)
 {
   m_analogProto.design (order, rippleDb);
 
-  LowPassTransform (cutoffFrequency / sampleRate,
+  LowPassTransform (cutoffFrequency,
                     m_digitalProto,
                     m_analogProto);
 
@@ -171,13 +170,12 @@ void LowPassBase::setup (int order,
 }
 
 void HighPassBase::setup (int order,
-                          double sampleRate,
                           double cutoffFrequency,
                           double rippleDb)
 {
   m_analogProto.design (order, rippleDb);
 
-  HighPassTransform (cutoffFrequency / sampleRate,
+  HighPassTransform (cutoffFrequency,
                      m_digitalProto,
                      m_analogProto);
 
@@ -185,15 +183,14 @@ void HighPassBase::setup (int order,
 }
 
 void BandPassBase::setup (int order,
-                          double sampleRate,
                           double centerFrequency,
                           double widthFrequency,
                           double rippleDb)
 {
   m_analogProto.design (order, rippleDb);
 
-  BandPassTransform (centerFrequency / sampleRate,
-                     widthFrequency / sampleRate,
+  BandPassTransform (centerFrequency,
+                     widthFrequency,
                      m_digitalProto,
                      m_analogProto);
 
@@ -201,15 +198,14 @@ void BandPassBase::setup (int order,
 }
 
 void BandStopBase::setup (int order,
-                          double sampleRate,
                           double centerFrequency,
                           double widthFrequency,
                           double rippleDb)
 {
   m_analogProto.design (order, rippleDb);
 
-  BandStopTransform (centerFrequency / sampleRate,
-                     widthFrequency / sampleRate,
+  BandStopTransform (centerFrequency,
+                     widthFrequency,
                      m_digitalProto,
                      m_analogProto);
 
@@ -217,14 +213,13 @@ void BandStopBase::setup (int order,
 }
 
 void LowShelfBase::setup (int order,
-                          double sampleRate,
                           double cutoffFrequency,
                           double gainDb,
                           double rippleDb)
 {
   m_analogProto.design (order, gainDb, rippleDb);
 
-  LowPassTransform (cutoffFrequency / sampleRate,
+  LowPassTransform (cutoffFrequency,
                     m_digitalProto,
                     m_analogProto);
 
@@ -232,14 +227,13 @@ void LowShelfBase::setup (int order,
 }
 
 void HighShelfBase::setup (int order,
-                           double sampleRate,
                            double cutoffFrequency,
                            double gainDb,
                            double rippleDb)
 {
   m_analogProto.design (order, gainDb, rippleDb);
 
-  HighPassTransform (cutoffFrequency / sampleRate,
+  HighPassTransform (cutoffFrequency,
                      m_digitalProto,
                      m_analogProto);
 
@@ -247,7 +241,6 @@ void HighShelfBase::setup (int order,
 }
 
 void BandShelfBase::setup (int order,
-                           double sampleRate,
                            double centerFrequency,
                            double widthFrequency,
                            double gainDb,
@@ -255,12 +248,12 @@ void BandShelfBase::setup (int order,
 {
   m_analogProto.design (order, gainDb, rippleDb);
 
-  BandPassTransform (centerFrequency / sampleRate,
-                     widthFrequency / sampleRate,
+  BandPassTransform (centerFrequency,
+                     widthFrequency,
                      m_digitalProto,
                      m_analogProto);
 
-  m_digitalProto.setNormal (((centerFrequency/sampleRate) < 0.25) ? doublePi : 0, 1);
+  m_digitalProto.setNormal ( (centerFrequency < 0.25) ? doublePi : 0, 1);
 
   Cascade::setLayout (m_digitalProto);
 }
