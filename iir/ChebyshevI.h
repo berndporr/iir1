@@ -430,7 +430,6 @@ template <int FilterOrder, class StateType = DEFAULT_STATE>
 		/**
 		 * Calculates the coefficients of the filter at specified order
 		 * \param reqOrder Actual order for the filter calculations
-                 * \param sampleRate Sampling rate
                  * \param centerFrequency Normalised centre frequency (0..1/2) of the notch
                  * \param widthFrequency Frequency width of the notch
                  * \param rippleDb Permitted ripples in dB in the passband

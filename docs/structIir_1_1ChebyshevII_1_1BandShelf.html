@@ -91,6 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adca87357a1e04fe298144cae7b200670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a335408ec59e8673fd18dfd603096c7f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1BandShelf.html#a335408ec59e8673fd18dfd603096c7f5">setup</a> (int reqOrder, double sampleRate, double centerFrequency, double widthFrequency, double gainDb, double stopBandDb)</td></tr>
 <tr class="separator:a335408ec59e8673fd18dfd603096c7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12df98805f6c0a25fd9275c74e26d8e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1BandShelf.html#a12df98805f6c0a25fd9275c74e26d8e1">setup</a> (double centerFrequency, double widthFrequency, double gainDb, double stopBandDb)</td></tr>
+<tr class="separator:a12df98805f6c0a25fd9275c74e26d8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a886941d494bb11e7ed924ae0b03fe050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structIir_1_1ChebyshevII_1_1BandShelf.html#a886941d494bb11e7ed924ae0b03fe050">setup</a> (int reqOrder, double centerFrequency, double widthFrequency, double gainDb, double stopBandDb)</td></tr>
+<tr class="separator:a886941d494bb11e7ed924ae0b03fe050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIir_1_1CascadeStages"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIir_1_1CascadeStages')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIir_1_1CascadeStages.html">Iir::CascadeStages&lt;(MaxDigitalPoles+1)/2, DirectFormII &gt;</a></td></tr>
 <tr class="memitem:ae5253fde0be7ccfa459a3f70fe8e3e31 inherit pub_methods_classIir_1_1CascadeStages"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIir_1_1CascadeStages.html#ae5253fde0be7ccfa459a3f70fe8e3e31">reset</a> ()</td></tr>
 <tr class="separator:ae5253fde0be7ccfa459a3f70fe8e3e31 inherit pub_methods_classIir_1_1CascadeStages"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,8 +115,67 @@ struct Iir::ChebyshevII::BandShelf&lt; FilterOrder, StateType &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a12df98805f6c0a25fd9275c74e26d8e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12df98805f6c0a25fd9275c74e26d8e1">&#9670;&nbsp;</a></span>setup() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevII_1_1BandShelf.html">Iir::ChebyshevII::BandShelf</a>&lt; FilterOrder, StateType &gt;::setup </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>centerFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>widthFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gainDb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stopBandDb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the coefficients of the filter </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency (0..1/2) of the bandpass </td></tr>
+    <tr><td class="paramname">widthFrequency</td><td>Width of the bandpass </td></tr>
+    <tr><td class="paramname">gainDb</td><td>Gain in the passband. The stopband has always 0dB. </td></tr>
+    <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="adca87357a1e04fe298144cae7b200670"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca87357a1e04fe298144cae7b200670">&#9670;&nbsp;</a></span>setup() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adca87357a1e04fe298144cae7b200670">&#9670;&nbsp;</a></span>setup() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,8 +240,74 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
 
 </div>
 </div>
+<a id="a886941d494bb11e7ed924ae0b03fe050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a886941d494bb11e7ed924ae0b03fe050">&#9670;&nbsp;</a></span>setup() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structIir_1_1ChebyshevII_1_1BandShelf.html">Iir::ChebyshevII::BandShelf</a>&lt; FilterOrder, StateType &gt;::setup </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reqOrder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>centerFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>widthFrequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gainDb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stopBandDb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the coefficients of the filter </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reqOrder</td><td>Requested order which can be less than the instantiated one </td></tr>
+    <tr><td class="paramname">centerFrequency</td><td>Normalised centre frequency (0..1/2) of the bandpass </td></tr>
+    <tr><td class="paramname">widthFrequency</td><td>Width of the bandpass </td></tr>
+    <tr><td class="paramname">gainDb</td><td>Gain in the passband. The stopband has always 0dB. </td></tr>
+    <tr><td class="paramname">stopBandDb</td><td>Permitted ripples in dB in the stopband </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a335408ec59e8673fd18dfd603096c7f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a335408ec59e8673fd18dfd603096c7f5">&#9670;&nbsp;</a></span>setup() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a335408ec59e8673fd18dfd603096c7f5">&#9670;&nbsp;</a></span>setup() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +385,7 @@ template&lt;int FilterOrder, class StateType  = DirectFormII&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 1 2021 23:10:05 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 5 2021 22:56:35 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

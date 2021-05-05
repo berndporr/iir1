@@ -12,7 +12,7 @@
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
  * Copyright (c) 2009 by Vinnie Falco
- * Copyright (c) 2011-2019 by Bernd Porr
+ * Copyright (c) 2011-2021 by Bernd Porr
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -91,7 +91,6 @@ private:
 struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
-              double sampleRate,
               double cutoffFrequency,
               double stopBandDb);
 };
@@ -99,7 +98,6 @@ struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
 struct DllExport HighPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
-              double sampleRate,
               double cutoffFrequency,
               double stopBandDb);
 };
@@ -107,7 +105,6 @@ struct DllExport HighPassBase : PoleFilterBase <AnalogLowPass>
 struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
-              double sampleRate,
               double centerFrequency,
               double widthFrequency,
               double stopBandDb);
@@ -116,7 +113,6 @@ struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
 struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
-              double sampleRate,
               double centerFrequency,
               double widthFrequency,
               double stopBandDb);
@@ -125,7 +121,6 @@ struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
-              double sampleRate,
               double cutoffFrequency,
               double gainDb,
               double stopBandDb);
@@ -134,7 +129,6 @@ struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 struct DllExport HighShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
-              double sampleRate,
               double cutoffFrequency,
               double gainDb,
               double stopBandDb);
@@ -143,7 +137,6 @@ struct DllExport HighShelfBase : PoleFilterBase <AnalogLowShelf>
 struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
-              double sampleRate,
               double centerFrequency,
               double widthFrequency,
               double gainDb,
@@ -174,8 +167,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 		    double cutoffFrequency,
 		    double stopBandDb) {
 		LowPassBase::setup (FilterOrder,
-				    sampleRate,
-				    cutoffFrequency,
+				    cutoffFrequency / sampleRate,
 				    stopBandDb);
 	}
 
@@ -192,7 +184,37 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		LowPassBase::setup (reqOrder,
-				    sampleRate,
+				    cutoffFrequency / sampleRate,
+				    stopBandDb);
+	}
+
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double cutoffFrequency,
+		    double stopBandDb) {
+		LowPassBase::setup (FilterOrder,
+				    cutoffFrequency,
+				    stopBandDb);
+	}
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double cutoffFrequency,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		LowPassBase::setup (reqOrder,
 				    cutoffFrequency,
 				    stopBandDb);
 	}
@@ -217,8 +239,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 		    double cutoffFrequency,
 		    double stopBandDb) {
 		HighPassBase::setup (FilterOrder,
-				     sampleRate,
-				     cutoffFrequency,
+				     cutoffFrequency / sampleRate,
 				     stopBandDb);
 	}
 
@@ -235,7 +256,36 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		HighPassBase::setup (reqOrder,
-				     sampleRate,
+				     cutoffFrequency / sampleRate,
+				     stopBandDb);
+	}
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double cutoffFrequency,
+		    double stopBandDb) {
+		HighPassBase::setup (FilterOrder,
+				     cutoffFrequency,
+				     stopBandDb);
+	}
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double cutoffFrequency,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		HighPassBase::setup (reqOrder,
 				     cutoffFrequency,
 				     stopBandDb);
 	}
@@ -262,9 +312,8 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
 		    double widthFrequency,
 		    double stopBandDb) {
 		BandPassBase::setup (FilterOrder,
-				     sampleRate,
-				     centerFrequency,
-				     widthFrequency,
+				     centerFrequency / sampleRate,
+				     widthFrequency / sampleRate,
 				     stopBandDb);
 	}
 
@@ -283,7 +332,42 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		BandPassBase::setup (reqOrder,
-				     sampleRate,
+				     centerFrequency / sampleRate,
+				     widthFrequency / sampleRate,
+				     stopBandDb);
+	}
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param centerFrequency Normalised centre frequency (0..1/2) of the bandpass
+         * \param widthFrequency Width of the bandpass
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		BandPassBase::setup (FilterOrder,
+				     centerFrequency,
+				     widthFrequency,
+				     stopBandDb);
+	}
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param centerFrequency Normalised centre frequency (0..1/2) of the bandpass
+         * \param widthFrequency Width of the bandpass
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		BandPassBase::setup (reqOrder,
 				     centerFrequency,
 				     widthFrequency,
 				     stopBandDb);
@@ -310,9 +394,8 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
 		    double widthFrequency,
 		    double stopBandDb) {
 		BandStopBase::setup (FilterOrder,
-				     sampleRate,
-				     centerFrequency,
-				     widthFrequency,
+				     centerFrequency / sampleRate,
+				     widthFrequency / sampleRate,
 				     stopBandDb);
 	}
 
@@ -331,7 +414,42 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		BandStopBase::setup (reqOrder,
-				     sampleRate,
+				     centerFrequency / sampleRate,
+				     widthFrequency / sampleRate,
+				     stopBandDb);
+	}
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param centerFrequency Normalised centre frequency (0..1/2) of the bandstop
+         * \param widthFrequency Width of the bandstop
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		BandStopBase::setup (FilterOrder,
+				     centerFrequency,
+				     widthFrequency,
+				     stopBandDb);
+	}
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param centerFrequency Normalised centre frequency (0..1/2) of the bandstop
+         * \param widthFrequency Width of the bandstop
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		BandStopBase::setup (reqOrder,
 				     centerFrequency,
 				     widthFrequency,
 				     stopBandDb);
@@ -350,7 +468,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 	 * Calculates the coefficients of the filter
 	 * \param sampleRate Sampling rate
 	 * \param cutoffFrequency Cutoff frequency.
-         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+         * \param gainDb Gain of the passbard. The stopband has 0 dB gain.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
 	void setup (double sampleRate,
@@ -358,8 +476,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 		    double gainDb,
 		    double stopBandDb) {
 		LowShelfBase::setup (FilterOrder,
-				     sampleRate,
-				     cutoffFrequency,
+				     cutoffFrequency / sampleRate,
 				     gainDb,
 				     stopBandDb);
 	}
@@ -368,8 +485,8 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 	 * Calculates the coefficients of the filter
 	 * \param reqOrder Requested order which can be less than the instantiated one
 	 * \param sampleRate Sampling rate
-	 * \param cutoffFrequency Cutoff frequency.
-         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+	 * \param cutoffFrequency Cutoff frequency
+         * \param gainDb Gain of the passbard. The stopband has 0 dB gain.
 	 * \param stopBandDb Permitted ripples in dB in the stopband
 	 **/
 	void setup (int reqOrder,
@@ -379,7 +496,43 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		LowShelfBase::setup (reqOrder,
-				     sampleRate,
+				     cutoffFrequency / sampleRate,
+				     gainDb,
+				     stopBandDb);
+	}
+	
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+         * \param gainDb Gain of the passbard. The stopband has 0 dB gain.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		LowShelfBase::setup (FilterOrder,
+				     cutoffFrequency,
+				     gainDb,
+				     stopBandDb);
+	}
+	
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		LowShelfBase::setup (reqOrder,
 				     cutoffFrequency,
 				     gainDb,
 				     stopBandDb);
@@ -407,8 +560,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 		    double gainDb,
 		    double stopBandDb) {
 		HighShelfBase::setup (FilterOrder,
-				      sampleRate,
-				      cutoffFrequency,
+				      cutoffFrequency / sampleRate,
 				      gainDb,
 				      stopBandDb);
 	}
@@ -428,7 +580,44 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		HighShelfBase::setup (reqOrder,
-				      sampleRate,
+				      cutoffFrequency / sampleRate,
+				      gainDb,
+				      stopBandDb);
+	}
+	
+
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		HighShelfBase::setup (FilterOrder,
+				      cutoffFrequency,
+				      gainDb,
+				      stopBandDb);
+	}
+	
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
+         * \param gainDb Gain the passbard. The stopband has 0 dB gain.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		HighShelfBase::setup (reqOrder,
 				      cutoffFrequency,
 				      gainDb,
 				      stopBandDb);
@@ -458,9 +647,8 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
 		    double gainDb,
 		    double stopBandDb) {
 		BandShelfBase::setup (FilterOrder,
-				      sampleRate,
-				      centerFrequency,
-				      widthFrequency,
+				      centerFrequency / sampleRate,
+				      widthFrequency / sampleRate,
 				      gainDb,
 				      stopBandDb);
 	}
@@ -483,7 +671,52 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
 		    double stopBandDb) {
 		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
 		BandShelfBase::setup (reqOrder,
-				      sampleRate,
+				      centerFrequency / sampleRate,
+				      widthFrequency / sampleRate,
+				      gainDb,
+				      stopBandDb);
+	}
+	  
+
+
+
+
+
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param centerFrequency Normalised centre frequency (0..1/2) of the bandpass
+         * \param widthFrequency Width of the bandpass
+         * \param gainDb Gain in the passband. The stopband has always 0dB.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (double centerFrequency,
+		    double widthFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		BandShelfBase::setup (FilterOrder,
+				      centerFrequency,
+				      widthFrequency,
+				      gainDb,
+				      stopBandDb);
+	}
+	  
+
+	/**
+	 * Calculates the coefficients of the filter
+	 * \param reqOrder Requested order which can be less than the instantiated one
+	 * \param centerFrequency Normalised centre frequency (0..1/2) of the bandpass
+         * \param widthFrequency Width of the bandpass
+         * \param gainDb Gain in the passband. The stopband has always 0dB.
+	 * \param stopBandDb Permitted ripples in dB in the stopband
+	 **/
+	void setup (int reqOrder,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double gainDb,
+		    double stopBandDb) {
+		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		BandShelfBase::setup (reqOrder,
 				      centerFrequency,
 				      widthFrequency,
 				      gainDb,

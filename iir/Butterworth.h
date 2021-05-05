@@ -181,7 +181,6 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	/**
 	 * Calculates the coefficients
          * \param reqOrder The actual order which can be less than the instantiated one
-         * \param sampleRate Sampling rate
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
 	void setup (int reqOrder,
@@ -203,7 +202,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	/**
 	 * Calculates the coefficients with the filter order provided by the instantiation
          * \param sampleRate Sampling rate
-         * \param cutoffFrequency Cutoff
+         * \param cutoffFrequency Cutoff frequency
          **/
 	void setup (double sampleRate,
 		    double cutoffFrequency) {
@@ -214,7 +213,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	 * Calculates the coefficients
          * \param reqOrder The actual order which can be less than the instantiated one
          * \param sampleRate Sampling rate
-         * \param cutoffFrequency Cutoff
+         * \param cutoffFrequency Cutoff frequency
          **/
 	void setup (int reqOrder,
 		    double sampleRate,
@@ -227,7 +226,6 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 
 	/**
 	 * Calculates the coefficients with the filter order provided by the instantiation
-         * \param sampleRate Sampling rate
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
 	void setup (double cutoffFrequency) {
@@ -237,7 +235,6 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	/**
 	 * Calculates the coefficients
          * \param reqOrder The actual order which can be less than the instantiated one
-         * \param sampleRate Sampling rate
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)
          **/
 	void setup (int reqOrder,

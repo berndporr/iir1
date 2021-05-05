@@ -66,10 +66,15 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
+	// Demo here if one has a pure digital
+	// system one can use normalised
+	// frequencies from 0 to 1/2 (Nyquist)
+	// where the frequency is 1/samples.
 	Iir::ChebyshevII::LowPass<8> lp_cheby2;
 	double stop_ripple_dB = 60;
-	lp_cheby2.setup (samplingrate,
-			 cutoff_frequency,
+	// Setting cutoff to normalised f=0.1
+	double normalised_cutoff_freq = 0.1;
+	lp_cheby2.setup (normalised_cutoff_freq,
 			 stop_ripple_dB);
 	fimpulse = fopen("lp_cheby2.dat","wt");
 	for(int i=0;i<1000;i++) 

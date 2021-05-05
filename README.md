@@ -31,6 +31,15 @@ All filters are available as lowpass, highpass, bandpass and bandstop/notch
 filters. Butterworth / Chebyshev offer also low/high/band-shelves with
 specified passband gain and 0dB gain in the stopband.
 
+The frequencies can either be analogue ones against the sampling rate
+or as normalised frequencies between 0..1/2 where 1/2 is the Nyquist frequency. Note
+that normalised frequencies are simply f = F/Fs and are in units of 1/samples.
+Internally the library works with normalised frequencies and the setup commands
+simply divide by the sampling rate if given. Thus there setup()
+methods for analogue frequencies with a sampling rate and setup methods for normalised frequencies:
+1. Specify the sampling rate and the analogue cutoff frequency
+2. Specify the normalised frequency in 1/samples between f = 0..1/2 where 1/2 = Nyquist.
+
 See the header files in `\iir` or the documentation for the arguments
 of the `setup` commands.
 
@@ -45,7 +54,10 @@ const float samplingrate = 1000; // Hz
 const float cutoff_frequency = 5; // Hz
 f.setup (samplingrate, cutoff_frequency);
 ```
-
+or specify normalised a normalised frequency between 0..1/2:
+```
+f.setup (norm_cutoff_frequency);
+```
 
 2. Chebyshev Type I -- `ChebyshevI.h`
 With permissible passband ripple in dB.
@@ -55,6 +67,10 @@ const float passband_ripple_in_db = 5;
 f.setup (samplingrate,
          cutoff_frequency,
          passband_ripple_in_dB);
+```
+or specify normalised a normalised frequency between 0..1/2:
+```
+f.setup (norm_cutoff_frequency,passband_ripple_in_dB);
 ```
 
 
@@ -67,7 +83,10 @@ f.setup (samplingrate,
          cutoff_frequency,
          stopband_ripple_in_dB);
 ```
-
+or specify normalised a normalised frequency between 0..1/2:
+```
+f.setup (norm_cutoff_frequency,stopband_ripple_in_dB);
+```
 
 4. RBJ -- `RBJ.h`
 2nd order filters with cutoff and Q factor.

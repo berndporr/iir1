@@ -6,10 +6,9 @@ import numpy as np
 
 # Plots the impulse response of the Bandstop and its frequency response
 
-def plot_if(figno,name,figtitle):
+def plot_if(figno,name,figtitle,fs = 1000):
     plt.figure(figno)
     plt.suptitle(figtitle)
-    fs = 1000
     y = np.loadtxt(name);
     plt.subplot(311)
     plt.title("Impulse response")
@@ -40,7 +39,7 @@ plot_if(2,"hp_rbj.dat","RBJ highpass")
 
 plot_if(3,"lp_cheby1.dat","ChebyshevI lowpass")
 
-plot_if(4,"lp_cheby2.dat","ChebyshevII lowpass")
+plot_if(4,"lp_cheby2.dat","ChebyshevII lowpass",fs=1)
 
 plot_if(5,"bs_rbj.dat","Digital notch")
 
