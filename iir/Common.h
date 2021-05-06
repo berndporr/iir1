@@ -12,7 +12,7 @@
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
  * Copyright (c) 2009 by Vinnie Falco
- * Copyright (c) 2011 by Bernd Porr
+ * Copyright (c) 2011-2021 by Bernd Porr
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -64,5 +64,7 @@
 #include <vector>
 
 static const char orderTooHigh[] = "Requested order is too high. Provide a higher order for the template.";
+
+#define DEFAULT_FILTER_ORDER 4
 
 #endif

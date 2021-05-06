@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">// Filters for the user</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html">  147</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html">LowPass</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;LowPassBase, StateType, FilterOrder&gt;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
 <div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">  154</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;};</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighPass.html">  203</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1HighPass.html">HighPass</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;HighPassBase, StateType, FilterOrder&gt;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
 <div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighPass.html#af7f7939a2e78245305cccd35aae4c75f">  210</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1HighPass.html#af7f7939a2e78245305cccd35aae4c75f">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -223,7 +223,7 @@ $(function() {
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;};</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandPass.html">  257</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandPass.html">BandPass</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;BandPassBase, StateType, FilterOrder, FilterOrder*2&gt;</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
 <div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandPass.html#a73d7b106f2da5ccd5defe5e86f7b8ffd">  265</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1BandPass.html#a73d7b106f2da5ccd5defe5e86f7b8ffd">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -264,7 +264,7 @@ $(function() {
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;};</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandStop.html">  327</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandStop.html">BandStop</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;BandStopBase, StateType, FilterOrder, FilterOrder*2&gt;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;{</div>
 <div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandStop.html#a88300cc9eef7b5eda35f0381f7238c16">  335</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1BandStop.html#a88300cc9eef7b5eda35f0381f7238c16">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -305,7 +305,7 @@ $(function() {
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;};</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowShelf.html">  398</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowShelf.html">LowShelf</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;LowShelfBase, StateType, FilterOrder&gt;</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;{</div>
 <div class="line"><a name="l00406"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowShelf.html#a74f72a17ffe747ad5b0e9f36235fcd34">  406</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowShelf.html#a74f72a17ffe747ad5b0e9f36235fcd34">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -348,7 +348,7 @@ $(function() {
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;};</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00471"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighShelf.html">  471</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1HighShelf.html">HighShelf</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;HighShelfBase, StateType, FilterOrder&gt;</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;{</div>
 <div class="line"><a name="l00479"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighShelf.html#a19a78cb96c9b2454ccb48745ed50500d">  479</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1HighShelf.html#a19a78cb96c9b2454ccb48745ed50500d">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -389,7 +389,7 @@ $(function() {
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;};</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160; </div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; </div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder = DEFAULT_FILTER_ORDER, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
 <div class="line"><a name="l00542"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandShelf.html">  542</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandShelf.html">BandShelf</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;BandShelfBase, StateType, FilterOrder, FilterOrder*2&gt;</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;{</div>
 <div class="line"><a name="l00551"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandShelf.html#a0de40c55dae63d23127cf4dd21bcf050">  551</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1BandShelf.html#a0de40c55dae63d23127cf4dd21bcf050">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
@@ -494,7 +494,7 @@ $(function() {
 <div class="ttc" id="aclassIir_1_1Butterworth_1_1AnalogLowShelf_html"><div class="ttname"><a href="classIir_1_1Butterworth_1_1AnalogLowShelf.html">Iir::Butterworth::AnalogLowShelf</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:73</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 6 2021 12:10:56 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 6 2021 19:18:31 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

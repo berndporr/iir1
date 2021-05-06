@@ -46,7 +46,7 @@ plot_if(3,"lp_cheby1.dat","ChebyshevI lowpass")
 
 plot_if(4,"hp_cheby2.dat","ChebyshevII highpass",fs=1)
 
-plot_if(5,"bs_norm.dat","Notch filter",fs=1)
+plot_if(5,"bs_norm.dat","Butterworth bandstop filter",fs=1)
 
 plot_if(6,"ellip.dat","Elliptic filter (Coefficients from Python)")
 

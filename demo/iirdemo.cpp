@@ -70,7 +70,7 @@ int main (int,char**)
 	// system one can use normalised
 	// frequencies from 0 to 1/2 (Nyquist)
 	// where the frequency is 1/samples.
-	Iir::ChebyshevII::HighPass<8> hp_cheby2;
+	Iir::ChebyshevII::HighPass<order> hp_cheby2;
 	double stop_ripple_dB = 60;
 	// Setting cutoff to normalised f=0.1
 	double normalised_cutoff_freq = 0.1;
@@ -86,8 +86,8 @@ int main (int,char**)
 	}
 	fclose(fimpulse);
 
-	// Bandstop filter
-	Iir::Butterworth::BandStop<4> bsn;
+	// Bandstop filter with default order
+	Iir::Butterworth::BandStop<> bsn;
         const float norm_center_frequency = 0.1;
         const float norm_frequency_width = 0.01;
         bsn.setupN(norm_center_frequency, norm_frequency_width);
