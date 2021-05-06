@@ -52,8 +52,9 @@ namespace Iir {
  **/
 namespace ChebyshevII {
 
-// Half-band analog prototypes (s-plane)
-
+/**
+ * Analogue lowpass prototype (s-plane)
+ **/
 class DllExport AnalogLowPass : public LayoutBase
 {
 public:
@@ -67,8 +68,10 @@ private:
 	double m_stopBandDb;
 };
 
-//------------------------------------------------------------------------------
 
+/**
+ * Analogue shelf lowpass prototype (s-plane)
+ **/
 class DllExport AnalogLowShelf : public LayoutBase
 {
 public:

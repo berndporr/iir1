@@ -41,5 +41,24 @@ int main (int,char**)
 	}
 	assert_print(fabs(b) < 1E-15,"Bandstop value for t->inf to high!");
 	//fprintf(stderr,"%e\n",b);
+
+
+        Iir::ChebyshevII::HighPass<8> hp_cheby2;
+        double stop_ripple_dB = 80;
+        // Setting cutoff to normalised f=0.1
+        double normalised_cutoff_freq = 0.1;
+        hp_cheby2.setupN(normalised_cutoff_freq,
+                         stop_ripple_dB);
+	double norm_signal_frequency = 0.0507;
+	for(int i=0;i<10000;i++) 
+	{
+		b = fabs(hp_cheby2.filter(sin(2*M_PI*norm_signal_frequency*i)));
+		if (i > 5000) {
+			assert_print(b < 1E-3,"Highpass not removing a sine.\n");
+		}
+	}
+	
+
+	
 	return 0;
 }

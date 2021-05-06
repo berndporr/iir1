@@ -37,5 +37,22 @@ int main (int,char**)
 	}
 	//fprintf(stderr,"%e\n",b);
 	assert_print(fabs(b) < 1E-15,"Bandstop value for t->inf to high!");
+
+        Iir::ChebyshevI::LowPass<8> lp_cheby1;
+        const float pass_ripple_db2 = 1; // dB
+	double norm_cutoff_frequency = 0.01;
+        lp_cheby1.setupN(norm_cutoff_frequency,
+                         pass_ripple_db2);
+	double norm_signal_frequency = 0.097;
+	for(int i=0;i<10000;i++) 
+	{
+		b = fabs(lp_cheby1.filter(sin(2*M_PI*norm_signal_frequency*i)));
+		if (i > 5000) {
+			assert_print(b < 1E-5,"Lowpass not removing a sine.\n");
+		}
+	}
+	
 	return 0;
+
+	
 }

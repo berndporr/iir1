@@ -52,7 +52,7 @@ namespace Iir {
 namespace Butterworth {
 
 /**
- * Half-band analog prototypes (s-plane)
+ * Analogue lowpass prototypes (s-plane)
  **/
 class DllExport AnalogLowPass : public LayoutBase
 {
@@ -67,6 +67,9 @@ private:
 
 //------------------------------------------------------------------------------
 
+/**
+ * Analogue low shelf prototypes (s-plane)
+ **/
 class DllExport AnalogLowShelf : public LayoutBase
 {
 public:

@@ -70,33 +70,28 @@ int main (int,char**)
 	// system one can use normalised
 	// frequencies from 0 to 1/2 (Nyquist)
 	// where the frequency is 1/samples.
-	Iir::ChebyshevII::LowPass<8> lp_cheby2;
+	Iir::ChebyshevII::HighPass<8> hp_cheby2;
 	double stop_ripple_dB = 60;
 	// Setting cutoff to normalised f=0.1
 	double normalised_cutoff_freq = 0.1;
-	lp_cheby2.setupN(normalised_cutoff_freq,
+	hp_cheby2.setupN(normalised_cutoff_freq,
 			 stop_ripple_dB);
-	fimpulse = fopen("lp_cheby2.dat","wt");
+	fimpulse = fopen("hp_cheby2.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
 		double a=0;
 		if (i==10) a = 1;
-		double b = lp_cheby2.filter(a);
+		double b = hp_cheby2.filter(a);
 		fprintf(fimpulse,"%e\n",b);
 	}
 	fclose(fimpulse);
 
-	// Digital bandstop filter
-        // This is a filter which as infinite damping
-	// at the notch frequency because the zero of the
-	// filter is placed there. A resonance at the notch
-	// then tunes the width of the filter.
-	// The higher the Q factor the narrow the notch
-	// but the longer its impulse response (=ringing).
-	Iir::RBJ::IIRNotch bsn;
-	const float bs_frequency = 50;
-	bsn.setup (samplingrate, bs_frequency);
-	fimpulse = fopen("bs_rbj.dat","wt");
+	// Bandstop filter
+	Iir::Butterworth::BandStop<4> bsn;
+        const float norm_center_frequency = 0.1;
+        const float norm_frequency_width = 0.01;
+        bsn.setupN(norm_center_frequency, norm_frequency_width);
+	fimpulse = fopen("bs_norm.dat","wt");
 	for(int i=0;i<1000;i++) 
 	{
 		double a=0;

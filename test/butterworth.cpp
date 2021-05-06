@@ -45,5 +45,19 @@ int main (int,char**)
 		//fprintf(stderr,"%e\n",b);
 	}
 	assert_print(fabs(b) < 1E-25,"Bandstop value for t->inf to high!");
+
+
+	Iir::Butterworth::BandStop<4> bs2;
+	const float norm_center_frequency = 0.1019;
+	const float norm_frequency_width = 0.01;	
+	bs2.setupN(norm_center_frequency, norm_frequency_width);
+	for(int i=0;i<10000;i++) 
+	{
+		b = fabs(bs2.filter(sin(2*M_PI*norm_center_frequency*i)));
+		if (i > 5000) {
+			assert_print(b < 1E-5,"Bandstop not removing sine.\n");
+		}
+	}
+	
 	return 0;
 }
