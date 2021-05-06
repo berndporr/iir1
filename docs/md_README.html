@@ -76,7 +76,7 @@ C++ code</h1>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Setting the filter parameters</h2>
 <p>All filters are available as lowpass, highpass, bandpass and bandstop/notch filters. Butterworth / Chebyshev offer also low/high/band-shelves with specified passband gain and 0dB gain in the stopband.</p>
-<p>The frequencies can either be analogue ones against the sampling rate or normalised ones between 0..1/2 where 1/2 is the Nyquist frequency. Note that normalised frequencies are simply f = F/Fs and are in units of 1/samples. Internally the library uses normalised frequencies and the setup commands simply divide by the sampling rate if given.</p><ol type="1">
+<p>The frequencies can either be analogue ones against the sampling rate or normalised ones between 0..1/2 where 1/2 is the Nyquist frequency. Note that normalised frequencies are simply f = F/Fs and are in units of 1/samples. Internally the library uses normalised frequencies and the setup commands simply divide by the sampling rate if given. Choose between:</p><ol type="1">
 <li><code>setup</code>: sampling rate and the analogue cutoff frequencies</li>
 <li><code>setupN</code>: normalised frequencies in 1/samples between f = 0..1/2 where 1/2 = Nyquist.</li>
 </ol>
@@ -90,7 +90,7 @@ Setting the filter parameters</h2>
 <div class="line">f.setup (samplingrate, cutoff_frequency);</div>
 </div><!-- fragment --></li>
 </ol>
-<p>or specify normalised a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setup (norm_cutoff_frequency);</div>
+<p>or specify a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setupN(norm_cutoff_frequency);</div>
 </div><!-- fragment --><ol type="1">
 <li>Chebyshev Type I &ndash; <code><a class="el" href="ChebyshevI_8h_source.html">ChebyshevI.h</a></code> With permissible passband ripple in dB. <div class="fragment"><div class="line">Iir::ChebyshevI::LowPass&lt;order&gt; f;</div>
 <div class="line">const float passband_ripple_in_db = 5;</div>
@@ -99,7 +99,7 @@ Setting the filter parameters</h2>
 <div class="line">         passband_ripple_in_dB);</div>
 </div><!-- fragment --></li>
 </ol>
-<p>or specify normalised a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setup (norm_cutoff_frequency,passband_ripple_in_dB);</div>
+<p>or specify a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setupN(norm_cutoff_frequency,passband_ripple_in_dB);</div>
 </div><!-- fragment --><ol type="1">
 <li>Chebyshev Type II &ndash; <code><a class="el" href="ChebyshevII_8h_source.html">ChebyshevII.h</a></code> With worst permissible stopband rejection in dB. <div class="fragment"><div class="line">Iir::ChebyshevII::LowPass&lt;order&gt; f;</div>
 <div class="line">double stopband_ripple_in_dB = 20;</div>
@@ -108,13 +108,16 @@ Setting the filter parameters</h2>
 <div class="line">         stopband_ripple_in_dB);</div>
 </div><!-- fragment --></li>
 </ol>
-<p>or specify normalised a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setup (norm_cutoff_frequency,stopband_ripple_in_dB);</div>
+<p>or specify a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setupN(norm_cutoff_frequency,stopband_ripple_in_dB);</div>
 </div><!-- fragment --><ol type="1">
 <li>RBJ &ndash; <code><a class="el" href="RBJ_8h_source.html">RBJ.h</a></code> 2nd order filters with cutoff and Q factor. <div class="fragment"><div class="line">Iir::RBJ::LowPass f;</div>
 <div class="line">const float cutoff_frequency = 100;</div>
 <div class="line">const float Q_factor = 5;</div>
 <div class="line">f.setup (samplingrate, cutoff_frequency, Q_factor);</div>
 </div><!-- fragment --></li>
+</ol>
+<p>or specify a normalised frequency between 0..1/2: </p><div class="fragment"><div class="line">f.setupN(norm_cutoff_frequency, Q_factor);</div>
+</div><!-- fragment --><ol type="1">
 <li>Designing filters with Python's scipy.signal &ndash; <code><a class="el" href="Custom_8h_source.html">Custom.h</a></code> <div class="fragment"><div class="line">########</div>
 <div class="line"># Python</div>
 <div class="line"># See &quot;elliptic_design.py&quot; for the complete code.</div>
@@ -225,7 +228,7 @@ Bibliography</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 6 2021 00:14:31 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 6 2021 08:22:44 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

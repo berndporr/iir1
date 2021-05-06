@@ -85,12 +85,12 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classIir_1_1Butterworth_1_1AnalogLowPass.html">   57</a></span>&#160;<span class="keyword">class </span>DllExport <a class="code" href="classIir_1_1Butterworth_1_1AnalogLowPass.html">AnalogLowPass</a> : <span class="keyword">public</span> <a class="code" href="classIir_1_1LayoutBase.html">LayoutBase</a></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classIir_1_1Butterworth_1_1AnalogLowPass.html">AnalogLowPass</a> ();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classIir_1_1Butterworth_1_1AnalogLowPass.html">AnalogLowPass</a> ();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> design (<span class="keyword">const</span> <span class="keywordtype">int</span> numPoles);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> design (<span class="keyword">const</span> <span class="keywordtype">int</span> numPoles);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> m_numPoles;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> m_numPoles;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
@@ -98,89 +98,89 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classIir_1_1Butterworth_1_1AnalogLowShelf.html">   70</a></span>&#160;<span class="keyword">class </span>DllExport <a class="code" href="classIir_1_1Butterworth_1_1AnalogLowShelf.html">AnalogLowShelf</a> : <span class="keyword">public</span> <a class="code" href="classIir_1_1LayoutBase.html">LayoutBase</a></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classIir_1_1Butterworth_1_1AnalogLowShelf.html">AnalogLowShelf</a> ();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> design (<span class="keywordtype">int</span> numPoles, <span class="keywordtype">double</span> gainDb);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classIir_1_1Butterworth_1_1AnalogLowShelf.html">AnalogLowShelf</a> ();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> design (<span class="keywordtype">int</span> numPoles, <span class="keywordtype">double</span> gainDb);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> m_numPoles;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">double</span> m_gainDb;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">int</span> m_numPoles;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">double</span> m_gainDb;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// Factored implementations to reduce template instantiations</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPassBase.html">   86</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowPassBase.html">LowPassBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;              <span class="keywordtype">double</span> cutoffFrequency);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighPassBase.html">   92</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1HighPassBase.html">HighPassBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;              <span class="keywordtype">double</span> cutoffFrequency);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandPassBase.html">   98</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandPassBase.html">BandPassBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;              <span class="keywordtype">double</span> centerFrequency,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;              <span class="keywordtype">double</span> widthFrequency);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandStopBase.html">  105</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandStopBase.html">BandStopBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;              <span class="keywordtype">double</span> centerFrequency,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;              <span class="keywordtype">double</span> widthFrequency);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowShelfBase.html">  112</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowShelfBase.html">LowShelfBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowShelf&gt;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;              <span class="keywordtype">double</span> cutoffFrequency,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;              <span class="keywordtype">double</span> gainDb);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighShelfBase.html">  119</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1HighShelfBase.html">HighShelfBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowShelf&gt;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;              <span class="keywordtype">double</span> cutoffFrequency,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;              <span class="keywordtype">double</span> gainDb);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandShelfBase.html">  126</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandShelfBase.html">BandShelfBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowShelf&gt;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;              <span class="keywordtype">double</span> centerFrequency,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;              <span class="keywordtype">double</span> widthFrequency,</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;              <span class="keywordtype">double</span> gainDb);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPassBase.html">   84</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowPassBase.html">LowPassBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighPassBase.html">   90</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1HighPassBase.html">HighPassBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandPassBase.html">   96</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandPassBase.html">BandPassBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordtype">double</span> centerFrequency,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="keywordtype">double</span> widthFrequency);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandStopBase.html">  103</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandStopBase.html">BandStopBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowPass&gt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <span class="keywordtype">double</span> centerFrequency,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="keywordtype">double</span> widthFrequency);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowShelfBase.html">  110</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowShelfBase.html">LowShelfBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowShelf&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordtype">double</span> gainDb);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1HighShelfBase.html">  117</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1HighShelfBase.html">HighShelfBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowShelf&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="keywordtype">double</span> gainDb);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1BandShelfBase.html">  124</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1BandShelfBase.html">BandShelfBase</a> : <a class="code" href="classIir_1_1PoleFilterBase.html">PoleFilterBase</a> &lt;AnalogLowShelf&gt;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> setup (<span class="keywordtype">int</span> order,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    <span class="keywordtype">double</span> centerFrequency,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    <span class="keywordtype">double</span> widthFrequency,</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    <span class="keywordtype">double</span> gainDb);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">// Filters for the user</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">// Filters for the user</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html">  146</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html">LowPass</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;LowPassBase, StateType, FilterOrder&gt;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">  153</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency) {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                LowPassBase::setup (FilterOrder,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                    cutoffFrequency / sampleRate);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html#a0e10c27ec72f076bf7d0b21c0281860c">  165</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html#a0e10c27ec72f076bf7d0b21c0281860c">setup</a> (<span class="keywordtype">int</span> reqOrder,</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    <span class="keywordtype">double</span> sampleRate,</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency) {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">if</span> (reqOrder &gt; FilterOrder) <span class="keywordflow">throw</span> std::invalid_argument(orderTooHigh);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                LowPassBase::setup (reqOrder,</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                    cutoffFrequency / sampleRate);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> FilterOrder, <span class="keyword">class</span> StateType = DEFAULT_STATE&gt;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html">  144</a></span>&#160;<span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html">LowPass</a> : <a class="code" href="structIir_1_1PoleFilter.html">PoleFilter</a> &lt;LowPassBase, StateType, FilterOrder&gt;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">  151</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">setup</a> (<span class="keywordtype">double</span> sampleRate,</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                LowPassBase::setup (FilterOrder,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                    cutoffFrequency / sampleRate);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html#a0e10c27ec72f076bf7d0b21c0281860c">  163</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html#a0e10c27ec72f076bf7d0b21c0281860c">setup</a> (<span class="keywordtype">int</span> reqOrder,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                    <span class="keywordtype">double</span> sampleRate,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    <span class="keywordtype">double</span> cutoffFrequency) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordflow">if</span> (reqOrder &gt; FilterOrder) <span class="keywordflow">throw</span> std::invalid_argument(orderTooHigh);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                LowPassBase::setup (reqOrder,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                    cutoffFrequency / sampleRate);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        </div>
 <div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="structIir_1_1Butterworth_1_1LowPass.html#a29cb3cdc2e4e8f8f5e76f8942dcbd249">  176</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structIir_1_1Butterworth_1_1LowPass.html#a29cb3cdc2e4e8f8f5e76f8942dcbd249">setupN</a>(<span class="keywordtype">double</span> cutoffFrequency) {</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                LowPassBase::setup (FilterOrder,</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                    cutoffFrequency);</div>
@@ -446,18 +446,18 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIir_1_1PoleFilterBase_html"><div class="ttname"><a href="classIir_1_1PoleFilterBase.html">Iir::PoleFilterBase</a></div><div class="ttdef"><b>Definition:</b> PoleFilter.h:89</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelf_html_a74f72a17ffe747ad5b0e9f36235fcd34"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelf.html#a74f72a17ffe747ad5b0e9f36235fcd34">Iir::Butterworth::LowShelf::setup</a></div><div class="ttdeci">void setup(double sampleRate, double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:403</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html_a21da9f4c29a8dbf80f4611677a86d777"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">Iir::Butterworth::LowPass::setup</a></div><div class="ttdeci">void setup(double sampleRate, double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:153</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html_a21da9f4c29a8dbf80f4611677a86d777"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html#a21da9f4c29a8dbf80f4611677a86d777">Iir::Butterworth::LowPass::setup</a></div><div class="ttdeci">void setup(double sampleRate, double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:151</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighShelf_html_af63e4f43001ae2d9faf44ba6496db562"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighShelf.html#af63e4f43001ae2d9faf44ba6496db562">Iir::Butterworth::HighShelf::setupN</a></div><div class="ttdeci">void setupN(double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:508</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html_a0e10c27ec72f076bf7d0b21c0281860c"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html#a0e10c27ec72f076bf7d0b21c0281860c">Iir::Butterworth::LowPass::setup</a></div><div class="ttdeci">void setup(int reqOrder, double sampleRate, double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:165</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html_a0e10c27ec72f076bf7d0b21c0281860c"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html#a0e10c27ec72f076bf7d0b21c0281860c">Iir::Butterworth::LowPass::setup</a></div><div class="ttdeci">void setup(int reqOrder, double sampleRate, double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:163</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelf_html_a4637158be17c50cb14cf3686b30e135e"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelf.html#a4637158be17c50cb14cf3686b30e135e">Iir::Butterworth::LowShelf::setupN</a></div><div class="ttdeci">void setupN(int reqOrder, double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:449</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandShelf_html_a96cc173942cd6789b5aff603b37e5b2f"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandShelf.html#a96cc173942cd6789b5aff603b37e5b2f">Iir::Butterworth::BandShelf::setupN</a></div><div class="ttdeci">void setupN(int reqOrder, double centerFrequency, double widthFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:602</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighShelf_html_a7df553be87ce22541c6ffa8af7508898"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighShelf.html#a7df553be87ce22541c6ffa8af7508898">Iir::Butterworth::HighShelf::setupN</a></div><div class="ttdeci">void setupN(int reqOrder, double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:521</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandPass_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandPass.html">Iir::Butterworth::BandPass</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:254</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighPass_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighPass.html">Iir::Butterworth::HighPass</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:200</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1BandStopBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandStopBase.html">Iir::Butterworth::BandStopBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:105</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1BandStopBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandStopBase.html">Iir::Butterworth::BandStopBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:103</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandStop_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandStop.html">Iir::Butterworth::BandStop</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:324</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1BandShelfBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandShelfBase.html">Iir::Butterworth::BandShelfBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:126</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html">Iir::Butterworth::LowPass</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:146</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1BandShelfBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandShelfBase.html">Iir::Butterworth::BandShelfBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:124</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html">Iir::Butterworth::LowPass</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:144</div></div>
 <div class="ttc" id="astructIir_1_1PoleFilter_html"><div class="ttname"><a href="structIir_1_1PoleFilter.html">Iir::PoleFilter</a></div><div class="ttdef"><b>Definition:</b> PoleFilter.h:112</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandPass_html_a50e74a28deeaaa6d4df4c68b3ae562a7"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandPass.html#a50e74a28deeaaa6d4df4c68b3ae562a7">Iir::Butterworth::BandPass::setupN</a></div><div class="ttdeci">void setupN(int reqOrder, double centerFrequency, double widthFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:307</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandPass_html_ac33b003f6c77021f90a998d0e03b0e4d"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandPass.html#ac33b003f6c77021f90a998d0e03b0e4d">Iir::Butterworth::BandPass::setupN</a></div><div class="ttdeci">void setupN(double centerFrequency, double widthFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:294</div></div>
@@ -465,9 +465,9 @@ $(function() {
 <div class="ttc" id="astructIir_1_1Butterworth_1_1LowPass_html_a29cb3cdc2e4e8f8f5e76f8942dcbd249"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPass.html#a29cb3cdc2e4e8f8f5e76f8942dcbd249">Iir::Butterworth::LowPass::setupN</a></div><div class="ttdeci">void setupN(double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:176</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighShelf_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighShelf.html">Iir::Butterworth::HighShelf</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:468</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandStop_html_a7d72486d044fef3dce19c9756de995ba"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandStop.html#a7d72486d044fef3dce19c9756de995ba">Iir::Butterworth::BandStop::setupN</a></div><div class="ttdeci">void setupN(int reqOrder, double sampleRate, double centerFrequency, double widthFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:347</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1HighPassBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighPassBase.html">Iir::Butterworth::HighPassBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:92</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1HighPassBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighPassBase.html">Iir::Butterworth::HighPassBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:90</div></div>
 <div class="ttc" id="anamespaceIir_html"><div class="ttname"><a href="namespaceIir.html">Iir</a></div><div class="ttdef"><b>Definition:</b> Biquad.cpp:41</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1BandPassBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandPassBase.html">Iir::Butterworth::BandPassBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:98</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1BandPassBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandPassBase.html">Iir::Butterworth::BandPassBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:96</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighPass_html_a7602019a900b288a16963126de49c2f1"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighPass.html#a7602019a900b288a16963126de49c2f1">Iir::Butterworth::HighPass::setupN</a></div><div class="ttdeci">void setupN(int reqOrder, double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:240</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandShelf_html_a0de40c55dae63d23127cf4dd21bcf050"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandShelf.html#a0de40c55dae63d23127cf4dd21bcf050">Iir::Butterworth::BandShelf::setup</a></div><div class="ttdeci">void setup(double sampleRate, double centerFrequency, double widthFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:548</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighPass_html_af7f7939a2e78245305cccd35aae4c75f"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighPass.html#af7f7939a2e78245305cccd35aae4c75f">Iir::Butterworth::HighPass::setup</a></div><div class="ttdeci">void setup(double sampleRate, double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:207</div></div>
@@ -485,16 +485,16 @@ $(function() {
 <div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelf_html_a660509a6bac1d3b7c10215806d5be5e2"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelf.html#a660509a6bac1d3b7c10215806d5be5e2">Iir::Butterworth::LowShelf::setup</a></div><div class="ttdeci">void setup(int reqOrder, double sampleRate, double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:418</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelf_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelf.html">Iir::Butterworth::LowShelf</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:395</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1BandPass_html_a73d7b106f2da5ccd5defe5e86f7b8ffd"><div class="ttname"><a href="structIir_1_1Butterworth_1_1BandPass.html#a73d7b106f2da5ccd5defe5e86f7b8ffd">Iir::Butterworth::BandPass::setup</a></div><div class="ttdeci">void setup(double sampleRate, double centerFrequency, double widthFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:262</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelfBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelfBase.html">Iir::Butterworth::LowShelfBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:112</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelfBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelfBase.html">Iir::Butterworth::LowShelfBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:110</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighPass_html_ac33912cbd0d3d65acdda0c53d5b64274"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighPass.html#ac33912cbd0d3d65acdda0c53d5b64274">Iir::Butterworth::HighPass::setupN</a></div><div class="ttdeci">void setupN(double cutoffFrequency)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:231</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1HighShelf_html_a19a78cb96c9b2454ccb48745ed50500d"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighShelf.html#a19a78cb96c9b2454ccb48745ed50500d">Iir::Butterworth::HighShelf::setup</a></div><div class="ttdeci">void setup(double sampleRate, double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:476</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1HighShelfBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighShelfBase.html">Iir::Butterworth::HighShelfBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:119</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1HighShelfBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1HighShelfBase.html">Iir::Butterworth::HighShelfBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:117</div></div>
 <div class="ttc" id="astructIir_1_1Butterworth_1_1LowShelf_html_a8bc2be489d0a5b901b02b9e2b62d7053"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowShelf.html#a8bc2be489d0a5b901b02b9e2b62d7053">Iir::Butterworth::LowShelf::setupN</a></div><div class="ttdeci">void setupN(double cutoffFrequency, double gainDb)</div><div class="ttdef"><b>Definition:</b> Butterworth.h:436</div></div>
-<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPassBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPassBase.html">Iir::Butterworth::LowPassBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:86</div></div>
+<div class="ttc" id="astructIir_1_1Butterworth_1_1LowPassBase_html"><div class="ttname"><a href="structIir_1_1Butterworth_1_1LowPassBase.html">Iir::Butterworth::LowPassBase</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:84</div></div>
 <div class="ttc" id="aclassIir_1_1Butterworth_1_1AnalogLowShelf_html"><div class="ttname"><a href="classIir_1_1Butterworth_1_1AnalogLowShelf.html">Iir::Butterworth::AnalogLowShelf</a></div><div class="ttdef"><b>Definition:</b> Butterworth.h:70</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 6 2021 00:14:31 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 6 2021 08:22:44 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
