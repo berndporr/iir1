@@ -335,9 +335,20 @@ namespace RBJ {
 	 **/
 	struct DllExport AllPass : RBJbase
 	{
+		/**
+		 * Calculates the coefficients
+		 * \param phaseFrequency Normalised frequency where the phase flips
+		 * \param q Q-factor
+		 **/
 		void setupN(double phaseFrequency,
 			    double q  = ONESQRT2);
 		
+		/**
+		 * Calculates the coefficients
+		 * \param sampleRate Sampling rate
+		 * \param phaseFrequency Frequency where the phase flips
+		 * \param q Q-factor
+		 **/
 		void setup (double sampleRate,
 			    double phaseFrequency,
 			    double q  = ONESQRT2) {

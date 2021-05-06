@@ -57,14 +57,14 @@ namespace ChebyshevII {
 class DllExport AnalogLowPass : public LayoutBase
 {
 public:
-  AnalogLowPass ();
+	AnalogLowPass ();
 
-  void design (const int numPoles,
-               double stopBandDb);
+	void design (const int numPoles,
+		     double stopBandDb);
 
 private:
-  int m_numPoles;
-  double m_stopBandDb;
+	int m_numPoles;
+	double m_stopBandDb;
 };
 
 //------------------------------------------------------------------------------
@@ -72,75 +72,73 @@ private:
 class DllExport AnalogLowShelf : public LayoutBase
 {
 public:
-  AnalogLowShelf ();
+	AnalogLowShelf ();
 
-  void design (int numPoles,
-               double gainDb,
-               double stopBandDb);
+	void design (int numPoles,
+		     double gainDb,
+		     double stopBandDb);
 
 private:
-  int m_numPoles;
-  double m_stopBandDb;
-  double m_gainDb;
+	int m_numPoles;
+	double m_stopBandDb;
+	double m_gainDb;
 };
 
 //------------------------------------------------------------------------------
 
-// Factored implementations to reduce template instantiations
-
 struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double cutoffFrequency,
-              double stopBandDb);
+	void setup (int order,
+		    double cutoffFrequency,
+		    double stopBandDb);
 };
 
 struct DllExport HighPassBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double cutoffFrequency,
-              double stopBandDb);
+	void setup (int order,
+		    double cutoffFrequency,
+		    double stopBandDb);
 };
 
 struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double centerFrequency,
-              double widthFrequency,
-              double stopBandDb);
+	void setup (int order,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb);
 };
 
 struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double centerFrequency,
-              double widthFrequency,
-              double stopBandDb);
+	void setup (int order,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double stopBandDb);
 };
 
 struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 {
-  void setup (int order,
-              double cutoffFrequency,
-              double gainDb,
-              double stopBandDb);
+	void setup (int order,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb);
 };
 
 struct DllExport HighShelfBase : PoleFilterBase <AnalogLowShelf>
 {
-  void setup (int order,
-              double cutoffFrequency,
-              double gainDb,
-              double stopBandDb);
+	void setup (int order,
+		    double cutoffFrequency,
+		    double gainDb,
+		    double stopBandDb);
 };
 
 struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 {
-  void setup (int order,
-              double centerFrequency,
-              double widthFrequency,
-              double gainDb,
-              double stopBandDb);
+	void setup (int order,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double gainDb,
+		    double stopBandDb);
 };
 
 //------------------------------------------------------------------------------

@@ -57,12 +57,12 @@ namespace Butterworth {
 class DllExport AnalogLowPass : public LayoutBase
 {
 public:
-  AnalogLowPass ();
+	AnalogLowPass ();
 
-  void design (const int numPoles);
+	void design (const int numPoles);
 
 private:
-  int m_numPoles;
+	int m_numPoles;
 };
 
 //------------------------------------------------------------------------------
@@ -70,65 +70,63 @@ private:
 class DllExport AnalogLowShelf : public LayoutBase
 {
 public:
-  AnalogLowShelf ();
-
-  void design (int numPoles, double gainDb);
+	AnalogLowShelf ();
+	
+	void design (int numPoles, double gainDb);
 
 private:
-  int m_numPoles;
-  double m_gainDb;
+	int m_numPoles;
+	double m_gainDb;
 };
 
 //------------------------------------------------------------------------------
 
-// Factored implementations to reduce template instantiations
-
 struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double cutoffFrequency);
+	void setup (int order,
+		    double cutoffFrequency);
 };
 
 struct DllExport HighPassBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double cutoffFrequency);
+	void setup (int order,
+		    double cutoffFrequency);
 };
 
 struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double centerFrequency,
-              double widthFrequency);
+	void setup (int order,
+		    double centerFrequency,
+		    double widthFrequency);
 };
 
 struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
 {
-  void setup (int order,
-              double centerFrequency,
-              double widthFrequency);
+	void setup (int order,
+		    double centerFrequency,
+		    double widthFrequency);
 };
 
 struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
 {
-  void setup (int order,
-              double cutoffFrequency,
-              double gainDb);
+	void setup (int order,
+		    double cutoffFrequency,
+		    double gainDb);
 };
 
 struct DllExport HighShelfBase : PoleFilterBase <AnalogLowShelf>
 {
-  void setup (int order,
-              double cutoffFrequency,
-              double gainDb);
+	void setup (int order,
+		    double cutoffFrequency,
+		    double gainDb);
 };
 
 struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
 {
-  void setup (int order,
-              double centerFrequency,
-              double widthFrequency,
-              double gainDb);
+	void setup (int order,
+		    double centerFrequency,
+		    double widthFrequency,
+		    double gainDb);
 };
 
 //------------------------------------------------------------------------------
@@ -169,6 +167,8 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 		LowPassBase::setup (reqOrder,
 				    cutoffFrequency / sampleRate);
 	}
+
+	
 	/**
 	 * Calculates the coefficients
          * \param cutoffFrequency Normalised cutoff frequency (0..1/2)

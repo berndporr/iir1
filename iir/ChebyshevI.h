@@ -54,14 +54,14 @@ namespace ChebyshevI {
 class DllExport AnalogLowPass : public LayoutBase
 {
 public:
-  AnalogLowPass ();
+	AnalogLowPass ();
 
-  void design (const int numPoles,
-               double rippleDb);
+	void design (const int numPoles,
+		     double rippleDb);
 
 private:
-  int m_numPoles;
-  double m_rippleDb;
+	int m_numPoles;
+	double m_rippleDb;
 };
 
 //------------------------------------------------------------------------------
@@ -69,21 +69,19 @@ private:
 class DllExport AnalogLowShelf : public LayoutBase
 {
 public:
-  AnalogLowShelf ();
+	AnalogLowShelf ();
 
-  void design (int numPoles,
-               double gainDb,
-               double rippleDb);
+	void design (int numPoles,
+		     double gainDb,
+		     double rippleDb);
 
 private:
-  int m_numPoles;
-  double m_rippleDb;
-  double m_gainDb;
+	int m_numPoles;
+	double m_rippleDb;
+	double m_gainDb;
 };
 
 //------------------------------------------------------------------------------
-
-// Factored implementations to reduce template instantiations
 
 struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
 {
