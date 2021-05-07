@@ -87,14 +87,14 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structIir_1_1Cascade_1_1Storage.html">   57</a></span>&#160;        <span class="keyword">struct </span>DllExport <a class="code" href="structIir_1_1Cascade_1_1Storage.html">Storage</a></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structIir_1_1Cascade_1_1Storage.html#afaea83e9bee69938a00168391550b43c">   64</a></span>&#160;                <a class="code" href="structIir_1_1Cascade_1_1Storage.html#afaea83e9bee69938a00168391550b43c">Storage</a> (<span class="keywordtype">int</span> maxStages_, <a class="code" href="classIir_1_1Biquad.html">Biquad</a>* stageArray_)</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structIir_1_1Cascade_1_1Storage.html#a9e85047a65aad450e66340c9e7b01206">   64</a></span>&#160;                <a class="code" href="structIir_1_1Cascade_1_1Storage.html#a9e85047a65aad450e66340c9e7b01206">Storage</a> (<span class="keywordtype">int</span> maxStages_, <a class="code" href="classIir_1_1Biquad.html">Biquad</a>* <span class="keyword">const</span> stageArray_)</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                : maxStages (maxStages_)</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                , stageArray (stageArray_)</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordtype">int</span> maxStages;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="classIir_1_1Biquad.html">Biquad</a>* stageArray;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">int</span> maxStages;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="classIir_1_1Biquad.html">Biquad</a>* <span class="keyword">const</span> stageArray;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        };</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classIir_1_1Cascade.html#a9694b85c160e3689a4d71fd51ca6175d">   77</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classIir_1_1Cascade.html#a9694b85c160e3689a4d71fd51ca6175d">getNumStages</a> ()<span class="keyword"> const</span></div>
@@ -164,21 +164,22 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        out = (state++)-&gt;filter(out, stage);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Sample<span class="keyword">&gt;</span> (out);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="structIir_1_1Cascade_1_1Storage.html">Cascade::Storage</a> getCascadeStorage()</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="structIir_1_1Cascade_1_1Storage.html">Cascade::Storage</a> (MaxStages, m_stages);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        Biquad m_stages[MaxStages];</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        StateType m_states[MaxStages];</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        };</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classIir_1_1CascadeStages.html#a034a9be8ae590b814c8499898a93987a">  175</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="structIir_1_1Cascade_1_1Storage.html">Cascade::Storage</a> <a class="code" href="classIir_1_1CascadeStages.html#a034a9be8ae590b814c8499898a93987a">getCascadeStorage</a>()</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="structIir_1_1Cascade_1_1Storage.html">Cascade::Storage</a> (MaxStages, m_stages);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">inline</span> <span class="keyword">const</span> StateType (&amp;getCascadeState())[MaxStages];</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="classIir_1_1Biquad.html">Biquad</a> m_stages[MaxStages];</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        StateType m_states[MaxStages];</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        };</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIir_1_1Biquad_html"><div class="ttname"><a href="classIir_1_1Biquad.html">Iir::Biquad</a></div><div class="ttdef"><b>Definition:</b> Biquad.h:52</div></div>
 <div class="ttc" id="astructIir_1_1Cascade_1_1Storage_html"><div class="ttname"><a href="structIir_1_1Cascade_1_1Storage.html">Iir::Cascade::Storage</a></div><div class="ttdef"><b>Definition:</b> Cascade.h:57</div></div>
@@ -186,14 +187,15 @@ $(function() {
 <div class="ttc" id="aclassIir_1_1CascadeStages_html_a56d24da4cf09f898b534b1b05578244d"><div class="ttname"><a href="classIir_1_1CascadeStages.html#a56d24da4cf09f898b534b1b05578244d">Iir::CascadeStages::setup</a></div><div class="ttdeci">void setup(const double(&amp;sosCoefficients)[MaxStages][6])</div><div class="ttdef"><b>Definition:</b> Cascade.h:144</div></div>
 <div class="ttc" id="aclassIir_1_1CascadeStages_html_ae5253fde0be7ccfa459a3f70fe8e3e31"><div class="ttname"><a href="classIir_1_1CascadeStages.html#ae5253fde0be7ccfa459a3f70fe8e3e31">Iir::CascadeStages::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> Cascade.h:132</div></div>
 <div class="ttc" id="aclassIir_1_1CascadeStages_html_aa18e9abcaac65fd21be31ee859add3bb"><div class="ttname"><a href="classIir_1_1CascadeStages.html#aa18e9abcaac65fd21be31ee859add3bb">Iir::CascadeStages::filter</a></div><div class="ttdeci">Sample filter(const Sample in)</div><div class="ttdef"><b>Definition:</b> Cascade.h:163</div></div>
+<div class="ttc" id="aclassIir_1_1CascadeStages_html_a034a9be8ae590b814c8499898a93987a"><div class="ttname"><a href="classIir_1_1CascadeStages.html#a034a9be8ae590b814c8499898a93987a">Iir::CascadeStages::getCascadeStorage</a></div><div class="ttdeci">const Cascade::Storage getCascadeStorage()</div><div class="ttdef"><b>Definition:</b> Cascade.h:175</div></div>
 <div class="ttc" id="aclassIir_1_1Cascade_html"><div class="ttname"><a href="classIir_1_1Cascade.html">Iir::Cascade</a></div><div class="ttdef"><b>Definition:</b> Cascade.h:50</div></div>
 <div class="ttc" id="anamespaceIir_html"><div class="ttname"><a href="namespaceIir.html">Iir</a></div><div class="ttdef"><b>Definition:</b> Biquad.cpp:41</div></div>
 <div class="ttc" id="aclassIir_1_1LayoutBase_html"><div class="ttname"><a href="classIir_1_1LayoutBase.html">Iir::LayoutBase</a></div><div class="ttdef"><b>Definition:</b> Layout.h:63</div></div>
-<div class="ttc" id="astructIir_1_1Cascade_1_1Storage_html_afaea83e9bee69938a00168391550b43c"><div class="ttname"><a href="structIir_1_1Cascade_1_1Storage.html#afaea83e9bee69938a00168391550b43c">Iir::Cascade::Storage::Storage</a></div><div class="ttdeci">Storage(int maxStages_, Biquad *stageArray_)</div><div class="ttdef"><b>Definition:</b> Cascade.h:64</div></div>
+<div class="ttc" id="astructIir_1_1Cascade_1_1Storage_html_a9e85047a65aad450e66340c9e7b01206"><div class="ttname"><a href="structIir_1_1Cascade_1_1Storage.html#a9e85047a65aad450e66340c9e7b01206">Iir::Cascade::Storage::Storage</a></div><div class="ttdeci">Storage(int maxStages_, Biquad *const stageArray_)</div><div class="ttdef"><b>Definition:</b> Cascade.h:64</div></div>
 <div class="ttc" id="aclassIir_1_1Cascade_html_a9694b85c160e3689a4d71fd51ca6175d"><div class="ttname"><a href="classIir_1_1Cascade.html#a9694b85c160e3689a4d71fd51ca6175d">Iir::Cascade::getNumStages</a></div><div class="ttdeci">int getNumStages() const</div><div class="ttdef"><b>Definition:</b> Cascade.h:77</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 6 2021 19:18:31 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 7 2021 20:14:59 for iir1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

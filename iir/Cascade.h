@@ -57,18 +57,18 @@ namespace Iir {
         struct DllExport Storage
         {
                 /**
-                 * Constructor which receives the pointer to the Biquad array and the number of Biquads
+                 * Copy-constructor which receives the pointer to the Biquad array and the number of Biquads
                  * \param maxStages_ Number of biquads
                  * \param stageArray_ The array of the Biquads
                  **/
-                Storage (int maxStages_, Biquad* stageArray_)
+                Storage (int maxStages_, Biquad* const stageArray_)
                 : maxStages (maxStages_)
                 , stageArray (stageArray_)
                 {
                 }
 
-                int maxStages;
-                Biquad* stageArray;
+                const int maxStages;
+                Biquad* const stageArray;
         };
 
         /**
@@ -168,12 +168,19 @@ namespace Iir {
                         out = (state++)->filter(out, stage);
                 return static_cast<Sample> (out);
         }
-        
-        Cascade::Storage getCascadeStorage()
+
+	/**
+	 * Returns the coefficients of the entire Biquad chain
+	 **/
+        const Cascade::Storage getCascadeStorage()
         {
                 return Cascade::Storage (MaxStages, m_stages);
         }
         
+ 	/**
+	 * Returns the current state of the entire Biquad chain
+	 **/
+	inline const StateType (&getCascadeState())[MaxStages];
         
         private:
         Biquad m_stages[MaxStages];

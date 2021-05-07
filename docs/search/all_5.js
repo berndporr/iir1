@@ -6,7 +6,9 @@ var searchData=
   ['getb0_30',['getB0',['../classIir_1_1Biquad.html#a84686da988e160a216f3e7057682ffbb',1,'Iir::Biquad']]],
   ['getb1_31',['getB1',['../classIir_1_1Biquad.html#af418a5f260baadbcffe5a7029f089937',1,'Iir::Biquad']]],
   ['getb2_32',['getB2',['../classIir_1_1Biquad.html#a8f3d697bb7c2def508da648938f6afc3',1,'Iir::Biquad']]],
-  ['getnumstages_33',['getNumStages',['../classIir_1_1Cascade.html#a9694b85c160e3689a4d71fd51ca6175d',1,'Iir::Cascade']]],
-  ['getpolezeros_34',['getPoleZeros',['../classIir_1_1Biquad.html#a63c78d766bc40be10004a34aaebfb8e7',1,'Iir::Biquad::getPoleZeros()'],['../classIir_1_1Cascade.html#a18df8bebec4a5e8e3ddc28c35b6bb2f8',1,'Iir::Cascade::getPoleZeros()']]],
-  ['getstate_35',['getState',['../structIir_1_1RBJ_1_1RBJbase.html#a8093409edfce007a4972fa2992d69670',1,'Iir::RBJ::RBJbase']]]
+  ['getcascadestate_33',['getCascadeState',['../classIir_1_1CascadeStages.html#ae01ea212e8a3c79c79af31103427d461',1,'Iir::CascadeStages']]],
+  ['getcascadestorage_34',['getCascadeStorage',['../classIir_1_1CascadeStages.html#a034a9be8ae590b814c8499898a93987a',1,'Iir::CascadeStages']]],
+  ['getnumstages_35',['getNumStages',['../classIir_1_1Cascade.html#a9694b85c160e3689a4d71fd51ca6175d',1,'Iir::Cascade']]],
+  ['getpolezeros_36',['getPoleZeros',['../classIir_1_1Biquad.html#a63c78d766bc40be10004a34aaebfb8e7',1,'Iir::Biquad::getPoleZeros()'],['../classIir_1_1Cascade.html#a18df8bebec4a5e8e3ddc28c35b6bb2f8',1,'Iir::Cascade::getPoleZeros()']]],
+  ['getstate_37',['getState',['../structIir_1_1RBJ_1_1RBJbase.html#a8093409edfce007a4972fa2992d69670',1,'Iir::RBJ::RBJbase']]]
 ];
