@@ -177,11 +177,6 @@ namespace Iir {
                 return Cascade::Storage (MaxStages, m_stages);
         }
         
- 	/**
-	 * Returns the current state of the entire Biquad chain
-	 **/
-	inline const StateType (&getCascadeState())[MaxStages];
-        
         private:
         Biquad m_stages[MaxStages];
         StateType m_states[MaxStages];
