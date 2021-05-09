@@ -295,18 +295,4 @@ requiring optimisation (for example Ellipic filters) has
 been removed and instead a function has been added which can import easily
 coefficients from scipy.
 
-## Bibliography
-
-```
-  "High-Order Digital Parametric Equalizer Design"
-   Sophocles J. Orfanidis
-   (Journal of the Audio Engineering Society, vol 53. pp 1026-1046)
-
-  "Spectral Transformations for digital filters"
-   A. G. Constantinides, B.Sc.(Eng.) Ph.D.
-   (Proceedings of the IEEE, vol. 117, pp. 1585-1590, August 1970)
-```
-
-Enjoy!
-
 Bernd Porr -- http://www.berndporr.me.uk
