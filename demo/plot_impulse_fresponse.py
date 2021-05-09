@@ -21,7 +21,6 @@ def plot_if(figno,name,figtitle,fs = 1000):
     plt.plot(fx,20*np.log10(abs(yf)))
     plt.xlim(0,fs/2)
     plt.title("Frequency response")
-    plt.xlabel("f/Hz")
     plt.ylabel("gain/dB")
 
     plt.subplot(313)
