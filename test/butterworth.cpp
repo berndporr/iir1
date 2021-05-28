@@ -61,5 +61,29 @@ int main(int, char**)
 		}
 	}
 
+	Iir::Butterworth::LowPass<8> lp2;
+	double norm_cutoff_frequency = 0.01;
+	lp2.setupN(norm_cutoff_frequency);
+	double norm_signal_frequency = 0.09;
+	for (int i = 0; i < 10000; i++)
+	{
+		b = fabs(lp2.filter(sin(2 * M_PI*norm_signal_frequency*i)));
+		if (i > 5000) {
+			assert_print(b < 1E-5, "Lowpass not removing a sine.\n");
+		}
+	}
+
+	Iir::Butterworth::HighPass<8> hp2;
+	norm_cutoff_frequency = 0.05;
+	hp2.setupN(norm_cutoff_frequency);
+	norm_signal_frequency = 0.005;
+	for (int i = 0; i < 10000; i++)
+	{
+		b = fabs(hp2.filter(sin(2 * M_PI*norm_signal_frequency*i)));
+		if (i > 9000) {
+			assert_print(b < 1E-5, "Highpass not removing a sine.\n");
+		}
+	}
+
 	return 0;
 }
