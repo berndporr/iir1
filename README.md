@@ -22,6 +22,10 @@ it can run without any malloc / new commands.
 Memory is allocated at compile time
 so that there is never the risk of memory leaks.
 
+All realtime filter code is in the header files which guarantees
+efficient integration into the main program and the compiler
+can optimise both filter code and main program at the same time.
+
 ## C++ code
 Add the following include statement to your code:
 ```
