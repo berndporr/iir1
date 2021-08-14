@@ -2,6 +2,13 @@
 
 ![alt tag](title.png)
 
+ - High performance
+ - Realtime sample in - sample out processing
+ - Butterworth, RBJ, Chebychev filters
+ - Lowpass, highpass, bandpass and bandstop filters
+ - Template based header-only filter functions
+ - Cross platform: Linux, Windows and Mac
+
 An infinite impulse response (IIR) filter library for
 Linux, Mac OSX and Windows
 which implements Butterworth, RBJ, Chebychev filters
