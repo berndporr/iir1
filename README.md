@@ -243,7 +243,7 @@ Both gcc and clang have been tested.
 ### Windows
 
 ```
-cmake -G "Visual Studio 15 2017 Win64" .
+cmake -G "Visual Studio 16 2019" -A x64 .
 ```
 
 See `cmake` for the different build-options. Above is for a 64 bit build.
