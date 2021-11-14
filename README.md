@@ -37,16 +37,16 @@ instantiated specifying its order, then the
 parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
-### Instantiating the filter
-The idea is to allocate the memory of the filter at compile time
-with a template argument to avoid any `new` commands. This prevents memory leaks and
-can be optimised at compile time. The `order` provided to the template
-is the maximum order for the filter:
+### Instantiating the filter The idea is to allocate the memory of the
+filter at compile time with a template argument to avoid any new
+commands. This prevents memory leaks and can be optimised at compile
+time. The `order` provided to the template (for example here for a
+lowpass filter):
 ```
 Iir::Butterworth::LowPass<order> f;
 ```
-and is used as a default for the `setup` command but can be overridden
-by a lower order if required.
+is used as the default order by the `setup` command below
+but can be overridden by a lower order if required.
 
 ### Setting the filter parameters: `setup`
 All filters are available as lowpass, highpass, bandpass and bandstop/notch
