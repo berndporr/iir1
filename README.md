@@ -37,7 +37,8 @@ instantiated specifying its order, then the
 parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
-### Instantiating the filter The idea is to allocate the memory of the
+### Instantiating the filter
+The idea is to allocate the memory of the
 filter at compile time with a template argument to avoid any new
 commands. This prevents memory leaks and can be optimised at compile
 time. The `order` provided to the template (for example here for a
