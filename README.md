@@ -37,7 +37,18 @@ instantiated specifying its order, then the
 parameters are set with the function `setup` and
 then it's ready to be used for sample by sample realtime filtering.
 
-### Setting the filter parameters
+### Instantiating the filter
+The idea is to allocate the memory of the filter at compile time
+with a template argument to avoid any `new` commands. This prevents memory leaks and
+can be optimised at compile time. The `order` provided to the template
+is the maximum order for the filter:
+```
+Iir::Butterworth::LowPass<order> f;
+```
+and is used as a default for the `setup` command but can be overridden
+by a lower order if required.
+
+### Setting the filter parameters: `setup`
 All filters are available as lowpass, highpass, bandpass and bandstop/notch
 filters. Butterworth / Chebyshev offer also low/high/band-shelves with
 specified passband gain and 0dB gain in the stopband.
@@ -49,6 +60,9 @@ Internally the library uses normalised frequencies and the setup commands
 simply divide by the sampling rate if given. Choose between:
  1. `setup`: sampling rate and the analogue cutoff frequencies
  2. `setupN`: normalised frequencies in 1/samples between f = 0..1/2 where 1/2 = Nyquist.
+
+By default `setup` uses the order supplied by the template argument but
+can be overridden by lower filter orders.
 
 See the header files in `\iir` or the documentation for the arguments
 of the `setup` commands.
