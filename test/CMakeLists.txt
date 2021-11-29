@@ -31,3 +31,7 @@ add_test(TestCUSTOM test_custom)
 add_executable (test_badparam badparam.cpp)
 target_link_libraries(test_badparam iir_static)
 add_test(TestBadParam test_badparam)
+
+add_executable (test_state state.cpp)
+target_link_libraries(test_state iir_static)
+add_test(TestState test_state)
