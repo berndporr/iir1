@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#include "assert_print.h"
+// All coefficients, inputs, results come from state.py
 
 const double coeff1[1][6] =
 {{ 0.02008337,  0.04016673,  0.02008337,
@@ -42,7 +42,7 @@ void assert_double(double a, double b) {
 	char tmp[1024];
 	sprintf(tmp,"Mismatch: %e != %e\n",a,b);
 	fprintf(stderr,"%s",tmp);
-	//throw tmp;
+	throw tmp;
 }
 
 void test1 () {
