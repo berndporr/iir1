@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1.0)
 
-project(iir VERSION 1.9.0 LANGUAGES CXX)
+project(iir VERSION 1.9.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
