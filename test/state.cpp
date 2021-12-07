@@ -43,10 +43,8 @@ void assert_double(const double a, const double b) {
 		fprintf(stderr,"%e == %e, err = %e,%e\n",a,b,err1,err2);
 		return;
 	}
-	const std::string s = "Mismatch: " + std::to_string(a) + "!=" +
-		std::to_string(b) + "\n";
-	std::cerr << s;
-	throw s;
+	fprintf(stderr,"%e != %e, err = %e,%e\n",a,b,err1,err2);
+	exit(-1);
 }
 
 void test1 () {

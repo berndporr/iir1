@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  5 DEC 2021 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.2)  7 DEC 2021 07:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2103,12 +2103,12 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: 65D6967890BBD095958B24646177D796;55127.
  ) 
 Here is how much of TeX's memory you used:
- 18560 strings out of 481239
- 302539 string characters out of 5920377
- 653259 words of memory out of 5000000
- 32377 multiletter control sequences out of 15000+600000
+ 18560 strings out of 482480
+ 302539 string characters out of 5946191
+ 650192 words of memory out of 5000000
+ 32183 multiletter control sequences out of 15000+600000
  586988 words of font info for 98 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 395 hyphenation exceptions out of 8191
  55i,16n,96p,1174b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{State_8h_source} has been referenced but does not
  exist, replaced by a fixed one
@@ -2127,7 +2127,7 @@ exlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf
 type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
 elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
 o8a.pfb>
-Output written on refman.pdf (93 pages, 665182 bytes).
+Output written on refman.pdf (93 pages, 665126 bytes).
 PDF statistics:
  3822 PDF objects out of 4296 (max. 8388607)
  3446 compressed objects within 35 object streams

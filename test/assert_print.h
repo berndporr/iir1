@@ -4,7 +4,7 @@
 inline void assert_print(int b, const char* t) {
 	if (b) return;
 	fprintf(stderr,"%s\n",t);
-	abort();
+	exit(-1);
 }
 
 // placed there so that it only affects the cpp files
