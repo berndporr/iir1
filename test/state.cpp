@@ -1,19 +1,23 @@
 #include "Iir.h"
 
 #include <stdio.h>
+#include<iostream>
 
 #include "assert_print.h"
 
-void assert_double(double a, double b) {
+void assert_double(const double a, const double b) {
 	const double d = fabs(a-b);
-	if (d < 1E-5) {
-		fprintf(stderr,"%e == %e, err = %e\n",a,b,d);		
+	const double epsilon = 1E-5;
+	const double err1 = d/fabs(a);
+	const double err2 = d/fabs(b);
+	if ((err1 < epsilon) && (err2 < epsilon)) {
+		fprintf(stderr,"%e == %e, err = %e,%e\n",a,b,err1,err2);
 		return;
 	}
-	char tmp[1024];
-	sprintf(tmp,"Mismatch: %e != %e\n",a,b);
-	fprintf(stderr,"%s",tmp);
-	throw tmp;
+	const std::string s = "Mismatch: " + std::to_string(a) + "!=" +
+		std::to_string(b) + "\n";
+	std::cerr << s;
+	throw s;
 }
 
 void test1 () {
