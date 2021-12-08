@@ -269,8 +269,10 @@ to use the static library and link it into the application program.
 ### Unit tests
 
 Run unit tests by typing `make test` or just `ctest`.
-These test if after a delta pulse all filters relax to zero and
-that their outputs never become NaN.
+These test if after a delta pulse all filters relax to zero,
+that their outputs never become NaN and if the Direct Form I&II filters calculate
+expected sequences by comparing them from results created
+by the output of scipy's `sosfilt`.
 
 ## Documentation
 
