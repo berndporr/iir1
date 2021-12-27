@@ -40,7 +40,6 @@
 #include "Biquad.h"
 #include "Layout.h"
 #include "MathSupplement.h"
-#include <stdexcept>
 
 namespace Iir {
 
@@ -85,7 +84,7 @@ namespace Iir {
         const Biquad& operator[] (int index)
         {
                 if ((index < 0) || (index >= m_numStages))
-                        throw std::invalid_argument("Index out of bounds.");
+                        throw_invalid_argument("Index out of bounds.");
                 return m_stageArray[index];
         }
 

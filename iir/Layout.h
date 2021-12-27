@@ -38,7 +38,6 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
-#include <stdexcept>
 
 /**
  * Describes a filter as a collection of poles and zeros along with
@@ -101,11 +100,11 @@ namespace Iir {
 		void add (const complex_t& pole, const complex_t& zero)
 		{
 			if (m_numPoles&1)
-				throw std::invalid_argument(errCantAdd2ndOrder);
+				throw_invalid_argument(errCantAdd2ndOrder);
 			if (Iir::is_nan(pole))
-				throw std::invalid_argument(errPoleisNaN);
+				throw_invalid_argument(errPoleisNaN);
 			if (Iir::is_nan(zero))
-				throw std::invalid_argument(errZeroisNaN);
+				throw_invalid_argument(errZeroisNaN);
 			m_pair[m_numPoles/2] = PoleZeroPair (pole, zero);
 			++m_numPoles;
 		}
@@ -114,11 +113,11 @@ namespace Iir {
 						const complex_t zero)
 		{
 			if (m_numPoles&1)
-				throw std::invalid_argument(errCantAdd2ndOrder);
+				throw_invalid_argument(errCantAdd2ndOrder);
 			if (Iir::is_nan(pole))
-				throw std::invalid_argument(errPoleisNaN);
+				throw_invalid_argument(errPoleisNaN);
 			if (Iir::is_nan(zero))
-				throw std::invalid_argument(errZeroisNaN);
+				throw_invalid_argument(errZeroisNaN);
 			m_pair[m_numPoles/2] = PoleZeroPair (
 				pole, zero, std::conj (pole), std::conj (zero));
 			m_numPoles += 2;
@@ -127,11 +126,11 @@ namespace Iir {
 		void add (const ComplexPair& poles, const ComplexPair& zeros)
 		{
 			if (m_numPoles&1)
-				throw std::invalid_argument(errCantAdd2ndOrder);
+				throw_invalid_argument(errCantAdd2ndOrder);
 			if (!poles.isMatchedPair ())
-				throw std::invalid_argument(errPolesNotComplexConj);
+				throw_invalid_argument(errPolesNotComplexConj);
 			if (!zeros.isMatchedPair ())
-				throw std::invalid_argument(errZerosNotComplexConj);
+				throw_invalid_argument(errZerosNotComplexConj);
 			m_pair[m_numPoles/2] = PoleZeroPair (poles.first, zeros.first,
 							     poles.second, zeros.second);
 			m_numPoles += 2;
@@ -140,7 +139,7 @@ namespace Iir {
 		const PoleZeroPair& getPair (int pairIndex) const
 		{
 			if ((pairIndex < 0) || (pairIndex >= (m_numPoles+1)/2))
-				throw std::invalid_argument(pairIndexOutOfBounds);
+				throw_invalid_argument(pairIndexOutOfBounds);
 			return m_pair[pairIndex];
 		}
 

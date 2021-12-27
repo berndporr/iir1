@@ -62,9 +62,26 @@
 #include <string>
 #include <limits>
 #include <vector>
+#include <stdexcept> // for invalid_argument
 
 static const char orderTooHigh[] = "Requested order is too high. Provide a higher order for the template.";
 
 #define DEFAULT_FILTER_ORDER 4
+
+/**
+ * @brief Throw invalid argument exception if exceptions are enabled, otherwise abort.
+ *
+ * @param msg Error message
+ */
+inline void throw_invalid_argument(const char* msg) {
+
+#ifndef IIR1_NO_EXCEPTIONS
+    throw std::invalid_argument(msg);
+#else
+    (void) msg; // Discard parameter
+    abort();
+#endif
+
+}
 
 #endif

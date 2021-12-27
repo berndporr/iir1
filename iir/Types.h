@@ -38,7 +38,6 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
-#include <stdexcept>
 
 namespace Iir {
 
@@ -54,7 +53,7 @@ namespace Iir {
 		explicit ComplexPair (const complex_t& c1)
 			: complex_pair_t (c1, 0.)
 		{
-			if (!isReal()) throw std::invalid_argument("A single complex number needs to be real.");
+			if (!isReal()) throw_invalid_argument("A single complex number needs to be real.");
 		}
 
 		ComplexPair (const complex_t& c1,

@@ -103,7 +103,7 @@ namespace Iir {
 		const int numPoles = proto.getNumPoles();
 		m_numStages = (numPoles + 1)/ 2;
 		if (m_numStages > m_maxStages)
-			throw std::invalid_argument("Number of stages is larger than the max stages.");
+			throw_invalid_argument("Number of stages is larger than the max stages.");
 
 		Biquad* stage = m_stageArray;
 		for (int i = 0; i < m_maxStages; ++i, ++stage)

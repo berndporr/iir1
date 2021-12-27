@@ -39,7 +39,6 @@
 #include "Common.h"
 #include "Biquad.h"
 
-#include <stdexcept>
 
 #define DEFAULT_STATE DirectFormII
 
