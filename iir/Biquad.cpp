@@ -36,7 +36,6 @@
 #include "Common.h"
 #include "MathSupplement.h"
 #include "Biquad.h"
-#include <stdexcept>
 
 namespace Iir {
 
@@ -64,7 +63,7 @@ namespace Iir {
 				double d = 2. * a0;
 				poles.first = -(a1 + c) / d;
 				poles.second =  (c - a1) / d;
-				if (poles.is_nan()) throw std::invalid_argument("poles are NaN");
+				if (poles.is_nan()) throw_invalid_argument("poles are NaN");
 			}
 
 			{
@@ -73,7 +72,7 @@ namespace Iir {
 				double d = 2. * b0;
 				zeros.first = -(b1 + c) / d;
 				zeros.second =  (c - b1) / d;
-				if (zeros.is_nan()) throw std::invalid_argument("zeros are NaN");
+				if (zeros.is_nan()) throw_invalid_argument("zeros are NaN");
 			}
 		}
 
@@ -124,12 +123,12 @@ namespace Iir {
 	void Biquad::setCoefficients (double a0, double a1, double a2,
 					  double b0, double b1, double b2)
 	{
-		if (Iir::is_nan (a0)) throw std::invalid_argument("a0 is NaN");
-		if (Iir::is_nan (a1)) throw std::invalid_argument("a1 is NaN");
-		if (Iir::is_nan (a2)) throw std::invalid_argument("a2 is NaN");
-		if (Iir::is_nan (b0)) throw std::invalid_argument("b0 is NaN");
-		if (Iir::is_nan (b1)) throw std::invalid_argument("b1 is NaN");
-		if (Iir::is_nan (b2)) throw std::invalid_argument("b2 is NaN");
+		if (Iir::is_nan (a0)) throw_invalid_argument("a0 is NaN");
+		if (Iir::is_nan (a1)) throw_invalid_argument("a1 is NaN");
+		if (Iir::is_nan (a2)) throw_invalid_argument("a2 is NaN");
+		if (Iir::is_nan (b0)) throw_invalid_argument("b0 is NaN");
+		if (Iir::is_nan (b1)) throw_invalid_argument("b1 is NaN");
+		if (Iir::is_nan (b2)) throw_invalid_argument("b2 is NaN");
 
 		m_a0 = a0;
 		m_a1 = a1/a0;
@@ -141,8 +140,8 @@ namespace Iir {
 
 	void Biquad::setOnePole (complex_t pole, complex_t zero)
 	{
-		if (pole.imag() != 0) throw std::invalid_argument("Imaginary part of pole is non-zero.");
-		if (zero.imag() != 0) throw std::invalid_argument("Imaginary part of zero is non-zero.");
+		if (pole.imag() != 0) throw_invalid_argument("Imaginary part of pole is non-zero.");
+		if (zero.imag() != 0) throw_invalid_argument("Imaginary part of zero is non-zero.");
 
 		const double a0 = 1;
 		const double a1 = -pole.real();
@@ -166,14 +165,14 @@ namespace Iir {
 		if (pole1.imag() != 0)
 		{
 			if (pole2 != std::conj (pole1))
-				throw std::invalid_argument(errMsgPole);
+				throw_invalid_argument(errMsgPole);
 			a1 = -2 * pole1.real();
 			a2 = std::norm (pole1);
 		}
 		else
 		{
 			if (pole2.imag() != 0)
-				throw std::invalid_argument(errMsgPole);
+				throw_invalid_argument(errMsgPole);
 			a1 = -(pole1.real() + pole2.real());
 			a2 =   pole1.real() * pole2.real();
 		}
@@ -185,14 +184,14 @@ namespace Iir {
 		if (zero1.imag() != 0)
 		{
 			if (zero2 != std::conj (zero1))
-				throw std::invalid_argument(errMsgZero);
+				throw_invalid_argument(errMsgZero);
 			b1 = -2 * zero1.real();
 			b2 = std::norm (zero1);
 		}
 		else
 		{
 			if (zero2.imag() != 0)
-				throw std::invalid_argument(errMsgZero);
+				throw_invalid_argument(errMsgZero);
 
 			b1 = -(zero1.real() + zero2.real());
 			b2 =   zero1.real() * zero2.real();

@@ -179,7 +179,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			LowPassBase::setup (reqOrder,
 					    cutoffFrequency / sampleRate,
 					    rippleDb);
@@ -208,7 +208,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 		void setupN(int reqOrder,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			LowPassBase::setup (reqOrder,
 					    cutoffFrequency,
 					    rippleDb);
@@ -248,7 +248,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double sampleRate,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			HighPassBase::setup (reqOrder,
 					     cutoffFrequency / sampleRate,
 					     rippleDb);
@@ -277,7 +277,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 		void setupN(int reqOrder,
 			    double cutoffFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			HighPassBase::setup (reqOrder,
 					     cutoffFrequency,
 					     rippleDb);
@@ -322,7 +322,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			BandPassBase::setup (reqOrder,
 			       centerFrequency / sampleRate,
 			       widthFrequency / sampleRate,
@@ -357,7 +357,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			BandPassBase::setup (reqOrder,
 			       centerFrequency,
 			       widthFrequency,
@@ -403,7 +403,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			BandStopBase::setup (reqOrder,
 					     centerFrequency / sampleRate,
 					     widthFrequency / sampleRate,
@@ -438,7 +438,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double centerFrequency,
 			    double widthFrequency,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			BandStopBase::setup (reqOrder,
 					     centerFrequency,
 					     widthFrequency,
@@ -485,7 +485,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			LowShelfBase::setup (reqOrder,
 					     cutoffFrequency / sampleRate,
 					     gainDb,
@@ -520,7 +520,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			LowShelfBase::setup (reqOrder,
 					     cutoffFrequency,
 					     gainDb,
@@ -566,7 +566,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			HighShelfBase::setup (reqOrder,
 			       cutoffFrequency / sampleRate,
 			       gainDb,
@@ -602,7 +602,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double cutoffFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			HighShelfBase::setup (reqOrder,
 			       cutoffFrequency,
 			       gainDb,
@@ -655,7 +655,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double widthFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			BandShelfBase::setup (reqOrder,
 					      centerFrequency / sampleRate,
 					      widthFrequency / sampleRate,
@@ -699,7 +699,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 			    double widthFrequency,
 			    double gainDb,
 			    double rippleDb) {
-			if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+			if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 			BandShelfBase::setup (reqOrder,
 					      centerFrequency,
 					      widthFrequency,

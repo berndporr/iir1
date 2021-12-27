@@ -61,8 +61,8 @@ LowPassTransform::LowPassTransform (double fc,
                                     LayoutBase const& analog)
 {
 
-	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
-	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
+	if (!(fc < 0.5)) throw_invalid_argument(cutoffError);
+	if (fc < 0.0) throw_invalid_argument(cutoffNeg);
 	
 	digital.reset ();
 
@@ -107,8 +107,8 @@ HighPassTransform::HighPassTransform (double fc,
                                       LayoutBase& digital,
                                       LayoutBase const& analog)
 {
-	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
-	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
+	if (!(fc < 0.5)) throw_invalid_argument(cutoffError);
+	if (fc < 0.0) throw_invalid_argument(cutoffNeg);
 	
 	digital.reset ();
 	
@@ -142,8 +142,8 @@ BandPassTransform::BandPassTransform (double fc,
                                       LayoutBase& digital,
                                       LayoutBase const& analog)
 {
-	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
-	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
+	if (!(fc < 0.5)) throw_invalid_argument(cutoffError);
+	if (fc < 0.0) throw_invalid_argument(cutoffNeg);
 
 	digital.reset ();
 	
@@ -226,8 +226,8 @@ BandStopTransform::BandStopTransform (double fc,
                                       LayoutBase& digital,
                                       LayoutBase const& analog)
 {
-	if (!(fc < 0.5)) throw std::invalid_argument(cutoffError);
-	if (fc < 0.0) throw std::invalid_argument(cutoffNeg);
+	if (!(fc < 0.5)) throw_invalid_argument(cutoffError);
+	if (fc < 0.0) throw_invalid_argument(cutoffNeg);
 
 	digital.reset ();
 	

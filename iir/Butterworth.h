@@ -166,7 +166,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	void setup (int reqOrder,
 		    double sampleRate,
 		    double cutoffFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		LowPassBase::setup (reqOrder,
 				    cutoffFrequency / sampleRate);
 	}
@@ -188,7 +188,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
          **/
 	void setupN(int reqOrder,
 		    double cutoffFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		LowPassBase::setup (reqOrder,
 				    cutoffFrequency);
 	}
@@ -221,7 +221,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	void setup (int reqOrder,
 		    double sampleRate,
 		    double cutoffFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		HighPassBase::setup (reqOrder,
 				     cutoffFrequency / sampleRate);
 	}
@@ -242,7 +242,7 @@ struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
          **/
 	void setupN(int reqOrder,
 		    double cutoffFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		HighPassBase::setup (reqOrder,
 				     cutoffFrequency);
 	}
@@ -281,7 +281,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
 		    double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		BandPassBase::setup(reqOrder,
 				    centerFrequency / sampleRate,
 				    widthFrequency / sampleRate);
@@ -310,7 +310,7 @@ struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, Fi
 	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		BandPassBase::setup(reqOrder,
 				    centerFrequency,
 				    widthFrequency);
@@ -351,7 +351,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
 		    double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		BandStopBase::setup (reqOrder,
 				     centerFrequency / sampleRate,
 				     widthFrequency / sampleRate);
@@ -380,7 +380,7 @@ struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, Fi
 	void setupN(int reqOrder,
 		    double centerFrequency,
 		    double widthFrequency) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		BandStopBase::setup (reqOrder,
 				     centerFrequency,
 				     widthFrequency);
@@ -422,7 +422,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 		    double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		LowShelfBase::setup (reqOrder,
 				     cutoffFrequency / sampleRate,
 				     gainDb);
@@ -452,7 +452,7 @@ struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		LowShelfBase::setup (reqOrder,
 				     cutoffFrequency,
 				     gainDb);
@@ -495,7 +495,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 		    double sampleRate,
 		    double cutoffFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		HighShelfBase::setup (reqOrder,
 				      cutoffFrequency / sampleRate,
 				      gainDb);
@@ -524,7 +524,7 @@ struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 	void setupN(int reqOrder,
 		    double cutoffFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		HighShelfBase::setup (reqOrder,
 				      cutoffFrequency,
 				      gainDb);
@@ -571,7 +571,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
 		    double centerFrequency,
 		    double widthFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		BandShelfBase::setup (reqOrder,
 				      centerFrequency / sampleRate,
 				      widthFrequency / sampleRate,
@@ -606,7 +606,7 @@ struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, 
 		    double centerFrequency,
 		    double widthFrequency,
 		    double gainDb) {
-		if (reqOrder > FilterOrder) throw std::invalid_argument(orderTooHigh);
+		if (reqOrder > FilterOrder) throw_invalid_argument(orderTooHigh);
 		BandShelfBase::setup (reqOrder,
 				      centerFrequency,
 				      widthFrequency,
