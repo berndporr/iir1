@@ -19,10 +19,10 @@ int main(int, char**)
 		float a = 0;
 		if (i == 10) a = 1;
 		b = f.filter(a);
-		assert_print(!isnan(b), "Lowpass output is NAN\n");
+		assert_print(!isnan(b), "Highpass output is NAN\n");
 	}
 	//fprintf(stderr,"%e\n",b);
-	assert_print(fabs(b) < 1E-15, "Lowpass value for t->inf to high!");
+	assert_print(fabs(b) < 1E-15, "Highpass value for t->inf to high!");
 
 	Iir::ChebyshevI::BandStop<4, Iir::DirectFormI> bs;
 	const float center_frequency = 50;
