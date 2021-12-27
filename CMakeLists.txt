@@ -51,13 +51,18 @@ set(LIBINCLUDE
 
 if (BUILD_SHARED_LIBS)
   set(IIR_LIB_TARGET iir)
+
   add_library(iir SHARED ${LIBSRC})
   add_library(iir::iir ALIAS iir)
 else ()
   set(IIR_LIB_TARGET iir_static)
   set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+
   add_library(iir_static STATIC ${LIBSRC})
   add_library(iir::iir_static ALIAS iir_static)
+
+  set_target_properties(${IIR_LIB_TARGET} PROPERTIES
+  NO_SONAME TRUE)
 endif()
 
 target_include_directories(${IIR_LIB_TARGET}
