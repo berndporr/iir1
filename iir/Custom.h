@@ -93,7 +93,7 @@ struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
 	 * Default constructor which creates a unity gain filter of NSOS biquads.
 	 * Set the filter coefficients later with the setup() method.
 	 **/
-	SOSCascade();
+	SOSCascade() {};
 	/**
          * Python scipy.signal-friendly setting of coefficients.
 	 * Initialises the coefficients of the whole chain of
