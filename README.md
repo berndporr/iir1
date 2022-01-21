@@ -176,6 +176,9 @@ an exception. Parameters provided to `setup()` which
 result in coefficients being NAN will also
 throw an exception.
 
+You can switch off trowing exeptions by defining
+`IIR1_NO_EXCEPTIONS` via cmake or in your program.
+
 
 ## Linking
 
