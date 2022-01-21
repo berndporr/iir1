@@ -203,10 +203,10 @@ Windows: `libiir_static.lib`).
 
 
 
-## Packages for Ubuntu (xenial / bionic / focal):
+## Packages for Ubuntu LTS:
 
-If you have Ubuntu's LTS distros xenial, bionic or focal then
-install it as a pre-compiled package:
+If you are using Ubuntu LTS then you can
+install this library as a pre-compiled package:
 
 ```
 sudo add-apt-repository ppa:berndporr/dsp
