@@ -66,8 +66,8 @@ namespace Iir {
                 {
                 }
 
-                const int maxStages;
-                Biquad* const stageArray;
+                const int maxStages = 0;
+                Biquad* const stageArray = nullptr;
         };
 
         /**
@@ -109,9 +109,9 @@ namespace Iir {
         void setLayout (const LayoutBase& proto);
 
         private:
-        int m_numStages;
-        int m_maxStages;
-        Biquad* m_stageArray;
+        int m_numStages = 0;
+        int m_maxStages = 0;
+        Biquad* m_stageArray = nullptr;
         };
 
 
@@ -177,8 +177,8 @@ namespace Iir {
         }
         
         private:
-        Biquad m_stages[MaxStages];
-        StateType m_states[MaxStages];
+        Biquad m_stages[MaxStages] = {};
+        StateType m_states[MaxStages] = {};
         };
         
 }

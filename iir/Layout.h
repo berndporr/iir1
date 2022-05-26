@@ -65,6 +65,7 @@ namespace Iir {
 		LayoutBase ()
 			: m_numPoles (0)
 			, m_maxPoles (0)
+			, m_pair (nullptr)
 		{
 		}
 
@@ -165,9 +166,9 @@ namespace Iir {
 		}
 
 	private:
-		int m_numPoles;
-		int m_maxPoles;
-		PoleZeroPair* m_pair;
+		int m_numPoles = 0;
+		int m_maxPoles = 0;
+		PoleZeroPair* m_pair = nullptr;
 		double m_normalW = 0;
 		double m_normalGain = 1;
 	};
@@ -187,7 +188,7 @@ namespace Iir {
 		}
 
 	private:
-		PoleZeroPair m_pairs[(MaxPoles+1)/2];
+		PoleZeroPair m_pairs[(MaxPoles+1)/2] = {};
 	};
 
 }

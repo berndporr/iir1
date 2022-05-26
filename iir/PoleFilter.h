@@ -77,7 +77,7 @@ public:
   }
 
 protected:
-  LayoutBase m_digitalProto;
+  LayoutBase m_digitalProto = {};
 };
 
 
@@ -97,7 +97,7 @@ protected:
   }
 
 protected:
-  AnalogPrototype m_analogProto;
+  AnalogPrototype m_analogProto = {};
 };
 
 //------------------------------------------------------------------------------
@@ -121,8 +121,8 @@ template <class BaseClass,
   }
 
 private:
-  Layout <MaxAnalogPoles> m_analogStorage;
-  Layout <MaxDigitalPoles> m_digitalStorage;
+  Layout <MaxAnalogPoles> m_analogStorage = {};
+  Layout <MaxDigitalPoles> m_digitalStorage = {};
 };
 
 //------------------------------------------------------------------------------
@@ -151,7 +151,7 @@ public:
 private:
   complex_t transform (complex_t c);
 
-  double f;
+  double f = 0.0;
 };
 
 //------------------------------------------------------------------------------
@@ -169,7 +169,7 @@ public:
 private:
   complex_t transform (complex_t c);
 
-  double f;
+  double f = 0.0;
 };
 
 //------------------------------------------------------------------------------
@@ -189,14 +189,14 @@ public:
 private:
   ComplexPair transform (complex_t c);
 
-  double wc;
-  double wc2;
-  double a;
-  double b;
-  double a2;
-  double b2;
-  double ab;
-  double ab_2;
+  double wc = 0.0;
+  double wc2 = 0.0;
+  double a = 0.0;
+  double b = 0.0;
+  double a2 = 0.0;
+  double b2 = 0.0;
+  double ab = 0.0;
+  double ab_2 = 0.0;
 };
 
 //------------------------------------------------------------------------------
@@ -215,12 +215,12 @@ public:
 private:
   ComplexPair transform (complex_t c);
 
-  double wc;
-  double wc2;
-  double a;
-  double b;
-  double a2;
-  double b2;
+  double wc = 0.0;
+  double wc2 = 0.0;
+  double a = 0.0;
+  double b = 0.0;
+  double a2 = 0.0;
+  double b2 = 0.0;
 };
 
 }

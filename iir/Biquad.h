@@ -155,12 +155,12 @@ namespace Iir {
 		void applyScale (double scale);
 
 	public:
-		double m_a0 = 1;
-		double m_a1 = 0;
-		double m_a2 = 0;
-		double m_b1 = 0;
-		double m_b2 = 0;
-		double m_b0 = 1;
+		double m_a0 = 1.0;
+		double m_a1 = 0.0;
+		double m_a2 = 0.0;
+		double m_b1 = 0.0;
+		double m_b2 = 0.0;
+		double m_b0 = 1.0;
 	};
 
 //------------------------------------------------------------------------------
@@ -176,7 +176,7 @@ namespace Iir {
 
 		explicit BiquadPoleState (const Biquad& s);
 
-		double gain = 1;
+		double gain = 1.0;
 	};
 
 }
