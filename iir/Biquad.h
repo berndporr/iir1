@@ -172,7 +172,7 @@ namespace Iir {
  **/
 	struct DllExport BiquadPoleState : PoleZeroPair
 	{
-		BiquadPoleState () { }
+		BiquadPoleState () = default;
 
 		explicit BiquadPoleState (const Biquad& s);
 
