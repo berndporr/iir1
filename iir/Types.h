@@ -98,10 +98,10 @@ namespace Iir {
  **/
 	struct DllExport PoleZeroPair
 	{
-		ComplexPair poles;
-		ComplexPair zeros;
+		ComplexPair poles = ComplexPair();
+		ComplexPair zeros = ComplexPair();
 
-		PoleZeroPair () { }
+		PoleZeroPair () = default;
 
 		// single pole/zero
 		PoleZeroPair (const complex_t& p, const complex_t& z)
