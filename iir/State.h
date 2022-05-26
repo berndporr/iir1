@@ -55,10 +55,7 @@ namespace Iir {
 	class DllExport DirectFormI
 	{
 	public:
-	DirectFormI ()
-	{
-		reset();
-	}
+	DirectFormI () = default;
 	
 	void reset ()
 	{
@@ -102,10 +99,7 @@ namespace Iir {
 	class DllExport DirectFormII
 	{
 	public:
-	DirectFormII ()
-	{
-		reset ();
-	}
+	DirectFormII () = default;
 	
 	void reset ()
 	{
@@ -137,6 +131,7 @@ namespace Iir {
 	{
 	public:
 	TransposedDirectFormII() = default;
+	
 	void reset ()
 	{
 		m_s1 = 0.0;
