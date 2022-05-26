@@ -46,9 +46,7 @@ namespace Iir {
  **/
 	struct DllExport ComplexPair : complex_pair_t
 	{
-		ComplexPair ()
-		{
-		}
+		ComplexPair() = default;
 
 		explicit ComplexPair (const complex_t& c1)
 			: complex_pair_t (c1, 0.)
