@@ -110,8 +110,8 @@ namespace Iir {
 			++m_numPoles;
 		}
 
-		void addPoleZeroConjugatePairs (const complex_t pole,
-						const complex_t zero)
+		void addPoleZeroConjugatePairs (const complex_t& pole,
+						const complex_t& zero)
 		{
 			if (m_numPoles&1)
 				throw_invalid_argument(errCantAdd2ndOrder);
