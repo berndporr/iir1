@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(iir VERSION 1.9.2 LANGUAGES CXX)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
+
 set(CMAKE_CXX_STANDARD 11)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
@@ -71,7 +73,14 @@ install(TARGETS iir EXPORT iir-targets
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
   PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
 
+include(JoinPaths)
+
+join_paths(includedir_for_pc_file "\${prefix}" "${CMAKE_INSTALL_INCLUDEDIR}")
+join_paths(libdir_for_pc_file "\${prefix}" "${CMAKE_INSTALL_LIBDIR}")
+
 configure_file(iir.pc.in iir.pc @ONLY)
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/iir.pc"
+  DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig/")
 
 add_library(iir_static STATIC ${LIBSRC})
 add_library(iir::iir_static ALIAS iir_static)
