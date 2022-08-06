@@ -50,24 +50,16 @@ namespace Iir {
         {
         public:
         
+        Cascade () = default;
+
         /**
-         * Pointer to an array of Biquads
+         * To return the array from a function and to set it.
+	 * Transmits number of stages and the pointer to the array.
          **/
         struct DllExport Storage
         {
-                /**
-                 * Copy-constructor which receives the pointer to the Biquad array and the number of Biquads
-                 * \param maxStages_ Number of biquads
-                 * \param stageArray_ The array of the Biquads
-                 **/
-                Storage (int maxStages_, Biquad* const stageArray_)
-                : maxStages (maxStages_)
-                , stageArray (stageArray_)
-                {
-                }
-
-                const int maxStages = 0;
-                Biquad* const stageArray = nullptr;
+                int maxStages = 0;
+                Biquad* stageArray = nullptr;
         };
 
         /**
@@ -99,9 +91,6 @@ namespace Iir {
          **/
         std::vector<PoleZeroPair> getPoleZeros () const;
 
-        protected:
-        Cascade ();
-
         void setCascadeStorage (const Storage& storage);
 
         void applyScale (double scale);
@@ -115,7 +104,6 @@ namespace Iir {
         };
 
 
-        
 //------------------------------------------------------------------------------
         
 /**
@@ -124,6 +112,11 @@ namespace Iir {
  **/
         template <int MaxStages,class StateType>
         class DllExport CascadeStages {
+
+	public:
+	CascadeStages() = default;
+		
+		
         public:
         /**
          * Resets all biquads (i.e. the delay lines but not the coefficients)
@@ -173,7 +166,10 @@ namespace Iir {
 	 **/
         const Cascade::Storage getCascadeStorage()
         {
-                return Cascade::Storage (MaxStages, m_stages);
+                Cascade::Storage s;
+                s.maxStages = MaxStages;
+                s.stageArray = m_stages;
+		return s;
         }
         
         private:

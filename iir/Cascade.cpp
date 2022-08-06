@@ -38,13 +38,6 @@
 
 namespace Iir {
 
-	Cascade::Cascade ()
-		: m_numStages (0)
-		, m_maxStages (0)
-		, m_stageArray (0)
-	{
-	}
-
 	void Cascade::setCascadeStorage (const Storage& storage)
 	{
 		m_numStages = 0;
