@@ -44,4 +44,4 @@ add_test(TestState test_state)
 
 add_executable (test_copyconstr copyconstr.cpp)
 target_link_libraries(test_copyconstr iir_static)
-# add_test(TestCopyConstr test_copyconstr)
+add_test(TestCopyConstr test_copyconstr)
