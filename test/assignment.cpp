@@ -50,7 +50,7 @@ int main(int, char**) {
     // setup & test 2nd time
     std::cout << "Creating and testing filter using object assignment\n";
     filter = FilterType();  // this assignment seems to be the problem
-    //filter.setupN(0.1);
+    filter.setupN(0.1);
     filter.reset();
     std::array<double, test_len> res2 { testFilter(filter) }; 
     assert_print(sq_err(res1, res2) < 1e-10,
