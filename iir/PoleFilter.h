@@ -122,13 +122,17 @@ namespace Iir {
 			{
 				// This glues together the factored base classes
 				// with the templatized storage classes.
+				std::cout << "PoleFilter()\n";
 				BaseClass::setCascadeStorage (this->getCascadeStorage());
 				BaseClass::setPrototypeStorage (m_analogStorage, m_digitalStorage);
 			}
 		PoleFilter& operator=(const PoleFilter&)
 			{
-				std::cerr << "Copying PoleFilter object (hopefully!)\n";
+				std::cout << "Copying PoleFilter object (hopefully!)\n";
 				BaseClass::setCascadeStorage (this->getCascadeStorage());
+				CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
+				// Uncommenting the following line breaks stuff (response goes to [1,1,1,1,1])
+				//BaseClass::setPrototypeStorage (m_analogStorage, m_digitalStorage);
 				return *this;
 			}
 
