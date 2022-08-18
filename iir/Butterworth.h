@@ -202,6 +202,7 @@ struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
 struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 {
+
 	/**
 	 * Calculates the coefficients with the filter order provided by the instantiation
          * \param sampleRate Sampling rate

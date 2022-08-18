@@ -127,6 +127,8 @@ namespace Iir {
 				BaseClass::setPrototypeStorage (m_analogStorage, m_digitalStorage);
 				CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
 			}
+
+		PoleFilter(const PoleFilter&) = default;
 		
 		PoleFilter& operator=(const PoleFilter&)
 			{
