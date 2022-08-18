@@ -125,12 +125,16 @@ namespace Iir {
 				std::cout << "PoleFilter()\n";
 				BaseClass::setCascadeStorage (this->getCascadeStorage());
 				BaseClass::setPrototypeStorage (m_analogStorage, m_digitalStorage);
+				CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
 			}
+		
 		PoleFilter& operator=(const PoleFilter&)
 			{
 				std::cout << "Copying PoleFilter object (hopefully!)\n";
-				BaseClass::setCascadeStorage (this->getCascadeStorage());
-				CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
+				// Don't need this because the constructor called it.
+				//BaseClass::setCascadeStorage (this->getCascadeStorage());
+				// Uncomment to reset the filter state when copied.
+				//CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
 				// Uncommenting the following line breaks stuff (response goes to [1,1,1,1,1])
 				//BaseClass::setPrototypeStorage (m_analogStorage, m_digitalStorage);
 				return *this;
