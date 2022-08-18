@@ -117,6 +117,7 @@ namespace Iir {
 	struct PoleFilter : BaseClass
 		, CascadeStages <(MaxDigitalPoles + 1) / 2 , StateType>
 	{
+	public:
 		PoleFilter ()
 			{
 				// This glues together the factored base classes
@@ -127,6 +128,7 @@ namespace Iir {
 		PoleFilter& operator=(const PoleFilter&)
 			{
 				std::cerr << "Copying PoleFilter object (hopefully!)\n";
+				BaseClass::setCascadeStorage (this->getCascadeStorage());
 				return *this;
 			}
 
