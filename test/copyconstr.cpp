@@ -33,6 +33,8 @@ int main(int, char**) {
     filter.setupN(0.1);
     std::array<double, test_len> res1 { testFilter(filter) }; 
     // Test response: [0.192873, -0.427308, -0.00869136, 0.266734, 0.2204]
+    std::cout << "Next four samples should be: [0.0189142, -0.150791, -0.197797, -0.129944, -0.00990682]\n";
+    // std::array<double, test_len> next { testFilter(filter) }; 
 
     // setup & test 2nd time
     filter = FilterType();  // this assignment seems to be the problem

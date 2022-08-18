@@ -41,6 +41,9 @@
 #include "Cascade.h"
 #include "State.h"
 
+// Purely for debugging...
+#include <iostream>
+
 namespace Iir {
 
 /***
@@ -120,6 +123,11 @@ namespace Iir {
 				// with the templatized storage classes.
 				BaseClass::setCascadeStorage (this->getCascadeStorage());
 				BaseClass::setPrototypeStorage (m_analogStorage, m_digitalStorage);
+			}
+		PoleFilter& operator=(const PoleFilter&)
+			{
+				std::cerr << "Copying PoleFilter object (hopefully!)\n";
+				return *this;
 			}
 
 	private:
