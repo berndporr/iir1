@@ -131,8 +131,8 @@ namespace Iir {
 		
 		PoleFilter& operator=(const PoleFilter&)
 			{
-				// Uncomment to reset the filter state when copied.
-				// CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
+				// Reset the filter state when copied for now
+				CascadeStages<(MaxDigitalPoles + 1) / 2 , StateType>::reset();
 				return *this;
 			}
 		

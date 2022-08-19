@@ -51,7 +51,6 @@ int main(int, char**) {
     std::cout << "Creating and testing filter using object assignment\n";
     filter = FilterType();  // this assignment seems to be the problem
     filter.setupN(0.1);
-    filter.reset();
     std::array<double, test_len> res2 { testFilter(filter) }; 
     assert_print(sq_err(res1, res2) < 1e-10,
                  "Filter produces different results after initialisation by assignment.\n");

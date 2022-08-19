@@ -41,8 +41,7 @@ namespace Iir {
 
 	void Cascade::setCascadeStorage (const Storage& storage)
 	{
-		std::cout << "setCascadeStorage()\n";
-		m_numStages = 0;
+		m_numStages = 0; // fixme
 		m_maxStages = storage.maxStages;
 		m_stageArray = storage.stageArray;
 	}
