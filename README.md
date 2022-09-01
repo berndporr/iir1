@@ -206,14 +206,20 @@ Windows: `libiir_static.lib`).
 ## Packages for Ubuntu LTS:
 
 If you are using Ubuntu LTS then you can
-install this library as a pre-compiled package:
+install this library as a pre-compiled package.
 
+Add this repository to your system:
 ```
 sudo add-apt-repository ppa:berndporr/dsp
 ```
 
+Then install the packages:
+
+  - Library files: `sudo apt install iir1`
+  - Development files: `sudo apt install iir1-dev`
+
 It's available for 32,64 bit PC and 32,64 bit ARM (Raspberry PI etc).
-The documentation and the example programs are in:
+The documentation of the development package and the example programs are in:
 ```
 /usr/share/doc/iir1-dev/
 ```
