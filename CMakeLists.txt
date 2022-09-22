@@ -107,7 +107,7 @@ install(TARGETS iir_static EXPORT iir-targets
   PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/iir)
 
 install(EXPORT iir-targets
-  DESTINATION lib/cmake/iir
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/iir
   NAMESPACE iir::
   FILE iirTargets.cmake
 )
@@ -116,7 +116,7 @@ include(CMakePackageConfigHelpers)
 
 configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/Config.cmake.in
   "${CMAKE_CURRENT_BINARY_DIR}/iirConfig.cmake"
-  INSTALL_DESTINATION "lib/cmake/iir"
+  INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/iir"
   NO_SET_AND_CHECK_MACRO
   NO_CHECK_REQUIRED_COMPONENTS_MACRO
   )
@@ -130,5 +130,5 @@ write_basic_package_version_file(
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/iirConfig.cmake
   ${CMAKE_CURRENT_BINARY_DIR}/iirConfigVersion.cmake
-  DESTINATION lib/cmake/iir
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/iir
   )
