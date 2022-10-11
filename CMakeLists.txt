@@ -16,9 +16,12 @@ cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 option(INSTALL_STATIC "Build static library" ON)
 
 include(GNUInstallDirs)
-add_subdirectory(test)
+# If including this project in another project, use IIR1_BUILD_TESTING to enable local testing
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR IIR1_BUILD_TESTING)
+    add_subdirectory(test)
+    enable_testing ()
+endif()
 add_subdirectory(demo)
-enable_testing ()
 
 if (MSVC)
   add_compile_options(/W4)
