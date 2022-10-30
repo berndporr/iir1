@@ -14,20 +14,24 @@ cmake_policy(SET CMP0048 NEW) # set VERSION in project()
 cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 
 option(INSTALL_STATIC "Build static library" ON)
+option(IIR1_DEV_FLAGS "Enable developer flags" ON)
 
 include(GNUInstallDirs)
+
+if(IIR1_DEV_FLAGS)
+  if (MSVC)
+    add_compile_options(/W4 /WX)
+  else()
+    add_compile_options(-Wall -Wconversion -Wextra -pedantic -Werror)
+  endif()
+endif()
+
 # If including this project in another project, use IIR1_BUILD_TESTING to enable local testing
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR IIR1_BUILD_TESTING)
     add_subdirectory(test)
     enable_testing ()
 endif()
 add_subdirectory(demo)
-
-if (MSVC)
-  add_compile_options(/W4)
-else()
-  add_compile_options(-Wall -Wconversion -Wextra -pedantic)
-endif()
 
 set(LIBSRC
   iir/Biquad.cpp
