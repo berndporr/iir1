@@ -13,15 +13,16 @@ endif()
 cmake_policy(SET CMP0048 NEW) # set VERSION in project()
 cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 
-option(INSTALL_STATIC "Build static library" ON)
+option(IIR1_INSTALL_STATIC "Install static library" ON)
+option(IIR1_BUILD_DEMO "Build demo" ON)
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  set(IIR1_BUILD_TESTING_DEFAULT ON)
+else()
+  set(IIR1_BUILD_TESTING_DEFAULT OFF)
+endif()
+option(IIR1_BUILD_TESTING "Build tests" ${IIR1_BUILD_TESTING_DEFAULT})
 
 include(GNUInstallDirs)
-# If including this project in another project, use IIR1_BUILD_TESTING to enable local testing
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR IIR1_BUILD_TESTING)
-    add_subdirectory(test)
-    enable_testing ()
-endif()
-add_subdirectory(demo)
 
 if (MSVC)
   add_compile_options(/W4)
@@ -103,7 +104,7 @@ set_target_properties(iir_static PROPERTIES
   PUBLIC_HEADER Iir.h
   PRIVATE_HEADER "${LIBINCLUDE}")
 
-if(INSTALL_STATIC)
+if(IIR1_INSTALL_STATIC)
   install(TARGETS iir_static EXPORT iir-targets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -139,3 +140,11 @@ install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/iirConfigVersion.cmake
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/iir
   )
+
+if(IIR1_BUILD_TESTING)
+  enable_testing()
+  add_subdirectory(test)
+endif()
+if(IIR1_BUILD_DEMO)
+  add_subdirectory(demo)
+endif()
