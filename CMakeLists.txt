@@ -1,27 +1,23 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.8)
 
 project(iir VERSION 1.9.4 LANGUAGES CXX)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
-
-set(CMAKE_CXX_STANDARD 11)
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-cmake_policy(SET CMP0048 NEW) # set VERSION in project()
-cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
-
-option(INSTALL_STATIC "Build static library" ON)
+option(IIR1_INSTALL_STATIC "Install static library" ON)
+option(IIR1_BUILD_DEMO "Build demo" ON)
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  set(IIR1_BUILD_TESTING_DEFAULT ON)
+else()
+  set(IIR1_BUILD_TESTING_DEFAULT OFF)
+endif()
+option(IIR1_BUILD_TESTING "Build tests" ${IIR1_BUILD_TESTING_DEFAULT})
 
 include(GNUInstallDirs)
-# If including this project in another project, use IIR1_BUILD_TESTING to enable local testing
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR IIR1_BUILD_TESTING)
-    add_subdirectory(test)
-    enable_testing ()
-endif()
-add_subdirectory(demo)
 
 if (MSVC)
   add_compile_options(/W4)
@@ -64,6 +60,8 @@ target_include_directories(iir
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
 )
 
+target_compile_features(iir PUBLIC cxx_std_11)
+
 set_target_properties(iir PROPERTIES
   SOVERSION 1
   VERSION ${PROJECT_VERSION}
@@ -83,12 +81,14 @@ include(JoinPaths)
 join_paths(includedir_for_pc_file "\${prefix}" "${CMAKE_INSTALL_INCLUDEDIR}")
 join_paths(libdir_for_pc_file "\${prefix}" "${CMAKE_INSTALL_LIBDIR}")
 
-configure_file(iir.pc.in iir.pc @ONLY)
+configure_file(${PROJECT_SOURCE_DIR}/cmake/iir.pc.in iir.pc @ONLY)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/iir.pc"
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig/")
 
 add_library(iir_static STATIC ${LIBSRC})
 add_library(iir::iir_static ALIAS iir_static)
+
+target_compile_features(iir_static PUBLIC cxx_std_11)
 
 target_include_directories(iir_static
   PUBLIC
@@ -103,7 +103,7 @@ set_target_properties(iir_static PROPERTIES
   PUBLIC_HEADER Iir.h
   PRIVATE_HEADER "${LIBINCLUDE}")
 
-if(INSTALL_STATIC)
+if(IIR1_INSTALL_STATIC)
   install(TARGETS iir_static EXPORT iir-targets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -121,7 +121,7 @@ install(EXPORT iir-targets
 
 include(CMakePackageConfigHelpers)
 
-configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/Config.cmake.in
+configure_package_config_file(${PROJECT_SOURCE_DIR}/cmake/Config.cmake.in
   "${CMAKE_CURRENT_BINARY_DIR}/iirConfig.cmake"
   INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/iir"
   NO_SET_AND_CHECK_MACRO
@@ -139,3 +139,11 @@ install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/iirConfigVersion.cmake
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/iir
   )
+
+if(IIR1_BUILD_TESTING)
+  enable_testing()
+  add_subdirectory(test)
+endif()
+if(IIR1_BUILD_DEMO)
+  add_subdirectory(demo)
+endif()
