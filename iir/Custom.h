@@ -87,7 +87,7 @@ struct TwoPole : public Biquad
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int NSOS, class StateType = DEFAULT_STATE>
-struct DllExport SOSCascade : CascadeStages<NSOS,StateType>
+struct SOSCascade : CascadeStages<NSOS,StateType>
 {
 	/**
 	 * Default constructor which creates a unity gain filter of NSOS biquads.

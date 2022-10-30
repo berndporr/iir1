@@ -67,6 +67,8 @@ target_include_directories(iir
 set_target_properties(iir PROPERTIES
   SOVERSION 1
   VERSION ${PROJECT_VERSION}
+  CXX_VISIBILITY_PRESET hidden
+  VISIBILITY_INLINES_HIDDEN TRUE
   PUBLIC_HEADER Iir.h
   PRIVATE_HEADER "${LIBINCLUDE}")
 

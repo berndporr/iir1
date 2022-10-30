@@ -46,7 +46,7 @@ namespace Iir {
 /**
  * Holds coefficients for a cascade of second order sections.
  **/
-        class DllExport Cascade
+        class IIR_EXPORT Cascade
         {
         public:
         
@@ -56,7 +56,7 @@ namespace Iir {
          * To return the array from a function and to set it.
 	 * Transmits number of stages and the pointer to the array.
          **/
-        struct DllExport Storage
+        struct IIR_EXPORT Storage
         {
                 int maxStages = 0;
                 Biquad* stageArray = nullptr;
@@ -111,7 +111,7 @@ namespace Iir {
  * with its coefficients.
  **/
         template <int MaxStages,class StateType>
-        class DllExport CascadeStages {
+        class CascadeStages {
 
 	public:
 	CascadeStages() = default;
