@@ -98,7 +98,6 @@ target_include_directories(iir_static
 )
 
 set_target_properties(iir_static PROPERTIES
-  POSITION_INDEPENDENT_CODE TRUE
   VERSION ${PROJECT_VERSION}
   PUBLIC_HEADER Iir.h
   PRIVATE_HEADER "${LIBINCLUDE}")
