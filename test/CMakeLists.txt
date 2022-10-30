@@ -9,10 +9,6 @@ else()
 endif()
 
 enable_testing()
-include_directories(
-  ..
-  ../iir
-  )
 
 add_executable (test_butterworth butterworth.cpp)
 target_link_libraries(test_butterworth iir_static)
