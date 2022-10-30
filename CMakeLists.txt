@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(iir VERSION 1.9.4 LANGUAGES CXX)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -83,7 +83,7 @@ include(JoinPaths)
 join_paths(includedir_for_pc_file "\${prefix}" "${CMAKE_INSTALL_INCLUDEDIR}")
 join_paths(libdir_for_pc_file "\${prefix}" "${CMAKE_INSTALL_LIBDIR}")
 
-configure_file(iir.pc.in iir.pc @ONLY)
+configure_file(${PROJECT_SOURCE_DIR}/cmake/iir.pc.in iir.pc @ONLY)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/iir.pc"
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig/")
 
@@ -121,7 +121,7 @@ install(EXPORT iir-targets
 
 include(CMakePackageConfigHelpers)
 
-configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/Config.cmake.in
+configure_package_config_file(${PROJECT_SOURCE_DIR}/cmake/Config.cmake.in
   "${CMAKE_CURRENT_BINARY_DIR}/iirConfig.cmake"
   INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/iir"
   NO_SET_AND_CHECK_MACRO
