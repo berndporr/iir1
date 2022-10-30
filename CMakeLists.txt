@@ -1,10 +1,8 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.8)
 
 project(iir VERSION 1.9.4 LANGUAGES CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
-
-set(CMAKE_CXX_STANDARD 11)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "RelWithDebInfo")
@@ -64,6 +62,8 @@ target_include_directories(iir
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
 )
 
+target_compile_features(iir PUBLIC cxx_std_11)
+
 set_target_properties(iir PROPERTIES
   SOVERSION 1
   VERSION ${PROJECT_VERSION}
@@ -96,6 +96,8 @@ target_include_directories(iir_static
   PRIVATE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
 )
+
+target_compile_features(iir_static PUBLIC cxx_std_11)
 
 set_target_properties(iir_static PROPERTIES
   POSITION_INDEPENDENT_CODE TRUE
