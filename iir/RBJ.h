@@ -63,7 +63,7 @@ namespace RBJ {
 	/** 
          * The base class of all RBJ filters
          **/
-	struct DllExport RBJbase : Biquad
+	struct IIR_EXPORT RBJbase : Biquad
 	{
 	public:
 		/// filter operation
@@ -86,7 +86,7 @@ namespace RBJ {
 	/**
          * Lowpass.
          **/
-	struct DllExport LowPass : RBJbase
+	struct IIR_EXPORT LowPass : RBJbase
 	{
 		/**
                  * Calculates the coefficients
@@ -112,7 +112,7 @@ namespace RBJ {
 	/**
          * Highpass.
          **/
-	struct DllExport HighPass : RBJbase
+	struct IIR_EXPORT HighPass : RBJbase
 	{
 		/**
                  * Calculates the coefficients
@@ -137,7 +137,7 @@ namespace RBJ {
 	/**
          * Bandpass with constant skirt gain
          **/
-	struct DllExport BandPass1 : RBJbase
+	struct IIR_EXPORT BandPass1 : RBJbase
 	{
 		/**
                  * Calculates the coefficients
@@ -162,7 +162,7 @@ namespace RBJ {
 	/**
          * Bandpass with constant 0 dB peak gain
          **/
-	struct DllExport BandPass2 : RBJbase
+	struct IIR_EXPORT BandPass2 : RBJbase
 	{
 		/**
                  * Calculates the coefficients
@@ -188,7 +188,7 @@ namespace RBJ {
          * Bandstop filter. Warning: the bandwidth might not be accurate
          * for narrow notches.
          **/
-	struct DllExport BandStop : RBJbase
+	struct IIR_EXPORT BandStop : RBJbase
 	{
 		/**
                  * Calculates the coefficients
@@ -221,7 +221,7 @@ namespace RBJ {
          * the angles of the poles/zeros define the bandstop frequency. The higher
          * Q the closer r moves towards the unit circle.
          **/
-	struct DllExport IIRNotch : RBJbase
+	struct IIR_EXPORT IIRNotch : RBJbase
 	{
 		/**
                  * Calculates the coefficients
@@ -246,7 +246,7 @@ namespace RBJ {
 	/**
          * Low shelf: 0db in the stopband and gainDb in the passband.
          **/
-	struct DllExport LowShelf : RBJbase
+	struct IIR_EXPORT LowShelf : RBJbase
 	{
 		/**
 		 * Calculates the coefficients
@@ -275,7 +275,7 @@ namespace RBJ {
 	/**
          * High shelf: 0db in the stopband and gainDb in the passband.
          **/
-	struct DllExport HighShelf : RBJbase
+	struct IIR_EXPORT HighShelf : RBJbase
 	{
 		/**
 		 * Calculates the coefficients
@@ -304,7 +304,7 @@ namespace RBJ {
 	/**
          * Band shelf: 0db in the stopband and gainDb in the passband.
          **/
-	struct DllExport BandShelf : RBJbase
+	struct IIR_EXPORT BandShelf : RBJbase
 	{
 		/**
 		 * Calculates the coefficients
@@ -333,7 +333,7 @@ namespace RBJ {
 	/**
 	 * Allpass filter
 	 **/
-	struct DllExport AllPass : RBJbase
+	struct IIR_EXPORT AllPass : RBJbase
 	{
 		/**
 		 * Calculates the coefficients

@@ -44,7 +44,7 @@ namespace Iir {
 /**
  * A conjugate or real pair
  **/
-	struct DllExport ComplexPair : complex_pair_t
+	struct IIR_EXPORT ComplexPair : complex_pair_t
 	{
 		ComplexPair() = default;
 
@@ -94,7 +94,7 @@ namespace Iir {
 /**
  * A pair of pole/zeros. This fits in a biquad (but is missing the gain)
  **/
-	struct DllExport PoleZeroPair
+	struct IIR_EXPORT PoleZeroPair
 	{
 		ComplexPair poles = ComplexPair();
 		ComplexPair zeros = ComplexPair();

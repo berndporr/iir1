@@ -52,7 +52,7 @@ namespace ChebyshevI {
 /**
  * Analog lowpass prototypes (s-plane)
  **/
-class DllExport AnalogLowPass : public LayoutBase
+class IIR_EXPORT AnalogLowPass : public LayoutBase
 {
 public:
 	AnalogLowPass ();
@@ -68,7 +68,7 @@ private:
 /**
  * Analog lowpass shelf prototype (s-plane)
  **/
-class DllExport AnalogLowShelf : public LayoutBase
+class IIR_EXPORT AnalogLowShelf : public LayoutBase
 {
 public:
 	AnalogLowShelf ();
@@ -85,21 +85,21 @@ private:
 
 //------------------------------------------------------------------------------
 
-struct DllExport LowPassBase : PoleFilterBase <AnalogLowPass>
+struct IIR_EXPORT LowPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double cutoffFrequency,
               double rippleDb);
 };
 
-struct DllExport HighPassBase : PoleFilterBase <AnalogLowPass>
+struct IIR_EXPORT HighPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double cutoffFrequency,
               double rippleDb);
 };
 
-struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
+struct IIR_EXPORT BandPassBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double centerFrequency,
@@ -107,7 +107,7 @@ struct DllExport BandPassBase : PoleFilterBase <AnalogLowPass>
               double rippleDb);
 };
 
-struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
+struct IIR_EXPORT BandStopBase : PoleFilterBase <AnalogLowPass>
 {
   void setup (int order,
               double centerFrequency,
@@ -115,7 +115,7 @@ struct DllExport BandStopBase : PoleFilterBase <AnalogLowPass>
               double rippleDb);
 };
 
-struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
+struct IIR_EXPORT LowShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
               double cutoffFrequency,
@@ -123,7 +123,7 @@ struct DllExport LowShelfBase : PoleFilterBase <AnalogLowShelf>
               double rippleDb);
 };
 
-struct DllExport HighShelfBase : PoleFilterBase <AnalogLowShelf>
+struct IIR_EXPORT HighShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
               double cutoffFrequency,
@@ -131,7 +131,7 @@ struct DllExport HighShelfBase : PoleFilterBase <AnalogLowShelf>
               double rippleDb);
 };
 
-struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
+struct IIR_EXPORT BandShelfBase : PoleFilterBase <AnalogLowShelf>
 {
   void setup (int order,
               double centerFrequency,
@@ -152,7 +152,7 @@ struct DllExport BandShelfBase : PoleFilterBase <AnalogLowShelf>
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
+	struct LowPass : PoleFilter <LowPassBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder
@@ -221,7 +221,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
+	struct HighPass : PoleFilter <HighPassBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder
@@ -290,7 +290,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, FilterOrder*2>
+	struct BandPass : PoleFilter <BandPassBase, StateType, FilterOrder, FilterOrder*2>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder
@@ -371,7 +371,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  */
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, FilterOrder*2>
+	struct BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, FilterOrder*2>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder
@@ -453,7 +453,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
+	struct LowShelf : PoleFilter <LowShelfBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder
@@ -534,7 +534,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
+	struct HighShelf : PoleFilter <HighShelfBase, StateType, FilterOrder>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder
@@ -617,7 +617,7 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
  * \param StateType The filter topology: DirectFormI, DirectFormII, ...
  **/
 template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STATE>
-	struct DllExport BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, FilterOrder*2>
+	struct BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, FilterOrder*2>
 	{
 		/**
 		 * Calculates the coefficients of the filter at the order FilterOrder

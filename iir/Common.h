@@ -46,12 +46,12 @@
 
 // This exports the classes/structures to the windows DLL
 #ifdef _WIN32
-#  define DllExport   __declspec( dllexport )
+#  define IIR_EXPORT __declspec( dllexport )
 #  ifndef _CRT_SECURE_NO_WARNINGS
 #    define _CRT_SECURE_NO_WARNINGS
 #  endif
 #else
-#  define DllExport
+#  define IIR_EXPORT
 #endif
 
 #include <stdlib.h>

@@ -42,14 +42,14 @@
 
 namespace Iir {
 	
-	struct DllExport BiquadPoleState;
+	struct IIR_EXPORT BiquadPoleState;
 	
 /*
  * Holds coefficients for a second order Infinite Impulse Response
  * digital filter. This is the building block for all IIR filters.
  *
  */
-	class DllExport Biquad {
+	class IIR_EXPORT Biquad {
 	public:
 
 	Biquad() = default;
@@ -172,7 +172,7 @@ namespace Iir {
  * Expresses a biquad as a pair of pole/zeros, with gain
  * values so that the coefficients can be reconstructed precisely.
  **/
-	struct DllExport BiquadPoleState : PoleZeroPair
+	struct IIR_EXPORT BiquadPoleState : PoleZeroPair
 	{
 		BiquadPoleState () = default;
 

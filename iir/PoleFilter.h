@@ -59,7 +59,7 @@ namespace Iir {
 /**
  * Factored implementations to reduce template instantiations
  **/
-	class DllExport PoleFilterBase2 : public Cascade
+	class IIR_EXPORT PoleFilterBase2 : public Cascade
 	{
 	public:
 		// This gets the poles/zeros directly from the digital
@@ -91,7 +91,7 @@ namespace Iir {
  * and the digital pole/zero layout.
  **/
 	template <class AnalogPrototype>
-	class DllExport PoleFilterBase : public PoleFilterBase2
+	class PoleFilterBase : public PoleFilterBase2
 	{
 	protected:
 		void setPrototypeStorage (const LayoutBase& analogStorage,
@@ -157,7 +157,7 @@ namespace Iir {
 /** 
  * low pass to low pass 
  **/
-	class DllExport LowPassTransform
+	class IIR_EXPORT LowPassTransform
 	{
 	public:
 	LowPassTransform (double fc,
@@ -175,7 +175,7 @@ namespace Iir {
 /**
  * low pass to high pass
  **/
-	class DllExport HighPassTransform
+	class IIR_EXPORT HighPassTransform
 	{
 	public:
 	HighPassTransform (double fc,
@@ -193,7 +193,7 @@ namespace Iir {
 /**
  * low pass to band pass transform
  **/
-	class DllExport BandPassTransform
+	class IIR_EXPORT BandPassTransform
 	{
 
 	public:
@@ -220,7 +220,7 @@ namespace Iir {
 /** 
  * low pass to band stop transform
  **/
-	class DllExport BandStopTransform
+	class IIR_EXPORT BandStopTransform
 	{
 	public:
 	BandStopTransform (double fc,
