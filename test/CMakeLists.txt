@@ -8,7 +8,6 @@ else()
   add_compile_options(-Wall -Wconversion -Wextra -pedantic)
 endif()
 
-enable_testing()
 include_directories(
   ..
   ../iir
