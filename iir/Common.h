@@ -42,16 +42,13 @@
 
 #ifdef _MSC_VER
 #  pragma warning (disable: 4100)
-#  ifndef _CRT_SECURE_NO_WARNINGS
-#    define _CRT_SECURE_NO_WARNINGS
-#  endif
 #endif
 
-#ifdef iir_EXPORTS
-#  ifdef _WIN32
-#    define IIR_EXPORT __declspec(dllexport)
-#  else
-#    define IIR_EXPORT __attribute__((visibility("default")))
+// This exports the classes/structures to the windows DLL
+#ifdef _WIN32
+#  define IIR_EXPORT __declspec( dllexport )
+#  ifndef _CRT_SECURE_NO_WARNINGS
+#    define _CRT_SECURE_NO_WARNINGS
 #  endif
 #else
 #  define IIR_EXPORT
