@@ -12,12 +12,9 @@ endif()
 
 add_executable (iirdemo iirdemo.cpp)
 target_link_libraries(iirdemo iir_static)
-target_include_directories(iirdemo PRIVATE ..)
 
 add_executable (rbj_update rbj_update.cpp)
 target_link_libraries(rbj_update iir_static)
-target_include_directories(rbj_update PRIVATE ..)
 
 add_executable (ecg50hzfilt ecg50hzfilt.cpp)
 target_link_libraries(ecg50hzfilt iir_static)
-target_include_directories(ecg50hzfilt PRIVATE ..)
