@@ -6,20 +6,32 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(CMAKE_CXX_STANDARD 11)
 
+include(GNUInstallDirs)
+
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-option(INSTALL_STATIC "Build static library" ON)
 option(IIR1_NO_EXCEPTIONS "Disable exception handling" OFF)
 
-include(GNUInstallDirs)
-# If including this project in another project, use IIR1_BUILD_TESTING to enable local testing
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR IIR1_BUILD_TESTING)
-    add_subdirectory(test)
-    enable_testing ()
+option(IIR1_INSTALL_STATIC "Install static library" ON)
+
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  set(IIR1_BUILD_TESTING_DEFAULT ON)
+else()
+  set(IIR1_BUILD_TESTING_DEFAULT OFF)
 endif()
-add_subdirectory(demo)
+
+option(IIR1_BUILD_TESTING "Build tests" ${IIR1_BUILD_TESTING_DEFAULT})
+if(IIR1_BUILD_TESTING)
+  enable_testing()
+  add_subdirectory(test)
+endif()
+
+option(IIR1_BUILD_DEMO "Build demo" ON)
+if(IIR1_BUILD_DEMO)
+  add_subdirectory(demo)
+endif()
 
 if (MSVC)
   add_compile_options(/W4)
@@ -109,7 +121,7 @@ set_target_properties(iir_static PROPERTIES
   PUBLIC_HEADER Iir.h
   PRIVATE_HEADER "${LIBINCLUDE}")
 
-if(INSTALL_STATIC)
+if(IIR1_INSTALL_STATIC)
   install(TARGETS iir_static EXPORT iir-targets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
