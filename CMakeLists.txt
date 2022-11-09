@@ -14,6 +14,7 @@ cmake_policy(SET CMP0048 NEW) # set VERSION in project()
 cmake_policy(SET CMP0042 NEW) # enable MACOSX_RPATH by default
 
 option(INSTALL_STATIC "Build static library" ON)
+option(IIR1_NO_EXCEPTIONS "Disable exception handling" OFF)
 
 include(GNUInstallDirs)
 # If including this project in another project, use IIR1_BUILD_TESTING to enable local testing
@@ -64,6 +65,10 @@ target_include_directories(iir
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
 )
 
+if(IIR1_NO_EXCEPTIONS)
+    target_compile_definitions(iir PUBLIC "IIR1_NO_EXCEPTIONS")
+endif()
+
 set_target_properties(iir PROPERTIES
   SOVERSION 1
   VERSION ${PROJECT_VERSION}
@@ -96,6 +101,10 @@ target_include_directories(iir_static
   PRIVATE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/iir>  # everything else
 )
+
+if(IIR1_NO_EXCEPTIONS)
+    target_compile_definitions(iir_static PUBLIC "IIR1_NO_EXCEPTIONS")
+endif()
 
 set_target_properties(iir_static PROPERTIES
   POSITION_INDEPENDENT_CODE TRUE
