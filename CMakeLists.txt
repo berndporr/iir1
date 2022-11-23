@@ -1,10 +1,8 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.8.0)
 
 project(iir VERSION 1.9.4 LANGUAGES CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
-
-set(CMAKE_CXX_STANDARD 11)
 
 include(GNUInstallDirs)
 
@@ -36,7 +34,7 @@ endif()
 if (MSVC)
   add_compile_options(/W4)
 else()
-  add_compile_options(-Wall -Wconversion -Wextra -pedantic)
+  add_compile_options(-Wall -pedantic)
 endif()
 
 set(LIBSRC
@@ -66,6 +64,8 @@ set(LIBINCLUDE
 
 add_library(iir SHARED ${LIBSRC})
 add_library(iir::iir ALIAS iir)
+
+target_compile_features(iir PUBLIC cxx_std_11)
 
 target_include_directories(iir
   PUBLIC
@@ -103,6 +103,8 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/iir.pc"
 
 add_library(iir_static STATIC ${LIBSRC})
 add_library(iir::iir_static ALIAS iir_static)
+
+target_compile_features(iir_static PUBLIC cxx_std_11)
 
 target_include_directories(iir_static
   PUBLIC
