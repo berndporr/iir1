@@ -60,11 +60,6 @@ namespace Iir {
 		{
 		}
 
-		bool isConjugate () const
-		{
-			return second == std::conj (first);
-		}
-
 		bool isReal () const
 		{
 			return first.imag() == 0 && second.imag() == 0;
@@ -126,21 +121,6 @@ namespace Iir {
 		}
 	};
 
-
-/**
- * Identifies the general class of filter
- **/
-	enum Kind
-	{
-		kindLowPass,
-		kindHighPass,
-		kindBandPass,
-		kindBandStop,
-		kindLowShelf,
-		kindHighShelf,
-		kindBandShelf,
-		kindOther
-	};
 
 }
 
