@@ -35,7 +35,7 @@ int main(int, char**)
 		double b = lp.filter(a);
 		fprintf(fimpulse, "%e\n", b);
 		if ((i%75) == 0) {
-			samplingrate = samplingrate + ((float)random()/(float)RAND_MAX)*10 - 5;
+			samplingrate = samplingrate + ((float)rand()/(float)RAND_MAX)*10 - 5;
 			printf("n=%d,fs=%f\n",i,samplingrate);
 			lp.setup(samplingrate, lp_cutoff_frequency, lp_qfactor);
 		}
