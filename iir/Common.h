@@ -49,9 +49,9 @@
 
 // This exports the classes/structures to the windows DLL
 #if defined(_WIN32) && defined(iir_EXPORTS)
-#  define IIR_EXPORT __declspec( dllexport )
+#define IIR_EXPORT __declspec( dllexport )
 #else
-#  define IIR_EXPORT
+#define IIR_EXPORT
 #endif
 
 #include <stdlib.h>

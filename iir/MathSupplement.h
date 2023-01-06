@@ -42,8 +42,8 @@
 
 #ifdef _MSC_VER
  // Under Unix these have already default instantiations but not under Vis Studio
-template class std::complex<double>;
-template class std::complex<float>;
+template class IIR_EXPORT std::complex<double>;
+template class IIR_EXPORT std::complex<float>;
 #endif
 
 namespace Iir {
