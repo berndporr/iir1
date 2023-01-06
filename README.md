@@ -283,6 +283,8 @@ that their outputs never become NaN and if the Direct Form I&II filters calculat
 expected sequences by comparing them from results created
 by the output of scipy's `sosfilt`.
 
+You can disable the generation of tests by setting `IIR1_BUILD_TESTING` to off.
+
 ## Documentation
 
 ### Learn from the demos
@@ -290,6 +292,8 @@ The easiest way to learn is from the examples which are in the `demo`
 directory. A delta pulse as a test signal is sent into the different
 filters and saved in a file. With the Python script
 `plot_impulse_fresponse.py` you can then plot the frequency responses.
+
+You can disable the compilation of the demos by setting `IIR1_BUILD_DEMO` to off.
 
 Also the directory containing the unit tests provides examples for
 every filter type.
