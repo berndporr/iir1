@@ -13,6 +13,7 @@
 \RequirePackage{tabu_doxygen}
 \RequirePackage{fancyvrb}
 \RequirePackage{tabularx}
+\RequirePackage{multicol}
 \RequirePackage{multirow}
 \RequirePackage{hanging}
 \RequirePackage{ifpdf}
@@ -186,9 +187,8 @@
 % (only if caption is specified)
 \newenvironment{DoxyImage}{%
   \begin{figure}[H]%
-    \begin{center}%
+    \centering%
 }{%
-    \end{center}%
   \end{figure}%
 }
 
@@ -571,6 +571,6 @@
 % Define caption that is also suitable in a table
 \makeatletter
 \def\doxyfigcaption{%
-\refstepcounter{figure}%
+\H@refstepcounter{figure}%
 \@dblarg{\@caption{figure}}}
 \makeatother
