@@ -18,14 +18,13 @@ def plot_if(figno,name,figtitle,fs = 1000,freq_resp_name=False):
     yf = np.fft.fft(y)
     plt.subplot(312)
     fx = np.linspace(0,fs,len(yf))
-    plt.plot(fx,20*np.log10(abs(yf)),label="freq resp from fft(impulse)")
+    plt.plot(fx,20*np.log10(abs(yf)),label="resp from fft(impulse)")
     plt.xlim(0,fs/2)
     plt.title("Frequency response")
     plt.ylabel("gain/dB")
     if freq_resp_name:
-        print("Also plotting",freq_resp_name);
         fr = np.loadtxt(freq_resp_name);
-        plt.plot(fr[:,0]*fs,20*np.log10(abs(fr[:,1])),label="analytical frequ resp")
+        plt.plot(fr[:,0]*fs,20*np.log10(abs(fr[:,1])),label="resp from poles/zeroes")
         plt.legend()
 
     plt.subplot(313)
