@@ -12,7 +12,7 @@
  *
  * License: MIT License (http://www.opensource.org/licenses/mit-license.php)
  * Copyright (c) 2009 by Vinnie Falco
- * Copyright (c) 2011 by Bernd Porr
+ * Copyright (c) 2011-2023 by Bernd Porr
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -36,6 +36,9 @@
 #include "Common.h"
 #include "Cascade.h"
 
+static const char maxFError[] = "The normalised frequency needs to be =< 0.5.";
+static const char minFError[] = "The normalised frequency needs to be >= 0.";
+
 #include <iostream>
 namespace Iir {
 
@@ -48,6 +51,8 @@ namespace Iir {
 
 	complex_t Cascade::response (double normalizedFrequency) const
 	{
+		if (normalizedFrequency > 0.5) throw_invalid_argument(maxFError);
+		if (normalizedFrequency < 0.0) throw_invalid_argument(minFError);
 		double w = 2 * doublePi * normalizedFrequency;
 		const complex_t czn1 = std::polar (1., -w);
 		const complex_t czn2 = std::polar (1., -2 * w);
