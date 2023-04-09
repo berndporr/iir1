@@ -6,7 +6,7 @@ import numpy as np
 
 # Plots the impulse response of the Bandstop and its frequency response
 
-def plot_if(figno,name,figtitle,fs = 1000):
+def plot_if(figno,name,figtitle,fs = 1000,freq_resp_name=False):
     plt.figure(figno)
     plt.suptitle(figtitle)
     y = np.loadtxt(name);
@@ -18,10 +18,15 @@ def plot_if(figno,name,figtitle,fs = 1000):
     yf = np.fft.fft(y)
     plt.subplot(312)
     fx = np.linspace(0,fs,len(yf))
-    plt.plot(fx,20*np.log10(abs(yf)))
+    plt.plot(fx,20*np.log10(abs(yf)),label="freq resp from fft(impulse)")
     plt.xlim(0,fs/2)
     plt.title("Frequency response")
     plt.ylabel("gain/dB")
+    if freq_resp_name:
+        print("Also plotting",freq_resp_name);
+        fr = np.loadtxt(freq_resp_name);
+        plt.plot(fr[:,0]*fs,20*np.log10(abs(fr[:,1])),label="analytical frequ resp")
+        plt.legend()
 
     plt.subplot(313)
     p = -np.diff(np.unwrap(np.angle(yf))) / np.diff(fx * 2 * np.pi)
@@ -37,7 +42,7 @@ def plot_if(figno,name,figtitle,fs = 1000):
         plt.xlabel("f/Hz")
         plt.ylabel("delay/secs")
     
-plot_if(1,"lp.dat","Butterworth lowpass")
+plot_if(1,"lp.dat","Butterworth lowpass",freq_resp_name="lpf.dat")
 
 plot_if(2,"hp_rbj.dat","RBJ highpass")
 

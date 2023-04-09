@@ -31,6 +31,12 @@ int main(int, char**)
 		fprintf(fimpulse, "%e\n", b);
 	}
 	fclose(fimpulse);
+	FILE* fresp = fopen("lpf.dat", "wt");
+	for(double fr=0.0;fr<0.5;fr=fr+0.01) {
+		auto r = f.response(fr);
+		fprintf(fresp,"%e\t%e\n",fr,abs(r));
+	}
+	fclose(fresp);
 
 	// RBJ highpass filter
 	// The Q factor determines the resonance at the
