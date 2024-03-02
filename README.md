@@ -203,7 +203,7 @@ Windows: `libiir_static.lib`).
 
 
 
-## Packages for Ubuntu LTS:
+## Pre compiled packages for Ubuntu LTS (PPA):
 
 If you are using Ubuntu LTS then you can
 install this library as a pre-compiled package.
@@ -223,23 +223,6 @@ The documentation of the development package and the example programs are in:
 ```
 /usr/share/doc/iir1-dev/
 ```
-
-## Package for MacOS
-
-Make sure you have the homebrew package manager installed: https://brew.sh/
-
-Add the homebrew tap:
-
-```
-brew tap berndporr/dsp
-```
-
-and then install the iir filter package with:
-
-```
-brew install iir
-```
-
 
 
 ## Compilation from source
