@@ -218,7 +218,7 @@ Then install the packages:
   - Library files: `sudo apt install iir1`
   - Development files: `sudo apt install iir1-dev`
 
-It's available for 32,64 bit PC and 32,64 bit ARM (Raspberry PI etc).
+It's available for 64 bit Intel and 32,64 bit ARM (Raspberry PI etc).
 The documentation of the development package and the example programs are in:
 ```
 /usr/share/doc/iir1-dev/
