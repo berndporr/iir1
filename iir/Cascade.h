@@ -59,9 +59,12 @@ namespace Iir {
         struct IIR_EXPORT Storage
         {
 	    Storage() = delete;
-	    Storage(const int maxNumBiquads, Biquad* const biquadArray) : maxStages(maxNumBiquads), stageArray(biquadArray) {}
+	    Storage(const int maxNumBiquads, Biquad* const biquadArray) : maxStages(maxNumBiquads), stageArray(new Biquad[maxNumBiquads]) {
+		std::copy(biquadArray,biquadArray+maxNumBiquads,stageArray);
+	    }
+	    ~Storage() { delete [] stageArray; }
 	    const int maxStages = 0;
-	    Biquad* const stageArray = nullptr;
+	    Biquad* stageArray = nullptr;
         };
 
         /**
