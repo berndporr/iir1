@@ -58,8 +58,9 @@ namespace Iir {
          **/
         struct IIR_EXPORT Storage
         {
-                int maxStages = 0;
-                Biquad* stageArray = nullptr;
+	    Storage(const int maxNumBiquads, Biquad* const biquadArray) : maxStages(maxNumBiquads), stageArray(biquadArray) {}
+	    const int maxStages = 0;
+	    Biquad* const stageArray = nullptr;
         };
 
         /**
@@ -166,10 +167,8 @@ namespace Iir {
 	 **/
         const Cascade::Storage getCascadeStorage()
         {
-                Cascade::Storage s;
-                s.maxStages = MaxStages;
-                s.stageArray = m_stages;
-		return s;
+	    const Cascade::Storage s(MaxStages, m_stages);
+	    return s;
         }
         
         private:
