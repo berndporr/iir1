@@ -59,10 +59,7 @@ namespace Iir {
         struct IIR_EXPORT Storage
         {
 	    Storage() = delete;
-	    Storage(const int maxNumBiquads, const Biquad* const biquadArray) : maxStages(maxNumBiquads), stageArray(new Biquad[maxNumBiquads]) {
-		std::copy(biquadArray,biquadArray+maxNumBiquads,stageArray);
-	    }
-	    ~Storage() { delete [] stageArray; }
+	    Storage(const int maxNumBiquads, Biquad* const biquadArray) : maxStages(maxNumBiquads), stageArray(biquadArray) {}
 	    const int maxStages = 0;
 	    Biquad* const stageArray = nullptr;
         };
@@ -169,7 +166,7 @@ namespace Iir {
 	/**
 	 * Returns the coefficients of the entire Biquad chain
 	 **/
-        const Cascade::Storage getCascadeStorage() const
+        const Cascade::Storage getCascadeStorage()
         {
 	    const Cascade::Storage s(MaxStages, m_stages);
 	    return s;

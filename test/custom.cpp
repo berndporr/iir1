@@ -23,6 +23,16 @@ int main (int,char**)
 
 	Iir::Custom::SOSCascade<2> f(coeff);
 
+	auto coeffRet = f.getCascadeStorage();
+	for(int i = 0; i < 2; i++) {
+	    assert_print(coeffRet.stageArray[i].m_a0 == coeff[i][3],"m_a0 mismatch.\n");
+	    assert_print(coeffRet.stageArray[i].m_a1 == coeff[i][4],"m_a1 mismatch.\n");
+	    assert_print(coeffRet.stageArray[i].m_a2 == coeff[i][5],"m_a2 mismatch.\n");
+	    assert_print(coeffRet.stageArray[i].m_b0 == coeff[i][3],"m_b0 mismatch.\n");
+	    assert_print(coeffRet.stageArray[i].m_b1 == coeff[i][4],"m_b1 mismatch.\n");
+	    assert_print(coeffRet.stageArray[i].m_b2 == coeff[i][5],"m_b2 mismatch.\n");
+	}
+
 	double b = 0;
 	double b2 = 0;
 	for(int i=0;i<10000;i++) 
