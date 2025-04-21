@@ -8,12 +8,12 @@ if (MSVC)
     add_compile_options(-Wall)
 endif()
 
+# Copy scripts and data to build dir	
 function(copy_demo_file TARGET FILE)
     add_custom_command(TARGET ${TARGET} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
             "${CMAKE_CURRENT_SOURCE_DIR}/${FILE}"
             "$<TARGET_FILE_DIR:${TARGET}>/${FILE}"
-        COMMENT "Copy ${FILE} after ${TARGET} is built"
     )
 endfunction()
 
