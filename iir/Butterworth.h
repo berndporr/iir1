@@ -348,7 +348,7 @@ struct BandStop : PoleFilter <BandStopBase, StateType, FilterOrder, FilterOrder*
          * \param centerFrequency Centre frequency of the bandstop
          * \param widthFrequency Width of the bandstop
          **/
-	void setupN(int reqOrder,
+	void setup (int reqOrder,
 		    double sampleRate,
 		    double centerFrequency,
 		    double widthFrequency) {
