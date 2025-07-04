@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 45.248867
+%%BoundingBox: 0 0 500 346.907990
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 11.050000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 1.441304 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 2 def
-/cols 2 def
+/rows 23 def
+/cols 3 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -176,6 +176,27 @@ boxfont setfont
 (Iir::PoleFilter< BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles >) cw
 (BaseClass) cw
 (Iir::CascadeStages<\(MaxAnalogPoles+1\)/2, StateType >) cw
+(Iir::Butterworth::BandPass< FilterOrder, StateType >) cw
+(Iir::Butterworth::BandShelf< FilterOrder, StateType >) cw
+(Iir::Butterworth::BandStop< FilterOrder, StateType >) cw
+(Iir::Butterworth::HighPass< FilterOrder, StateType >) cw
+(Iir::Butterworth::HighShelf< FilterOrder, StateType >) cw
+(Iir::Butterworth::LowPass< FilterOrder, StateType >) cw
+(Iir::Butterworth::LowShelf< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::BandPass< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::BandShelf< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::BandStop< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::HighPass< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::HighShelf< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::LowPass< FilterOrder, StateType >) cw
+(Iir::ChebyshevI::LowShelf< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::BandPass< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::BandShelf< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::BandStop< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::HighPass< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::HighShelf< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::LowPass< FilterOrder, StateType >) cw
+(Iir::ChebyshevII::LowShelf< FilterOrder, StateType >) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -187,17 +208,84 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Iir::PoleFilter< BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles >) 0.500000 0.000000 box
- (BaseClass) 0.000000 1.000000 box
- (Iir::CascadeStages<\(MaxAnalogPoles+1\)/2, StateType >) 1.000000 1.000000 box
+ (Iir::PoleFilter< BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles >) 0.500000 21.000000 box
+ (BaseClass) 0.000000 22.000000 box
+ (Iir::CascadeStages<\(MaxAnalogPoles+1\)/2, StateType >) 1.000000 22.000000 box
+ (Iir::Butterworth::BandPass< FilterOrder, StateType >) 1.500000 20.000000 box
+ (Iir::Butterworth::BandShelf< FilterOrder, StateType >) 1.500000 19.000000 box
+ (Iir::Butterworth::BandStop< FilterOrder, StateType >) 1.500000 18.000000 box
+ (Iir::Butterworth::HighPass< FilterOrder, StateType >) 1.500000 17.000000 box
+ (Iir::Butterworth::HighShelf< FilterOrder, StateType >) 1.500000 16.000000 box
+ (Iir::Butterworth::LowPass< FilterOrder, StateType >) 1.500000 15.000000 box
+ (Iir::Butterworth::LowShelf< FilterOrder, StateType >) 1.500000 14.000000 box
+ (Iir::ChebyshevI::BandPass< FilterOrder, StateType >) 1.500000 13.000000 box
+ (Iir::ChebyshevI::BandShelf< FilterOrder, StateType >) 1.500000 12.000000 box
+ (Iir::ChebyshevI::BandStop< FilterOrder, StateType >) 1.500000 11.000000 box
+ (Iir::ChebyshevI::HighPass< FilterOrder, StateType >) 1.500000 10.000000 box
+ (Iir::ChebyshevI::HighShelf< FilterOrder, StateType >) 1.500000 9.000000 box
+ (Iir::ChebyshevI::LowPass< FilterOrder, StateType >) 1.500000 8.000000 box
+ (Iir::ChebyshevI::LowShelf< FilterOrder, StateType >) 1.500000 7.000000 box
+ (Iir::ChebyshevII::BandPass< FilterOrder, StateType >) 1.500000 6.000000 box
+ (Iir::ChebyshevII::BandShelf< FilterOrder, StateType >) 1.500000 5.000000 box
+ (Iir::ChebyshevII::BandStop< FilterOrder, StateType >) 1.500000 4.000000 box
+ (Iir::ChebyshevII::HighPass< FilterOrder, StateType >) 1.500000 3.000000 box
+ (Iir::ChebyshevII::HighShelf< FilterOrder, StateType >) 1.500000 2.000000 box
+ (Iir::ChebyshevII::LowPass< FilterOrder, StateType >) 1.500000 1.000000 box
+ (Iir::ChebyshevII::LowShelf< FilterOrder, StateType >) 1.500000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 0.500000 0.000000 out
+0 0.500000 21.000000 out
 solid
-0.000000 1.000000 1.000000 conn
+0.000000 1.000000 22.000000 conn
 solid
-1 0.000000 1.000000 in
+1 0.000000 22.000000 in
 solid
-1 1.000000 1.000000 in
+1 1.000000 22.000000 in
+solid
+1 0.500000 20.250000 out
+solid
+0 0.500000 20.500000 hedge
+solid
+0 0.500000 19.500000 hedge
+solid
+0 0.500000 18.500000 hedge
+solid
+0 0.500000 17.500000 hedge
+solid
+0 0.500000 16.500000 hedge
+solid
+0 0.500000 15.500000 hedge
+solid
+0 0.500000 14.500000 hedge
+solid
+0 0.500000 13.500000 hedge
+solid
+0 0.500000 12.500000 hedge
+solid
+0 0.500000 11.500000 hedge
+solid
+0 0.500000 10.500000 hedge
+solid
+0 0.500000 9.500000 hedge
+solid
+0 0.500000 8.500000 hedge
+solid
+0 0.500000 7.500000 hedge
+solid
+0 0.500000 6.500000 hedge
+solid
+0 0.500000 5.500000 hedge
+solid
+0 0.500000 4.500000 hedge
+solid
+0 0.500000 3.500000 hedge
+solid
+0 0.500000 2.500000 hedge
+solid
+0 0.500000 1.500000 hedge
+solid
+0 0.500000 0.500000 hedge
+solid
+0.500000 21.000000 0.500000 vedge

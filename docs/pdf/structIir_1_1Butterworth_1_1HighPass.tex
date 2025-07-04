@@ -1,16 +1,16 @@
-\hypertarget{structIir_1_1Butterworth_1_1HighPass}{}\doxysubsection{Iir\+::Butterworth\+::High\+Pass$<$ Filter\+Order, State\+Type $>$ Struct Template Reference}
-\label{structIir_1_1Butterworth_1_1HighPass}\index{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}}
+\doxysubsection{Iir\+::Butterworth\+::High\+Pass\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structIir_1_1Butterworth_1_1HighPass}{}\label{structIir_1_1Butterworth_1_1HighPass}\index{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}}
 
 
 {\ttfamily \#include $<$Butterworth.\+h$>$}
 
-Inheritance diagram for Iir\+::Butterworth\+::High\+Pass$<$ Filter\+Order, State\+Type $>$\+:\begin{figure}[H]
+Inheritance diagram for Iir\+::Butterworth\+::High\+Pass\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.400000cm]{structIir_1_1Butterworth_1_1HighPass}
+\includegraphics[height=2.492581cm]{structIir_1_1Butterworth_1_1HighPass}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f}{setup}} (double sample\+Rate, double cutoff\+Frequency)
@@ -21,23 +21,33 @@ void \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_ac33912cbd0d3d65acdda
 \item 
 void \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_a7602019a900b288a16963126de49c2f1}{setupN}} (int req\+Order, double cutoff\+Frequency)
 \end{DoxyCompactItemize}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
+\item 
+{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+\item 
+const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$\newline
 struct Iir\+::\+Butterworth\+::\+High\+Pass$<$ Filter\+Order, State\+Type $>$}
-
-\mbox{\hyperlink{namespaceIir_1_1Butterworth}{Butterworth}} Highpass filter. 
+\doxylink{namespaceIir_1_1Butterworth}{Butterworth} Highpass filter. 
 \begin{DoxyParams}{Parameters}
 {\em Filter\+Order} & Reserves memory for a filter of the order Filter\+Order \\
 \hline
-{\em State\+Type} & The filter topology\+: \mbox{\hyperlink{classIir_1_1DirectFormI}{Direct\+FormI}}, \mbox{\hyperlink{classIir_1_1DirectFormII}{Direct\+Form\+II}}, ... \\
+{\em State\+Type} & The filter topology\+: \doxylink{classIir_1_1DirectFormI}{Direct\+FormI}, \doxylink{classIir_1_1DirectFormII}{Direct\+Form\+II}, ... \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f}\label{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f}} 
+\Hypertarget{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f}\label{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f} 
 \index{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -51,7 +61,7 @@ Calculates the coefficients with the filter order provided by the instantiation
 {\em cutoff\+Frequency} & Cutoff frequency \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1Butterworth_1_1HighPass_ac9835800f12a982c160720cebef2f963}\label{structIir_1_1Butterworth_1_1HighPass_ac9835800f12a982c160720cebef2f963}} 
+\Hypertarget{structIir_1_1Butterworth_1_1HighPass_ac9835800f12a982c160720cebef2f963}\label{structIir_1_1Butterworth_1_1HighPass_ac9835800f12a982c160720cebef2f963} 
 \index{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -67,7 +77,7 @@ Calculates the coefficients
 {\em cutoff\+Frequency} & Cutoff frequency \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1Butterworth_1_1HighPass_ac33912cbd0d3d65acdda0c53d5b64274}\label{structIir_1_1Butterworth_1_1HighPass_ac33912cbd0d3d65acdda0c53d5b64274}} 
+\Hypertarget{structIir_1_1Butterworth_1_1HighPass_ac33912cbd0d3d65acdda0c53d5b64274}\label{structIir_1_1Butterworth_1_1HighPass_ac33912cbd0d3d65acdda0c53d5b64274} 
 \index{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -79,7 +89,7 @@ Calculates the coefficients with the filter order provided by the instantiation
 {\em cutoff\+Frequency} & Normalised cutoff frequency (0..1/2) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1Butterworth_1_1HighPass_a7602019a900b288a16963126de49c2f1}\label{structIir_1_1Butterworth_1_1HighPass_a7602019a900b288a16963126de49c2f1}} 
+\Hypertarget{structIir_1_1Butterworth_1_1HighPass_a7602019a900b288a16963126de49c2f1}\label{structIir_1_1Butterworth_1_1HighPass_a7602019a900b288a16963126de49c2f1} 
 \index{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$@{Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}

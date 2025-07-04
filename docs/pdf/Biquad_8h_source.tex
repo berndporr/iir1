@@ -1,0 +1,98 @@
+\doxysubsection{Biquad.\+h}
+\hypertarget{Biquad_8h_source}{}\label{Biquad_8h_source}\index{iir/Biquad.h@{iir/Biquad.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_BIQUAD\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_BIQUAD\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Common.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}MathSupplement.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}Types.h"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ BiquadPoleState;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ *\ Holds\ coefficients\ for\ a\ second\ order\ Infinite\ Impulse\ Response}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ digital\ filter.\ This\ is\ the\ building\ block\ for\ all\ IIR\ filters.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ complex\_t\ response\ (\textcolor{keywordtype}{double}\ normalizedFrequency)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::vector<PoleZeroPair>\ getPoleZeros\ ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_a7debc9f6ef5e64622c710b8c9ba96056}{getA0}}\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_a0;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_a459116db7aa381281997f428f15334cf}{getA1}}\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_a1*m\_a0;\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_a061e2402d528312fc6095db6551c9141}{getA2}}\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_a2*m\_a0;\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_a84686da988e160a216f3e7057682ffbb}{getB0}}\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_b0*m\_a0;\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_af418a5f260baadbcffe5a7029f089937}{getB1}}\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_b1*m\_a0;\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_a8f3d697bb7c2def508da648938f6afc3}{getB2}}\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_b2*m\_a0;\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ StateType>}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIir_1_1Biquad_a527b9666d6aef0e576193fdce7e19750}{filter}}(\textcolor{keywordtype}{double}\ s,\ StateType\&\ state)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00106\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state.filter(s,\ *\textcolor{keyword}{this});}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setCoefficients\ (\textcolor{keywordtype}{double}\ a0,\ \textcolor{keywordtype}{double}\ a1,\ \textcolor{keywordtype}{double}\ a2,}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ b0,\ \textcolor{keywordtype}{double}\ b1,\ \textcolor{keywordtype}{double}\ b2);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setOnePole\ (complex\_t\ pole,\ complex\_t\ zero);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setTwoPole\ (complex\_t\ pole1,\ complex\_t\ zero1,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complex\_t\ pole2,\ complex\_t\ zero2);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIir_1_1Biquad_a69b4a2eaedb4b51aea9fb46a99c3d3c2}{setPoleZeroPair}}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{PoleZeroPair}}\&\ pair)}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pair.isSinglePole\ ())}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setOnePole\ (pair.poles.first,\ pair.zeros.first);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setTwoPole\ (pair.poles.first,\ pair.zeros.first,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pair.poles.second,\ pair.zeros.second);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setPoleZeroForm\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structIir_1_1BiquadPoleState}{BiquadPoleState}}\&\ bps);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setIdentity\ ();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ applyScale\ (\textcolor{keywordtype}{double}\ scale);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_a0\ =\ 1.0;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_a1\ =\ 0.0;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_a2\ =\ 0.0;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_b1\ =\ 0.0;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_b2\ =\ 0.0;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_b0\ =\ 1.0;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1BiquadPoleState}{BiquadPoleState}}\ :\ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{PoleZeroPair}}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1BiquadPoleState}{BiquadPoleState}}\ ()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structIir_1_1BiquadPoleState}{BiquadPoleState}}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}\&\ s);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gain\ =\ 1.0;}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

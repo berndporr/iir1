@@ -1,328 +1,345 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \contentsline {section}{\numberline {1}DSP IIR Realtime C++ filter library}{1}{section.1}%
-\contentsline {section}{\numberline {2}Namespace Index}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Namespace List}{2}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Hierarchical Index}{2}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Class Hierarchy}{2}{subsection.3.1}%
+\contentsline {section}{\numberline {2}Namespace Index}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Namespace List}{1}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Hierarchical Index}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Class Hierarchy}{1}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Class Index}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Class List}{5}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Namespace Documentation}{8}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Iir Namespace Reference}{8}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Detailed Description}{9}{subsubsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.2}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth Namespace Reference}{10}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Detailed Description}{11}{subsubsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.3}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI Namespace Reference}{11}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Detailed Description}{11}{subsubsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.4}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II Namespace Reference}{11}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Detailed Description}{12}{subsubsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.5}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom Namespace Reference}{12}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Detailed Description}{12}{subsubsection.5.5.1}%
-\contentsline {section}{\numberline {6}Class Documentation}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::All\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Struct Reference}{12}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Detailed Description}{12}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Member Function Documentation}{12}{subsubsection.6.1.2}%
-\contentsline {paragraph}{\numberline {6.1.2.1}setup()}{12}{paragraph.6.1.2.1}%
-\contentsline {paragraph}{\numberline {6.1.2.2}setupN()}{13}{paragraph.6.1.2.2}%
-\contentsline {subsection}{\numberline {6.2}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Class Reference}{13}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Detailed Description}{13}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Class Reference}{13}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Detailed Description}{13}{subsubsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.4}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Class Reference}{14}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Detailed Description}{14}{subsubsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.5}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Class Reference}{14}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Detailed Description}{14}{subsubsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.6}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Class Reference}{14}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Detailed Description}{14}{subsubsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.7}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Class Reference}{15}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Detailed Description}{15}{subsubsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.8}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{15}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1}Detailed Description}{15}{subsubsection.6.8.1}%
-\contentsline {subsubsection}{\numberline {6.8.2}Member Function Documentation}{15}{subsubsection.6.8.2}%
-\contentsline {paragraph}{\numberline {6.8.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{15}{paragraph.6.8.2.1}%
-\contentsline {paragraph}{\numberline {6.8.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{paragraph.6.8.2.2}%
-\contentsline {paragraph}{\numberline {6.8.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{paragraph.6.8.2.3}%
-\contentsline {paragraph}{\numberline {6.8.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{paragraph.6.8.2.4}%
-\contentsline {subsection}{\numberline {6.9}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{17}{subsection.6.9}%
-\contentsline {subsubsection}{\numberline {6.9.1}Detailed Description}{17}{subsubsection.6.9.1}%
-\contentsline {subsubsection}{\numberline {6.9.2}Member Function Documentation}{17}{subsubsection.6.9.2}%
-\contentsline {paragraph}{\numberline {6.9.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{17}{paragraph.6.9.2.1}%
-\contentsline {paragraph}{\numberline {6.9.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{18}{paragraph.6.9.2.2}%
-\contentsline {paragraph}{\numberline {6.9.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{paragraph.6.9.2.3}%
-\contentsline {paragraph}{\numberline {6.9.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{18}{paragraph.6.9.2.4}%
-\contentsline {subsection}{\numberline {6.10}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{18}{subsection.6.10}%
-\contentsline {subsubsection}{\numberline {6.10.1}Detailed Description}{19}{subsubsection.6.10.1}%
-\contentsline {subsubsection}{\numberline {6.10.2}Member Function Documentation}{19}{subsubsection.6.10.2}%
-\contentsline {paragraph}{\numberline {6.10.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{19}{paragraph.6.10.2.1}%
-\contentsline {paragraph}{\numberline {6.10.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{paragraph.6.10.2.2}%
-\contentsline {paragraph}{\numberline {6.10.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{20}{paragraph.6.10.2.3}%
-\contentsline {paragraph}{\numberline {6.10.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{20}{paragraph.6.10.2.4}%
-\contentsline {subsection}{\numberline {6.11}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass1 Struct Reference}{20}{subsection.6.11}%
-\contentsline {subsubsection}{\numberline {6.11.1}Detailed Description}{21}{subsubsection.6.11.1}%
-\contentsline {subsubsection}{\numberline {6.11.2}Member Function Documentation}{21}{subsubsection.6.11.2}%
-\contentsline {paragraph}{\numberline {6.11.2.1}setup()}{21}{paragraph.6.11.2.1}%
-\contentsline {paragraph}{\numberline {6.11.2.2}setupN()}{21}{paragraph.6.11.2.2}%
-\contentsline {subsection}{\numberline {6.12}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass2 Struct Reference}{21}{subsection.6.12}%
-\contentsline {subsubsection}{\numberline {6.12.1}Detailed Description}{22}{subsubsection.6.12.1}%
-\contentsline {subsubsection}{\numberline {6.12.2}Member Function Documentation}{22}{subsubsection.6.12.2}%
-\contentsline {paragraph}{\numberline {6.12.2.1}setup()}{22}{paragraph.6.12.2.1}%
-\contentsline {paragraph}{\numberline {6.12.2.2}setupN()}{22}{paragraph.6.12.2.2}%
-\contentsline {subsection}{\numberline {6.13}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{22}{subsection.6.13}%
-\contentsline {subsection}{\numberline {6.14}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{23}{subsection.6.14}%
-\contentsline {subsection}{\numberline {6.15}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{23}{subsection.6.15}%
-\contentsline {subsection}{\numberline {6.16}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{24}{subsection.6.16}%
-\contentsline {subsubsection}{\numberline {6.16.1}Detailed Description}{24}{subsubsection.6.16.1}%
-\contentsline {subsection}{\numberline {6.17}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{24}{subsection.6.17}%
-\contentsline {subsubsection}{\numberline {6.17.1}Detailed Description}{24}{subsubsection.6.17.1}%
-\contentsline {subsubsection}{\numberline {6.17.2}Member Function Documentation}{24}{subsubsection.6.17.2}%
-\contentsline {paragraph}{\numberline {6.17.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{24}{paragraph.6.17.2.1}%
-\contentsline {paragraph}{\numberline {6.17.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{25}{paragraph.6.17.2.2}%
-\contentsline {paragraph}{\numberline {6.17.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{25}{paragraph.6.17.2.3}%
-\contentsline {paragraph}{\numberline {6.17.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{25}{paragraph.6.17.2.4}%
-\contentsline {subsection}{\numberline {6.18}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{26}{subsection.6.18}%
-\contentsline {subsubsection}{\numberline {6.18.1}Detailed Description}{26}{subsubsection.6.18.1}%
-\contentsline {subsubsection}{\numberline {6.18.2}Member Function Documentation}{26}{subsubsection.6.18.2}%
-\contentsline {paragraph}{\numberline {6.18.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{26}{paragraph.6.18.2.1}%
-\contentsline {paragraph}{\numberline {6.18.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{27}{paragraph.6.18.2.2}%
-\contentsline {paragraph}{\numberline {6.18.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{27}{paragraph.6.18.2.3}%
-\contentsline {paragraph}{\numberline {6.18.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{27}{paragraph.6.18.2.4}%
-\contentsline {subsection}{\numberline {6.19}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{28}{subsection.6.19}%
-\contentsline {subsubsection}{\numberline {6.19.1}Detailed Description}{28}{subsubsection.6.19.1}%
-\contentsline {subsubsection}{\numberline {6.19.2}Member Function Documentation}{28}{subsubsection.6.19.2}%
-\contentsline {paragraph}{\numberline {6.19.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{29}{paragraph.6.19.2.1}%
-\contentsline {paragraph}{\numberline {6.19.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{29}{paragraph.6.19.2.2}%
-\contentsline {paragraph}{\numberline {6.19.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{29}{paragraph.6.19.2.3}%
-\contentsline {paragraph}{\numberline {6.19.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{30}{paragraph.6.19.2.4}%
-\contentsline {subsection}{\numberline {6.20}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Struct Reference}{30}{subsection.6.20}%
-\contentsline {subsubsection}{\numberline {6.20.1}Detailed Description}{30}{subsubsection.6.20.1}%
-\contentsline {subsubsection}{\numberline {6.20.2}Member Function Documentation}{30}{subsubsection.6.20.2}%
-\contentsline {paragraph}{\numberline {6.20.2.1}setup()}{30}{paragraph.6.20.2.1}%
-\contentsline {paragraph}{\numberline {6.20.2.2}setupN()}{31}{paragraph.6.20.2.2}%
-\contentsline {subsection}{\numberline {6.21}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{31}{subsection.6.21}%
-\contentsline {subsection}{\numberline {6.22}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{31}{subsection.6.22}%
-\contentsline {subsection}{\numberline {6.23}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{32}{subsection.6.23}%
-\contentsline {subsection}{\numberline {6.24}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{32}{subsection.6.24}%
-\contentsline {subsubsection}{\numberline {6.24.1}Detailed Description}{33}{subsubsection.6.24.1}%
-\contentsline {subsubsection}{\numberline {6.24.2}Member Function Documentation}{33}{subsubsection.6.24.2}%
-\contentsline {paragraph}{\numberline {6.24.2.1}setup()}{33}{paragraph.6.24.2.1}%
-\contentsline {paragraph}{\numberline {6.24.2.2}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{33}{paragraph.6.24.2.2}%
-\contentsline {paragraph}{\numberline {6.24.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{33}{paragraph.6.24.2.3}%
-\contentsline {paragraph}{\numberline {6.24.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{34}{paragraph.6.24.2.4}%
-\contentsline {subsection}{\numberline {6.25}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{34}{subsection.6.25}%
-\contentsline {subsubsection}{\numberline {6.25.1}Detailed Description}{34}{subsubsection.6.25.1}%
-\contentsline {subsubsection}{\numberline {6.25.2}Member Function Documentation}{34}{subsubsection.6.25.2}%
-\contentsline {paragraph}{\numberline {6.25.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{35}{paragraph.6.25.2.1}%
-\contentsline {paragraph}{\numberline {6.25.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{35}{paragraph.6.25.2.2}%
-\contentsline {paragraph}{\numberline {6.25.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{35}{paragraph.6.25.2.3}%
-\contentsline {paragraph}{\numberline {6.25.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{35}{paragraph.6.25.2.4}%
-\contentsline {subsection}{\numberline {6.26}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{36}{subsection.6.26}%
-\contentsline {subsubsection}{\numberline {6.26.1}Detailed Description}{36}{subsubsection.6.26.1}%
-\contentsline {subsubsection}{\numberline {6.26.2}Member Function Documentation}{36}{subsubsection.6.26.2}%
-\contentsline {paragraph}{\numberline {6.26.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{36}{paragraph.6.26.2.1}%
-\contentsline {paragraph}{\numberline {6.26.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{37}{paragraph.6.26.2.2}%
-\contentsline {paragraph}{\numberline {6.26.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{37}{paragraph.6.26.2.3}%
-\contentsline {paragraph}{\numberline {6.26.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{37}{paragraph.6.26.2.4}%
-\contentsline {subsection}{\numberline {6.27}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop Struct Reference}{38}{subsection.6.27}%
-\contentsline {subsubsection}{\numberline {6.27.1}Detailed Description}{38}{subsubsection.6.27.1}%
-\contentsline {subsubsection}{\numberline {6.27.2}Member Function Documentation}{38}{subsubsection.6.27.2}%
-\contentsline {paragraph}{\numberline {6.27.2.1}setup()}{38}{paragraph.6.27.2.1}%
-\contentsline {paragraph}{\numberline {6.27.2.2}setupN()}{38}{paragraph.6.27.2.2}%
-\contentsline {subsection}{\numberline {6.28}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{39}{subsection.6.28}%
-\contentsline {subsection}{\numberline {6.29}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{39}{subsection.6.29}%
-\contentsline {subsection}{\numberline {6.30}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{40}{subsection.6.30}%
-\contentsline {subsection}{\numberline {6.31}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{40}{subsection.6.31}%
-\contentsline {subsubsection}{\numberline {6.31.1}Detailed Description}{40}{subsubsection.6.31.1}%
-\contentsline {subsection}{\numberline {6.32}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Biquad Class Reference}{40}{subsection.6.32}%
-\contentsline {subsubsection}{\numberline {6.32.1}Member Function Documentation}{41}{subsubsection.6.32.1}%
-\contentsline {paragraph}{\numberline {6.32.1.1}applyScale()}{41}{paragraph.6.32.1.1}%
-\contentsline {paragraph}{\numberline {6.32.1.2}filter()}{42}{paragraph.6.32.1.2}%
-\contentsline {paragraph}{\numberline {6.32.1.3}getA0()}{42}{paragraph.6.32.1.3}%
-\contentsline {paragraph}{\numberline {6.32.1.4}getA1()}{42}{paragraph.6.32.1.4}%
-\contentsline {paragraph}{\numberline {6.32.1.5}getA2()}{42}{paragraph.6.32.1.5}%
-\contentsline {paragraph}{\numberline {6.32.1.6}getB0()}{42}{paragraph.6.32.1.6}%
-\contentsline {paragraph}{\numberline {6.32.1.7}getB1()}{42}{paragraph.6.32.1.7}%
-\contentsline {paragraph}{\numberline {6.32.1.8}getB2()}{42}{paragraph.6.32.1.8}%
-\contentsline {paragraph}{\numberline {6.32.1.9}getPoleZeros()}{42}{paragraph.6.32.1.9}%
-\contentsline {paragraph}{\numberline {6.32.1.10}response()}{42}{paragraph.6.32.1.10}%
-\contentsline {paragraph}{\numberline {6.32.1.11}setCoefficients()}{43}{paragraph.6.32.1.11}%
-\contentsline {paragraph}{\numberline {6.32.1.12}setIdentity()}{43}{paragraph.6.32.1.12}%
-\contentsline {paragraph}{\numberline {6.32.1.13}setOnePole()}{43}{paragraph.6.32.1.13}%
-\contentsline {paragraph}{\numberline {6.32.1.14}setPoleZeroPair()}{43}{paragraph.6.32.1.14}%
-\contentsline {paragraph}{\numberline {6.32.1.15}setTwoPole()}{43}{paragraph.6.32.1.15}%
-\contentsline {subsection}{\numberline {6.33}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Biquad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Struct Reference}{43}{subsection.6.33}%
-\contentsline {subsubsection}{\numberline {6.33.1}Detailed Description}{44}{subsubsection.6.33.1}%
-\contentsline {subsection}{\numberline {6.34}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cascade Class Reference}{44}{subsection.6.34}%
-\contentsline {subsubsection}{\numberline {6.34.1}Detailed Description}{44}{subsubsection.6.34.1}%
-\contentsline {subsubsection}{\numberline {6.34.2}Member Function Documentation}{44}{subsubsection.6.34.2}%
-\contentsline {paragraph}{\numberline {6.34.2.1}getNumStages()}{44}{paragraph.6.34.2.1}%
-\contentsline {paragraph}{\numberline {6.34.2.2}getPoleZeros()}{45}{paragraph.6.34.2.2}%
-\contentsline {paragraph}{\numberline {6.34.2.3}operator[]()}{45}{paragraph.6.34.2.3}%
-\contentsline {paragraph}{\numberline {6.34.2.4}response()}{45}{paragraph.6.34.2.4}%
-\contentsline {subsection}{\numberline {6.35}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cascade\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stages$<$ Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stages, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{45}{subsection.6.35}%
-\contentsline {subsubsection}{\numberline {6.35.1}Detailed Description}{45}{subsubsection.6.35.1}%
-\contentsline {subsubsection}{\numberline {6.35.2}Member Function Documentation}{45}{subsubsection.6.35.2}%
-\contentsline {paragraph}{\numberline {6.35.2.1}filter()}{45}{paragraph.6.35.2.1}%
-\contentsline {paragraph}{\numberline {6.35.2.2}getCascadeStorage()}{46}{paragraph.6.35.2.2}%
-\contentsline {paragraph}{\numberline {6.35.2.3}reset()}{46}{paragraph.6.35.2.3}%
-\contentsline {paragraph}{\numberline {6.35.2.4}setup()}{46}{paragraph.6.35.2.4}%
-\contentsline {subsection}{\numberline {6.36}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Complex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pair Struct Reference}{46}{subsection.6.36}%
-\contentsline {subsubsection}{\numberline {6.36.1}Detailed Description}{46}{subsubsection.6.36.1}%
-\contentsline {subsubsection}{\numberline {6.36.2}Member Function Documentation}{46}{subsubsection.6.36.2}%
-\contentsline {paragraph}{\numberline {6.36.2.1}isMatchedPair()}{46}{paragraph.6.36.2.1}%
-\contentsline {subsection}{\numberline {6.37}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Direct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FormI Class Reference}{47}{subsection.6.37}%
-\contentsline {subsubsection}{\numberline {6.37.1}Detailed Description}{47}{subsubsection.6.37.1}%
-\contentsline {subsection}{\numberline {6.38}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Direct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II Class Reference}{47}{subsection.6.38}%
-\contentsline {subsubsection}{\numberline {6.38.1}Detailed Description}{47}{subsubsection.6.38.1}%
-\contentsline {subsection}{\numberline {6.39}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{47}{subsection.6.39}%
-\contentsline {subsubsection}{\numberline {6.39.1}Detailed Description}{47}{subsubsection.6.39.1}%
-\contentsline {subsubsection}{\numberline {6.39.2}Member Function Documentation}{48}{subsubsection.6.39.2}%
-\contentsline {paragraph}{\numberline {6.39.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{48}{paragraph.6.39.2.1}%
-\contentsline {paragraph}{\numberline {6.39.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{48}{paragraph.6.39.2.2}%
-\contentsline {paragraph}{\numberline {6.39.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{48}{paragraph.6.39.2.3}%
-\contentsline {paragraph}{\numberline {6.39.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{48}{paragraph.6.39.2.4}%
-\contentsline {subsection}{\numberline {6.40}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{49}{subsection.6.40}%
-\contentsline {subsubsection}{\numberline {6.40.1}Detailed Description}{49}{subsubsection.6.40.1}%
-\contentsline {subsubsection}{\numberline {6.40.2}Member Function Documentation}{49}{subsubsection.6.40.2}%
-\contentsline {paragraph}{\numberline {6.40.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{49}{paragraph.6.40.2.1}%
-\contentsline {paragraph}{\numberline {6.40.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{49}{paragraph.6.40.2.2}%
-\contentsline {paragraph}{\numberline {6.40.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{50}{paragraph.6.40.2.3}%
-\contentsline {paragraph}{\numberline {6.40.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{50}{paragraph.6.40.2.4}%
-\contentsline {subsection}{\numberline {6.41}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{50}{subsection.6.41}%
-\contentsline {subsubsection}{\numberline {6.41.1}Detailed Description}{51}{subsubsection.6.41.1}%
-\contentsline {subsubsection}{\numberline {6.41.2}Member Function Documentation}{51}{subsubsection.6.41.2}%
-\contentsline {paragraph}{\numberline {6.41.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{paragraph.6.41.2.1}%
-\contentsline {paragraph}{\numberline {6.41.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{51}{paragraph.6.41.2.2}%
-\contentsline {paragraph}{\numberline {6.41.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{paragraph.6.41.2.3}%
-\contentsline {paragraph}{\numberline {6.41.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{52}{paragraph.6.41.2.4}%
-\contentsline {subsection}{\numberline {6.42}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Struct Reference}{52}{subsection.6.42}%
-\contentsline {subsubsection}{\numberline {6.42.1}Detailed Description}{52}{subsubsection.6.42.1}%
-\contentsline {subsubsection}{\numberline {6.42.2}Member Function Documentation}{52}{subsubsection.6.42.2}%
-\contentsline {paragraph}{\numberline {6.42.2.1}setup()}{53}{paragraph.6.42.2.1}%
-\contentsline {paragraph}{\numberline {6.42.2.2}setupN()}{53}{paragraph.6.42.2.2}%
-\contentsline {subsection}{\numberline {6.43}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{53}{subsection.6.43}%
-\contentsline {subsection}{\numberline {6.44}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{53}{subsection.6.44}%
-\contentsline {subsection}{\numberline {6.45}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{54}{subsection.6.45}%
-\contentsline {subsection}{\numberline {6.46}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{54}{subsection.6.46}%
-\contentsline {subsubsection}{\numberline {6.46.1}Detailed Description}{54}{subsubsection.6.46.1}%
-\contentsline {subsection}{\numberline {6.47}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{54}{subsection.6.47}%
-\contentsline {subsubsection}{\numberline {6.47.1}Detailed Description}{55}{subsubsection.6.47.1}%
-\contentsline {subsubsection}{\numberline {6.47.2}Member Function Documentation}{55}{subsubsection.6.47.2}%
-\contentsline {paragraph}{\numberline {6.47.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{55}{paragraph.6.47.2.1}%
-\contentsline {paragraph}{\numberline {6.47.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{55}{paragraph.6.47.2.2}%
-\contentsline {paragraph}{\numberline {6.47.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{56}{paragraph.6.47.2.3}%
-\contentsline {paragraph}{\numberline {6.47.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{56}{paragraph.6.47.2.4}%
-\contentsline {subsection}{\numberline {6.48}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{56}{subsection.6.48}%
-\contentsline {subsubsection}{\numberline {6.48.1}Detailed Description}{57}{subsubsection.6.48.1}%
-\contentsline {subsubsection}{\numberline {6.48.2}Member Function Documentation}{57}{subsubsection.6.48.2}%
-\contentsline {paragraph}{\numberline {6.48.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{57}{paragraph.6.48.2.1}%
-\contentsline {paragraph}{\numberline {6.48.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{57}{paragraph.6.48.2.2}%
-\contentsline {paragraph}{\numberline {6.48.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{57}{paragraph.6.48.2.3}%
-\contentsline {paragraph}{\numberline {6.48.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{58}{paragraph.6.48.2.4}%
-\contentsline {subsection}{\numberline {6.49}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{58}{subsection.6.49}%
-\contentsline {subsubsection}{\numberline {6.49.1}Detailed Description}{58}{subsubsection.6.49.1}%
-\contentsline {subsubsection}{\numberline {6.49.2}Member Function Documentation}{59}{subsubsection.6.49.2}%
-\contentsline {paragraph}{\numberline {6.49.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{59}{paragraph.6.49.2.1}%
-\contentsline {paragraph}{\numberline {6.49.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{59}{paragraph.6.49.2.2}%
-\contentsline {paragraph}{\numberline {6.49.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{59}{paragraph.6.49.2.3}%
-\contentsline {paragraph}{\numberline {6.49.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{60}{paragraph.6.49.2.4}%
-\contentsline {subsection}{\numberline {6.50}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Struct Reference}{60}{subsection.6.50}%
-\contentsline {subsubsection}{\numberline {6.50.1}Detailed Description}{60}{subsubsection.6.50.1}%
-\contentsline {subsubsection}{\numberline {6.50.2}Member Function Documentation}{60}{subsubsection.6.50.2}%
-\contentsline {paragraph}{\numberline {6.50.2.1}setup()}{60}{paragraph.6.50.2.1}%
-\contentsline {paragraph}{\numberline {6.50.2.2}setupN()}{61}{paragraph.6.50.2.2}%
-\contentsline {subsection}{\numberline {6.51}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{61}{subsection.6.51}%
-\contentsline {subsection}{\numberline {6.52}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{61}{subsection.6.52}%
-\contentsline {subsection}{\numberline {6.53}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{62}{subsection.6.53}%
-\contentsline {subsection}{\numberline {6.54}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::IIRNotch Struct Reference}{62}{subsection.6.54}%
-\contentsline {subsubsection}{\numberline {6.54.1}Detailed Description}{63}{subsubsection.6.54.1}%
-\contentsline {subsubsection}{\numberline {6.54.2}Member Function Documentation}{63}{subsubsection.6.54.2}%
-\contentsline {paragraph}{\numberline {6.54.2.1}setup()}{63}{paragraph.6.54.2.1}%
-\contentsline {paragraph}{\numberline {6.54.2.2}setupN()}{63}{paragraph.6.54.2.2}%
-\contentsline {subsection}{\numberline {6.55}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Layout$<$ Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poles $>$ Class Template Reference}{63}{subsection.6.55}%
-\contentsline {subsubsection}{\numberline {6.55.1}Detailed Description}{63}{subsubsection.6.55.1}%
-\contentsline {subsection}{\numberline {6.56}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Layout\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{63}{subsection.6.56}%
-\contentsline {subsubsection}{\numberline {6.56.1}Detailed Description}{64}{subsubsection.6.56.1}%
-\contentsline {subsection}{\numberline {6.57}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{64}{subsection.6.57}%
-\contentsline {subsubsection}{\numberline {6.57.1}Detailed Description}{64}{subsubsection.6.57.1}%
-\contentsline {subsubsection}{\numberline {6.57.2}Member Function Documentation}{64}{subsubsection.6.57.2}%
-\contentsline {paragraph}{\numberline {6.57.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{64}{paragraph.6.57.2.1}%
-\contentsline {paragraph}{\numberline {6.57.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{65}{paragraph.6.57.2.2}%
-\contentsline {paragraph}{\numberline {6.57.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{65}{paragraph.6.57.2.3}%
-\contentsline {paragraph}{\numberline {6.57.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{65}{paragraph.6.57.2.4}%
-\contentsline {subsection}{\numberline {6.58}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{65}{subsection.6.58}%
-\contentsline {subsubsection}{\numberline {6.58.1}Detailed Description}{66}{subsubsection.6.58.1}%
-\contentsline {subsubsection}{\numberline {6.58.2}Member Function Documentation}{66}{subsubsection.6.58.2}%
-\contentsline {paragraph}{\numberline {6.58.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{66}{paragraph.6.58.2.1}%
-\contentsline {paragraph}{\numberline {6.58.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{66}{paragraph.6.58.2.2}%
-\contentsline {paragraph}{\numberline {6.58.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{67}{paragraph.6.58.2.3}%
-\contentsline {paragraph}{\numberline {6.58.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{67}{paragraph.6.58.2.4}%
-\contentsline {subsection}{\numberline {6.59}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{67}{subsection.6.59}%
-\contentsline {subsubsection}{\numberline {6.59.1}Detailed Description}{67}{subsubsection.6.59.1}%
-\contentsline {subsubsection}{\numberline {6.59.2}Member Function Documentation}{68}{subsubsection.6.59.2}%
-\contentsline {paragraph}{\numberline {6.59.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{68}{paragraph.6.59.2.1}%
-\contentsline {paragraph}{\numberline {6.59.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{68}{paragraph.6.59.2.2}%
-\contentsline {paragraph}{\numberline {6.59.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{68}{paragraph.6.59.2.3}%
-\contentsline {paragraph}{\numberline {6.59.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{69}{paragraph.6.59.2.4}%
-\contentsline {subsection}{\numberline {6.60}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Struct Reference}{69}{subsection.6.60}%
-\contentsline {subsubsection}{\numberline {6.60.1}Detailed Description}{69}{subsubsection.6.60.1}%
-\contentsline {subsubsection}{\numberline {6.60.2}Member Function Documentation}{69}{subsubsection.6.60.2}%
-\contentsline {paragraph}{\numberline {6.60.2.1}setup()}{69}{paragraph.6.60.2.1}%
-\contentsline {paragraph}{\numberline {6.60.2.2}setupN()}{70}{paragraph.6.60.2.2}%
-\contentsline {subsection}{\numberline {6.61}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{70}{subsection.6.61}%
-\contentsline {subsection}{\numberline {6.62}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{70}{subsection.6.62}%
-\contentsline {subsection}{\numberline {6.63}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{71}{subsection.6.63}%
-\contentsline {subsection}{\numberline {6.64}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{71}{subsection.6.64}%
-\contentsline {subsubsection}{\numberline {6.64.1}Detailed Description}{71}{subsubsection.6.64.1}%
-\contentsline {subsection}{\numberline {6.65}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{71}{subsection.6.65}%
-\contentsline {subsubsection}{\numberline {6.65.1}Detailed Description}{72}{subsubsection.6.65.1}%
-\contentsline {subsubsection}{\numberline {6.65.2}Member Function Documentation}{72}{subsubsection.6.65.2}%
-\contentsline {paragraph}{\numberline {6.65.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{72}{paragraph.6.65.2.1}%
-\contentsline {paragraph}{\numberline {6.65.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{72}{paragraph.6.65.2.2}%
-\contentsline {paragraph}{\numberline {6.65.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{72}{paragraph.6.65.2.3}%
-\contentsline {paragraph}{\numberline {6.65.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{73}{paragraph.6.65.2.4}%
-\contentsline {subsection}{\numberline {6.66}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{73}{subsection.6.66}%
-\contentsline {subsubsection}{\numberline {6.66.1}Detailed Description}{73}{subsubsection.6.66.1}%
-\contentsline {subsubsection}{\numberline {6.66.2}Member Function Documentation}{74}{subsubsection.6.66.2}%
-\contentsline {paragraph}{\numberline {6.66.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{74}{paragraph.6.66.2.1}%
-\contentsline {paragraph}{\numberline {6.66.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{74}{paragraph.6.66.2.2}%
-\contentsline {paragraph}{\numberline {6.66.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{74}{paragraph.6.66.2.3}%
-\contentsline {paragraph}{\numberline {6.66.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{75}{paragraph.6.66.2.4}%
-\contentsline {subsection}{\numberline {6.67}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{75}{subsection.6.67}%
-\contentsline {subsubsection}{\numberline {6.67.1}Detailed Description}{75}{subsubsection.6.67.1}%
-\contentsline {subsubsection}{\numberline {6.67.2}Member Function Documentation}{75}{subsubsection.6.67.2}%
-\contentsline {paragraph}{\numberline {6.67.2.1}setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{75}{paragraph.6.67.2.1}%
-\contentsline {paragraph}{\numberline {6.67.2.2}setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{76}{paragraph.6.67.2.2}%
-\contentsline {paragraph}{\numberline {6.67.2.3}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{76}{paragraph.6.67.2.3}%
-\contentsline {paragraph}{\numberline {6.67.2.4}setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{76}{paragraph.6.67.2.4}%
-\contentsline {subsection}{\numberline {6.68}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Struct Reference}{77}{subsection.6.68}%
-\contentsline {subsubsection}{\numberline {6.68.1}Detailed Description}{77}{subsubsection.6.68.1}%
-\contentsline {subsubsection}{\numberline {6.68.2}Member Function Documentation}{77}{subsubsection.6.68.2}%
-\contentsline {paragraph}{\numberline {6.68.2.1}setup()}{77}{paragraph.6.68.2.1}%
-\contentsline {paragraph}{\numberline {6.68.2.2}setupN()}{77}{paragraph.6.68.2.2}%
-\contentsline {subsection}{\numberline {6.69}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{78}{subsection.6.69}%
-\contentsline {subsection}{\numberline {6.70}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{78}{subsection.6.70}%
-\contentsline {subsection}{\numberline {6.71}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{79}{subsection.6.71}%
-\contentsline {subsection}{\numberline {6.72}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::One\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pole Struct Reference}{79}{subsection.6.72}%
-\contentsline {subsubsection}{\numberline {6.72.1}Detailed Description}{79}{subsubsection.6.72.1}%
-\contentsline {subsection}{\numberline {6.73}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter$<$ Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Class, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poles, Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Digital\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poles $>$ Struct Template Reference}{79}{subsection.6.73}%
-\contentsline {subsubsection}{\numberline {6.73.1}Detailed Description}{80}{subsubsection.6.73.1}%
-\contentsline {subsection}{\numberline {6.74}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base$<$ Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Prototype $>$ Class Template Reference}{80}{subsection.6.74}%
-\contentsline {subsubsection}{\numberline {6.74.1}Detailed Description}{80}{subsubsection.6.74.1}%
-\contentsline {subsection}{\numberline {6.75}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base2 Class Reference}{80}{subsection.6.75}%
-\contentsline {subsubsection}{\numberline {6.75.1}Detailed Description}{81}{subsubsection.6.75.1}%
-\contentsline {subsection}{\numberline {6.76}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zero\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pair Struct Reference}{81}{subsection.6.76}%
-\contentsline {subsubsection}{\numberline {6.76.1}Detailed Description}{81}{subsubsection.6.76.1}%
-\contentsline {subsection}{\numberline {6.77}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJbase Struct Reference}{81}{subsection.6.77}%
-\contentsline {subsubsection}{\numberline {6.77.1}Detailed Description}{82}{subsubsection.6.77.1}%
-\contentsline {subsection}{\numberline {6.78}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::SOSCascade$<$ NSOS, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{82}{subsection.6.78}%
-\contentsline {subsubsection}{\numberline {6.78.1}Detailed Description}{83}{subsubsection.6.78.1}%
-\contentsline {subsubsection}{\numberline {6.78.2}Constructor \& Destructor Documentation}{83}{subsubsection.6.78.2}%
-\contentsline {paragraph}{\numberline {6.78.2.1}SOSCascade()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{83}{paragraph.6.78.2.1}%
-\contentsline {paragraph}{\numberline {6.78.2.2}SOSCascade()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{83}{paragraph.6.78.2.2}%
-\contentsline {subsubsection}{\numberline {6.78.3}Member Function Documentation}{83}{subsubsection.6.78.3}%
-\contentsline {paragraph}{\numberline {6.78.3.1}setup()}{83}{paragraph.6.78.3.1}%
-\contentsline {subsection}{\numberline {6.79}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cascade\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Storage Struct Reference}{84}{subsection.6.79}%
-\contentsline {subsubsection}{\numberline {6.79.1}Detailed Description}{84}{subsubsection.6.79.1}%
-\contentsline {subsection}{\numberline {6.80}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Transposed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Direct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II Class Reference}{84}{subsection.6.80}%
-\contentsline {subsection}{\numberline {6.81}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Two\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pole Struct Reference}{84}{subsection.6.81}%
-\contentsline {subsubsection}{\numberline {6.81.1}Detailed Description}{84}{subsubsection.6.81.1}%
-\contentsline {section}{Index}{85}{section*.169}%
+\contentsline {section}{\numberline {5}File Index}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}File List}{8}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Namespace Documentation}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Iir Namespace Reference}{8}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Detailed Description}{9}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth Namespace Reference}{11}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Detailed Description}{11}{subsubsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.3}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI Namespace Reference}{11}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Detailed Description}{11}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II Namespace Reference}{12}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Detailed Description}{12}{subsubsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.5}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom Namespace Reference}{12}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Detailed Description}{12}{subsubsection.6.5.1}%
+\contentsline {section}{\numberline {7}Class Documentation}{12}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::All\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Struct Reference}{12}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Detailed Description}{13}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Member Function Documentation}{13}{subsubsection.7.1.2}%
+\contentsline {paragraph}{setup()}{13}{section*.11}%
+\contentsline {paragraph}{setupN()}{13}{section*.12}%
+\contentsline {subsection}{\numberline {7.2}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Class Reference}{14}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Detailed Description}{14}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Class Reference}{14}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Detailed Description}{14}{subsubsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.4}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Class Reference}{14}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Detailed Description}{15}{subsubsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.5}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Class Reference}{15}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Detailed Description}{15}{subsubsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.6}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Class Reference}{15}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}Detailed Description}{15}{subsubsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.7}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Class Reference}{15}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}Detailed Description}{16}{subsubsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.8}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{16}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}Detailed Description}{16}{subsubsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.2}Member Function Documentation}{16}{subsubsection.7.8.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{section*.23}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{section*.24}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{17}{section*.25}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{section*.26}%
+\contentsline {subsection}{\numberline {7.9}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{18}{subsection.7.9}%
+\contentsline {subsubsection}{\numberline {7.9.1}Detailed Description}{18}{subsubsection.7.9.1}%
+\contentsline {subsubsection}{\numberline {7.9.2}Member Function Documentation}{18}{subsubsection.7.9.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{section*.31}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{section*.32}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{19}{section*.33}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{section*.34}%
+\contentsline {subsection}{\numberline {7.10}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{20}{subsection.7.10}%
+\contentsline {subsubsection}{\numberline {7.10.1}Detailed Description}{20}{subsubsection.7.10.1}%
+\contentsline {subsubsection}{\numberline {7.10.2}Member Function Documentation}{20}{subsubsection.7.10.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{20}{section*.39}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{section*.40}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{21}{section*.41}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{section*.42}%
+\contentsline {subsection}{\numberline {7.11}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass1 Struct Reference}{22}{subsection.7.11}%
+\contentsline {subsubsection}{\numberline {7.11.1}Detailed Description}{23}{subsubsection.7.11.1}%
+\contentsline {subsubsection}{\numberline {7.11.2}Member Function Documentation}{23}{subsubsection.7.11.2}%
+\contentsline {paragraph}{setup()}{23}{section*.47}%
+\contentsline {paragraph}{setupN()}{23}{section*.48}%
+\contentsline {subsection}{\numberline {7.12}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass2 Struct Reference}{23}{subsection.7.12}%
+\contentsline {subsubsection}{\numberline {7.12.1}Detailed Description}{24}{subsubsection.7.12.1}%
+\contentsline {subsubsection}{\numberline {7.12.2}Member Function Documentation}{24}{subsubsection.7.12.2}%
+\contentsline {paragraph}{setup()}{24}{section*.53}%
+\contentsline {paragraph}{setupN()}{24}{section*.54}%
+\contentsline {subsection}{\numberline {7.13}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{25}{subsection.7.13}%
+\contentsline {subsection}{\numberline {7.14}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{25}{subsection.7.14}%
+\contentsline {subsection}{\numberline {7.15}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{26}{subsection.7.15}%
+\contentsline {subsection}{\numberline {7.16}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{26}{subsection.7.16}%
+\contentsline {subsubsection}{\numberline {7.16.1}Detailed Description}{26}{subsubsection.7.16.1}%
+\contentsline {subsection}{\numberline {7.17}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{26}{subsection.7.17}%
+\contentsline {subsubsection}{\numberline {7.17.1}Detailed Description}{27}{subsubsection.7.17.1}%
+\contentsline {subsubsection}{\numberline {7.17.2}Member Function Documentation}{27}{subsubsection.7.17.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{27}{section*.68}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{27}{section*.69}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{28}{section*.70}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{28}{section*.71}%
+\contentsline {subsection}{\numberline {7.18}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{28}{subsection.7.18}%
+\contentsline {subsubsection}{\numberline {7.18.1}Detailed Description}{29}{subsubsection.7.18.1}%
+\contentsline {subsubsection}{\numberline {7.18.2}Member Function Documentation}{29}{subsubsection.7.18.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{29}{section*.76}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{30}{section*.77}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{30}{section*.78}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{30}{section*.79}%
+\contentsline {subsection}{\numberline {7.19}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{31}{subsection.7.19}%
+\contentsline {subsubsection}{\numberline {7.19.1}Detailed Description}{31}{subsubsection.7.19.1}%
+\contentsline {subsubsection}{\numberline {7.19.2}Member Function Documentation}{31}{subsubsection.7.19.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{31}{section*.84}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{section*.85}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{32}{section*.86}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{33}{section*.87}%
+\contentsline {subsection}{\numberline {7.20}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Struct Reference}{33}{subsection.7.20}%
+\contentsline {subsubsection}{\numberline {7.20.1}Detailed Description}{34}{subsubsection.7.20.1}%
+\contentsline {subsubsection}{\numberline {7.20.2}Member Function Documentation}{34}{subsubsection.7.20.2}%
+\contentsline {paragraph}{setup()}{34}{section*.92}%
+\contentsline {paragraph}{setupN()}{34}{section*.93}%
+\contentsline {subsection}{\numberline {7.21}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{35}{subsection.7.21}%
+\contentsline {subsection}{\numberline {7.22}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{35}{subsection.7.22}%
+\contentsline {subsection}{\numberline {7.23}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{36}{subsection.7.23}%
+\contentsline {subsection}{\numberline {7.24}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{36}{subsection.7.24}%
+\contentsline {subsubsection}{\numberline {7.24.1}Detailed Description}{37}{subsubsection.7.24.1}%
+\contentsline {subsubsection}{\numberline {7.24.2}Member Function Documentation}{37}{subsubsection.7.24.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{37}{section*.107}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{37}{section*.108}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{37}{section*.109}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{38}{section*.110}%
+\contentsline {subsection}{\numberline {7.25}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{38}{subsection.7.25}%
+\contentsline {subsubsection}{\numberline {7.25.1}Detailed Description}{39}{subsubsection.7.25.1}%
+\contentsline {subsubsection}{\numberline {7.25.2}Member Function Documentation}{39}{subsubsection.7.25.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{39}{section*.115}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{39}{section*.116}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{39}{section*.117}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{40}{section*.118}%
+\contentsline {subsection}{\numberline {7.26}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{40}{subsection.7.26}%
+\contentsline {subsubsection}{\numberline {7.26.1}Detailed Description}{41}{subsubsection.7.26.1}%
+\contentsline {subsubsection}{\numberline {7.26.2}Member Function Documentation}{41}{subsubsection.7.26.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{41}{section*.123}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{41}{section*.124}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{42}{section*.125}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{42}{section*.126}%
+\contentsline {subsection}{\numberline {7.27}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop Struct Reference}{42}{subsection.7.27}%
+\contentsline {subsubsection}{\numberline {7.27.1}Detailed Description}{43}{subsubsection.7.27.1}%
+\contentsline {subsubsection}{\numberline {7.27.2}Member Function Documentation}{43}{subsubsection.7.27.2}%
+\contentsline {paragraph}{setup()}{43}{section*.131}%
+\contentsline {paragraph}{setupN()}{43}{section*.132}%
+\contentsline {subsection}{\numberline {7.28}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{44}{subsection.7.28}%
+\contentsline {subsection}{\numberline {7.29}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{44}{subsection.7.29}%
+\contentsline {subsection}{\numberline {7.30}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{45}{subsection.7.30}%
+\contentsline {subsection}{\numberline {7.31}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Band\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{45}{subsection.7.31}%
+\contentsline {subsubsection}{\numberline {7.31.1}Detailed Description}{45}{subsubsection.7.31.1}%
+\contentsline {subsection}{\numberline {7.32}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Biquad Class Reference}{45}{subsection.7.32}%
+\contentsline {subsubsection}{\numberline {7.32.1}Member Function Documentation}{46}{subsubsection.7.32.1}%
+\contentsline {paragraph}{applyScale()}{46}{section*.144}%
+\contentsline {paragraph}{filter()}{47}{section*.145}%
+\contentsline {paragraph}{getA0()}{47}{section*.146}%
+\contentsline {paragraph}{getA1()}{47}{section*.147}%
+\contentsline {paragraph}{getA2()}{47}{section*.148}%
+\contentsline {paragraph}{getB0()}{47}{section*.149}%
+\contentsline {paragraph}{getB1()}{47}{section*.150}%
+\contentsline {paragraph}{getB2()}{47}{section*.151}%
+\contentsline {paragraph}{getPoleZeros()}{47}{section*.152}%
+\contentsline {paragraph}{response()}{48}{section*.153}%
+\contentsline {paragraph}{setCoefficients()}{48}{section*.154}%
+\contentsline {paragraph}{setIdentity()}{48}{section*.155}%
+\contentsline {paragraph}{setOnePole()}{48}{section*.156}%
+\contentsline {paragraph}{setPoleZeroPair()}{48}{section*.157}%
+\contentsline {paragraph}{setTwoPole()}{48}{section*.158}%
+\contentsline {subsection}{\numberline {7.33}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Biquad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Struct Reference}{49}{subsection.7.33}%
+\contentsline {subsubsection}{\numberline {7.33.1}Detailed Description}{49}{subsubsection.7.33.1}%
+\contentsline {subsection}{\numberline {7.34}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cascade Class Reference}{49}{subsection.7.34}%
+\contentsline {subsubsection}{\numberline {7.34.1}Detailed Description}{50}{subsubsection.7.34.1}%
+\contentsline {subsubsection}{\numberline {7.34.2}Member Function Documentation}{50}{subsubsection.7.34.2}%
+\contentsline {paragraph}{getNumStages()}{50}{section*.163}%
+\contentsline {paragraph}{getPoleZeros()}{50}{section*.164}%
+\contentsline {paragraph}{operator[]()}{50}{section*.165}%
+\contentsline {paragraph}{response()}{50}{section*.166}%
+\contentsline {subsection}{\numberline {7.35}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cascade\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stages$<$ Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stages, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{50}{subsection.7.35}%
+\contentsline {subsubsection}{\numberline {7.35.1}Detailed Description}{51}{subsubsection.7.35.1}%
+\contentsline {subsubsection}{\numberline {7.35.2}Member Function Documentation}{51}{subsubsection.7.35.2}%
+\contentsline {paragraph}{filter()}{51}{section*.170}%
+\contentsline {paragraph}{getCascadeStorage()}{51}{section*.171}%
+\contentsline {paragraph}{reset()}{51}{section*.172}%
+\contentsline {paragraph}{setup()}{52}{section*.173}%
+\contentsline {subsection}{\numberline {7.36}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Complex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pair Struct Reference}{52}{subsection.7.36}%
+\contentsline {subsubsection}{\numberline {7.36.1}Detailed Description}{52}{subsubsection.7.36.1}%
+\contentsline {subsubsection}{\numberline {7.36.2}Member Function Documentation}{52}{subsubsection.7.36.2}%
+\contentsline {paragraph}{isMatchedPair()}{52}{section*.176}%
+\contentsline {subsection}{\numberline {7.37}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Direct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FormI Class Reference}{52}{subsection.7.37}%
+\contentsline {subsubsection}{\numberline {7.37.1}Detailed Description}{52}{subsubsection.7.37.1}%
+\contentsline {subsection}{\numberline {7.38}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Direct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II Class Reference}{53}{subsection.7.38}%
+\contentsline {subsubsection}{\numberline {7.38.1}Detailed Description}{53}{subsubsection.7.38.1}%
+\contentsline {subsection}{\numberline {7.39}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{53}{subsection.7.39}%
+\contentsline {subsubsection}{\numberline {7.39.1}Detailed Description}{53}{subsubsection.7.39.1}%
+\contentsline {subsubsection}{\numberline {7.39.2}Member Function Documentation}{54}{subsubsection.7.39.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{54}{section*.181}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{54}{section*.182}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{54}{section*.183}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{54}{section*.184}%
+\contentsline {subsection}{\numberline {7.40}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{55}{subsection.7.40}%
+\contentsline {subsubsection}{\numberline {7.40.1}Detailed Description}{55}{subsubsection.7.40.1}%
+\contentsline {subsubsection}{\numberline {7.40.2}Member Function Documentation}{55}{subsubsection.7.40.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{55}{section*.189}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{56}{section*.190}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{56}{section*.191}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{56}{section*.192}%
+\contentsline {subsection}{\numberline {7.41}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{56}{subsection.7.41}%
+\contentsline {subsubsection}{\numberline {7.41.1}Detailed Description}{57}{subsubsection.7.41.1}%
+\contentsline {subsubsection}{\numberline {7.41.2}Member Function Documentation}{57}{subsubsection.7.41.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{57}{section*.197}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{57}{section*.198}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{58}{section*.199}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{58}{section*.200}%
+\contentsline {subsection}{\numberline {7.42}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Struct Reference}{58}{subsection.7.42}%
+\contentsline {subsubsection}{\numberline {7.42.1}Detailed Description}{59}{subsubsection.7.42.1}%
+\contentsline {subsubsection}{\numberline {7.42.2}Member Function Documentation}{59}{subsubsection.7.42.2}%
+\contentsline {paragraph}{setup()}{59}{section*.205}%
+\contentsline {paragraph}{setupN()}{60}{section*.206}%
+\contentsline {subsection}{\numberline {7.43}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{60}{subsection.7.43}%
+\contentsline {subsection}{\numberline {7.44}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{60}{subsection.7.44}%
+\contentsline {subsection}{\numberline {7.45}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{61}{subsection.7.45}%
+\contentsline {subsection}{\numberline {7.46}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{61}{subsection.7.46}%
+\contentsline {subsubsection}{\numberline {7.46.1}Detailed Description}{62}{subsubsection.7.46.1}%
+\contentsline {subsection}{\numberline {7.47}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{62}{subsection.7.47}%
+\contentsline {subsubsection}{\numberline {7.47.1}Detailed Description}{62}{subsubsection.7.47.1}%
+\contentsline {subsubsection}{\numberline {7.47.2}Member Function Documentation}{62}{subsubsection.7.47.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{62}{section*.220}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{63}{section*.221}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{63}{section*.222}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{63}{section*.223}%
+\contentsline {subsection}{\numberline {7.48}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{64}{subsection.7.48}%
+\contentsline {subsubsection}{\numberline {7.48.1}Detailed Description}{64}{subsubsection.7.48.1}%
+\contentsline {subsubsection}{\numberline {7.48.2}Member Function Documentation}{64}{subsubsection.7.48.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{64}{section*.228}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{65}{section*.229}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{65}{section*.230}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{65}{section*.231}%
+\contentsline {subsection}{\numberline {7.49}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{66}{subsection.7.49}%
+\contentsline {subsubsection}{\numberline {7.49.1}Detailed Description}{66}{subsubsection.7.49.1}%
+\contentsline {subsubsection}{\numberline {7.49.2}Member Function Documentation}{66}{subsubsection.7.49.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{66}{section*.236}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{67}{section*.237}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{67}{section*.238}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{67}{section*.239}%
+\contentsline {subsection}{\numberline {7.50}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Struct Reference}{68}{subsection.7.50}%
+\contentsline {subsubsection}{\numberline {7.50.1}Detailed Description}{68}{subsubsection.7.50.1}%
+\contentsline {subsubsection}{\numberline {7.50.2}Member Function Documentation}{69}{subsubsection.7.50.2}%
+\contentsline {paragraph}{setup()}{69}{section*.244}%
+\contentsline {paragraph}{setupN()}{69}{section*.245}%
+\contentsline {subsection}{\numberline {7.51}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{69}{subsection.7.51}%
+\contentsline {subsection}{\numberline {7.52}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{70}{subsection.7.52}%
+\contentsline {subsection}{\numberline {7.53}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{70}{subsection.7.53}%
+\contentsline {subsection}{\numberline {7.54}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::IIRNotch Struct Reference}{71}{subsection.7.54}%
+\contentsline {subsubsection}{\numberline {7.54.1}Detailed Description}{72}{subsubsection.7.54.1}%
+\contentsline {subsubsection}{\numberline {7.54.2}Member Function Documentation}{72}{subsubsection.7.54.2}%
+\contentsline {paragraph}{setup()}{72}{section*.259}%
+\contentsline {paragraph}{setupN()}{72}{section*.260}%
+\contentsline {subsection}{\numberline {7.55}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Layout$<$ Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poles $>$ Class Template Reference}{72}{subsection.7.55}%
+\contentsline {subsubsection}{\numberline {7.55.1}Detailed Description}{72}{subsubsection.7.55.1}%
+\contentsline {subsection}{\numberline {7.56}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Layout\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{72}{subsection.7.56}%
+\contentsline {subsubsection}{\numberline {7.56.1}Detailed Description}{73}{subsubsection.7.56.1}%
+\contentsline {subsection}{\numberline {7.57}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{73}{subsection.7.57}%
+\contentsline {subsubsection}{\numberline {7.57.1}Detailed Description}{73}{subsubsection.7.57.1}%
+\contentsline {subsubsection}{\numberline {7.57.2}Member Function Documentation}{73}{subsubsection.7.57.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{73}{section*.267}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{74}{section*.268}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{74}{section*.269}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{74}{section*.270}%
+\contentsline {subsection}{\numberline {7.58}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{74}{subsection.7.58}%
+\contentsline {subsubsection}{\numberline {7.58.1}Detailed Description}{75}{subsubsection.7.58.1}%
+\contentsline {subsubsection}{\numberline {7.58.2}Member Function Documentation}{75}{subsubsection.7.58.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{75}{section*.275}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{75}{section*.276}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{76}{section*.277}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{76}{section*.278}%
+\contentsline {subsection}{\numberline {7.59}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{76}{subsection.7.59}%
+\contentsline {subsubsection}{\numberline {7.59.1}Detailed Description}{77}{subsubsection.7.59.1}%
+\contentsline {subsubsection}{\numberline {7.59.2}Member Function Documentation}{77}{subsubsection.7.59.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{77}{section*.283}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{77}{section*.284}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{78}{section*.285}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{78}{section*.286}%
+\contentsline {subsection}{\numberline {7.60}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass Struct Reference}{78}{subsection.7.60}%
+\contentsline {subsubsection}{\numberline {7.60.1}Detailed Description}{79}{subsubsection.7.60.1}%
+\contentsline {subsubsection}{\numberline {7.60.2}Member Function Documentation}{79}{subsubsection.7.60.2}%
+\contentsline {paragraph}{setup()}{79}{section*.291}%
+\contentsline {paragraph}{setupN()}{80}{section*.292}%
+\contentsline {subsection}{\numberline {7.61}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{80}{subsection.7.61}%
+\contentsline {subsection}{\numberline {7.62}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{80}{subsection.7.62}%
+\contentsline {subsection}{\numberline {7.63}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{81}{subsection.7.63}%
+\contentsline {subsection}{\numberline {7.64}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transform Class Reference}{81}{subsection.7.64}%
+\contentsline {subsubsection}{\numberline {7.64.1}Detailed Description}{82}{subsubsection.7.64.1}%
+\contentsline {subsection}{\numberline {7.65}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{82}{subsection.7.65}%
+\contentsline {subsubsection}{\numberline {7.65.1}Detailed Description}{82}{subsubsection.7.65.1}%
+\contentsline {subsubsection}{\numberline {7.65.2}Member Function Documentation}{82}{subsubsection.7.65.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{82}{section*.306}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{83}{section*.307}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{83}{section*.308}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{83}{section*.309}%
+\contentsline {subsection}{\numberline {7.66}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{84}{subsection.7.66}%
+\contentsline {subsubsection}{\numberline {7.66.1}Detailed Description}{84}{subsubsection.7.66.1}%
+\contentsline {subsubsection}{\numberline {7.66.2}Member Function Documentation}{84}{subsubsection.7.66.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{84}{section*.314}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{85}{section*.315}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{85}{section*.316}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{85}{section*.317}%
+\contentsline {subsection}{\numberline {7.67}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf$<$ Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{86}{subsection.7.67}%
+\contentsline {subsubsection}{\numberline {7.67.1}Detailed Description}{86}{subsubsection.7.67.1}%
+\contentsline {subsubsection}{\numberline {7.67.2}Member Function Documentation}{86}{subsubsection.7.67.2}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{86}{section*.322}%
+\contentsline {paragraph}{setup()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{87}{section*.323}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{87}{section*.324}%
+\contentsline {paragraph}{setupN()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{87}{section*.325}%
+\contentsline {subsection}{\numberline {7.68}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf Struct Reference}{88}{subsection.7.68}%
+\contentsline {subsubsection}{\numberline {7.68.1}Detailed Description}{89}{subsubsection.7.68.1}%
+\contentsline {subsubsection}{\numberline {7.68.2}Member Function Documentation}{89}{subsubsection.7.68.2}%
+\contentsline {paragraph}{setup()}{89}{section*.330}%
+\contentsline {paragraph}{setupN()}{89}{section*.331}%
+\contentsline {subsection}{\numberline {7.69}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Butterworth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{89}{subsection.7.69}%
+\contentsline {subsection}{\numberline {7.70}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::ChebyshevI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{90}{subsection.7.70}%
+\contentsline {subsection}{\numberline {7.71}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shelf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Struct Reference}{90}{subsection.7.71}%
+\contentsline {subsection}{\numberline {7.72}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::One\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pole Struct Reference}{91}{subsection.7.72}%
+\contentsline {subsubsection}{\numberline {7.72.1}Detailed Description}{92}{subsubsection.7.72.1}%
+\contentsline {subsection}{\numberline {7.73}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter$<$ Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Class, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poles, Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Digital\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poles $>$ Struct Template Reference}{93}{subsection.7.73}%
+\contentsline {subsubsection}{\numberline {7.73.1}Detailed Description}{93}{subsubsection.7.73.1}%
+\contentsline {subsection}{\numberline {7.74}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base$<$ Analog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Prototype $>$ Class Template Reference}{94}{subsection.7.74}%
+\contentsline {subsubsection}{\numberline {7.74.1}Detailed Description}{94}{subsubsection.7.74.1}%
+\contentsline {subsection}{\numberline {7.75}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base2 Class Reference}{94}{subsection.7.75}%
+\contentsline {subsubsection}{\numberline {7.75.1}Detailed Description}{95}{subsubsection.7.75.1}%
+\contentsline {subsection}{\numberline {7.76}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zero\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pair Struct Reference}{95}{subsection.7.76}%
+\contentsline {subsubsection}{\numberline {7.76.1}Detailed Description}{95}{subsubsection.7.76.1}%
+\contentsline {subsection}{\numberline {7.77}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::RBJbase Struct Reference}{96}{subsection.7.77}%
+\contentsline {subsubsection}{\numberline {7.77.1}Detailed Description}{97}{subsubsection.7.77.1}%
+\contentsline {subsection}{\numberline {7.78}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::SOSCascade$<$ NSOS, State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Template Reference}{97}{subsection.7.78}%
+\contentsline {subsubsection}{\numberline {7.78.1}Detailed Description}{97}{subsubsection.7.78.1}%
+\contentsline {subsubsection}{\numberline {7.78.2}Constructor \& Destructor Documentation}{97}{subsubsection.7.78.2}%
+\contentsline {paragraph}{SOSCascade()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{97}{section*.363}%
+\contentsline {paragraph}{SOSCascade()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{98}{section*.364}%
+\contentsline {subsubsection}{\numberline {7.78.3}Member Function Documentation}{98}{subsubsection.7.78.3}%
+\contentsline {paragraph}{setup()}{98}{section*.365}%
+\contentsline {subsection}{\numberline {7.79}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cascade\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Storage Struct Reference}{98}{subsection.7.79}%
+\contentsline {subsubsection}{\numberline {7.79.1}Detailed Description}{98}{subsubsection.7.79.1}%
+\contentsline {subsection}{\numberline {7.80}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Transposed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Direct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II Class Reference}{98}{subsection.7.80}%
+\contentsline {subsection}{\numberline {7.81}Iir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Two\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pole Struct Reference}{98}{subsection.7.81}%
+\contentsline {subsubsection}{\numberline {7.81.1}Detailed Description}{99}{subsubsection.7.81.1}%
+\contentsline {section}{\numberline {8}File Documentation}{99}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Iir.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{99}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Biquad.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{100}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Butterworth.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{101}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Cascade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{105}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{106}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{112}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Common.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{117}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Custom.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{118}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}Layout.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{118}{subsection.8.9}%
+\contentsline {subsection}{\numberline {8.10}Math\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Supplement.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{120}{subsection.8.10}%
+\contentsline {subsection}{\numberline {8.11}Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{121}{subsection.8.11}%
+\contentsline {subsection}{\numberline {8.12}RBJ.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{123}{subsection.8.12}%
+\contentsline {subsection}{\numberline {8.13}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{125}{subsection.8.13}%
+\contentsline {subsection}{\numberline {8.14}Types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{126}{subsection.8.14}%
+\contentsline {section}{Index}{129}{section*.369}%

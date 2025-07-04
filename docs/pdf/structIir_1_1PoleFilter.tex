@@ -1,22 +1,32 @@
-\hypertarget{structIir_1_1PoleFilter}{}\doxysubsection{Iir\+::Pole\+Filter$<$ Base\+Class, State\+Type, Max\+Analog\+Poles, Max\+Digital\+Poles $>$ Struct Template Reference}
-\label{structIir_1_1PoleFilter}\index{Iir::PoleFilter$<$ BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles $>$@{Iir::PoleFilter$<$ BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles $>$}}
+\doxysubsection{Iir\+::Pole\+Filter\texorpdfstring{$<$}{<} Base\+Class, State\+Type, Max\+Analog\+Poles, Max\+Digital\+Poles \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structIir_1_1PoleFilter}{}\label{structIir_1_1PoleFilter}\index{Iir::PoleFilter$<$ BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles $>$@{Iir::PoleFilter$<$ BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles $>$}}
 
 
 {\ttfamily \#include $<$Pole\+Filter.\+h$>$}
 
-Inheritance diagram for Iir\+::Pole\+Filter$<$ Base\+Class, State\+Type, Max\+Analog\+Poles, Max\+Digital\+Poles $>$\+:\begin{figure}[H]
+Inheritance diagram for Iir\+::Pole\+Filter\texorpdfstring{$<$}{<} Base\+Class, State\+Type, Max\+Analog\+Poles, Max\+Digital\+Poles \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.266968cm]{structIir_1_1PoleFilter}
+\includegraphics[height=9.713424cm]{structIir_1_1PoleFilter}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Additional Inherited Members}
+\doxysubsubsubsection*{Additional Inherited Members}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
+\item 
+{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+\item 
+const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$class Base\+Class, class State\+Type, int Max\+Analog\+Poles, int Max\+Digital\+Poles = Max\+Analog\+Poles$>$\newline
 struct Iir\+::\+Pole\+Filter$<$ Base\+Class, State\+Type, Max\+Analog\+Poles, Max\+Digital\+Poles $>$}
-
 Storage for pole filters 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

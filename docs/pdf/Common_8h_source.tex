@@ -1,0 +1,56 @@
+\doxysubsection{Common.\+h}
+\hypertarget{Common_8h_source}{}\label{Common_8h_source}\index{iir/Common.h@{iir/Common.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_COMMON\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_COMMON\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ This\ must\ be\ the\ first\ file\ included\ in\ every\ DspFilters\ header\ and\ source}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#\ \ pragma\ warning\ (disable:\ 4100)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#\ \ ifndef\ \_CRT\_SECURE\_NO\_WARNINGS}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#\ \ \ \ define\ \_CRT\_SECURE\_NO\_WARNINGS}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ This\ exports\ the\ classes/structures\ to\ the\ windows\ DLL}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#if\ defined(\_WIN32)\ \&\&\ defined(iir\_EXPORTS)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ IIR\_EXPORT\ \_\_declspec(\ dllexport\ )}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ IIR\_EXPORT}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ <cfloat>}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#include\ <stdexcept>}\ \textcolor{comment}{//\ for\ invalid\_argument}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ orderTooHigh[]\ =\ \textcolor{stringliteral}{"{}Requested\ order\ is\ too\ high.\ Provide\ a\ higher\ order\ for\ the\ template."{}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ DEFAULT\_FILTER\_ORDER\ 4}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ throw\_invalid\_argument(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ msg)\ \{}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#ifndef\ IIR1\_NO\_EXCEPTIONS}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(msg);}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00083\ \ \ \ \ (void)\ msg;\ \textcolor{comment}{//\ Discard\ parameter}}
+\DoxyCodeLine{00084\ \ \ \ \ abort();}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

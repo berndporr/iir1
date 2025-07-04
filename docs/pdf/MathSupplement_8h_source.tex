@@ -1,0 +1,65 @@
+\doxysubsection{Math\+Supplement.\+h}
+\hypertarget{MathSupplement_8h_source}{}\label{MathSupplement_8h_source}\index{iir/MathSupplement.h@{iir/MathSupplement.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_MATHSUPPLEMENT\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_MATHSUPPLEMENT\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Common.h"{}}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include<complex>}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00044\ \ \textcolor{comment}{//\ Under\ Unix\ these\ have\ already\ default\ instantiations\ but\ not\ under\ Vis\ Studio}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{template}\ \textcolor{keyword}{class\ }IIR\_EXPORT\ std::complex<double>;}
+\DoxyCodeLine{00046\ \textcolor{keyword}{template}\ \textcolor{keyword}{class\ }IIR\_EXPORT\ std::complex<float>;}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ doublePi\ \ \ =3.1415926535897932384626433832795028841971;}
+\DoxyCodeLine{00052\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ doublePi\_2\ =1.5707963267948966192313216916397514420986;}
+\DoxyCodeLine{00053\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ doubleLn2\ \ =0.69314718055994530941723212145818;}
+\DoxyCodeLine{00054\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ doubleLn10\ =2.3025850929940456840179914546844;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{typedef}\ std::complex<double>\ complex\_t;}
+\DoxyCodeLine{00057\ \textcolor{keyword}{typedef}\ std::pair<complex\_t,\ complex\_t>\ complex\_pair\_t;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ complex\_t\ infinity()}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordflow}{return}\ complex\_t\ (std::numeric\_limits<double>::infinity());}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Ty,\ \textcolor{keyword}{typename}\ To>}
+\DoxyCodeLine{00065\ \textcolor{keyword}{inline}\ std::complex<Ty>\ addmul\ (\textcolor{keyword}{const}\ std::complex<Ty>\&\ c,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ty\ v,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::complex<To>\&\ c1)}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordflow}{return}\ std::complex\ <Ty>\ (}
+\DoxyCodeLine{00070\ \ \ \ \ c.real()\ +\ v\ *\ c1.real(),\ c.imag()\ +\ v\ *\ c1.imag());}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Ty>}
+\DoxyCodeLine{00074\ \textcolor{keyword}{inline}\ Ty\ asinh\ (Ty\ x)}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordflow}{return}\ log\ (x\ +\ std::sqrt\ (x\ *\ x\ +\ 1\ ));}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Ty>}
+\DoxyCodeLine{00080\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ is\_nan\ (Ty\ v)}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordflow}{return}\ !(v\ ==\ v);}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00086\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ is\_nan<complex\_t>\ (complex\_t\ v)}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordflow}{return}\ Iir::is\_nan\ (v.real())\ ||\ Iir::is\_nan\ (v.imag());}
+\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

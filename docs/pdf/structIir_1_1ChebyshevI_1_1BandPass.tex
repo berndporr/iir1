@@ -1,16 +1,16 @@
-\hypertarget{structIir_1_1ChebyshevI_1_1BandPass}{}\doxysubsection{Iir\+::ChebyshevI\+::Band\+Pass$<$ Filter\+Order, State\+Type $>$ Struct Template Reference}
-\label{structIir_1_1ChebyshevI_1_1BandPass}\index{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}}
+\doxysubsection{Iir\+::ChebyshevI\+::Band\+Pass\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structIir_1_1ChebyshevI_1_1BandPass}{}\label{structIir_1_1ChebyshevI_1_1BandPass}\index{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}}
 
 
 {\ttfamily \#include $<$Chebyshev\+I.\+h$>$}
 
-Inheritance diagram for Iir\+::ChebyshevI\+::Band\+Pass$<$ Filter\+Order, State\+Type $>$\+:\begin{figure}[H]
+Inheritance diagram for Iir\+::ChebyshevI\+::Band\+Pass\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.434783cm]{structIir_1_1ChebyshevI_1_1BandPass}
+\includegraphics[height=2.492581cm]{structIir_1_1ChebyshevI_1_1BandPass}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandPass_ac52fcb50fb3022ac8290e07e954a0ab0}{setup}} (double sample\+Rate, double center\+Frequency, double width\+Frequency, double ripple\+Db)
@@ -21,23 +21,33 @@ void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandPass_aa10de012e157fb8ec55dc
 \item 
 void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandPass_a1cbadc704fcb119e98bf13a62f61e0b7}{setupN}} (int req\+Order, double center\+Frequency, double width\+Frequency, double ripple\+Db)
 \end{DoxyCompactItemize}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
+\item 
+{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+\item 
+const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$\newline
 struct Iir\+::\+Chebyshev\+I\+::\+Band\+Pass$<$ Filter\+Order, State\+Type $>$}
-
-\mbox{\hyperlink{namespaceIir_1_1ChebyshevI}{ChebyshevI}} bandpass filter 
+\doxylink{namespaceIir_1_1ChebyshevI}{ChebyshevI} bandpass filter 
 \begin{DoxyParams}{Parameters}
 {\em Filter\+Order} & Reserves memory for a filter of the order Filter\+Order \\
 \hline
-{\em State\+Type} & The filter topology\+: \mbox{\hyperlink{classIir_1_1DirectFormI}{Direct\+FormI}}, \mbox{\hyperlink{classIir_1_1DirectFormII}{Direct\+Form\+II}}, ... \\
+{\em State\+Type} & The filter topology\+: \doxylink{classIir_1_1DirectFormI}{Direct\+FormI}, \doxylink{classIir_1_1DirectFormII}{Direct\+Form\+II}, ... \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_ac52fcb50fb3022ac8290e07e954a0ab0}\label{structIir_1_1ChebyshevI_1_1BandPass_ac52fcb50fb3022ac8290e07e954a0ab0}} 
+\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_ac52fcb50fb3022ac8290e07e954a0ab0}\label{structIir_1_1ChebyshevI_1_1BandPass_ac52fcb50fb3022ac8290e07e954a0ab0} 
 \index{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -55,7 +65,7 @@ Calculates the coefficients of the filter at the order Filter\+Order
 {\em ripple\+Db} & Permitted ripples in dB in the passband \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_afbd6dea93c75cdb5b7af375aa7810eff}\label{structIir_1_1ChebyshevI_1_1BandPass_afbd6dea93c75cdb5b7af375aa7810eff}} 
+\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_afbd6dea93c75cdb5b7af375aa7810eff}\label{structIir_1_1ChebyshevI_1_1BandPass_afbd6dea93c75cdb5b7af375aa7810eff} 
 \index{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -75,7 +85,7 @@ Calculates the coefficients of the filter at specified order
 {\em ripple\+Db} & Permitted ripples in dB in the passband \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_aa10de012e157fb8ec55dcd0d0a2813d7}\label{structIir_1_1ChebyshevI_1_1BandPass_aa10de012e157fb8ec55dcd0d0a2813d7}} 
+\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_aa10de012e157fb8ec55dcd0d0a2813d7}\label{structIir_1_1ChebyshevI_1_1BandPass_aa10de012e157fb8ec55dcd0d0a2813d7} 
 \index{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -91,7 +101,7 @@ Calculates the coefficients of the filter at the order Filter\+Order
 {\em ripple\+Db} & Permitted ripples in dB in the passband \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_a1cbadc704fcb119e98bf13a62f61e0b7}\label{structIir_1_1ChebyshevI_1_1BandPass_a1cbadc704fcb119e98bf13a62f61e0b7}} 
+\Hypertarget{structIir_1_1ChebyshevI_1_1BandPass_a1cbadc704fcb119e98bf13a62f61e0b7}\label{structIir_1_1ChebyshevI_1_1BandPass_a1cbadc704fcb119e98bf13a62f61e0b7} 
 \index{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}

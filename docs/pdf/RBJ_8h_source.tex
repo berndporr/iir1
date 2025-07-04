@@ -1,0 +1,161 @@
+\doxysubsection{RBJ.\+h}
+\hypertarget{RBJ_8h_source}{}\label{RBJ_8h_source}\index{iir/RBJ.h@{iir/RBJ.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_RBJ\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_RBJ\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Common.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}Biquad.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}State.h"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ ONESQRT2\ (1/sqrt(2))}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{namespace\ }RBJ\ \{}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}\ :\ \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Sample>}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ Sample\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase_a5dd179c8491e29966d5c33036cabe151}{filter}}(Sample\ s)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}Sample\textcolor{keyword}{>}(state.filter((\textcolor{keywordtype}{double})s,*\textcolor{keyword}{this}));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase_a0bd9a0b60e60b9326a14e43acbb430ab}{reset}}()\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.reset();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIir_1_1DirectFormI}{DirectFormI}}\&\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase_afe6a9cf3f0168eaacae1932a852f57ec}{getState}}()\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1DirectFormI}{DirectFormI}}\ state\ =\ \{\};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1LowPass}{LowPass}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ =\ ONESQRT2);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1LowPass_adc6ffd4bab0cdc4f665f667841b96cea}{setup}}(\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ =\ ONESQRT2)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(cutoffFrequency\ /\ sampleRate,\ q);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1HighPass}{HighPass}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ =\ ONESQRT2);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1HighPass_a445c9bba06d82c972e389fbae45962e9}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ =\ ONESQRT2)\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(cutoffFrequency\ /\ sampleRate,\ q);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass1}{BandPass1}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass1_a82ba843c68435a5a09cc16fdbf358afc}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(centerFrequency\ /\ sampleRate,\ bandWidth);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass2}{BandPass2}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34e4cde}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(centerFrequency\ /\ sampleRate,\ bandWidth);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandStop}{BandStop}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandStop_afe29086ad05ecfe2c0697a09bfa45c49}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(centerFrequency\ /\ sampleRate,\ bandWidth);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1IIRNotch}{IIRNotch}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\_factor\ =\ 10);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1IIRNotch_aedecb6358bc0a907742c56d5235d35df}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\_factor\ =\ 10)\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(centerFrequency\ /\ sampleRate,\ q\_factor);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1LowShelf}{LowShelf}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ shelfSlope\ =\ 1);}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1LowShelf_a9bac813cc8399f3c274d9d10dc3a5a1e}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ shelfSlope\ =\ 1)\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(\ cutoffFrequency\ /\ sampleRate,\ gainDb,\ shelfSlope);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1HighShelf}{HighShelf}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ shelfSlope\ =\ 1);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1HighShelf_a4887616ad520c27fce55d76d915d5bf6}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ shelfSlope\ =\ 1)\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(\ cutoffFrequency\ /\ sampleRate,\ gainDb,\ shelfSlope);}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandShelf}{BandShelf}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth);}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1BandShelf_ae4b2c50b6cf6715d881f9c3681530870}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bandWidth)\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(centerFrequency\ /\ sampleRate,\ gainDb,\ bandWidth);}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1RBJ_1_1AllPass}{AllPass}}\ :\ \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{RBJbase}}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupN(\textcolor{keywordtype}{double}\ phaseFrequency,}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ \ =\ ONESQRT2);}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1RBJ_1_1AllPass_ae68e5b4a22b3256b52798cddc3ff653c}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ phaseFrequency,}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ \ =\ ONESQRT2)\ \{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setupN(\ phaseFrequency\ /\ sampleRate,\ q);}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00359\ \}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \}}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

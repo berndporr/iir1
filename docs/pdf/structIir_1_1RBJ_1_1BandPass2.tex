@@ -1,5 +1,5 @@
-\hypertarget{structIir_1_1RBJ_1_1BandPass2}{}\doxysubsection{Iir\+::RBJ\+::Band\+Pass2 Struct Reference}
-\label{structIir_1_1RBJ_1_1BandPass2}\index{Iir::RBJ::BandPass2@{Iir::RBJ::BandPass2}}
+\doxysubsection{Iir\+::RBJ\+::Band\+Pass2 Struct Reference}
+\hypertarget{structIir_1_1RBJ_1_1BandPass2}{}\label{structIir_1_1RBJ_1_1BandPass2}\index{Iir::RBJ::BandPass2@{Iir::RBJ::BandPass2}}
 
 
 {\ttfamily \#include $<$RBJ.\+h$>$}
@@ -10,12 +10,54 @@ Inheritance diagram for Iir\+::RBJ\+::Band\+Pass2\+:\begin{figure}[H]
 \includegraphics[height=3.000000cm]{structIir_1_1RBJ_1_1BandPass2}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass2_aaad03d74806380bb4df721bceaed0249}{setupN}} (double center\+Frequency, double band\+Width)
 \item 
 void \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34e4cde}{setup}} (double sample\+Rate, double center\+Frequency, double band\+Width)
+\end{DoxyCompactItemize}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{Iir\+::\+RBJ\+::\+RBJbase}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Sample $>$ }\\Sample {\bfseries filter} (Sample s)
+\begin{DoxyCompactList}\small\item\em filter operation \end{DoxyCompactList}\item 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em resets the delay lines to zero \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classIir_1_1DirectFormI}{Direct\+FormI}} \& {\bfseries get\+State} ()
+\begin{DoxyCompactList}\small\item\em gets the delay lines (=state) of the filter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1Biquad}{Iir\+::\+Biquad}}}
+\begin{DoxyCompactItemize}
+\item 
+complex\+\_\+t \mbox{\hyperlink{classIir_1_1Biquad_ace03653f66fe65eddc55d48840458440}{response}} (double normalized\+Frequency) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{Pole\+Zero\+Pair}} $>$ \mbox{\hyperlink{classIir_1_1Biquad_a63c78d766bc40be10004a34aaebfb8e7}{get\+Pole\+Zeros}} () const
+\item 
+double \mbox{\hyperlink{classIir_1_1Biquad_a7debc9f6ef5e64622c710b8c9ba96056}{get\+A0}} () const
+\item 
+double \mbox{\hyperlink{classIir_1_1Biquad_a459116db7aa381281997f428f15334cf}{get\+A1}} () const
+\item 
+double \mbox{\hyperlink{classIir_1_1Biquad_a061e2402d528312fc6095db6551c9141}{get\+A2}} () const
+\item 
+double \mbox{\hyperlink{classIir_1_1Biquad_a84686da988e160a216f3e7057682ffbb}{get\+B0}} () const
+\item 
+double \mbox{\hyperlink{classIir_1_1Biquad_af418a5f260baadbcffe5a7029f089937}{get\+B1}} () const
+\item 
+double \mbox{\hyperlink{classIir_1_1Biquad_a8f3d697bb7c2def508da648938f6afc3}{get\+B2}} () const
+\item 
+{\footnotesize template$<$class State\+Type $>$ }\\double \mbox{\hyperlink{classIir_1_1Biquad_a527b9666d6aef0e576193fdce7e19750}{filter}} (double s, State\+Type \&state) const
+\item 
+void \mbox{\hyperlink{classIir_1_1Biquad_a7f005089c194c68aeecdc66a3e6c6a78}{set\+Coefficients}} (double a0, double a1, double a2, double b0, double b1, double b2)
+\item 
+void \mbox{\hyperlink{classIir_1_1Biquad_a455fd42a2e99ac84b09184becf2d047f}{set\+One\+Pole}} (complex\+\_\+t pole, complex\+\_\+t zero)
+\item 
+void \mbox{\hyperlink{classIir_1_1Biquad_a6c614e84db8493b8495b314dd860d0bc}{set\+Two\+Pole}} (complex\+\_\+t pole1, complex\+\_\+t zero1, complex\+\_\+t pole2, complex\+\_\+t zero2)
+\item 
+void \mbox{\hyperlink{classIir_1_1Biquad_a69b4a2eaedb4b51aea9fb46a99c3d3c2}{set\+Pole\+Zero\+Pair}} (const \mbox{\hyperlink{structIir_1_1PoleZeroPair}{Pole\+Zero\+Pair}} \&pair)
+\item 
+void \mbox{\hyperlink{classIir_1_1Biquad_a53b066d077ce559a91f26fc3c4201c2c}{set\+Identity}} ()
+\item 
+void \mbox{\hyperlink{classIir_1_1Biquad_a38c8e327dca53dbfa9a25758b7be8227}{apply\+Scale}} (double scale)
 \end{DoxyCompactItemize}
 
 
@@ -23,7 +65,7 @@ void \mbox{\hyperlink{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34
 Bandpass with constant 0 dB peak gain 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34e4cde}\label{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34e4cde}} 
+\Hypertarget{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34e4cde}\label{structIir_1_1RBJ_1_1BandPass2_a2173d305036d1e9d842c249aa34e4cde} 
 \index{Iir::RBJ::BandPass2@{Iir::RBJ::BandPass2}!setup@{setup}}
 \index{setup@{setup}!Iir::RBJ::BandPass2@{Iir::RBJ::BandPass2}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}}
@@ -38,7 +80,7 @@ Calculates the coefficients
 {\em band\+Width} & Bandwidth in octaves \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structIir_1_1RBJ_1_1BandPass2_aaad03d74806380bb4df721bceaed0249}\label{structIir_1_1RBJ_1_1BandPass2_aaad03d74806380bb4df721bceaed0249}} 
+\Hypertarget{structIir_1_1RBJ_1_1BandPass2_aaad03d74806380bb4df721bceaed0249}\label{structIir_1_1RBJ_1_1BandPass2_aaad03d74806380bb4df721bceaed0249} 
 \index{Iir::RBJ::BandPass2@{Iir::RBJ::BandPass2}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::RBJ::BandPass2@{Iir::RBJ::BandPass2}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}}

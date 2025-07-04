@@ -1,30 +1,30 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.25)  6 JAN 2023 23:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.25)  4 JUL 2025 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **refman
 (./refman.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Rollback for package 'array' requested -> date 2016-10-06.
@@ -32,182 +32,175 @@ Rollback for package 'array' requested -> date 2016-10-06.
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array-2016-10-06.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen139
-\extrarowheight=\dimen140
-\NC@list=\toks16
-\extratabsurround=\skip49
-\backup@length=\skip50
+\col@sep=\dimen141
+\extrarowheight=\dimen142
+\NC@list=\toks17
+\extratabsurround=\skip50
+\backup@length=\skip51
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
-Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
-Applying: [2015/01/01] Old fixltx2e package on input line 46.
-
-
-Package fixltx2e Warning: fixltx2e is not required with releases after 2015
-(fixltx2e)                All fixes are now in the LaTeX kernel.
-(fixltx2e)                See the latexrelease package for details.
-
-Already applied: [0000/00/00] Old fixltx2e package on input line 53.
-) (./doxygen.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+package info suppressed
+)
+(./doxygen.sty
 Package: doxygen 
  (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 2021/01/29 v2.0g defines alltt environment
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count193
-\calc@Bcount=\count194
-\calc@Adimen=\dimen141
-\calc@Bdimen=\dimen142
-\calc@Askip=\skip51
-\calc@Bskip=\skip52
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count195
+\calc@Bcount=\count196
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count195
-\calc@Cskip=\skip53
+\calc@Ccount=\count197
+\calc@Cskip=\skip54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count196
-\float@exts=\toks17
-\float@box=\box50
-\@float@everytoks=\toks18
-\@floatcapt=\box51
+\c@float@type=\count198
+\float@exts=\toks18
+\float@box=\box51
+\@float@everytoks=\toks19
+\@floatcapt=\box52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks19
-\verbatim@line=\toks20
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
 \verbatim@in@stream=\read2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Driver file: pdftex.def on input line 274.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-\everycr=\toks21
-\minrowclearance=\skip54
-)
-\rownum=\count197
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
-Package xcolor Info: Model `RGB' extended on input line 1368.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks22
+\minrowclearance=\skip55
+\rownum=\count199
 )
 (./longtable_doxygen.sty
 Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
 ozen version for doxygen
-\LTleft=\skip55
-\LTright=\skip56
-\LTpre=\skip57
-\LTpost=\skip58
-\LTchunksize=\count198
-\LTcapwidth=\dimen143
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@cols=\count199
-\LT@rows=\count266
-\c@LT@tables=\count267
-\c@LT@chunks=\count268
-\LT@p@ftn=\toks22
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count266
+\LTcapwidth=\dimen145
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count267
+\LT@rows=\count268
+\c@LT@tables=\count269
+\c@LT@chunks=\count270
+\LT@p@ftn=\toks23
 ) (./tabu_doxygen.sty
 Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
 rsion for doxygen
 
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box56
-\sift@deathcycles=\count269
-\@vwid@loff=\dimen144
-\@vwid@roff=\dimen145
+\@vwid@box=\box57
+\sift@deathcycles=\count271
+\@vwid@loff=\dimen146
+\@vwid@roff=\dimen147
 )
-\c@taburow=\count270
-\tabu@nbcols=\count271
-\tabu@cnt=\count272
-\tabu@Xcol=\count273
-\tabu@alloc=\count274
-\tabu@nested=\count275
-\tabu@target=\dimen146
-\tabu@spreadtarget=\dimen147
-\tabu@naturalX=\dimen148
-\tabucolX=\dimen149
-\tabu@Xsum=\dimen150
-\extrarowdepth=\dimen151
-\abovetabulinesep=\dimen152
-\belowtabulinesep=\dimen153
-\tabustrutrule=\dimen154
-\tabu@thebody=\toks23
-\tabu@footnotes=\toks24
-\tabu@box=\box57
-\tabu@arstrutbox=\box58
-\tabu@hleads=\box59
-\tabu@vleads=\box60
-\tabu@cellskip=\skip59
+\c@taburow=\count272
+\tabu@nbcols=\count273
+\tabu@cnt=\count274
+\tabu@Xcol=\count275
+\tabu@alloc=\count276
+\tabu@nested=\count277
+\tabu@target=\dimen148
+\tabu@spreadtarget=\dimen149
+\tabu@naturalX=\dimen150
+\tabucolX=\dimen151
+\tabu@Xsum=\dimen152
+\extrarowdepth=\dimen153
+\abovetabulinesep=\dimen154
+\belowtabulinesep=\dimen155
+\tabustrutrule=\dimen156
+\tabu@thebody=\toks24
+\tabu@footnotes=\toks25
+\tabu@box=\box58
+\tabu@arstrutbox=\box59
+\tabu@hleads=\box60
+\tabu@vleads=\box61
+\tabu@cellskip=\skip60
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks25
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
 )
-\FV@CodeLineNo=\count276
+\FV@CodeLineNo=\count278
 \FV@InFile=\read3
-\FV@TabBox=\box61
-\c@FancyVerbLine=\count277
-\FV@StepNumber=\count278
+\FV@TabBox=\box62
+\c@FancyVerbLine=\count279
+\FV@StepNumber=\count280
 \FV@OutFile=\write3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen155
-\TX@old@table=\dimen156
-\TX@old@col=\dimen157
-\TX@target=\dimen158
-\TX@delta=\dimen159
-\TX@cols=\count279
-\TX@ftn=\toks26
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen157
+\TX@old@table=\dimen158
+\TX@old@col=\dimen159
+\TX@target=\dimen160
+\TX@delta=\dimen161
+\TX@cols=\count281
+\TX@ftn=\toks27
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count280
-\mult@box=\box62
-\multicol@leftmargin=\dimen160
-\c@unbalance=\count281
-\c@collectmore=\count282
-\doublecol@number=\count283
-\multicoltolerance=\count284
-\multicolpretolerance=\count285
-\full@width=\dimen161
-\page@free=\dimen162
-\premulticols=\dimen163
-\postmulticols=\dimen164
-\multicolsep=\skip60
-\multicolbaselineskip=\skip61
-\partial@page=\box63
-\last@line=\box64
-\maxbalancingoverflow=\dimen165
-\mult@rightbox=\box65
-\mult@grightbox=\box66
-\mult@firstbox=\box67
-\mult@gfirstbox=\box68
-\@tempa=\box69
-\@tempa=\box70
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count282
+\mult@box=\box63
+\multicol@leftmargin=\dimen162
+\c@unbalance=\count283
+\c@collectmore=\count284
+\doublecol@number=\count285
+\multicoltolerance=\count286
+\multicolpretolerance=\count287
+\full@width=\dimen163
+\page@free=\dimen164
+\premulticols=\dimen165
+\postmulticols=\dimen166
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box64
+\last@line=\box65
+\mc@boxedresult=\box66
+\maxbalancingoverflow=\dimen167
+\mult@rightbox=\box67
+\mult@grightbox=\box68
+\mult@firstbox=\box69
+\mult@gfirstbox=\box70
 \@tempa=\box71
 \@tempa=\box72
 \@tempa=\box73
@@ -242,52 +235,54 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box102
 \@tempa=\box103
 \@tempa=\box104
-\c@minrows=\count286
-\c@columnbadness=\count287
-\c@finalcolumnbadness=\count288
-\last@try=\dimen166
-\multicolovershoot=\dimen167
-\multicolundershoot=\dimen168
-\mult@nat@firstbox=\box105
-\colbreak@box=\box106
-\mc@col@check@num=\count289
+\@tempa=\box105
+\@tempa=\box106
+\c@minrows=\count288
+\c@columnbadness=\count289
+\c@finalcolumnbadness=\count290
+\last@try=\dimen168
+\multicolovershoot=\dimen169
+\multicolundershoot=\dimen170
+\mult@nat@firstbox=\box107
+\colbreak@box=\box108
+\mc@col@check@num=\count291
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip62
-\multirow@cntb=\count290
-\multirow@dima=\skip63
-\bigstrutjot=\dimen169
+\multirow@colwidth=\skip63
+\multirow@cntb=\count292
+\multirow@dima=\skip64
+\bigstrutjot=\dimen171
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hanging/hanging.sty
 Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
-\h@ngcommawd=\skip64
-\h@ngfstopwd=\skip65
-\h@ngquotewd=\skip66
-\h@ngdquotewd=\skip67
-\h@ngquerywd=\skip68
-\h@ngexclwd=\skip69
-\h@ngcolonwd=\skip70
-\h@ngscolonwd=\skip71
+\h@ngcommawd=\skip65
+\h@ngfstopwd=\skip66
+\h@ngquotewd=\skip67
+\h@ngdquotewd=\skip68
+\h@ngquerywd=\skip69
+\h@ngexclwd=\skip70
+\h@ngcolonwd=\skip71
+\h@ngscolonwd=\skip72
 )
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
-Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
 
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks27
-\XKV@tempa@toks=\toks28
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
 )
-\XKV@depth=\count291
+\XKV@depth=\count293
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -301,7 +296,7 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
@@ -311,41 +306,41 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen170
-\Gin@req@width=\dimen171
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
 )
 (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
-Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box107
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box109
 )
-\tc@llx=\dimen172
-\tc@lly=\dimen173
-\tc@urx=\dimen174
-\tc@ury=\dimen175
+\tc@llx=\dimen174
+\tc@lly=\dimen175
+\tc@urx=\dimen176
+\tc@ury=\dimen177
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen176
-\adjbox@Height=\dimen177
-\adjbox@Depth=\dimen178
-\adjbox@Totalheight=\dimen179
-\adjbox@pwidth=\dimen180
-\adjbox@pheight=\dimen181
-\adjbox@pdepth=\dimen182
-\adjbox@ptotalheight=\dimen183
+\adjbox@Width=\dimen178
+\adjbox@Height=\dimen179
+\adjbox@Depth=\dimen180
+\adjbox@Totalheight=\dimen181
+\adjbox@pwidth=\dimen182
+\adjbox@pheight=\dimen183
+\adjbox@pdepth=\dimen184
+\adjbox@ptotalheight=\dimen185
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count292
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count294
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks29
+\@emptytoks=\toks30
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -358,51 +353,84 @@ ways
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count293
+\etb@tempcnta=\count295
 )
 (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
 (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count294
-\loi_nestcnt=\count295
+\loi_cnt_foreach_nest=\count296
+\loi_nestcnt=\count297
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
 sep char (CT)
 )
-\c@@stackindex=\count296
-\@boxshift=\skip72
-\stack@tmplength=\skip73
-\temp@stkl=\skip74
-\@stackedboxwidth=\skip75
-\@addedbox=\box108
-\@anchorbox=\box109
-\@insetbox=\box110
-\se@backgroundbox=\box111
-\stackedbox=\box112
-\@centerbox=\box113
-\c@ROWcellindex@=\count297
+\c@@stackindex=\count298
+\@boxshift=\skip73
+\stack@tmplength=\skip74
+\temp@stkl=\skip75
+\@stackedboxwidth=\skip76
+\@addedbox=\box110
+\@anchorbox=\box111
+\@insetbox=\box112
+\se@backgroundbox=\box113
+\stackedbox=\box114
+\@centerbox=\box115
+\c@ROWcellindex@=\count299
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip77
+\enit@outerparindent=\dimen186
+\enit@toks=\toks31
+\enit@inbox=\box116
+\enit@count@id=\count300
+\enitdp@description=\count301
+)
+(/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+))
 (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box114
-\UL@hyphenbox=\box115
-\UL@skip=\skip76
-\UL@hook=\toks30
-\UL@height=\dimen184
-\UL@pe=\count298
-\UL@pixel=\dimen185
-\ULC@box=\box116
+\UL@box=\box117
+\UL@hyphenbox=\box118
+\UL@skip=\skip78
+\UL@hook=\toks32
+\UL@height=\dimen187
+\UL@pe=\count302
+\UL@pixel=\dimen188
+\ULC@box=\box119
 Package: ulem 2019/11/18
-\ULdepth=\dimen186
+\ULdepth=\dimen189
 )
-\xrefbox=\box117
-\xreflength=\skip77
-\CodeWidthChar=\skip78
-\CodeHeightChar=\skip79
-\DoxyCodeWidth=\skip80
+\xrefbox=\box120
+\xreflength=\skip79
+\CodeWidthChar=\skip80
+\CodeHeightChar=\skip81
+\DoxyCodeWidth=\skip82
+\c@DoxyEnumeratei=\count303
+\c@DoxyEnumerateii=\count304
+\c@DoxyEnumerateiii=\count305
+\c@DoxyEnumerateiv=\count306
+\c@DoxyEnumeratev=\count307
+\c@DoxyEnumeratevi=\count308
+\c@DoxyEnumeratevii=\count309
+\c@DoxyEnumerateviii=\count310
+\c@DoxyEnumerateix=\count311
+\c@DoxyEnumeratex=\count312
+\c@DoxyEnumeratexi=\count313
+\c@DoxyEnumeratexii=\count314
+\enitdp@DoxyEnumerate=\count315
+\enitdp@DoxyItemize=\count316
+\c@subsubsubsection=\count317
+\c@subsubsubsubsection=\count318
+\c@subsubsubsubsubsection=\count319
+\c@subsubsubsubsubsubsection=\count320
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks31
-\inpenc@posthook=\toks32
+\inpenc@prehook=\toks33
+\inpenc@posthook=\toks34
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
@@ -428,93 +456,87 @@ Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
-(/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
-Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
-les
-
-
-LaTeX Warning: Command \underbar  has changed.
-               Check if current package is valid.
-
-
-LaTeX Warning: Command \underline  has changed.
-               Check if current package is valid.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count299
-\Gm@cntv=\count300
-\c@Gm@tempcnt=\count301
-\Gm@bindingoffset=\dimen187
-\Gm@wd@mp=\dimen188
-\Gm@odd@mp=\dimen189
-\Gm@even@mp=\dimen190
-\Gm@layoutwidth=\dimen191
-\Gm@layoutheight=\dimen192
-\Gm@layouthoffset=\dimen193
-\Gm@layoutvoffset=\dimen194
-\Gm@dimlist=\toks33
+\Gm@cnth=\count321
+\Gm@cntv=\count322
+\c@Gm@tempcnt=\count323
+\Gm@bindingoffset=\dimen190
+\Gm@wd@mp=\dimen191
+\Gm@odd@mp=\dimen192
+\Gm@even@mp=\dimen193
+\Gm@layoutwidth=\dimen194
+\Gm@layoutheight=\dimen195
+\Gm@layouthoffset=\dimen196
+\Gm@layoutvoffset=\dimen197
+\Gm@dimlist=\toks35
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count324
+\cp@tempcnt=\count325
+LaTeX Info: Redefining \checkoddpage on input line 59.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
-rs
-\f@nch@headwidth=\skip81
-\f@nch@O@elh=\skip82
-\f@nch@O@erh=\skip83
-\f@nch@O@olh=\skip84
-\f@nch@O@orh=\skip85
-\f@nch@O@elf=\skip86
-\f@nch@O@erf=\skip87
-\f@nch@O@olf=\skip88
-\f@nch@O@orf=\skip89
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip83
+\f@nch@O@elh=\skip84
+\f@nch@O@erh=\skip85
+\f@nch@O@olh=\skip86
+\f@nch@O@orh=\skip87
+\f@nch@O@elf=\skip88
+\f@nch@O@erf=\skip89
+\f@nch@O@olf=\skip90
+\f@nch@O@orf=\skip91
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip90
-\bibsep=\skip91
+\bibhang=\skip92
+\bibsep=\skip93
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count302
+\c@NAT@ctr=\count326
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip92
-\cftbeforetoctitleskip=\skip93
-\cftaftertoctitleskip=\skip94
-\cftbeforepartskip=\skip95
-\cftpartnumwidth=\skip96
-\cftpartindent=\skip97
-\cftbeforesecskip=\skip98
-\cftsecindent=\skip99
-\cftsecnumwidth=\skip100
-\cftbeforesubsecskip=\skip101
-\cftsubsecindent=\skip102
-\cftsubsecnumwidth=\skip103
-\cftbeforesubsubsecskip=\skip104
-\cftsubsubsecindent=\skip105
-\cftsubsubsecnumwidth=\skip106
-\cftbeforeparaskip=\skip107
-\cftparaindent=\skip108
-\cftparanumwidth=\skip109
-\cftbeforesubparaskip=\skip110
-\cftsubparaindent=\skip111
-\cftsubparanumwidth=\skip112
-\cftbeforeloftitleskip=\skip113
-\cftafterloftitleskip=\skip114
-\cftbeforefigskip=\skip115
-\cftfigindent=\skip116
-\cftfignumwidth=\skip117
-\c@lofdepth=\count303
-\c@lotdepth=\count304
-\cftbeforelottitleskip=\skip118
-\cftafterlottitleskip=\skip119
-\cftbeforetabskip=\skip120
-\cfttabindent=\skip121
-\cfttabnumwidth=\skip122
+\cftparskip=\skip94
+\cftbeforetoctitleskip=\skip95
+\cftaftertoctitleskip=\skip96
+\cftbeforepartskip=\skip97
+\cftpartnumwidth=\skip98
+\cftpartindent=\skip99
+\cftbeforesecskip=\skip100
+\cftsecindent=\skip101
+\cftsecnumwidth=\skip102
+\cftbeforesubsecskip=\skip103
+\cftsubsecindent=\skip104
+\cftsubsecnumwidth=\skip105
+\cftbeforesubsubsecskip=\skip106
+\cftsubsubsecindent=\skip107
+\cftsubsubsecnumwidth=\skip108
+\cftbeforeparaskip=\skip109
+\cftparaindent=\skip110
+\cftparanumwidth=\skip111
+\cftbeforesubparaskip=\skip112
+\cftsubparaindent=\skip113
+\cftsubparanumwidth=\skip114
+\cftbeforeloftitleskip=\skip115
+\cftafterloftitleskip=\skip116
+\cftbeforefigskip=\skip117
+\cftfigindent=\skip118
+\cftfignumwidth=\skip119
+\c@lofdepth=\count327
+\c@lotdepth=\count328
+\cftbeforelottitleskip=\skip120
+\cftafterlottitleskip=\skip121
+\cftbeforetabskip=\skip122
+\cfttabindent=\skip123
+\cfttabnumwidth=\skip124
 )
 \@indexfile=\write4
 \openout4 = `refman.idx'.
@@ -524,91 +546,77 @@ Writing index file refman.idx
 (/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 )
-
-Package newunicodechar Warning: Redefining Unicode character on input line 112.
-
-
-
-Package newunicodechar Warning: Redefining Unicode character on input line 113.
-
-
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
 (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-\@linkdim=\dimen195
-\Hy@linkcounter=\count305
-\Hy@pagecounter=\count306
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count329
+)
+\@linkdim=\dimen198
+\Hy@linkcounter=\count330
+\Hy@pagecounter=\count331
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count307
+\Hy@SavedSpaceFactor=\count332
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing ON on input line 4210.
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing ON on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
+Package hyperref Info: Bookmarks ON on input line 4446.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2021/02/04 v1.41 Bibliographical back referencing
+Package: backref 2023-11-26 v1.44 Bibliographical back referencing
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
@@ -623,136 +631,133 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+85.
 ))
-\c@Hy@tempcnt=\count308
+\c@Hy@tempcnt=\count333
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen196
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen199
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count309
-\Field@Width=\dimen197
-\Fld@charsize=\dimen198
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing ON on input line 6089.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+\Fld@menulength=\count334
+\Field@Width=\dimen256
+\Fld@charsize=\dimen257
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing ON on input line 6076.
+Package hyperref Info: Link coloring OFF on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count310
-\c@Item=\count311
-\c@Hfootnote=\count312
-
-
-LaTeX Warning: Command \LT@p@ftntext  has changed.
-               Check if current package is valid.
-
+\Hy@abspage=\count335
+\c@Item=\count336
+\c@Hfootnote=\count337
 )
 Package hyperref Info: Driver: hpdftex.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
-\Fld@listcount=\count313
-\c@bookmark@seq@number=\count314
-\Hy@SectionHShift=\skip123
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+\Fld@listcount=\count338
+\c@bookmark@seq@number=\count339
+\Hy@SectionHShift=\skip125
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 131.
-Package hyperref Info: Option `unicode' set `true' on input line 131.
+Package hyperref Info: Option `colorlinks' set `true' on input line 158.
+Package hyperref Info: Option `unicode' set `true' on input line 158.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen199
-\captionmargin@=\dimen256
-\captionwidth=\dimen257
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen258
-\caption@indent=\dimen259
-\caption@parindent=\dimen260
-\caption@hangindent=\dimen261
+\captionmargin=\dimen259
+\caption@leftmargin=\dimen260
+\caption@rightmargin=\dimen261
+\caption@width=\dimen262
+\caption@indent=\dimen263
+\caption@parindent=\dimen264
+\caption@hangindent=\dimen265
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count315
-\c@continuedfloat=\count316
+\c@caption@flags=\count340
+\c@continuedfloat=\count341
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen266
+\caption@adjustwidth@linewidth=\dimen267
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
-Package: etoc 2021/09/23 v1.09e Completely customisable TOCs (JFB)
-\Etoc@toctoks=\toks34
-\c@etoc@tocid=\count317
-\c@etoc@tocdepth=\count318
-\etoc@framed@titlebox=\box118
-\etoc@framed@contentsbox=\box119
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks36
+\c@etoc@tocid=\count342
+\etoc@framed@titlebox=\box121
+\etoc@framed@contentsbox=\box122
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 14
-6.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
+0.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 146.
+(Font)              scaled to size 8.99994pt on input line 180.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count319
-\l__pdf_internal_box=\box120
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count343
+\l__pdf_internal_box=\box123
 )
 (./refman.aux)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count320
-\scratchdimen=\dimen262
-\scratchbox=\box121
-\nofMPsegments=\count321
-\nofMParguments=\count322
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count323
-\MPscratchDim=\dimen263
-\MPnumerator=\count324
-\makeMPintoPDFobject=\count325
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count344
+\scratchdimen=\dimen268
+\scratchbox=\box124
+\nofMPsegments=\count345
+\nofMParguments=\count346
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count347
+\MPscratchDim=\dimen269
+\MPnumerator=\count348
+\makeMPintoPDFobject=\count349
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -796,81 +801,70 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 146.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count326
-)
-LaTeX Info: Redefining \ref on input line 146.
-LaTeX Info: Redefining \pageref on input line 146.
-LaTeX Info: Redefining \nameref on input line 146.
-
+Package backref Info: ** backref set up for natbib ** on input line 180.
+Package hyperref Info: Link coloring ON on input line 180.
 (./refman.out) (./refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 146.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \Etoc@tf=\read4
-Package hyperref Info: Option `pageanchor' set `false' on input line 153.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 153.
+Package hyperref Info: Option `pageanchor' set `false' on input line 188.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 188.
 
-Package hyperref Info: Option `unicode' set `true' on input line 153.
+Package hyperref Info: Option `unicode' set `true' on input line 188.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 158.
+(Font)              scaled to size 12.9599pt on input line 193.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 160.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\tf@toc=\write6
-\openout6 = `refman.toc'.
-
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 165.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 165
+(Font)              scaled to size 10.79993pt on input line 195.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 195.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 195
 .
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 165
+LaTeX Font Info:    Trying to load font information for U+msb on input line 195
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 16
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 19
 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 165.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 165.
- [1] [2] [3] [4]
-Package hyperref Info: Option `pageanchor' set `true' on input line 166.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 169.
+(Font)              scaled to size 8.09995pt on input line 197.
+ [1
 
-(./index.tex
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
-.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 202.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 202.
+ [1] [2] [3] [4] [5]
+Package hyperref Info: Option `pageanchor' set `true' on input line 204.
+ (./index.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 9.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
+(Font)              scaled to size 8.99994pt on input line 11.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 13
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -878,28 +872,33 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )) (./namespaces.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
-
-[1]) (./hierarchy.tex [2] [3] [4]) (./annotated.tex [5] [6] [7])
+)
+(./hierarchy.tex [1] [2] [3] [4]) (./annotated.tex [5] [6] [7]) (./files.tex)
 (./namespaceIir.tex [8] [9]) (./namespaceIir_1_1Butterworth.tex [10])
-(./namespaceIir_1_1ChebyshevI.tex) (./namespaceIir_1_1ChebyshevII.tex)
-(./namespaceIir_1_1Custom.tex [11]) (./structIir_1_1RBJ_1_1AllPass.tex <./struc
-tIir_1_1RBJ_1_1AllPass.pdf>
-<structIir_1_1RBJ_1_1AllPass.pdf, id=1516, 501.875pt x 519.17964pt>
+(./namespaceIir_1_1ChebyshevI.tex) (./namespaceIir_1_1ChebyshevII.tex [11])
+(./namespaceIir_1_1Custom.tex) (./structIir_1_1RBJ_1_1AllPass.tex <./structIir_
+1_1RBJ_1_1AllPass.pdf>
+<structIir_1_1RBJ_1_1AllPass.pdf, id=1648, 501.875pt x 519.17964pt>
 File: structIir_1_1RBJ_1_1AllPass.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1AllPass.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1AllPass.pdf  used on input line 10
 .
 (pdftex.def)             Requested size: 82.50713pt x 85.35826pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 30.
+(Font)              scaled to size 7.19995pt on input line 23.
+ [12]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 24.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 30.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 72.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 30.
- [12])
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 72.
+ [13])
 (./classIir_1_1Butterworth_1_1AnalogLowPass.tex <./classIir_1_1Butterworth_1_1A
 nalogLowPass.pdf>
-<classIir_1_1Butterworth_1_1AnalogLowPass.pdf, id=1537, 501.875pt x 203.81145pt
+<classIir_1_1Butterworth_1_1AnalogLowPass.pdf, id=1716, 501.875pt x 203.81145pt
 >
 File: classIir_1_1Butterworth_1_1AnalogLowPass.pdf Graphic file (type pdf)
 <use classIir_1_1Butterworth_1_1AnalogLowPass.pdf>
@@ -908,7 +907,7 @@ input line 10.
 (pdftex.def)             Requested size: 140.12582pt x 56.9055pt.
 ) (./classIir_1_1ChebyshevI_1_1AnalogLowPass.tex <./classIir_1_1ChebyshevI_1_1A
 nalogLowPass.pdf>
-<classIir_1_1ChebyshevI_1_1AnalogLowPass.pdf, id=1542, 501.875pt x 200.75pt>
+<classIir_1_1ChebyshevI_1_1AnalogLowPass.pdf, id=1722, 501.875pt x 200.75pt>
 File: classIir_1_1ChebyshevI_1_1AnalogLowPass.pdf Graphic file (type pdf)
 <use classIir_1_1ChebyshevI_1_1AnalogLowPass.pdf>
 Package pdftex.def Info: classIir_1_1ChebyshevI_1_1AnalogLowPass.pdf  used on i
@@ -917,16 +916,16 @@ nput line 10.
 )
 (./classIir_1_1ChebyshevII_1_1AnalogLowPass.tex <./classIir_1_1ChebyshevII_1_1A
 nalogLowPass.pdf>
-<classIir_1_1ChebyshevII_1_1AnalogLowPass.pdf, id=1547, 501.875pt x 197.7789pt>
+<classIir_1_1ChebyshevII_1_1AnalogLowPass.pdf, id=1728, 501.875pt x 197.7789pt>
 
 File: classIir_1_1ChebyshevII_1_1AnalogLowPass.pdf Graphic file (type pdf)
 <use classIir_1_1ChebyshevII_1_1AnalogLowPass.pdf>
 Package pdftex.def Info: classIir_1_1ChebyshevII_1_1AnalogLowPass.pdf  used on 
 input line 10.
 (pdftex.def)             Requested size: 144.39897pt x 56.9055pt.
- [13]) (./classIir_1_1Butterworth_1_1AnalogLowShelf.tex <./classIir_1_1Butterwo
+ [14]) (./classIir_1_1Butterworth_1_1AnalogLowShelf.tex <./classIir_1_1Butterwo
 rth_1_1AnalogLowShelf.pdf>
-<classIir_1_1Butterworth_1_1AnalogLowShelf.pdf, id=1560, 501.875pt x 201.76378p
+<classIir_1_1Butterworth_1_1AnalogLowShelf.pdf, id=1742, 501.875pt x 201.76378p
 t>
 File: classIir_1_1Butterworth_1_1AnalogLowShelf.pdf Graphic file (type pdf)
 <use classIir_1_1Butterworth_1_1AnalogLowShelf.pdf>
@@ -936,905 +935,531 @@ Package pdftex.def Info: classIir_1_1Butterworth_1_1AnalogLowShelf.pdf  used on
 )
 (./classIir_1_1ChebyshevI_1_1AnalogLowShelf.tex <./classIir_1_1ChebyshevI_1_1An
 alogLowShelf.pdf>
-<classIir_1_1ChebyshevI_1_1AnalogLowShelf.pdf, id=1565, 501.875pt x 198.76257pt
+<classIir_1_1ChebyshevI_1_1AnalogLowShelf.pdf, id=1748, 501.875pt x 198.76257pt
 >
 File: classIir_1_1ChebyshevI_1_1AnalogLowShelf.pdf Graphic file (type pdf)
 <use classIir_1_1ChebyshevI_1_1AnalogLowShelf.pdf>
 Package pdftex.def Info: classIir_1_1ChebyshevI_1_1AnalogLowShelf.pdf  used on 
 input line 10.
 (pdftex.def)             Requested size: 143.67912pt x 56.9055pt.
-) (./classIir_1_1ChebyshevII_1_1AnalogLowShelf.tex [14] <./classIir_1_1Chebyshe
-vII_1_1AnalogLowShelf.pdf>
-<classIir_1_1ChebyshevII_1_1AnalogLowShelf.pdf, id=1578, 501.875pt x 195.8517pt
+) (./classIir_1_1ChebyshevII_1_1AnalogLowShelf.tex <./classIir_1_1ChebyshevII_1
+_1AnalogLowShelf.pdf>
+<classIir_1_1ChebyshevII_1_1AnalogLowShelf.pdf, id=1754, 501.875pt x 195.8517pt
 >
 File: classIir_1_1ChebyshevII_1_1AnalogLowShelf.pdf Graphic file (type pdf)
 <use classIir_1_1ChebyshevII_1_1AnalogLowShelf.pdf>
 Package pdftex.def Info: classIir_1_1ChebyshevII_1_1AnalogLowShelf.pdf  used on
  input line 10.
 (pdftex.def)             Requested size: 145.82336pt x 56.9055pt.
-)
-(./structIir_1_1Butterworth_1_1BandPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1BandPass.pdf>
-<structIir_1_1Butterworth_1_1BandPass.pdf, id=1583, 501.875pt x 87.2861pt>
+ [15])
+(./structIir_1_1Butterworth_1_1BandPass.tex <./structIir_1_1Butterworth_1_1Band
+Pass.pdf>
+<structIir_1_1Butterworth_1_1BandPass.pdf, id=1768, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1BandPass.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1BandPass.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1BandPass.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 28.
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 44.
- [15] [16])
-(./structIir_1_1ChebyshevI_1_1BandPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1BandPass.pdf>
-<structIir_1_1ChebyshevI_1_1BandPass.pdf, id=1632, 501.875pt x 87.2861pt>
+(Font)              scaled to size 7.19995pt on input line 53.
+ [16]) (./structIir_1_1ChebyshevI_1_1BandPass.tex [17] <./structIir_1_1Chebyshe
+vI_1_1BandPass.pdf>
+<structIir_1_1ChebyshevI_1_1BandPass.pdf, id=1826, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1BandPass.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1BandPass.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1BandPass.pdf  used on input
  line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [17])
-(./structIir_1_1ChebyshevII_1_1BandPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [18]
+Overfull \vbox (7.09712pt too high) has occurred while \output is active []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1BandPass.pdf>
-<structIir_1_1ChebyshevII_1_1BandPass.pdf, id=1666, 501.875pt x 87.2861pt>
+[19]) (./structIir_1_1ChebyshevII_1_1BandPass.tex <./structIir_1_1ChebyshevII_1
+_1BandPass.pdf>
+<structIir_1_1ChebyshevII_1_1BandPass.pdf, id=1880, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1BandPass.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1BandPass.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1BandPass.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [18] [19])
-(./structIir_1_1RBJ_1_1BandPass1.tex <./structIir_1_1RBJ_1_1BandPass1.pdf>
-<structIir_1_1RBJ_1_1BandPass1.pdf, id=1714, 501.875pt x 466.8642pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [20] [21]) (./structIir_1_1RBJ_1_1BandPass1.tex <./structIir_1_1RBJ_1_1BandPas
+s1.pdf>
+<structIir_1_1RBJ_1_1BandPass1.pdf, id=1934, 501.875pt x 466.8642pt>
 File: structIir_1_1RBJ_1_1BandPass1.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1BandPass1.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1BandPass1.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 91.75798pt x 85.35826pt.
-
-[20]) (./structIir_1_1RBJ_1_1BandPass2.tex <./structIir_1_1RBJ_1_1BandPass2.pdf
->
-<structIir_1_1RBJ_1_1BandPass2.pdf, id=1731, 501.875pt x 466.8642pt>
+ [22]) (./structIir_1_1RBJ_1_1BandPass2.tex <./structIir_1_1RBJ_1_1BandPass2.pd
+f>
+<structIir_1_1RBJ_1_1BandPass2.pdf, id=1972, 501.875pt x 466.8642pt>
 File: structIir_1_1RBJ_1_1BandPass2.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1BandPass2.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1BandPass2.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 91.75798pt x 85.35826pt.
- [21]) (./structIir_1_1Butterworth_1_1BandPassBase.tex <./structIir_1_1Butterwo
-rth_1_1BandPassBase.pdf>
-<structIir_1_1Butterworth_1_1BandPassBase.pdf, id=1750, 501.875pt x 344.63757pt
+ [23] [24])
+(./structIir_1_1Butterworth_1_1BandPassBase.tex <./structIir_1_1Butterworth_1_1
+BandPassBase.pdf>
+<structIir_1_1Butterworth_1_1BandPassBase.pdf, id=2022, 501.875pt x 344.63757pt
 >
 File: structIir_1_1Butterworth_1_1BandPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1BandPassBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1BandPassBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
- [22]) (./structIir_1_1ChebyshevI_1_1BandPassBase.tex <./structIir_1_1Chebyshev
-I_1_1BandPassBase.pdf>
-<structIir_1_1ChebyshevI_1_1BandPassBase.pdf, id=1767, 501.875pt x 344.63757pt>
+) (./structIir_1_1ChebyshevI_1_1BandPassBase.tex <./structIir_1_1ChebyshevI_1_1
+BandPassBase.pdf>
+<structIir_1_1ChebyshevI_1_1BandPassBase.pdf, id=2035, 501.875pt x 344.63757pt>
 
 File: structIir_1_1ChebyshevI_1_1BandPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1BandPassBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1BandPassBase.pdf  used on i
 nput line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-)
+ [25])
 (./structIir_1_1ChebyshevII_1_1BandPassBase.tex <./structIir_1_1ChebyshevII_1_1
 BandPassBase.pdf>
-<structIir_1_1ChebyshevII_1_1BandPassBase.pdf, id=1772, 501.875pt x 344.63757pt
+<structIir_1_1ChebyshevII_1_1BandPassBase.pdf, id=2064, 501.875pt x 344.63757pt
 >
 File: structIir_1_1ChebyshevII_1_1BandPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1BandPassBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1BandPassBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
- [23]) (./classIir_1_1BandPassTransform.tex)
-(./structIir_1_1Butterworth_1_1BandShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1BandShelf.pdf>
-<structIir_1_1Butterworth_1_1BandShelf.pdf, id=1786, 501.875pt x 87.2861pt>
+) (./classIir_1_1BandPassTransform.tex)
+(./structIir_1_1Butterworth_1_1BandShelf.tex <./structIir_1_1Butterworth_1_1Ban
+dShelf.pdf>
+<structIir_1_1Butterworth_1_1BandShelf.pdf, id=2077, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1BandShelf.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1BandShelf.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1BandShelf.pdf  used on inp
 ut line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [24] [25])
-(./structIir_1_1ChebyshevI_1_1BandShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1BandShelf.pdf>
-<structIir_1_1ChebyshevI_1_1BandShelf.pdf, id=1831, 501.875pt x 87.2861pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [26] [27]) (./structIir_1_1ChebyshevI_1_1BandShelf.tex <./structIir_1_1Chebysh
+evI_1_1BandShelf.pdf>
+<structIir_1_1ChebyshevI_1_1BandShelf.pdf, id=2128, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1BandShelf.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1BandShelf.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1BandShelf.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [26] [27])
-(./structIir_1_1ChebyshevII_1_1BandShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1BandShelf.pdf>
-<structIir_1_1ChebyshevII_1_1BandShelf.pdf, id=1876, 501.875pt x 87.2861pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [28] [29] [30])
+(./structIir_1_1ChebyshevII_1_1BandShelf.tex <./structIir_1_1ChebyshevII_1_1Ban
+dShelf.pdf>
+<structIir_1_1ChebyshevII_1_1BandShelf.pdf, id=2189, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1BandShelf.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1BandShelf.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1BandShelf.pdf  used on inp
 ut line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [28] [29])
-(./structIir_1_1RBJ_1_1BandShelf.tex <./structIir_1_1RBJ_1_1BandShelf.pdf>
-<structIir_1_1RBJ_1_1BandShelf.pdf, id=1919, 501.875pt x 485.68451pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [31] [32]) (./structIir_1_1RBJ_1_1BandShelf.tex <./structIir_1_1RBJ_1_1BandShe
+lf.pdf>
+<structIir_1_1RBJ_1_1BandShelf.pdf, id=2241, 501.875pt x 485.68451pt>
 File: structIir_1_1RBJ_1_1BandShelf.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1BandShelf.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1BandShelf.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 88.19702pt x 85.35826pt.
-
-[30]) (./structIir_1_1Butterworth_1_1BandShelfBase.tex <./structIir_1_1Butterwo
-rth_1_1BandShelfBase.pdf>
-<structIir_1_1Butterworth_1_1BandShelfBase.pdf, id=1938, 501.875pt x 341.7066pt
+ [33]) (./structIir_1_1Butterworth_1_1BandShelfBase.tex <./structIir_1_1Butterw
+orth_1_1BandShelfBase.pdf>
+<structIir_1_1Butterworth_1_1BandShelfBase.pdf, id=2281, 501.875pt x 341.7066pt
 >
 File: structIir_1_1Butterworth_1_1BandShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1BandShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1BandShelfBase.pdf  used on
  input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
-) (./structIir_1_1ChebyshevI_1_1BandShelfBase.tex <./structIir_1_1ChebyshevI_1_
-1BandShelfBase.pdf>
-<structIir_1_1ChebyshevI_1_1BandShelfBase.pdf, id=1943, 501.875pt x 341.7066pt>
+ [34])
+(./structIir_1_1ChebyshevI_1_1BandShelfBase.tex <./structIir_1_1ChebyshevI_1_1B
+andShelfBase.pdf>
+<structIir_1_1ChebyshevI_1_1BandShelfBase.pdf, id=2302, 501.875pt x 341.7066pt>
 
 File: structIir_1_1ChebyshevI_1_1BandShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1BandShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1BandShelfBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
- [31])
-(./structIir_1_1ChebyshevII_1_1BandShelfBase.tex <./structIir_1_1ChebyshevII_1_
-1BandShelfBase.pdf>
-<structIir_1_1ChebyshevII_1_1BandShelfBase.pdf, id=1957, 501.875pt x 341.7066pt
+) (./structIir_1_1ChebyshevII_1_1BandShelfBase.tex <./structIir_1_1ChebyshevII_
+1_1BandShelfBase.pdf>
+<structIir_1_1ChebyshevII_1_1BandShelfBase.pdf, id=2316, 501.875pt x 341.7066pt
 >
 File: structIir_1_1ChebyshevII_1_1BandShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1BandShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1BandShelfBase.pdf  used on
  input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
-) (./structIir_1_1Butterworth_1_1BandStop.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1BandStop.pdf>
-<structIir_1_1Butterworth_1_1BandStop.pdf, id=1962, 501.875pt x 87.2861pt>
+ [35])
+(./structIir_1_1Butterworth_1_1BandStop.tex <./structIir_1_1Butterworth_1_1Band
+Stop.pdf>
+<structIir_1_1Butterworth_1_1BandStop.pdf, id=2339, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1BandStop.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1BandStop.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1BandStop.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [32]
-Overfull \vbox (3.41219pt too high) has occurred while \output is active []
-
-
-[33]) (./structIir_1_1ChebyshevI_1_1BandStop.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1BandStop.pdf>
-<structIir_1_1ChebyshevI_1_1BandStop.pdf, id=2009, 501.875pt x 87.2861pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [36] [37]) (./structIir_1_1ChebyshevI_1_1BandStop.tex <./structIir_1_1Chebyshe
+vI_1_1BandStop.pdf>
+<structIir_1_1ChebyshevI_1_1BandStop.pdf, id=2392, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1BandStop.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1BandStop.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1BandStop.pdf  used on input
  line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [34] [35])
-(./structIir_1_1ChebyshevII_1_1BandStop.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1BandStop.pdf>
-<structIir_1_1ChebyshevII_1_1BandStop.pdf, id=2055, 501.875pt x 87.2861pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [38] [39])
+(./structIir_1_1ChebyshevII_1_1BandStop.tex <./structIir_1_1ChebyshevII_1_1Band
+Stop.pdf>
+<structIir_1_1ChebyshevII_1_1BandStop.pdf, id=2445, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1BandStop.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1BandStop.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1BandStop.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.33778pt x 69.2763pt.
- [36] [37])
-(./structIir_1_1RBJ_1_1BandStop.tex <./structIir_1_1RBJ_1_1BandStop.pdf>
-<structIir_1_1RBJ_1_1BandStop.pdf, id=2099, 501.875pt x 501.875pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [40] [41]) (./structIir_1_1RBJ_1_1BandStop.tex <./structIir_1_1RBJ_1_1BandStop
+.pdf>
+<structIir_1_1RBJ_1_1BandStop.pdf, id=2496, 501.875pt x 501.875pt>
 File: structIir_1_1RBJ_1_1BandStop.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1BandStop.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1BandStop.pdf  used on input line 1
 0.
 (pdftex.def)             Requested size: 85.3559pt x 85.35826pt.
-
-[38]) (./structIir_1_1Butterworth_1_1BandStopBase.tex <./structIir_1_1Butterwor
-th_1_1BandStopBase.pdf>
-<structIir_1_1Butterworth_1_1BandStopBase.pdf, id=2119, 501.875pt x 344.63757pt
+ [42] [43]) (./structIir_1_1Butterworth_1_1BandStopBase.tex <./structIir_1_1But
+terworth_1_1BandStopBase.pdf>
+<structIir_1_1Butterworth_1_1BandStopBase.pdf, id=2547, 501.875pt x 344.63757pt
 >
 File: structIir_1_1Butterworth_1_1BandStopBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1BandStopBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1BandStopBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-) (./structIir_1_1ChebyshevI_1_1BandStopBase.tex <./structIir_1_1ChebyshevI_1_1
-BandStopBase.pdf>
-<structIir_1_1ChebyshevI_1_1BandStopBase.pdf, id=2124, 501.875pt x 344.63757pt>
+)
+(./structIir_1_1ChebyshevI_1_1BandStopBase.tex <./structIir_1_1ChebyshevI_1_1Ba
+ndStopBase.pdf>
+<structIir_1_1ChebyshevI_1_1BandStopBase.pdf, id=2560, 501.875pt x 344.63757pt>
 
 File: structIir_1_1ChebyshevI_1_1BandStopBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1BandStopBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1BandStopBase.pdf  used on i
 nput line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-)
-(./structIir_1_1ChebyshevII_1_1BandStopBase.tex <./structIir_1_1ChebyshevII_1_1
-BandStopBase.pdf>
-<structIir_1_1ChebyshevII_1_1BandStopBase.pdf, id=2129, 501.875pt x 344.63757pt
+ [44]) (./structIir_1_1ChebyshevII_1_1BandStopBase.tex <./structIir_1_1Chebyshe
+vII_1_1BandStopBase.pdf>
+<structIir_1_1ChebyshevII_1_1BandStopBase.pdf, id=2584, 501.875pt x 344.63757pt
 >
 File: structIir_1_1ChebyshevII_1_1BandStopBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1BandStopBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1BandStopBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
- [39]) (./classIir_1_1BandStopTransform.tex)
+) (./classIir_1_1BandStopTransform.tex)
 (./classIir_1_1Biquad.tex <./classIir_1_1Biquad.pdf>
-<classIir_1_1Biquad.pdf, id=2144, 501.875pt x 452.82175pt>
+<classIir_1_1Biquad.pdf, id=2597, 501.875pt x 452.82175pt>
 File: classIir_1_1Biquad.pdf Graphic file (type pdf)
 <use classIir_1_1Biquad.pdf>
 Package pdftex.def Info: classIir_1_1Biquad.pdf  used on input line 6.
 (pdftex.def)             Requested size: 378.41937pt x 341.43306pt.
- [40] [41]
+ [45] [46]
 Underfull \hbox (badness 10000) detected at line 70
 [][][]
  []
 
-[42]) (./structIir_1_1BiquadPoleState.tex <./structIir_1_1BiquadPoleState.pdf>
-<structIir_1_1BiquadPoleState.pdf, id=2217, 501.875pt x 313.67188pt>
+[47] [48]) (./structIir_1_1BiquadPoleState.tex <./structIir_1_1BiquadPoleState.
+pdf>
+<structIir_1_1BiquadPoleState.pdf, id=2667, 501.875pt x 313.67188pt>
 File: structIir_1_1BiquadPoleState.pdf Graphic file (type pdf)
 <use structIir_1_1BiquadPoleState.pdf>
 Package pdftex.def Info: structIir_1_1BiquadPoleState.pdf  used on input line 1
 0.
 (pdftex.def)             Requested size: 91.04579pt x 56.9055pt.
-
-[43]) (./classIir_1_1Cascade.tex <./classIir_1_1Cascade.pdf>
-<classIir_1_1Cascade.pdf, id=2233, 501.875pt x 317.64671pt>
+) (./classIir_1_1Cascade.tex <./classIir_1_1Cascade.pdf>
+<classIir_1_1Cascade.pdf, id=2673, 501.875pt x 317.64671pt>
 File: classIir_1_1Cascade.pdf Graphic file (type pdf)
 <use classIir_1_1Cascade.pdf>
 Package pdftex.def Info: classIir_1_1Cascade.pdf  used on input line 10.
 (pdftex.def)             Requested size: 398.33778pt x 252.11313pt.
- [44])
-(./classIir_1_1CascadeStages.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./classIir_1_1CascadeStages.pdf>
-<classIir_1_1CascadeStages.pdf, id=2261, 501.875pt x 21.73119pt>
+ [49])
+(./classIir_1_1CascadeStages.tex <./classIir_1_1CascadeStages.pdf>
+<classIir_1_1CascadeStages.pdf, id=2696, 501.875pt x 227.08841pt>
 File: classIir_1_1CascadeStages.pdf Graphic file (type pdf)
 <use classIir_1_1CascadeStages.pdf>
 Package pdftex.def Info: classIir_1_1CascadeStages.pdf  used on input line 10.
-(pdftex.def)             Requested size: 398.2612pt x 17.24419pt.
- [45]
-Underfull \hbox (badness 10000) detected at line 46
+(pdftex.def)             Requested size: 398.36076pt x 180.24362pt.
+ [50]
+Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
 \T1/pcr/m/n/8 const [] []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Max[]Stages, State[]
 Type $\OML/cmm/m/it/8 >$[]\T1/pcr/m/n/8 ::get[]Cascade[]Storage ( )
  []
 
-) (./structIir_1_1ComplexPair.tex <./structIir_1_1ComplexPair.pdf>
-<structIir_1_1ComplexPair.pdf, id=2295, 501.875pt x 371.75888pt>
+[51]) (./structIir_1_1ComplexPair.tex <./structIir_1_1ComplexPair.pdf>
+<structIir_1_1ComplexPair.pdf, id=2736, 501.875pt x 371.75888pt>
 File: structIir_1_1ComplexPair.pdf Graphic file (type pdf)
 <use structIir_1_1ComplexPair.pdf>
 Package pdftex.def Info: structIir_1_1ComplexPair.pdf  used on input line 10.
 (pdftex.def)             Requested size: 76.81725pt x 56.9055pt.
 )
-(./classIir_1_1DirectFormI.tex [46]
+(./classIir_1_1DirectFormI.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-) (./classIir_1_1DirectFormII.tex) (./structIir_1_1Butterworth_1_1HighPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1HighPass.pdf>
-<structIir_1_1Butterworth_1_1HighPass.pdf, id=2313, 501.875pt x 86.03142pt>
+[52]) (./classIir_1_1DirectFormII.tex)
+(./structIir_1_1Butterworth_1_1HighPass.tex <./structIir_1_1Butterworth_1_1High
+Pass.pdf>
+<structIir_1_1Butterworth_1_1HighPass.pdf, id=2753, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1HighPass.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1HighPass.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1HighPass.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [47] [48])
-(./structIir_1_1ChebyshevI_1_1HighPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1HighPass.pdf>
-<structIir_1_1ChebyshevI_1_1HighPass.pdf, id=2358, 501.875pt x 86.03142pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [53] [54]) (./structIir_1_1ChebyshevI_1_1HighPass.tex <./structIir_1_1Chebyshe
+vI_1_1HighPass.pdf>
+<structIir_1_1ChebyshevI_1_1HighPass.pdf, id=2806, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1HighPass.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1HighPass.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1HighPass.pdf  used on input
  line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [49])
-(./structIir_1_1ChebyshevII_1_1HighPass.tex
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
+Overfull \vbox (2.11687pt too high) has occurred while \output is active []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1HighPass.pdf>
-<structIir_1_1ChebyshevII_1_1HighPass.pdf, id=2393, 501.875pt x 86.03142pt>
+[55]) (./structIir_1_1ChebyshevII_1_1HighPass.tex <./structIir_1_1ChebyshevII_1
+_1HighPass.pdf>
+<structIir_1_1ChebyshevII_1_1HighPass.pdf, id=2849, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1HighPass.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1HighPass.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1HighPass.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [50] [51])
-(./structIir_1_1RBJ_1_1HighPass.tex <./structIir_1_1RBJ_1_1HighPass.pdf>
-<structIir_1_1RBJ_1_1HighPass.pdf, id=2440, 501.875pt x 506.09076pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [56] [57]) (./structIir_1_1RBJ_1_1HighPass.tex <./structIir_1_1RBJ_1_1HighPass
+.pdf>
+<structIir_1_1RBJ_1_1HighPass.pdf, id=2902, 501.875pt x 506.09076pt>
 File: structIir_1_1RBJ_1_1HighPass.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1HighPass.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1HighPass.pdf  used on input line 1
 0.
 (pdftex.def)             Requested size: 84.6437pt x 85.35826pt.
-
-[52]) (./structIir_1_1Butterworth_1_1HighPassBase.tex <./structIir_1_1Butterwor
-th_1_1HighPassBase.pdf>
-<structIir_1_1Butterworth_1_1HighPassBase.pdf, id=2459, 501.875pt x 344.63757pt
+ [58] [59]) (./structIir_1_1Butterworth_1_1HighPassBase.tex <./structIir_1_1But
+terworth_1_1HighPassBase.pdf>
+<structIir_1_1Butterworth_1_1HighPassBase.pdf, id=2951, 501.875pt x 344.63757pt
 >
 File: structIir_1_1Butterworth_1_1HighPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1HighPassBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1HighPassBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-) (./structIir_1_1ChebyshevI_1_1HighPassBase.tex <./structIir_1_1ChebyshevI_1_1
-HighPassBase.pdf>
-<structIir_1_1ChebyshevI_1_1HighPassBase.pdf, id=2464, 501.875pt x 344.63757pt>
+)
+(./structIir_1_1ChebyshevI_1_1HighPassBase.tex <./structIir_1_1ChebyshevI_1_1Hi
+ghPassBase.pdf>
+<structIir_1_1ChebyshevI_1_1HighPassBase.pdf, id=2964, 501.875pt x 344.63757pt>
 
 File: structIir_1_1ChebyshevI_1_1HighPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1HighPassBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1HighPassBase.pdf  used on i
 nput line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
- [53])
-(./structIir_1_1ChebyshevII_1_1HighPassBase.tex <./structIir_1_1ChebyshevII_1_1
-HighPassBase.pdf>
-<structIir_1_1ChebyshevII_1_1HighPassBase.pdf, id=2479, 501.875pt x 344.63757pt
+ [60]) (./structIir_1_1ChebyshevII_1_1HighPassBase.tex <./structIir_1_1Chebyshe
+vII_1_1HighPassBase.pdf>
+<structIir_1_1ChebyshevII_1_1HighPassBase.pdf, id=2987, 501.875pt x 344.63757pt
 >
 File: structIir_1_1ChebyshevII_1_1HighPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1HighPassBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1HighPassBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-) (./classIir_1_1HighPassTransform.tex)
-(./structIir_1_1Butterworth_1_1HighShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1HighShelf.pdf>
-<structIir_1_1Butterworth_1_1HighShelf.pdf, id=2484, 501.875pt x 86.03142pt>
+) (./classIir_1_1HighPassTransform.tex
+[61]) (./structIir_1_1Butterworth_1_1HighShelf.tex <./structIir_1_1Butterworth_
+1_1HighShelf.pdf>
+<structIir_1_1Butterworth_1_1HighShelf.pdf, id=3012, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1HighShelf.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1HighShelf.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1HighShelf.pdf  used on inp
 ut line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [54] [55])
-(./structIir_1_1ChebyshevI_1_1HighShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1HighShelf.pdf>
-<structIir_1_1ChebyshevI_1_1HighShelf.pdf, id=2528, 501.875pt x 86.03142pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [62]) (./structIir_1_1ChebyshevI_1_1HighShelf.tex [63] <./structIir_1_1Chebysh
+evI_1_1HighShelf.pdf>
+<structIir_1_1ChebyshevI_1_1HighShelf.pdf, id=3064, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1HighShelf.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1HighShelf.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1HighShelf.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [56] [57])
-(./structIir_1_1ChebyshevII_1_1HighShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1HighShelf.pdf>
-<structIir_1_1ChebyshevII_1_1HighShelf.pdf, id=2575, 501.875pt x 86.03142pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [64])
+(./structIir_1_1ChebyshevII_1_1HighShelf.tex [65] <./structIir_1_1ChebyshevII_1
+_1HighShelf.pdf>
+<structIir_1_1ChebyshevII_1_1HighShelf.pdf, id=3117, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1HighShelf.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1HighShelf.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1HighShelf.pdf  used on inp
 ut line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [58] [59])
-(./structIir_1_1RBJ_1_1HighShelf.tex <./structIir_1_1RBJ_1_1HighShelf.pdf>
-<structIir_1_1RBJ_1_1HighShelf.pdf, id=2620, 501.875pt x 497.7295pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [66]) (./structIir_1_1RBJ_1_1HighShelf.tex [67] <./structIir_1_1RBJ_1_1HighShe
+lf.pdf>
+<structIir_1_1RBJ_1_1HighShelf.pdf, id=3170, 501.875pt x 497.7295pt>
 File: structIir_1_1RBJ_1_1HighShelf.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1HighShelf.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1HighShelf.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 86.0681pt x 85.35826pt.
-
-[60]) (./structIir_1_1Butterworth_1_1HighShelfBase.tex <./structIir_1_1Butterwo
-rth_1_1HighShelfBase.pdf>
-<structIir_1_1Butterworth_1_1HighShelfBase.pdf, id=2638, 501.875pt x 341.7066pt
+ [68]) (./structIir_1_1Butterworth_1_1HighShelfBase.tex <./structIir_1_1Butterw
+orth_1_1HighShelfBase.pdf>
+<structIir_1_1Butterworth_1_1HighShelfBase.pdf, id=3208, 501.875pt x 341.7066pt
 >
 File: structIir_1_1Butterworth_1_1HighShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1HighShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1HighShelfBase.pdf  used on
  input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
-) (./structIir_1_1ChebyshevI_1_1HighShelfBase.tex <./structIir_1_1ChebyshevI_1_
-1HighShelfBase.pdf>
-<structIir_1_1ChebyshevI_1_1HighShelfBase.pdf, id=2643, 501.875pt x 341.7066pt>
+ [69])
+(./structIir_1_1ChebyshevI_1_1HighShelfBase.tex <./structIir_1_1ChebyshevI_1_1H
+ighShelfBase.pdf>
+<structIir_1_1ChebyshevI_1_1HighShelfBase.pdf, id=3233, 501.875pt x 341.7066pt>
 
 File: structIir_1_1ChebyshevI_1_1HighShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1HighShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1HighShelfBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
- [61])
-(./structIir_1_1ChebyshevII_1_1HighShelfBase.tex <./structIir_1_1ChebyshevII_1_
-1HighShelfBase.pdf>
-<structIir_1_1ChebyshevII_1_1HighShelfBase.pdf, id=2658, 501.875pt x 341.7066pt
+) (./structIir_1_1ChebyshevII_1_1HighShelfBase.tex <./structIir_1_1ChebyshevII_
+1_1HighShelfBase.pdf>
+<structIir_1_1ChebyshevII_1_1HighShelfBase.pdf, id=3246, 501.875pt x 341.7066pt
 >
 File: structIir_1_1ChebyshevII_1_1HighShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1HighShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1HighShelfBase.pdf  used on
  input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
-) (./structIir_1_1RBJ_1_1IIRNotch.tex <./structIir_1_1RBJ_1_1IIRNotch.pdf>
-<structIir_1_1RBJ_1_1IIRNotch.pdf, id=2663, 501.875pt x 519.17964pt>
+ [70])
+(./structIir_1_1RBJ_1_1IIRNotch.tex <./structIir_1_1RBJ_1_1IIRNotch.pdf>
+<structIir_1_1RBJ_1_1IIRNotch.pdf, id=3269, 501.875pt x 519.17964pt>
 File: structIir_1_1RBJ_1_1IIRNotch.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1IIRNotch.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1IIRNotch.pdf  used on input line 1
 0.
 (pdftex.def)             Requested size: 82.50713pt x 85.35826pt.
- [62]) (./classIir_1_1Layout.tex
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-) (./classIir_1_1LayoutBase.tex <./classIir_1_1LayoutBase.pdf>
-<classIir_1_1LayoutBase.pdf, id=2684, 501.875pt x 32.64195pt>
+[71]) (./classIir_1_1Layout.tex) (./classIir_1_1LayoutBase.tex <./classIir_1_1L
+ayoutBase.pdf>
+<classIir_1_1LayoutBase.pdf, id=3308, 501.875pt x 32.64195pt>
 File: classIir_1_1LayoutBase.pdf Graphic file (type pdf)
 <use classIir_1_1LayoutBase.pdf>
 Package pdftex.def Info: classIir_1_1LayoutBase.pdf  used on input line 10.
 (pdftex.def)             Requested size: 398.3531pt x 25.90817pt.
- [63])
-(./structIir_1_1Butterworth_1_1LowPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1LowPass.pdf>
-<structIir_1_1Butterworth_1_1LowPass.pdf, id=2698, 501.875pt x 86.03142pt>
+ [72]) (./structIir_1_1Butterworth_1_1LowPass.tex <./structIir_1_1Butterworth_1
+_1LowPass.pdf>
+<structIir_1_1Butterworth_1_1LowPass.pdf, id=3324, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1LowPass.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1LowPass.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1LowPass.pdf  used on input
  line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [64])
-(./structIir_1_1ChebyshevI_1_1LowPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1LowPass.pdf>
-<structIir_1_1ChebyshevI_1_1LowPass.pdf, id=2733, 501.875pt x 86.03142pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [73]) (./structIir_1_1ChebyshevI_1_1LowPass.tex <./structIir_1_1ChebyshevI_1_1
+LowPass.pdf>
+<structIir_1_1ChebyshevI_1_1LowPass.pdf, id=3367, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1LowPass.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1LowPass.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1LowPass.pdf  used on input 
 line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [65] [66])
-(./structIir_1_1ChebyshevII_1_1LowPass.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1LowPass.pdf>
-<structIir_1_1ChebyshevII_1_1LowPass.pdf, id=2780, 501.875pt x 86.03142pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [74] [75])
+(./structIir_1_1ChebyshevII_1_1LowPass.tex <./structIir_1_1ChebyshevII_1_1LowPa
+ss.pdf>
+<structIir_1_1ChebyshevII_1_1LowPass.pdf, id=3421, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1LowPass.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1LowPass.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1LowPass.pdf  used on input
  line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [67] [68])
-(./structIir_1_1RBJ_1_1LowPass.tex <./structIir_1_1RBJ_1_1LowPass.pdf>
-<structIir_1_1RBJ_1_1LowPass.pdf, id=2827, 501.875pt x 519.17964pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [76] [77]) (./structIir_1_1RBJ_1_1LowPass.tex <./structIir_1_1RBJ_1_1LowPass.p
+df>
+<structIir_1_1RBJ_1_1LowPass.pdf, id=3474, 501.875pt x 519.17964pt>
 File: structIir_1_1RBJ_1_1LowPass.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1LowPass.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1LowPass.pdf  used on input line 10
 .
 (pdftex.def)             Requested size: 82.50713pt x 85.35826pt.
- [69])
-(./structIir_1_1Butterworth_1_1LowPassBase.tex <./structIir_1_1Butterworth_1_1L
-owPassBase.pdf>
-<structIir_1_1Butterworth_1_1LowPassBase.pdf, id=2846, 501.875pt x 344.63757pt>
+ [78] [79]) (./structIir_1_1Butterworth_1_1LowPassBase.tex <./structIir_1_1Butt
+erworth_1_1LowPassBase.pdf>
+<structIir_1_1Butterworth_1_1LowPassBase.pdf, id=3523, 501.875pt x 344.63757pt>
 
 File: structIir_1_1Butterworth_1_1LowPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1LowPassBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1LowPassBase.pdf  used on i
 nput line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-) (./structIir_1_1ChebyshevI_1_1LowPassBase.tex <./structIir_1_1ChebyshevI_1_1L
-owPassBase.pdf>
-<structIir_1_1ChebyshevI_1_1LowPassBase.pdf, id=2851, 501.875pt x 344.63757pt>
+)
+(./structIir_1_1ChebyshevI_1_1LowPassBase.tex <./structIir_1_1ChebyshevI_1_1Low
+PassBase.pdf>
+<structIir_1_1ChebyshevI_1_1LowPassBase.pdf, id=3536, 501.875pt x 344.63757pt>
 File: structIir_1_1ChebyshevI_1_1LowPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1LowPassBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1LowPassBase.pdf  used on in
 put line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
-) (./structIir_1_1ChebyshevII_1_1LowPassBase.tex <./structIir_1_1ChebyshevII_1_
-1LowPassBase.pdf>
-<structIir_1_1ChebyshevII_1_1LowPassBase.pdf, id=2856, 501.875pt x 344.63757pt>
+ [80]) (./structIir_1_1ChebyshevII_1_1LowPassBase.tex <./structIir_1_1Chebyshev
+II_1_1LowPassBase.pdf>
+<structIir_1_1ChebyshevII_1_1LowPassBase.pdf, id=3560, 501.875pt x 344.63757pt>
 
 File: structIir_1_1ChebyshevII_1_1LowPassBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1LowPassBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1LowPassBase.pdf  used on i
 nput line 6.
 (pdftex.def)             Requested size: 165.73413pt x 113.81102pt.
- [70])
-(./classIir_1_1LowPassTransform.tex)
-(./structIir_1_1Butterworth_1_1LowShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Butterworth_1_1LowShelf.pdf>
-<structIir_1_1Butterworth_1_1LowShelf.pdf, id=2872, 501.875pt x 86.03142pt>
+) (./classIir_1_1LowPassTransform.tex
+[81]) (./structIir_1_1Butterworth_1_1LowShelf.tex <./structIir_1_1Butterworth_1
+_1LowShelf.pdf>
+<structIir_1_1Butterworth_1_1LowShelf.pdf, id=3583, 501.875pt x 89.35382pt>
 File: structIir_1_1Butterworth_1_1LowShelf.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1LowShelf.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1LowShelf.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [71] [72])
-(./structIir_1_1ChebyshevI_1_1LowShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [82]
+Overfull \vbox (4.04558pt too high) has occurred while \output is active []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevI_1_1LowShelf.pdf>
-<structIir_1_1ChebyshevI_1_1LowShelf.pdf, id=2915, 501.875pt x 86.03142pt>
+[83]) (./structIir_1_1ChebyshevI_1_1LowShelf.tex <./structIir_1_1ChebyshevI_1_1
+LowShelf.pdf>
+<structIir_1_1ChebyshevI_1_1LowShelf.pdf, id=3636, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevI_1_1LowShelf.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1LowShelf.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1LowShelf.pdf  used on input
  line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [73] [74])
-(./structIir_1_1ChebyshevII_1_1LowShelf.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1ChebyshevII_1_1LowShelf.pdf>
-<structIir_1_1ChebyshevII_1_1LowShelf.pdf, id=2961, 501.875pt x 86.03142pt>
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [84] [85]) (./structIir_1_1ChebyshevII_1_1LowShelf.tex <./structIir_1_1Chebysh
+evII_1_1LowShelf.pdf>
+<structIir_1_1ChebyshevII_1_1LowShelf.pdf, id=3689, 501.875pt x 89.35382pt>
 File: structIir_1_1ChebyshevII_1_1LowShelf.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1LowShelf.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1LowShelf.pdf  used on inpu
 t line 10.
-(pdftex.def)             Requested size: 398.39139pt x 68.28644pt.
- [75] [76])
+(pdftex.def)             Requested size: 398.34544pt x 70.92088pt.
+ [86] [87])
 (./structIir_1_1RBJ_1_1LowShelf.tex <./structIir_1_1RBJ_1_1LowShelf.pdf>
-<structIir_1_1RBJ_1_1LowShelf.pdf, id=3007, 501.875pt x 510.37677pt>
+<structIir_1_1RBJ_1_1LowShelf.pdf, id=3740, 501.875pt x 510.37677pt>
 File: structIir_1_1RBJ_1_1LowShelf.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1LowShelf.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1LowShelf.pdf  used on input line 1
 0.
 (pdftex.def)             Requested size: 83.93152pt x 85.35826pt.
 
-[77]) (./structIir_1_1Butterworth_1_1LowShelfBase.tex <./structIir_1_1Butterwor
+[88]) (./structIir_1_1Butterworth_1_1LowShelfBase.tex <./structIir_1_1Butterwor
 th_1_1LowShelfBase.pdf>
-<structIir_1_1Butterworth_1_1LowShelfBase.pdf, id=3026, 501.875pt x 341.7066pt>
+<structIir_1_1Butterworth_1_1LowShelfBase.pdf, id=3780, 501.875pt x 341.7066pt>
 
 File: structIir_1_1Butterworth_1_1LowShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1Butterworth_1_1LowShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1Butterworth_1_1LowShelfBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
-) (./structIir_1_1ChebyshevI_1_1LowShelfBase.tex <./structIir_1_1ChebyshevI_1_1
-LowShelfBase.pdf>
-<structIir_1_1ChebyshevI_1_1LowShelfBase.pdf, id=3031, 501.875pt x 341.7066pt>
+ [89]) (./structIir_1_1ChebyshevI_1_1LowShelfBase.tex <./structIir_1_1Chebyshev
+I_1_1LowShelfBase.pdf>
+<structIir_1_1ChebyshevI_1_1LowShelfBase.pdf, id=3801, 501.875pt x 341.7066pt>
 File: structIir_1_1ChebyshevI_1_1LowShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevI_1_1LowShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevI_1_1LowShelfBase.pdf  used on i
@@ -1843,44 +1468,27 @@ nput line 6.
 )
 (./structIir_1_1ChebyshevII_1_1LowShelfBase.tex <./structIir_1_1ChebyshevII_1_1
 LowShelfBase.pdf>
-<structIir_1_1ChebyshevII_1_1LowShelfBase.pdf, id=3036, 501.875pt x 341.7066pt>
+<structIir_1_1ChebyshevII_1_1LowShelfBase.pdf, id=3814, 501.875pt x 341.7066pt>
 
 File: structIir_1_1ChebyshevII_1_1LowShelfBase.pdf Graphic file (type pdf)
 <use structIir_1_1ChebyshevII_1_1LowShelfBase.pdf>
 Package pdftex.def Info: structIir_1_1ChebyshevII_1_1LowShelfBase.pdf  used on 
 input line 6.
 (pdftex.def)             Requested size: 167.15851pt x 113.81102pt.
- [78]) (./structIir_1_1Custom_1_1OnePole.tex <./structIir_1_1Custom_1_1OnePole.
+ [90]) (./structIir_1_1Custom_1_1OnePole.tex <./structIir_1_1Custom_1_1OnePole.
 pdf>
-<structIir_1_1Custom_1_1OnePole.pdf, id=3050, 501.875pt x 301.8778pt>
+<structIir_1_1Custom_1_1OnePole.pdf, id=3837, 501.875pt x 301.8778pt>
 File: structIir_1_1Custom_1_1OnePole.pdf Graphic file (type pdf)
 <use structIir_1_1Custom_1_1OnePole.pdf>
 Package pdftex.def Info: structIir_1_1Custom_1_1OnePole.pdf  used on input line
  10.
 (pdftex.def)             Requested size: 94.59909pt x 56.9055pt.
-) (./structIir_1_1PoleFilter.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1PoleFilter.pdf>
-<structIir_1_1PoleFilter.pdf, id=3055, 501.875pt x 45.4197pt>
+ [91] [92]) (./structIir_1_1PoleFilter.tex <./structIir_1_1PoleFilter.pdf>
+<structIir_1_1PoleFilter.pdf, id=3877, 501.875pt x 348.21092pt>
 File: structIir_1_1PoleFilter.pdf Graphic file (type pdf)
 <use structIir_1_1PoleFilter.pdf>
 Package pdftex.def Info: structIir_1_1PoleFilter.pdf  used on input line 10.
-(pdftex.def)             Requested size: 398.33778pt x 36.04872pt.
+(pdftex.def)             Requested size: 398.36076pt x 276.37369pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1890,204 +1498,172 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[79]) (./classIir_1_1PoleFilterBase.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./classIir_1_1PoleFilterBase.pdf>
-<classIir_1_1PoleFilterBase.pdf, id=3069, 501.875pt x 254.10936pt>
+[93]) (./classIir_1_1PoleFilterBase.tex <./classIir_1_1PoleFilterBase.pdf>
+<classIir_1_1PoleFilterBase.pdf, id=3898, 501.875pt x 254.10936pt>
 File: classIir_1_1PoleFilterBase.pdf Graphic file (type pdf)
 <use classIir_1_1PoleFilterBase.pdf>
 Package pdftex.def Info: classIir_1_1PoleFilterBase.pdf  used on input line 10.
 
 (pdftex.def)             Requested size: 168.5829pt x 85.35826pt.
-) (./classIir_1_1PoleFilterBase2.tex <./classIir_1_1PoleFilterBase2.pdf>
-<classIir_1_1PoleFilterBase2.pdf, id=3074, 501.875pt x 317.64671pt>
+)
+(./classIir_1_1PoleFilterBase2.tex <./classIir_1_1PoleFilterBase2.pdf>
+<classIir_1_1PoleFilterBase2.pdf, id=3911, 501.875pt x 317.64671pt>
 File: classIir_1_1PoleFilterBase2.pdf Graphic file (type pdf)
 <use classIir_1_1PoleFilterBase2.pdf>
 Package pdftex.def Info: classIir_1_1PoleFilterBase2.pdf  used on input line 10
 .
 (pdftex.def)             Requested size: 398.33778pt x 252.11313pt.
- [80]) (./structIir_1_1PoleZeroPair.tex <./structIir_1_1PoleZeroPair.pdf>
-<structIir_1_1PoleZeroPair.pdf, id=3091, 501.875pt x 313.67188pt>
+ [94])
+(./structIir_1_1PoleZeroPair.tex <./structIir_1_1PoleZeroPair.pdf>
+<structIir_1_1PoleZeroPair.pdf, id=3932, 501.875pt x 313.67188pt>
 File: structIir_1_1PoleZeroPair.pdf Graphic file (type pdf)
 <use structIir_1_1PoleZeroPair.pdf>
 Package pdftex.def Info: structIir_1_1PoleZeroPair.pdf  used on input line 10.
 (pdftex.def)             Requested size: 91.04579pt x 56.9055pt.
-) (./structIir_1_1RBJ_1_1RBJbase.tex <./structIir_1_1RBJ_1_1RBJbase.pdf>
-<structIir_1_1RBJ_1_1RBJbase.pdf, id=3096, 501.875pt x 933.71834pt>
+)
+(./structIir_1_1RBJ_1_1RBJbase.tex <./structIir_1_1RBJ_1_1RBJbase.pdf>
+<structIir_1_1RBJ_1_1RBJbase.pdf, id=3938, 501.875pt x 933.71834pt>
 File: structIir_1_1RBJ_1_1RBJbase.pdf Graphic file (type pdf)
 <use structIir_1_1RBJ_1_1RBJbase.pdf>
 Package pdftex.def Info: structIir_1_1RBJ_1_1RBJbase.pdf  used on input line 10
 .
 (pdftex.def)             Requested size: 183.52362pt x 341.43306pt.
- [81]
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 18.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 18.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 18.
-) (./structIir_1_1Custom_1_1SOSCascade.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
- <./structIir_1_1Custom_1_1SOSCascade.pdf>
-<structIir_1_1Custom_1_1SOSCascade.pdf, id=3112, 501.875pt x 141.37819pt>
+ [95]
+[96]) (./structIir_1_1Custom_1_1SOSCascade.tex <./structIir_1_1Custom_1_1SOSCas
+cade.pdf>
+<structIir_1_1Custom_1_1SOSCascade.pdf, id=3982, 501.875pt x 141.37819pt>
 File: structIir_1_1Custom_1_1SOSCascade.pdf Graphic file (type pdf)
 <use structIir_1_1Custom_1_1SOSCascade.pdf>
 Package pdftex.def Info: structIir_1_1Custom_1_1SOSCascade.pdf  used on input l
 ine 10.
 (pdftex.def)             Requested size: 202.01001pt x 56.9055pt.
- [82] [83])
-(./structIir_1_1Cascade_1_1Storage.tex)
+ [97]) (./structIir_1_1Cascade_1_1Storage.tex)
 (./classIir_1_1TransposedDirectFormII.tex)
 (./structIir_1_1Custom_1_1TwoPole.tex <./structIir_1_1Custom_1_1TwoPole.pdf>
-<structIir_1_1Custom_1_1TwoPole.pdf, id=3157, 501.875pt x 304.16637pt>
+<structIir_1_1Custom_1_1TwoPole.pdf, id=4021, 501.875pt x 304.16637pt>
 File: structIir_1_1Custom_1_1TwoPole.pdf Graphic file (type pdf)
 <use structIir_1_1Custom_1_1TwoPole.pdf>
 Package pdftex.def Info: structIir_1_1Custom_1_1TwoPole.pdf  used on input line
  10.
 (pdftex.def)             Requested size: 93.89456pt x 56.9055pt.
-)
-[84] (./refman.ind
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 12.9599pt on input line 1.
 
-Underfull \hbox (badness 832) in paragraph at lines 76--78
+[98]) (./Iir_8h_source.tex [99]) (./Biquad_8h_source.tex [100])
+(./Butterworth_8h_source.tex [101] [102] [103] [104]) (./Cascade_8h_source.tex
+[105]) (./ChebyshevI_8h_source.tex [106] [107] [108] [109] [110] [111])
+(./ChebyshevII_8h_source.tex [112] [113] [114] [115] [116])
+(./Common_8h_source.tex) (./Custom_8h_source.tex [117]) (./Layout_8h_source.tex
+[118] [119]) (./MathSupplement_8h_source.tex [120]) (./PoleFilter_8h_source.tex
+[121] [122]) (./RBJ_8h_source.tex [123]) (./State_8h_source.tex [124] [125])
+(./Types_8h_source.tex [126]) [127] [128
+
+] (./refman.ind
+Underfull \hbox (badness 832) in paragraph at lines 93--95
 []\T1/phv/m/n/10 Iir::Butterworth::HighPass$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 
 Fil-terOrder, State-Type $\OML/cmm/m/it/10 >$\T1/phv/m/n/10 ,
  []
 
-[85
-
+[129
 
 ]
-Underfull \hbox (badness 963) in paragraph at lines 141--143
+Underfull \hbox (badness 963) in paragraph at lines 158--160
 []\T1/phv/m/n/10 Iir::ChebyshevI::LowShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 F
 il-terOrder, State-Type $\OML/cmm/m/it/10 >$\T1/phv/m/n/10 ,
  []
 
-[86]
-Underfull \hbox (badness 7869) in paragraph at lines 284--286
+[130]
+Underfull \hbox (badness 7869) in paragraph at lines 301--303
 []| \T1/phv/m/n/10 Iir::ChebyshevI::BandShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/1
 0 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 5475) in paragraph at lines 296--298
+Underfull \hbox (badness 5475) in paragraph at lines 313--315
 []| \T1/phv/m/n/10 Iir::ChebyshevII::BandPass$\OML/cmm/m/it/10 <$ \T1/phv/m/n/1
 0 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 298--300
+Underfull \hbox (badness 4429) in paragraph at lines 315--317
 []| \T1/phv/m/n/10 Iir::ChebyshevII::BandShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/
 10 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 7064) in paragraph at lines 300--302
+Underfull \hbox (badness 7064) in paragraph at lines 317--319
 []| \T1/phv/m/n/10 Iir::ChebyshevII::BandStop$\OML/cmm/m/it/10 <$ \T1/phv/m/n/1
 0 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 304--306
+Underfull \hbox (badness 7869) in paragraph at lines 321--323
 []| \T1/phv/m/n/10 Iir::ChebyshevII::HighShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/
 10 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 339--341
+Underfull \hbox (badness 7869) in paragraph at lines 356--358
 []| \T1/phv/m/n/10 Iir::ChebyshevI::BandShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/1
 0 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 5475) in paragraph at lines 351--353
+Underfull \hbox (badness 5475) in paragraph at lines 368--370
 []| \T1/phv/m/n/10 Iir::ChebyshevII::BandPass$\OML/cmm/m/it/10 <$ \T1/phv/m/n/1
 0 Fil-terOrder, State-
  []
 
-
-Underfull \hbox (badness 4429) in paragraph at lines 353--355
+[131]
+Underfull \hbox (badness 4429) in paragraph at lines 370--372
 []| \T1/phv/m/n/10 Iir::ChebyshevII::BandShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/
 10 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 7064) in paragraph at lines 355--357
+Underfull \hbox (badness 7064) in paragraph at lines 372--374
 []| \T1/phv/m/n/10 Iir::ChebyshevII::BandStop$\OML/cmm/m/it/10 <$ \T1/phv/m/n/1
 0 Fil-terOrder, State-
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 359--361
+Underfull \hbox (badness 7869) in paragraph at lines 376--378
 []| \T1/phv/m/n/10 Iir::ChebyshevII::HighShelf$\OML/cmm/m/it/10 <$ \T1/phv/m/n/
 10 Fil-terOrder, State-
  []
 
-[87] [88
+[132
 
 ]) (./refman.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 032B9DE7BEE49BA3093B71B473E36996;54558.
+(rerunfilecheck)             Checksum: F2D2C4AEA9F5D719B499CB55B8F788B1;56783.
  ) 
 Here is how much of TeX's memory you used:
- 19584 strings out of 478287
- 351528 string characters out of 5849288
- 701971 words of memory out of 5000000
- 36332 multiletter control sequences out of 15000+600000
- 523909 words of font info for 102 fonts, out of 8000000 for 9000
+ 20646 strings out of 474222
+ 374140 string characters out of 5748733
+ 1957975 words of memory out of 5000000
+ 41276 multiletter control sequences out of 15000+600000
+ 609807 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,117p,734b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{State_8h_source} has been referenced but does not
- exist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
-ic/uhvro8a.pfb>
-Output written on refman.pdf (93 pages, 668651 bytes).
+ 101i,16n,117p,730b,752s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cou
+rier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (138 pages, 788662 bytes).
 PDF statistics:
- 3739 PDF objects out of 4296 (max. 8388607)
- 3350 compressed objects within 34 object streams
- 946 named destinations out of 1000 (max. 500000)
- 1929 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5168 PDF objects out of 6186 (max. 8388607)
+ 4720 compressed objects within 48 object streams
+ 1089 named destinations out of 1200 (max. 500000)
+ 2065 words of extra memory for PDF output out of 10000 (max. 10000000)
 

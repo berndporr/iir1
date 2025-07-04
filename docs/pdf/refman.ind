@@ -1,379 +1,396 @@
 \begin{theindex}
 
   \item {applyScale}
-    \subitem {Iir::Biquad}, \hyperpage{41}
+    \subitem {Iir::Biquad}, \hyperpage{46}
+
+  \indexspace
+
+  \item {DSP IIR Realtime C++ filter library}, \hyperpage{1}
 
   \indexspace
 
   \item {filter}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
     \subitem {Iir::CascadeStages$<$ MaxStages, StateType $>$}, 
-		\hyperpage{45}
+		\hyperpage{51}
 
   \indexspace
 
   \item {getA0}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
   \item {getA1}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
   \item {getA2}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
   \item {getB0}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
   \item {getB1}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
   \item {getB2}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{47}
   \item {getCascadeStorage}
     \subitem {Iir::CascadeStages$<$ MaxStages, StateType $>$}, 
-		\hyperpage{46}
+		\hyperpage{51}
   \item {getNumStages}
-    \subitem {Iir::Cascade}, \hyperpage{44}
+    \subitem {Iir::Cascade}, \hyperpage{50}
   \item {getPoleZeros}
-    \subitem {Iir::Biquad}, \hyperpage{42}
-    \subitem {Iir::Cascade}, \hyperpage{44}
+    \subitem {Iir::Biquad}, \hyperpage{47}
+    \subitem {Iir::Cascade}, \hyperpage{50}
 
   \indexspace
 
   \item {Iir}, \hyperpage{8}
-  \item {Iir::BandPassTransform}, \hyperpage{24}
-  \item {Iir::BandStopTransform}, \hyperpage{40}
-  \item {Iir::Biquad}, \hyperpage{40}
-    \subitem {applyScale}, \hyperpage{41}
-    \subitem {filter}, \hyperpage{42}
-    \subitem {getA0}, \hyperpage{42}
-    \subitem {getA1}, \hyperpage{42}
-    \subitem {getA2}, \hyperpage{42}
-    \subitem {getB0}, \hyperpage{42}
-    \subitem {getB1}, \hyperpage{42}
-    \subitem {getB2}, \hyperpage{42}
-    \subitem {getPoleZeros}, \hyperpage{42}
-    \subitem {response}, \hyperpage{42}
-    \subitem {setCoefficients}, \hyperpage{42}
-    \subitem {setIdentity}, \hyperpage{43}
-    \subitem {setOnePole}, \hyperpage{43}
-    \subitem {setPoleZeroPair}, \hyperpage{43}
-    \subitem {setTwoPole}, \hyperpage{43}
-  \item {Iir::BiquadPoleState}, \hyperpage{43}
-  \item {Iir::Butterworth}, \hyperpage{10}
-  \item {Iir::Butterworth::AnalogLowPass}, \hyperpage{13}
-  \item {Iir::Butterworth::AnalogLowShelf}, \hyperpage{14}
+  \item {iir/Biquad.h}, \hyperpage{100}
+  \item {iir/Butterworth.h}, \hyperpage{101}
+  \item {iir/Cascade.h}, \hyperpage{105}
+  \item {iir/ChebyshevI.h}, \hyperpage{106}
+  \item {iir/ChebyshevII.h}, \hyperpage{112}
+  \item {iir/Common.h}, \hyperpage{117}
+  \item {iir/Custom.h}, \hyperpage{118}
+  \item {iir/Layout.h}, \hyperpage{118}
+  \item {iir/MathSupplement.h}, \hyperpage{120}
+  \item {iir/PoleFilter.h}, \hyperpage{121}
+  \item {iir/RBJ.h}, \hyperpage{123}
+  \item {iir/State.h}, \hyperpage{125}
+  \item {iir/Types.h}, \hyperpage{126}
+  \item {Iir::BandPassTransform}, \hyperpage{26}
+  \item {Iir::BandStopTransform}, \hyperpage{45}
+  \item {Iir::Biquad}, \hyperpage{45}
+    \subitem {applyScale}, \hyperpage{46}
+    \subitem {filter}, \hyperpage{47}
+    \subitem {getA0}, \hyperpage{47}
+    \subitem {getA1}, \hyperpage{47}
+    \subitem {getA2}, \hyperpage{47}
+    \subitem {getB0}, \hyperpage{47}
+    \subitem {getB1}, \hyperpage{47}
+    \subitem {getB2}, \hyperpage{47}
+    \subitem {getPoleZeros}, \hyperpage{47}
+    \subitem {response}, \hyperpage{47}
+    \subitem {setCoefficients}, \hyperpage{48}
+    \subitem {setIdentity}, \hyperpage{48}
+    \subitem {setOnePole}, \hyperpage{48}
+    \subitem {setPoleZeroPair}, \hyperpage{48}
+    \subitem {setTwoPole}, \hyperpage{48}
+  \item {Iir::BiquadPoleState}, \hyperpage{49}
+  \item {Iir::Butterworth}, \hyperpage{11}
+  \item {Iir::Butterworth::AnalogLowPass}, \hyperpage{14}
+  \item {Iir::Butterworth::AnalogLowShelf}, \hyperpage{15}
   \item {Iir::Butterworth::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{15}
-    \subitem {setup}, \hyperpage{15, 16}
-    \subitem {setupN}, \hyperpage{16}
-  \item {Iir::Butterworth::BandPassBase}, \hyperpage{22}
+		\hyperpage{16}
+    \subitem {setup}, \hyperpage{16, 17}
+    \subitem {setupN}, \hyperpage{17}
+  \item {Iir::Butterworth::BandPassBase}, \hyperpage{25}
   \item {Iir::Butterworth::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{24}
-    \subitem {setup}, \hyperpage{24, 25}
-    \subitem {setupN}, \hyperpage{25}
-  \item {Iir::Butterworth::BandShelfBase}, \hyperpage{31}
+		\hyperpage{26}
+    \subitem {setup}, \hyperpage{27}
+    \subitem {setupN}, \hyperpage{28}
+  \item {Iir::Butterworth::BandShelfBase}, \hyperpage{35}
   \item {Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{32}
-    \subitem {setup}, \hyperpage{33}
-    \subitem {setupN}, \hyperpage{33, 34}
-  \item {Iir::Butterworth::BandStopBase}, \hyperpage{39}
+		\hyperpage{36}
+    \subitem {setup}, \hyperpage{37}
+    \subitem {setupN}, \hyperpage{37, 38}
+  \item {Iir::Butterworth::BandStopBase}, \hyperpage{44}
   \item {Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{47}
-    \subitem {setup}, \hyperpage{48}
-    \subitem {setupN}, \hyperpage{48}
-  \item {Iir::Butterworth::HighPassBase}, \hyperpage{53}
+		\hyperpage{53}
+    \subitem {setup}, \hyperpage{54}
+    \subitem {setupN}, \hyperpage{54}
+  \item {Iir::Butterworth::HighPassBase}, \hyperpage{60}
   \item {Iir::Butterworth::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{54}
-    \subitem {setup}, \hyperpage{55}
-    \subitem {setupN}, \hyperpage{56}
-  \item {Iir::Butterworth::HighShelfBase}, \hyperpage{61}
+		\hyperpage{62}
+    \subitem {setup}, \hyperpage{62, 63}
+    \subitem {setupN}, \hyperpage{63}
+  \item {Iir::Butterworth::HighShelfBase}, \hyperpage{69}
   \item {Iir::Butterworth::LowPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{73}
+    \subitem {setup}, \hyperpage{73, 74}
+    \subitem {setupN}, \hyperpage{74}
+  \item {Iir::Butterworth::LowPassBase}, \hyperpage{80}
+  \item {Iir::Butterworth::LowShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{82}
+    \subitem {setup}, \hyperpage{82, 83}
+    \subitem {setupN}, \hyperpage{83}
+  \item {Iir::Butterworth::LowShelfBase}, \hyperpage{89}
+  \item {Iir::Cascade}, \hyperpage{49}
+    \subitem {getNumStages}, \hyperpage{50}
+    \subitem {getPoleZeros}, \hyperpage{50}
+    \subitem {operator[]}, \hyperpage{50}
+    \subitem {response}, \hyperpage{50}
+  \item {Iir::Cascade::Storage}, \hyperpage{98}
+  \item {Iir::CascadeStages$<$ MaxStages, StateType $>$}, 
+		\hyperpage{50}
+    \subitem {filter}, \hyperpage{51}
+    \subitem {getCascadeStorage}, \hyperpage{51}
+    \subitem {reset}, \hyperpage{51}
+    \subitem {setup}, \hyperpage{52}
+  \item {Iir::ChebyshevI}, \hyperpage{11}
+  \item {Iir::ChebyshevI::AnalogLowPass}, \hyperpage{14}
+  \item {Iir::ChebyshevI::AnalogLowShelf}, \hyperpage{15}
+  \item {Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{18}
+    \subitem {setup}, \hyperpage{18, 19}
+    \subitem {setupN}, \hyperpage{19}
+  \item {Iir::ChebyshevI::BandPassBase}, \hyperpage{25}
+  \item {Iir::ChebyshevI::BandShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{28}
+    \subitem {setup}, \hyperpage{29, 30}
+    \subitem {setupN}, \hyperpage{30}
+  \item {Iir::ChebyshevI::BandShelfBase}, \hyperpage{35}
+  \item {Iir::ChebyshevI::BandStop$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{38}
+    \subitem {setup}, \hyperpage{39}
+    \subitem {setupN}, \hyperpage{39, 40}
+  \item {Iir::ChebyshevI::BandStopBase}, \hyperpage{44}
+  \item {Iir::ChebyshevI::HighPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{55}
+    \subitem {setup}, \hyperpage{55, 56}
+    \subitem {setupN}, \hyperpage{56}
+  \item {Iir::ChebyshevI::HighPassBase}, \hyperpage{60}
+  \item {Iir::ChebyshevI::HighShelf$<$ FilterOrder, StateType $>$}, 
 		\hyperpage{64}
     \subitem {setup}, \hyperpage{64, 65}
     \subitem {setupN}, \hyperpage{65}
-  \item {Iir::Butterworth::LowPassBase}, \hyperpage{70}
-  \item {Iir::Butterworth::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{71}
-    \subitem {setup}, \hyperpage{72}
-    \subitem {setupN}, \hyperpage{72, 73}
-  \item {Iir::Butterworth::LowShelfBase}, \hyperpage{78}
-  \item {Iir::Cascade}, \hyperpage{44}
-    \subitem {getNumStages}, \hyperpage{44}
-    \subitem {getPoleZeros}, \hyperpage{44}
-    \subitem {operator[]}, \hyperpage{45}
-    \subitem {response}, \hyperpage{45}
-  \item {Iir::Cascade::Storage}, \hyperpage{84}
-  \item {Iir::CascadeStages$<$ MaxStages, StateType $>$}, 
-		\hyperpage{45}
-    \subitem {filter}, \hyperpage{45}
-    \subitem {getCascadeStorage}, \hyperpage{46}
-    \subitem {reset}, \hyperpage{46}
-    \subitem {setup}, \hyperpage{46}
-  \item {Iir::ChebyshevI}, \hyperpage{11}
-  \item {Iir::ChebyshevI::AnalogLowPass}, \hyperpage{13}
-  \item {Iir::ChebyshevI::AnalogLowShelf}, \hyperpage{14}
-  \item {Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{17}
-    \subitem {setup}, \hyperpage{17}
-    \subitem {setupN}, \hyperpage{18}
-  \item {Iir::ChebyshevI::BandPassBase}, \hyperpage{23}
-  \item {Iir::ChebyshevI::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{26}
-    \subitem {setup}, \hyperpage{26, 27}
-    \subitem {setupN}, \hyperpage{27}
-  \item {Iir::ChebyshevI::BandShelfBase}, \hyperpage{31}
-  \item {Iir::ChebyshevI::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{34}
-    \subitem {setup}, \hyperpage{34, 35}
-    \subitem {setupN}, \hyperpage{35}
-  \item {Iir::ChebyshevI::BandStopBase}, \hyperpage{39}
-  \item {Iir::ChebyshevI::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{49}
-    \subitem {setup}, \hyperpage{49}
-    \subitem {setupN}, \hyperpage{50}
-  \item {Iir::ChebyshevI::HighPassBase}, \hyperpage{53}
-  \item {Iir::ChebyshevI::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{56}
-    \subitem {setup}, \hyperpage{57}
-    \subitem {setupN}, \hyperpage{57, 58}
-  \item {Iir::ChebyshevI::HighShelfBase}, \hyperpage{61}
+  \item {Iir::ChebyshevI::HighShelfBase}, \hyperpage{70}
   \item {Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{65}
-    \subitem {setup}, \hyperpage{66}
-    \subitem {setupN}, \hyperpage{66, 67}
-  \item {Iir::ChebyshevI::LowPassBase}, \hyperpage{70}
+		\hyperpage{74}
+    \subitem {setup}, \hyperpage{75}
+    \subitem {setupN}, \hyperpage{76}
+  \item {Iir::ChebyshevI::LowPassBase}, \hyperpage{80}
   \item {Iir::ChebyshevI::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{73}
-    \subitem {setup}, \hyperpage{74}
-    \subitem {setupN}, \hyperpage{74}
-  \item {Iir::ChebyshevI::LowShelfBase}, \hyperpage{78}
-  \item {Iir::ChebyshevII}, \hyperpage{11}
+		\hyperpage{84}
+    \subitem {setup}, \hyperpage{84, 85}
+    \subitem {setupN}, \hyperpage{85}
+  \item {Iir::ChebyshevI::LowShelfBase}, \hyperpage{90}
+  \item {Iir::ChebyshevII}, \hyperpage{12}
   \item {Iir::ChebyshevII::AnalogLowPass}, \hyperpage{14}
   \item {Iir::ChebyshevII::AnalogLowShelf}, \hyperpage{15}
   \item {Iir::ChebyshevII::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{18}
-    \subitem {setup}, \hyperpage{19}
-    \subitem {setupN}, \hyperpage{20}
-  \item {Iir::ChebyshevII::BandPassBase}, \hyperpage{23}
-  \item {Iir::ChebyshevII::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{28}
-    \subitem {setup}, \hyperpage{28, 29}
-    \subitem {setupN}, \hyperpage{29, 30}
-  \item {Iir::ChebyshevII::BandShelfBase}, \hyperpage{32}
-  \item {Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{36}
-    \subitem {setup}, \hyperpage{36, 37}
-    \subitem {setupN}, \hyperpage{37}
-  \item {Iir::ChebyshevII::BandStopBase}, \hyperpage{40}
-  \item {Iir::ChebyshevII::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{50}
-    \subitem {setup}, \hyperpage{51}
-    \subitem {setupN}, \hyperpage{51, 52}
-  \item {Iir::ChebyshevII::HighPassBase}, \hyperpage{54}
-  \item {Iir::ChebyshevII::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{58}
-    \subitem {setup}, \hyperpage{59}
-    \subitem {setupN}, \hyperpage{59, 60}
-  \item {Iir::ChebyshevII::HighShelfBase}, \hyperpage{62}
-  \item {Iir::ChebyshevII::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{67}
-    \subitem {setup}, \hyperpage{68}
-    \subitem {setupN}, \hyperpage{68}
-  \item {Iir::ChebyshevII::LowPassBase}, \hyperpage{71}
-  \item {Iir::ChebyshevII::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{75}
-    \subitem {setup}, \hyperpage{75, 76}
-    \subitem {setupN}, \hyperpage{76}
-  \item {Iir::ChebyshevII::LowShelfBase}, \hyperpage{79}
-  \item {Iir::ComplexPair}, \hyperpage{46}
-    \subitem {isMatchedPair}, \hyperpage{46}
-  \item {Iir::Custom}, \hyperpage{12}
-  \item {Iir::Custom::OnePole}, \hyperpage{79}
-  \item {Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}, 
-		\hyperpage{82}
-    \subitem {setup}, \hyperpage{83}
-    \subitem {SOSCascade}, \hyperpage{83}
-  \item {Iir::Custom::TwoPole}, \hyperpage{84}
-  \item {Iir::DirectFormI}, \hyperpage{47}
-  \item {Iir::DirectFormII}, \hyperpage{47}
-  \item {Iir::HighPassTransform}, \hyperpage{54}
-  \item {Iir::Layout$<$ MaxPoles $>$}, \hyperpage{63}
-  \item {Iir::LayoutBase}, \hyperpage{63}
-  \item {Iir::LowPassTransform}, \hyperpage{71}
-  \item {Iir::PoleFilter$<$ BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles $>$}, 
-		\hyperpage{79}
-  \item {Iir::PoleFilterBase$<$ AnalogPrototype $>$}, \hyperpage{80}
-  \item {Iir::PoleFilterBase2}, \hyperpage{80}
-  \item {Iir::PoleZeroPair}, \hyperpage{81}
-  \item {Iir::RBJ::AllPass}, \hyperpage{12}
-    \subitem {setup}, \hyperpage{12}
-    \subitem {setupN}, \hyperpage{13}
-  \item {Iir::RBJ::BandPass1}, \hyperpage{20}
-    \subitem {setup}, \hyperpage{21}
+		\hyperpage{20}
+    \subitem {setup}, \hyperpage{20, 21}
     \subitem {setupN}, \hyperpage{21}
-  \item {Iir::RBJ::BandPass2}, \hyperpage{21}
-    \subitem {setup}, \hyperpage{22}
-    \subitem {setupN}, \hyperpage{22}
-  \item {Iir::RBJ::BandShelf}, \hyperpage{30}
-    \subitem {setup}, \hyperpage{30}
-    \subitem {setupN}, \hyperpage{31}
-  \item {Iir::RBJ::BandStop}, \hyperpage{38}
-    \subitem {setup}, \hyperpage{38}
-    \subitem {setupN}, \hyperpage{38}
-  \item {Iir::RBJ::HighPass}, \hyperpage{52}
-    \subitem {setup}, \hyperpage{52}
-    \subitem {setupN}, \hyperpage{53}
-  \item {Iir::RBJ::HighShelf}, \hyperpage{60}
-    \subitem {setup}, \hyperpage{60}
-    \subitem {setupN}, \hyperpage{61}
-  \item {Iir::RBJ::IIRNotch}, \hyperpage{62}
-    \subitem {setup}, \hyperpage{63}
-    \subitem {setupN}, \hyperpage{63}
-  \item {Iir::RBJ::LowPass}, \hyperpage{69}
+  \item {Iir::ChebyshevII::BandPassBase}, \hyperpage{26}
+  \item {Iir::ChebyshevII::BandShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{31}
+    \subitem {setup}, \hyperpage{31, 32}
+    \subitem {setupN}, \hyperpage{32}
+  \item {Iir::ChebyshevII::BandShelfBase}, \hyperpage{36}
+  \item {Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{40}
+    \subitem {setup}, \hyperpage{41}
+    \subitem {setupN}, \hyperpage{41, 42}
+  \item {Iir::ChebyshevII::BandStopBase}, \hyperpage{45}
+  \item {Iir::ChebyshevII::HighPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{56}
+    \subitem {setup}, \hyperpage{57}
+    \subitem {setupN}, \hyperpage{58}
+  \item {Iir::ChebyshevII::HighPassBase}, \hyperpage{61}
+  \item {Iir::ChebyshevII::HighShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{66}
+    \subitem {setup}, \hyperpage{66, 67}
+    \subitem {setupN}, \hyperpage{67}
+  \item {Iir::ChebyshevII::HighShelfBase}, \hyperpage{70}
+  \item {Iir::ChebyshevII::LowPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{76}
+    \subitem {setup}, \hyperpage{77}
+    \subitem {setupN}, \hyperpage{78}
+  \item {Iir::ChebyshevII::LowPassBase}, \hyperpage{81}
+  \item {Iir::ChebyshevII::LowShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{86}
+    \subitem {setup}, \hyperpage{86, 87}
+    \subitem {setupN}, \hyperpage{87}
+  \item {Iir::ChebyshevII::LowShelfBase}, \hyperpage{90}
+  \item {Iir::ComplexPair}, \hyperpage{52}
+    \subitem {isMatchedPair}, \hyperpage{52}
+  \item {Iir::Custom}, \hyperpage{12}
+  \item {Iir::Custom::OnePole}, \hyperpage{91}
+  \item {Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}, 
+		\hyperpage{97}
+    \subitem {setup}, \hyperpage{98}
+    \subitem {SOSCascade}, \hyperpage{97, 98}
+  \item {Iir::Custom::TwoPole}, \hyperpage{98}
+  \item {Iir::DirectFormI}, \hyperpage{52}
+  \item {Iir::DirectFormII}, \hyperpage{53}
+  \item {Iir::HighPassTransform}, \hyperpage{61}
+  \item {Iir::Layout$<$ MaxPoles $>$}, \hyperpage{72}
+  \item {Iir::LayoutBase}, \hyperpage{72}
+  \item {Iir::LowPassTransform}, \hyperpage{81}
+  \item {Iir::PoleFilter$<$ BaseClass, StateType, MaxAnalogPoles, MaxDigitalPoles $>$}, 
+		\hyperpage{93}
+  \item {Iir::PoleFilterBase$<$ AnalogPrototype $>$}, \hyperpage{94}
+  \item {Iir::PoleFilterBase2}, \hyperpage{94}
+  \item {Iir::PoleZeroPair}, \hyperpage{95}
+  \item {Iir::RBJ::AllPass}, \hyperpage{12}
+    \subitem {setup}, \hyperpage{13}
+    \subitem {setupN}, \hyperpage{13}
+  \item {Iir::RBJ::BandPass1}, \hyperpage{22}
+    \subitem {setup}, \hyperpage{23}
+    \subitem {setupN}, \hyperpage{23}
+  \item {Iir::RBJ::BandPass2}, \hyperpage{23}
+    \subitem {setup}, \hyperpage{24}
+    \subitem {setupN}, \hyperpage{24}
+  \item {Iir::RBJ::BandShelf}, \hyperpage{33}
+    \subitem {setup}, \hyperpage{34}
+    \subitem {setupN}, \hyperpage{34}
+  \item {Iir::RBJ::BandStop}, \hyperpage{42}
+    \subitem {setup}, \hyperpage{43}
+    \subitem {setupN}, \hyperpage{43}
+  \item {Iir::RBJ::HighPass}, \hyperpage{58}
+    \subitem {setup}, \hyperpage{59}
+    \subitem {setupN}, \hyperpage{60}
+  \item {Iir::RBJ::HighShelf}, \hyperpage{68}
     \subitem {setup}, \hyperpage{69}
     \subitem {setupN}, \hyperpage{69}
-  \item {Iir::RBJ::LowShelf}, \hyperpage{77}
-    \subitem {setup}, \hyperpage{77}
-    \subitem {setupN}, \hyperpage{77}
-  \item {Iir::RBJ::RBJbase}, \hyperpage{81}
-  \item {Iir::TransposedDirectFormII}, \hyperpage{84}
+  \item {Iir::RBJ::IIRNotch}, \hyperpage{71}
+    \subitem {setup}, \hyperpage{72}
+    \subitem {setupN}, \hyperpage{72}
+  \item {Iir::RBJ::LowPass}, \hyperpage{78}
+    \subitem {setup}, \hyperpage{79}
+    \subitem {setupN}, \hyperpage{80}
+  \item {Iir::RBJ::LowShelf}, \hyperpage{88}
+    \subitem {setup}, \hyperpage{89}
+    \subitem {setupN}, \hyperpage{89}
+  \item {Iir::RBJ::RBJbase}, \hyperpage{96}
+  \item {Iir::TransposedDirectFormII}, \hyperpage{98}
   \item {isMatchedPair}
-    \subitem {Iir::ComplexPair}, \hyperpage{46}
+    \subitem {Iir::ComplexPair}, \hyperpage{52}
 
   \indexspace
 
   \item {operator[]}
-    \subitem {Iir::Cascade}, \hyperpage{45}
+    \subitem {Iir::Cascade}, \hyperpage{50}
 
   \indexspace
 
   \item {reset}
     \subitem {Iir::CascadeStages$<$ MaxStages, StateType $>$}, 
-		\hyperpage{46}
+		\hyperpage{51}
   \item {response}
-    \subitem {Iir::Biquad}, \hyperpage{42}
-    \subitem {Iir::Cascade}, \hyperpage{45}
+    \subitem {Iir::Biquad}, \hyperpage{47}
+    \subitem {Iir::Cascade}, \hyperpage{50}
 
   \indexspace
 
   \item {setCoefficients}
-    \subitem {Iir::Biquad}, \hyperpage{42}
+    \subitem {Iir::Biquad}, \hyperpage{48}
   \item {setIdentity}
-    \subitem {Iir::Biquad}, \hyperpage{43}
+    \subitem {Iir::Biquad}, \hyperpage{48}
   \item {setOnePole}
-    \subitem {Iir::Biquad}, \hyperpage{43}
+    \subitem {Iir::Biquad}, \hyperpage{48}
   \item {setPoleZeroPair}
-    \subitem {Iir::Biquad}, \hyperpage{43}
+    \subitem {Iir::Biquad}, \hyperpage{48}
   \item {setTwoPole}
-    \subitem {Iir::Biquad}, \hyperpage{43}
+    \subitem {Iir::Biquad}, \hyperpage{48}
   \item {setup}
     \subitem {Iir::Butterworth::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{15, 16}
+		\hyperpage{16, 17}
     \subitem {Iir::Butterworth::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{24, 25}
+		\hyperpage{27}
     \subitem {Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{33}
+		\hyperpage{37}
     \subitem {Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{48}
+		\hyperpage{54}
     \subitem {Iir::Butterworth::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{55}
+		\hyperpage{62, 63}
     \subitem {Iir::Butterworth::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{64, 65}
+		\hyperpage{73, 74}
     \subitem {Iir::Butterworth::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{72}
+		\hyperpage{82, 83}
     \subitem {Iir::CascadeStages$<$ MaxStages, StateType $>$}, 
-		\hyperpage{46}
+		\hyperpage{52}
     \subitem {Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{17}
+		\hyperpage{18, 19}
     \subitem {Iir::ChebyshevI::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{26, 27}
+		\hyperpage{29, 30}
     \subitem {Iir::ChebyshevI::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{34, 35}
+		\hyperpage{39}
     \subitem {Iir::ChebyshevI::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{49}
+		\hyperpage{55, 56}
     \subitem {Iir::ChebyshevI::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{57}
+		\hyperpage{64, 65}
     \subitem {Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{66}
+		\hyperpage{75}
     \subitem {Iir::ChebyshevI::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{74}
+		\hyperpage{84, 85}
     \subitem {Iir::ChebyshevII::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{19}
+		\hyperpage{20, 21}
     \subitem {Iir::ChebyshevII::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{28, 29}
+		\hyperpage{31, 32}
     \subitem {Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{36, 37}
+		\hyperpage{41}
     \subitem {Iir::ChebyshevII::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{51}
+		\hyperpage{57}
     \subitem {Iir::ChebyshevII::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{59}
+		\hyperpage{66, 67}
     \subitem {Iir::ChebyshevII::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{68}
+		\hyperpage{77}
     \subitem {Iir::ChebyshevII::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{75, 76}
+		\hyperpage{86, 87}
     \subitem {Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}, 
-		\hyperpage{83}
-    \subitem {Iir::RBJ::AllPass}, \hyperpage{12}
-    \subitem {Iir::RBJ::BandPass1}, \hyperpage{21}
-    \subitem {Iir::RBJ::BandPass2}, \hyperpage{22}
-    \subitem {Iir::RBJ::BandShelf}, \hyperpage{30}
-    \subitem {Iir::RBJ::BandStop}, \hyperpage{38}
-    \subitem {Iir::RBJ::HighPass}, \hyperpage{52}
-    \subitem {Iir::RBJ::HighShelf}, \hyperpage{60}
-    \subitem {Iir::RBJ::IIRNotch}, \hyperpage{63}
-    \subitem {Iir::RBJ::LowPass}, \hyperpage{69}
-    \subitem {Iir::RBJ::LowShelf}, \hyperpage{77}
+		\hyperpage{98}
+    \subitem {Iir::RBJ::AllPass}, \hyperpage{13}
+    \subitem {Iir::RBJ::BandPass1}, \hyperpage{23}
+    \subitem {Iir::RBJ::BandPass2}, \hyperpage{24}
+    \subitem {Iir::RBJ::BandShelf}, \hyperpage{34}
+    \subitem {Iir::RBJ::BandStop}, \hyperpage{43}
+    \subitem {Iir::RBJ::HighPass}, \hyperpage{59}
+    \subitem {Iir::RBJ::HighShelf}, \hyperpage{69}
+    \subitem {Iir::RBJ::IIRNotch}, \hyperpage{72}
+    \subitem {Iir::RBJ::LowPass}, \hyperpage{79}
+    \subitem {Iir::RBJ::LowShelf}, \hyperpage{89}
   \item {setupN}
     \subitem {Iir::Butterworth::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{16}
+		\hyperpage{17}
     \subitem {Iir::Butterworth::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{25}
+		\hyperpage{28}
     \subitem {Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{33, 34}
+		\hyperpage{37, 38}
     \subitem {Iir::Butterworth::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{48}
+		\hyperpage{54}
     \subitem {Iir::Butterworth::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{56}
+		\hyperpage{63}
     \subitem {Iir::Butterworth::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{65}
-    \subitem {Iir::Butterworth::LowShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{72, 73}
-    \subitem {Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{18}
-    \subitem {Iir::ChebyshevI::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{27}
-    \subitem {Iir::ChebyshevI::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{35}
-    \subitem {Iir::ChebyshevI::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{50}
-    \subitem {Iir::ChebyshevI::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{57, 58}
-    \subitem {Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{66, 67}
-    \subitem {Iir::ChebyshevI::LowShelf$<$ FilterOrder, StateType $>$}, 
 		\hyperpage{74}
-    \subitem {Iir::ChebyshevII::BandPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{20}
-    \subitem {Iir::ChebyshevII::BandShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{29, 30}
-    \subitem {Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{37}
-    \subitem {Iir::ChebyshevII::HighPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{51, 52}
-    \subitem {Iir::ChebyshevII::HighShelf$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{59, 60}
-    \subitem {Iir::ChebyshevII::LowPass$<$ FilterOrder, StateType $>$}, 
-		\hyperpage{68}
-    \subitem {Iir::ChebyshevII::LowShelf$<$ FilterOrder, StateType $>$}, 
+    \subitem {Iir::Butterworth::LowShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{83}
+    \subitem {Iir::ChebyshevI::BandPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{19}
+    \subitem {Iir::ChebyshevI::BandShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{30}
+    \subitem {Iir::ChebyshevI::BandStop$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{39, 40}
+    \subitem {Iir::ChebyshevI::HighPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{56}
+    \subitem {Iir::ChebyshevI::HighShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{65}
+    \subitem {Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}, 
 		\hyperpage{76}
+    \subitem {Iir::ChebyshevI::LowShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{85}
+    \subitem {Iir::ChebyshevII::BandPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{21}
+    \subitem {Iir::ChebyshevII::BandShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{32}
+    \subitem {Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{41, 42}
+    \subitem {Iir::ChebyshevII::HighPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{58}
+    \subitem {Iir::ChebyshevII::HighShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{67}
+    \subitem {Iir::ChebyshevII::LowPass$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{78}
+    \subitem {Iir::ChebyshevII::LowShelf$<$ FilterOrder, StateType $>$}, 
+		\hyperpage{87}
     \subitem {Iir::RBJ::AllPass}, \hyperpage{13}
-    \subitem {Iir::RBJ::BandPass1}, \hyperpage{21}
-    \subitem {Iir::RBJ::BandPass2}, \hyperpage{22}
-    \subitem {Iir::RBJ::BandShelf}, \hyperpage{31}
-    \subitem {Iir::RBJ::BandStop}, \hyperpage{38}
-    \subitem {Iir::RBJ::HighPass}, \hyperpage{53}
-    \subitem {Iir::RBJ::HighShelf}, \hyperpage{61}
-    \subitem {Iir::RBJ::IIRNotch}, \hyperpage{63}
-    \subitem {Iir::RBJ::LowPass}, \hyperpage{69}
-    \subitem {Iir::RBJ::LowShelf}, \hyperpage{77}
+    \subitem {Iir::RBJ::BandPass1}, \hyperpage{23}
+    \subitem {Iir::RBJ::BandPass2}, \hyperpage{24}
+    \subitem {Iir::RBJ::BandShelf}, \hyperpage{34}
+    \subitem {Iir::RBJ::BandStop}, \hyperpage{43}
+    \subitem {Iir::RBJ::HighPass}, \hyperpage{60}
+    \subitem {Iir::RBJ::HighShelf}, \hyperpage{69}
+    \subitem {Iir::RBJ::IIRNotch}, \hyperpage{72}
+    \subitem {Iir::RBJ::LowPass}, \hyperpage{80}
+    \subitem {Iir::RBJ::LowShelf}, \hyperpage{89}
   \item {SOSCascade}
     \subitem {Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}, 
-		\hyperpage{83}
+		\hyperpage{97, 98}
 
 \end{theindex}

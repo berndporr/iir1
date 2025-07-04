@@ -1,16 +1,16 @@
-\hypertarget{structIir_1_1Custom_1_1SOSCascade}{}\doxysubsection{Iir\+::Custom\+::SOSCascade$<$ NSOS, State\+Type $>$ Struct Template Reference}
-\label{structIir_1_1Custom_1_1SOSCascade}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
+\doxysubsection{Iir\+::Custom\+::SOSCascade\texorpdfstring{$<$}{<} NSOS, State\+Type \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structIir_1_1Custom_1_1SOSCascade}{}\label{structIir_1_1Custom_1_1SOSCascade}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
 
 
 {\ttfamily \#include $<$Custom.\+h$>$}
 
-Inheritance diagram for Iir\+::Custom\+::SOSCascade$<$ NSOS, State\+Type $>$\+:\begin{figure}[H]
+Inheritance diagram for Iir\+::Custom\+::SOSCascade\texorpdfstring{$<$}{<} NSOS, State\+Type \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{structIir_1_1Custom_1_1SOSCascade}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}{SOSCascade}} ()=default
@@ -19,37 +19,47 @@ Inheritance diagram for Iir\+::Custom\+::SOSCascade$<$ NSOS, State\+Type $>$\+:\
 \item 
 void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup}} (const double(\&sos\+Coefficients)\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]})
 \end{DoxyCompactItemize}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
+\item 
+void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
+\item 
+{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+\item 
+const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$int NSOS, class State\+Type = Direct\+Form\+II$>$\newline
 struct Iir\+::\+Custom\+::\+SOSCascade$<$ NSOS, State\+Type $>$}
-
 A custom cascade of 2nd order (SOS / biquads) filters. 
 \begin{DoxyParams}{Parameters}
 {\em NSOS} & The number of 2nd order filters / biquads. \\
 \hline
-{\em State\+Type} & The filter topology\+: \mbox{\hyperlink{classIir_1_1DirectFormI}{Direct\+FormI}}, \mbox{\hyperlink{classIir_1_1DirectFormII}{Direct\+Form\+II}}, ... \\
+{\em State\+Type} & The filter topology\+: \doxylink{classIir_1_1DirectFormI}{Direct\+FormI}, \doxylink{classIir_1_1DirectFormII}{Direct\+Form\+II}, ... \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}\label{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}} 
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}\label{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63} 
 \index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
 \index{SOSCascade@{SOSCascade}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
 \doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$int NSOS, class State\+Type  = Direct\+Form\+II$>$ \\
-\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{SOSCascade}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-Default constructor which creates a unity gain filter of NSOS biquads. Set the filter coefficients later with the \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup()}} method. \mbox{\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}\label{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}} 
+Default constructor which creates a unity gain filter of NSOS biquads. Set the filter coefficients later with the \doxylink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup()} method. \Hypertarget{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}\label{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42} 
 \index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
 \index{SOSCascade@{SOSCascade}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
 \doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$int NSOS, class State\+Type  = Direct\+Form\+II$>$ \\
-\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{SOSCascade}} (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Python scipy.\+signal-\/friendly setting of coefficients. Initialises the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered \char`\"{}\+Python\char`\"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
+Python scipy.\+signal-\/friendly setting of coefficients. Initialises the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered "{}\+Python"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
 \begin{DoxyParams}{Parameters}
 {\em sos\+Coefficients} & 2D array Python style sos\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. Indexing\+: 0-\/2\+: FIR-\/, 3-\/5\+: IIR-\/coefficients. \\
 \hline
@@ -57,14 +67,14 @@ Python scipy.\+signal-\/friendly setting of coefficients. Initialises the coeffi
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}\label{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}} 
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}\label{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc} 
 \index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}}
 {\footnotesize\ttfamily template$<$int NSOS, class State\+Type  = Direct\+Form\+II$>$ \\
 void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Python scipy.\+signal-\/friendly setting of coefficients. Sets the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered \char`\"{}\+Python\char`\"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
+Python scipy.\+signal-\/friendly setting of coefficients. Sets the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered "{}\+Python"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
 \begin{DoxyParams}{Parameters}
 {\em sos\+Coefficients} & 2D array Python style sos\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. Indexing\+: 0-\/2\+: FIR-\/, 3-\/5\+: IIR-\/coefficients. \\
 \hline

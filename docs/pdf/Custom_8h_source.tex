@@ -1,0 +1,54 @@
+\doxysubsection{Custom.\+h}
+\hypertarget{Custom_8h_source}{}\label{Custom_8h_source}\index{iir/Custom.h@{iir/Custom.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_CUSTOM\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_CUSTOM\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Common.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}Biquad.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}PoleFilter.h"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}State.h"{}}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{namespace\ }Custom\ \{}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1OnePole}{OnePole}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{double}\ scale,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ pole,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zero);}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1TwoPole}{TwoPole}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{double}\ scale,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ poleRho,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ poleTheta,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zeroRho,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zeroTheta);}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ NSOS,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00090\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{SOSCascade}}\ :\ \mbox{\hyperlink{classIir_1_1CascadeStages}{CascadeStages}}<NSOS,StateType>}
+\DoxyCodeLine{00091\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}{SOSCascade}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}{SOSCascade}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ (\&sosCoefficients)[NSOS][6])\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,StateType>::setup}}(sosCoefficients);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ (\&sosCoefficients)[NSOS][6])\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,StateType>::setup}}(sosCoefficients);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

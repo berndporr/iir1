@@ -1,5 +1,5 @@
-\hypertarget{classIir_1_1Cascade}{}\doxysubsection{Iir\+::Cascade Class Reference}
-\label{classIir_1_1Cascade}\index{Iir::Cascade@{Iir::Cascade}}
+\doxysubsection{Iir\+::Cascade Class Reference}
+\hypertarget{classIir_1_1Cascade}{}\label{classIir_1_1Cascade}\index{Iir::Cascade@{Iir::Cascade}}
 
 
 {\ttfamily \#include $<$Cascade.\+h$>$}
@@ -10,17 +10,17 @@ Inheritance diagram for Iir\+::Cascade\+:\begin{figure}[H]
 \includegraphics[height=8.860760cm]{classIir_1_1Cascade}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Classes}
+\doxysubsubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Storage}}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classIir_1_1Cascade_a9694b85c160e3689a4d71fd51ca6175d}{get\+Num\+Stages}} () const
 \item 
-const \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}} \& \mbox{\hyperlink{classIir_1_1Cascade_afc58e4b464b2cdef11e77b01e1a80668}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+const \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}} \& \mbox{\hyperlink{classIir_1_1Cascade_a4c55fe6a33a7b4b229e259a5d60c306e}{operator\mbox{[}$\,$\mbox{]}}} (int index)
 \item 
 complex\+\_\+t \mbox{\hyperlink{classIir_1_1Cascade_aa76e09e3868829a80e954d0444390f90}{response}} (double normalized\+Frequency) const
 \item 
@@ -32,25 +32,25 @@ std\+::vector$<$ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{Pole\+Zero\+Pair}} 
 Holds coefficients for a cascade of second order sections. 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{classIir_1_1Cascade_a9694b85c160e3689a4d71fd51ca6175d}\label{classIir_1_1Cascade_a9694b85c160e3689a4d71fd51ca6175d}} 
+\Hypertarget{classIir_1_1Cascade_a9694b85c160e3689a4d71fd51ca6175d}\label{classIir_1_1Cascade_a9694b85c160e3689a4d71fd51ca6175d} 
 \index{Iir::Cascade@{Iir::Cascade}!getNumStages@{getNumStages}}
 \index{getNumStages@{getNumStages}!Iir::Cascade@{Iir::Cascade}}
 \doxyparagraph{\texorpdfstring{getNumStages()}{getNumStages()}}
 {\footnotesize\ttfamily int Iir\+::\+Cascade\+::get\+Num\+Stages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the number of Biquads kept here \mbox{\Hypertarget{classIir_1_1Cascade_a18df8bebec4a5e8e3ddc28c35b6bb2f8}\label{classIir_1_1Cascade_a18df8bebec4a5e8e3ddc28c35b6bb2f8}} 
+Returns the number of Biquads kept here \Hypertarget{classIir_1_1Cascade_a18df8bebec4a5e8e3ddc28c35b6bb2f8}\label{classIir_1_1Cascade_a18df8bebec4a5e8e3ddc28c35b6bb2f8} 
 \index{Iir::Cascade@{Iir::Cascade}!getPoleZeros@{getPoleZeros}}
 \index{getPoleZeros@{getPoleZeros}!Iir::Cascade@{Iir::Cascade}}
 \doxyparagraph{\texorpdfstring{getPoleZeros()}{getPoleZeros()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{Pole\+Zero\+Pair}} $>$ Iir\+::\+Cascade\+::get\+Pole\+Zeros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Returns a vector with all pole/zero pairs of the whole Biqad cascade \mbox{\Hypertarget{classIir_1_1Cascade_afc58e4b464b2cdef11e77b01e1a80668}\label{classIir_1_1Cascade_afc58e4b464b2cdef11e77b01e1a80668}} 
+Returns a vector with all pole/zero pairs of the whole Biqad cascade \Hypertarget{classIir_1_1Cascade_a4c55fe6a33a7b4b229e259a5d60c306e}\label{classIir_1_1Cascade_a4c55fe6a33a7b4b229e259a5d60c306e} 
 \index{Iir::Cascade@{Iir::Cascade}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!Iir::Cascade@{Iir::Cascade}}
 \doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}}\& Iir\+::\+Cascade\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classIir_1_1Biquad}{Biquad}} \& Iir\+::\+Cascade\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns a reference to a biquad \mbox{\Hypertarget{classIir_1_1Cascade_aa76e09e3868829a80e954d0444390f90}\label{classIir_1_1Cascade_aa76e09e3868829a80e954d0444390f90}} 
+Returns a reference to a biquad \Hypertarget{classIir_1_1Cascade_aa76e09e3868829a80e954d0444390f90}\label{classIir_1_1Cascade_aa76e09e3868829a80e954d0444390f90} 
 \index{Iir::Cascade@{Iir::Cascade}!response@{response}}
 \index{response@{response}!Iir::Cascade@{Iir::Cascade}}
 \doxyparagraph{\texorpdfstring{response()}{response()}}

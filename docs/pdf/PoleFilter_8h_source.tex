@@ -1,0 +1,183 @@
+\doxysubsection{Pole\+Filter.\+h}
+\hypertarget{PoleFilter_8h_source}{}\label{PoleFilter_8h_source}\index{iir/PoleFilter.h@{iir/PoleFilter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_POLEFILTER\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_POLEFILTER\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Common.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}MathSupplement.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}State.h"{}}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Purely\ for\ debugging...}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{/***}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *\ Base\ for\ filters\ designed\ via\ algorithmic\ placement\ of\ poles\ and\ zeros.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ *\ Typically,\ the\ filter\ is\ first\ designed\ as\ a\ half-\/band\ low\ pass\ or}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ *\ low\ shelf\ analog\ filter\ (s-\/plane).\ Then,\ using\ a\ transformation\ such}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ *\ as\ the\ ones\ from\ Constantinides,\ the\ poles\ and\ zeros\ of\ the\ analog\ filter}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ *\ are\ calculated\ in\ the\ z-\/plane.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ ***/}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1PoleFilterBase2}{PoleFilterBase2}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1Cascade}{Cascade}}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ gets\ the\ poles/zeros\ directly\ from\ the\ digital}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ prototype.\ It\ is\ used\ to\ double\ check\ the\ correctness}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ of\ the\ recovery\ of\ pole/zeros\ from\ biquad\ coefficients.}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ It\ can\ also\ be\ used\ to\ accelerate\ the\ interpolation}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ of\ pole/zeros\ for\ parameter\ modulation,\ since\ a\ pole}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ filter\ already\ has\ them\ calculated}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1PoleFilterBase2}{PoleFilterBase2}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<PoleZeroPair>\ getPoleZeros\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00076\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<PoleZeroPair>\ vpz;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ pairs\ =\ (m\_digitalProto.getNumPoles\ ()\ +\ 1)\ /\ 2;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ pairs;\ ++i)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vpz.push\_back\ (m\_digitalProto[i]);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vpz;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ m\_digitalProto\ =\ \{\};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ AnalogPrototype>}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1PoleFilterBase2}{PoleFilterBase2}}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setPrototypeStorage\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ analogStorage,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ digitalStorage)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_analogProto.setStorage\ (analogStorage);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_digitalProto\ =\ digitalStorage;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AnalogPrototype\ m\_analogProto\ =\ \{\};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class\ }BaseClass,}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }StateType,}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ MaxAnalogPoles,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ MaxDigitalPoles\ =\ MaxAnalogPoles>}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ :\ BaseClass}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classIir_1_1CascadeStages}{CascadeStages}}\ <(MaxDigitalPoles\ +\ 1)\ /\ 2\ ,\ StateType>}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ ()}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ glues\ together\ the\ factored\ base\ classes}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ with\ the\ templatized\ storage\ classes.}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BaseClass::setCascadeStorage\ (this-\/>\mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{getCascadeStorage}}());}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BaseClass::setPrototypeStorage\ (m\_analogStorage,\ m\_digitalStorage);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages}{CascadeStages}}<(MaxDigitalPoles\ +\ 1)\ /\ 2\ ,\ StateType>\mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{::reset}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\&)}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reset\ the\ filter\ state\ when\ copied\ for\ now}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages}{CascadeStages}}<(MaxDigitalPoles\ +\ 1)\ /\ 2\ ,\ StateType>\mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{::reset}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Layout\ <MaxAnalogPoles>\ m\_analogStorage\ =\ \{\};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Layout\ <MaxDigitalPoles>\ m\_digitalStorage\ =\ \{\};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1LowPassTransform}{LowPassTransform}}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LowPassTransform}{LowPassTransform}}\ (\textcolor{keywordtype}{double}\ fc,}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ digital,}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ \textcolor{keyword}{const}\&\ analog);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ complex\_t\ transform\ (complex\_t\ c);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ f\ =\ 0.0;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1HighPassTransform}{HighPassTransform}}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1HighPassTransform}{HighPassTransform}}\ (\textcolor{keywordtype}{double}\ fc,}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ digital,}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ \textcolor{keyword}{const}\&\ analog);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ complex\_t\ transform\ (complex\_t\ c);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ f\ =\ 0.0;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1BandPassTransform}{BandPassTransform}}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1BandPassTransform}{BandPassTransform}}\ (\textcolor{keywordtype}{double}\ fc,}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ fw,}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ digital,}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ \textcolor{keyword}{const}\&\ analog);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1ComplexPair}{ComplexPair}}\ transform\ (complex\_t\ c);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ wc\ =\ 0.0;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ wc2\ =\ 0.0;}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ a\ =\ 0.0;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ b\ =\ 0.0;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ a2\ =\ 0.0;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ b2\ =\ 0.0;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ab\ =\ 0.0;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ab\_2\ =\ 0.0;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1BandStopTransform}{BandStopTransform}}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1BandStopTransform}{BandStopTransform}}\ (\textcolor{keywordtype}{double}\ fc,}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ fw,}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ digital,}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ \textcolor{keyword}{const}\&\ analog);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structIir_1_1ComplexPair}{ComplexPair}}\ transform\ (complex\_t\ c);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ wc\ =\ 0.0;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ wc2\ =\ 0.0;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ a\ =\ 0.0;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ b\ =\ 0.0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ a2\ =\ 0.0;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ b2\ =\ 0.0;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,381 @@
+\doxysubsection{Butterworth.\+h}
+\hypertarget{Butterworth_8h_source}{}\label{Butterworth_8h_source}\index{iir/Butterworth.h@{iir/Butterworth.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_BUTTERWORTH\_H}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_BUTTERWORTH\_H}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Common.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}PoleFilter.h"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}State.h"{}}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{namespace\ }Butterworth\ \{}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowPass}{AnalogLowPass}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowPass}{AnalogLowPass}}\ ();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ design\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ numPoles);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_numPoles\ =\ 0;}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowShelf}{AnalogLowShelf}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowShelf}{AnalogLowShelf}}\ ();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ design\ (\textcolor{keywordtype}{int}\ numPoles,\ \textcolor{keywordtype}{double}\ gainDb);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_numPoles\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_gainDb\ =\ 0.0;}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPassBase}{LowPassBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowPass>}
+\DoxyCodeLine{00088\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency);}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPassBase}{HighPassBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowPass>}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency);}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPassBase}{BandPassBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowPass>}
+\DoxyCodeLine{00100\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency);}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStopBase}{BandStopBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowPass>}
+\DoxyCodeLine{00107\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency);}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelfBase}{LowShelfBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowShelf>}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb);}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelfBase}{HighShelfBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowShelf>}
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb);}
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{struct\ }IIR\_EXPORT\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelfBase}{BandShelfBase}}\ :\ \mbox{\hyperlink{classIir_1_1PoleFilterBase}{PoleFilterBase}}\ <AnalogLowShelf>}
+\DoxyCodeLine{00128\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{int}\ order,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb);}
+\DoxyCodeLine{00133\ \};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{comment}{//}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ Filters\ for\ the\ user}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00147\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass}{LowPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <LowPassBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00148\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass_a21da9f4c29a8dbf80f4611677a86d777}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowPassBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass_a0e10c27ec72f076bf7d0b21c0281860c}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowPassBase::setup\ (reqOrder,}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass_a29cb3cdc2e4e8f8f5e76f8942dcbd249}{setupN}}(\textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowPassBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass_af8fc4401089d8d36508a468dc09e74a0}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowPassBase::setup\ (reqOrder,}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00203\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass}{HighPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <HighPassBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00204\ \{}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighPassBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_ac9835800f12a982c160720cebef2f963}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighPassBase::setup\ (reqOrder,}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_ac33912cbd0d3d65acdda0c53d5b64274}{setupN}}(\textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighPassBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency);}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_a7602019a900b288a16963126de49c2f1}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighPassBase::setup\ (reqOrder,}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00257\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00258\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass}{BandPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandPassBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00259\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass_a73d7b106f2da5ccd5defe5e86f7b8ffd}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandPassBase::setup(FilterOrder,}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass_a4e01abd204275ae2223e5197bfc149dc}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandPassBase::setup(reqOrder,}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass_ac33b003f6c77021f90a998d0e03b0e4d}{setupN}}(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandPassBase::setup(FilterOrder,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency,}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass_a50e74a28deeaaa6d4df4c68b3ae562a7}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandPassBase::setup(reqOrder,}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency,}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \};}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00327\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00328\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{BandStop}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandStopBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00329\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_a88300cc9eef7b5eda35f0381f7238c16}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandStopBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_ac3f115c8cba7bc11cf852b91244228a5}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandStopBase::setup\ (reqOrder,}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency\ /\ sampleRate);}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_aff496377a74e44a7c5e88e5d9b5abe5c}{setupN}}(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandStopBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency,}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency);}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_ab88fa7f17faa3de891c9db4766b3cba6}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency)\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandStopBase::setup\ (reqOrder,}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency,}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency);}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \};}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00398\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00399\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf}{LowShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <LowShelfBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00400\ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf_a74f72a17ffe747ad5b0e9f36235fcd34}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowShelfBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf_a660509a6bac1d3b7c10215806d5be5e2}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowShelfBase::setup\ (reqOrder,}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf_a8bc2be489d0a5b901b02b9e2b62d7053}{setupN}}(\textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowShelfBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency,}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf_a4637158be17c50cb14cf3686b30e135e}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LowShelfBase::setup\ (reqOrder,}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency,}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \};}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00471\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00472\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf}{HighShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <HighShelfBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00473\ \{}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf_a19a78cb96c9b2454ccb48745ed50500d}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighShelfBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf_aa7fecdca7646acf8962c5d0106fb8b3c}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighShelfBase::setup\ (reqOrder,}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf_af63e4f43001ae2d9faf44ba6496db562}{setupN}}(\textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighShelfBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency,}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00518\ }
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf_a7df553be87ce22541c6ffa8af7508898}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HighShelfBase::setup\ (reqOrder,}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cutoffFrequency,}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00533\ \};}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00542\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00543\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf}{BandShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandShelfBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00544\ \{}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf_a0de40c55dae63d23127cf4dd21bcf050}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency,}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandShelfBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf_aa3f716cf9d393509c2caefb9e10ae8cc}{setup}}\ (\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sampleRate,}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency,}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandShelfBase::setup\ (reqOrder,}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency\ /\ sampleRate,}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00583\ }
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf_a43e02ec9dcfcd382b87ce20bc48f2ee2}{setupN}}(\textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency,}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandShelfBase::setup\ (FilterOrder,}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency,}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency,}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf_a96cc173942cd6789b5aff603b37e5b2f}{setupN}}(\textcolor{keywordtype}{int}\ reqOrder,}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ widthFrequency,}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb)\ \{}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reqOrder\ >\ FilterOrder)\ throw\_invalid\_argument(orderTooHigh);}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BandShelfBase::setup\ (reqOrder,}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ centerFrequency,}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ widthFrequency,}
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gainDb);}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00616\ \};}
+\DoxyCodeLine{00617\ }
+\DoxyCodeLine{00618\ \}}
+\DoxyCodeLine{00619\ }
+\DoxyCodeLine{00620\ \}}
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00623\ }
+
+\end{DoxyCode}
