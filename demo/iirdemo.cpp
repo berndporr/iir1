@@ -122,7 +122,7 @@ int main(int, char**)
 		 -1.605878925999785656e+00,
 		 9.538657786383895054e-01}
 	};
-	const int nSOS = sizeof(coeff) / sizeof(coeff[0]);
+	const int nSOS = std::extent<decltype(coeff)>::value;
 	Iir::Custom::SOSCascade<nSOS> cust(coeff);
 	fimpulse = fopen("ellip.dat", "wt");
 	for (int i = 0; i < 1000; i++)
