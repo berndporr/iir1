@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.8.0)
+cmake_minimum_required(VERSION 3.10.0)
 
-project(iir VERSION 1.10.0 LANGUAGES CXX)
+project(iir VERSION 1.11.0 LANGUAGES CXX)
+
+set (CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
 

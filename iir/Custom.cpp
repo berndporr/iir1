@@ -33,7 +33,6 @@
  * THE SOFTWARE.
  **/
 
-#include "Common.h"
 #include "Custom.h"
 
 namespace Iir {

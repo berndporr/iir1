@@ -7,6 +7,7 @@
 #include "Iir.h"
 
 #include <stdio.h>
+#include <array>
 
 int main(int, char**)
 {
@@ -108,7 +109,7 @@ int main(int, char**)
 	fclose(fimpulse);
 
 	// generated with: "elliptic_design.py"
-	const double coeff[][6] = {
+	const std::array<std::array<double, 6>, 2> sosCoefficients {{
 		{1.665623674062209972e-02,
 		 -3.924801366970616552e-03,
 		 1.665623674062210319e-02,
@@ -120,10 +121,9 @@ int main(int, char**)
 		 1.000000000000000222e+00,
 		 1.000000000000000000e+00,
 		 -1.605878925999785656e+00,
-		 9.538657786383895054e-01}
+		 9.538657786383895054e-01}}
 	};
-	const int nSOS = std::extent<decltype(coeff)>::value;
-	Iir::Custom::SOSCascade<nSOS> cust(coeff);
+	Iir::Custom::SOSCascade cust(sosCoefficients);
 	fimpulse = fopen("ellip.dat", "wt");
 	for (int i = 0; i < 1000; i++)
 	{

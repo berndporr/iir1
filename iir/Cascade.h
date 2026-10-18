@@ -147,6 +147,18 @@ namespace Iir {
                 }
         }
 
+        void setup (const std::array<std::array<double,6>,MaxStages> sosCoefficients) {
+                for (int i = 0; i < MaxStages; i++) {
+                        m_stages[i].setCoefficients(
+                                sosCoefficients[i][3],
+                                sosCoefficients[i][4],
+                                sosCoefficients[i][5],
+                                sosCoefficients[i][0],
+                                sosCoefficients[i][1],
+                                sosCoefficients[i][2]);
+                }
+        }
+
         public:
         /**
          * Filters one sample through the whole chain of biquads and return the result
