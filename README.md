@@ -211,13 +211,13 @@ sudo add-apt-repository ppa:berndporr/dsp
 
 Then install the packages:
 
-  - Library files: `sudo apt install iir1`
-  - Development files: `sudo apt install iir1-dev`
+  - Library files: `sudo apt install libiir1`
+  - Development files: `sudo apt install libiir-dev`
 
 It's available for 64 bit Intel and 32,64 bit ARM (Raspberry PI etc).
 The documentation of the development package and the example programs are in:
 ```
-/usr/share/doc/iir1-dev/
+/usr/share/doc/libiir1-dev/
 ```
 
 
