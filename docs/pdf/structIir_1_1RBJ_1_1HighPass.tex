@@ -20,7 +20,7 @@ void \mbox{\hyperlink{structIir_1_1RBJ_1_1HighPass_a445c9bba06d82c972e389fbae459
 \doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{Iir\+::\+RBJ\+::\+RBJbase}}}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Sample $>$ }\\Sample {\bfseries filter} (Sample s)
+{\footnotesize template$<$typename Sample$>$ }\\Sample {\bfseries filter} (Sample s)
 \begin{DoxyCompactList}\small\item\em filter operation \end{DoxyCompactList}\item 
 void {\bfseries reset} ()
 \begin{DoxyCompactList}\small\item\em resets the delay lines to zero \end{DoxyCompactList}\item 
@@ -45,7 +45,7 @@ double \mbox{\hyperlink{classIir_1_1Biquad_af418a5f260baadbcffe5a7029f089937}{ge
 \item 
 double \mbox{\hyperlink{classIir_1_1Biquad_a8f3d697bb7c2def508da648938f6afc3}{get\+B2}} () const
 \item 
-{\footnotesize template$<$class State\+Type $>$ }\\double \mbox{\hyperlink{classIir_1_1Biquad_a527b9666d6aef0e576193fdce7e19750}{filter}} (double s, State\+Type \&state) const
+{\footnotesize template$<$class State\+Type$>$ }\\double \mbox{\hyperlink{classIir_1_1Biquad_a527b9666d6aef0e576193fdce7e19750}{filter}} (double s, State\+Type \&state) const
 \item 
 void \mbox{\hyperlink{classIir_1_1Biquad_a7f005089c194c68aeecdc66a3e6c6a78}{set\+Coefficients}} (double a0, double a1, double a2, double b0, double b1, double b2)
 \item 
@@ -64,12 +64,14 @@ void \mbox{\hyperlink{classIir_1_1Biquad_a38c8e327dca53dbfa9a25758b7be8227}{appl
 \doxysubsubsection{Detailed Description}
 Highpass. 
 
+\label{doc-func-members}
+\Hypertarget{structIir_1_1RBJ_1_1HighPass_doc-func-members}
 \doxysubsubsection{Member Function Documentation}
-\Hypertarget{structIir_1_1RBJ_1_1HighPass_a445c9bba06d82c972e389fbae45962e9}\label{structIir_1_1RBJ_1_1HighPass_a445c9bba06d82c972e389fbae45962e9} 
-\index{Iir::RBJ::HighPass@{Iir::RBJ::HighPass}!setup@{setup}}
+\Hypertarget{structIir_1_1RBJ_1_1HighPass_a445c9bba06d82c972e389fbae45962e9}\index{Iir::RBJ::HighPass@{Iir::RBJ::HighPass}!setup@{setup}}
 \index{setup@{setup}!Iir::RBJ::HighPass@{Iir::RBJ::HighPass}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}}
-{\footnotesize\ttfamily void Iir\+::\+RBJ\+::\+High\+Pass\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate,  }\item[{double}]{cutoff\+Frequency,  }\item[{double}]{q = {\ttfamily (1/sqrt(2))} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1RBJ_1_1HighPass_a445c9bba06d82c972e389fbae45962e9} 
+void Iir\+::\+RBJ\+::\+High\+Pass\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate}{, }\item[{double}]{cutoff\+Frequency}{, }\item[{double}]{q}{ = {\ttfamily (1/sqrt(2))}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients 
 \begin{DoxyParams}{Parameters}
@@ -80,11 +82,11 @@ Calculates the coefficients
 {\em q} & Q factor determines the resonance peak at the cutoff. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1RBJ_1_1HighPass_aa990e5f563666cd2d3cdc48cd77d5f2b}\label{structIir_1_1RBJ_1_1HighPass_aa990e5f563666cd2d3cdc48cd77d5f2b} 
-\index{Iir::RBJ::HighPass@{Iir::RBJ::HighPass}!setupN@{setupN}}
+\Hypertarget{structIir_1_1RBJ_1_1HighPass_aa990e5f563666cd2d3cdc48cd77d5f2b}\index{Iir::RBJ::HighPass@{Iir::RBJ::HighPass}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::RBJ::HighPass@{Iir::RBJ::HighPass}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}}
-{\footnotesize\ttfamily void Iir\+::\+RBJ\+::\+High\+Pass\+::setupN (\begin{DoxyParamCaption}\item[{double}]{cutoff\+Frequency,  }\item[{double}]{q = {\ttfamily (1/sqrt(2))} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{structIir_1_1RBJ_1_1HighPass_aa990e5f563666cd2d3cdc48cd77d5f2b} 
+void Iir\+::\+RBJ\+::\+High\+Pass\+::setupN (\begin{DoxyParamCaption}\item[{double}]{cutoff\+Frequency}{, }\item[{double}]{q}{ = {\ttfamily (1/sqrt(2))}}\end{DoxyParamCaption})}
 
 Calculates the coefficients 
 \begin{DoxyParams}{Parameters}

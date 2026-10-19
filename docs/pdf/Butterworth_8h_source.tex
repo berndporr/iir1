@@ -3,6 +3,7 @@
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
+\DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_BUTTERWORTH\_H}}
 \DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_BUTTERWORTH\_H}}
 \DoxyCodeLine{00038\ }
@@ -13,12 +14,12 @@
 \DoxyCodeLine{00043\ }
 \DoxyCodeLine{00044\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00052\ \textcolor{keyword}{namespace\ }Butterworth\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir_1_1Butterworth}{Butterworth}}\ \{}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowPass}{AnalogLowPass}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }IIR\_EXPORT\ AnalogLowPass\ :\ \textcolor{keyword}{public}\ LayoutBase}
 \DoxyCodeLine{00058\ \{}
 \DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowPass}{AnalogLowPass}}\ ();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ AnalogLowPass\ ();}
 \DoxyCodeLine{00061\ }
 \DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ design\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ numPoles);}
 \DoxyCodeLine{00063\ }
@@ -28,10 +29,10 @@
 \DoxyCodeLine{00067\ }
 \DoxyCodeLine{00068\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{00069\ }
-\DoxyCodeLine{00073\ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowShelf}{AnalogLowShelf}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{class\ }IIR\_EXPORT\ AnalogLowShelf\ :\ \textcolor{keyword}{public}\ LayoutBase}
 \DoxyCodeLine{00074\ \{}
 \DoxyCodeLine{00075\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1Butterworth_1_1AnalogLowShelf}{AnalogLowShelf}}\ ();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ AnalogLowShelf\ ();}
 \DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ design\ (\textcolor{keywordtype}{int}\ numPoles,\ \textcolor{keywordtype}{double}\ gainDb);}
 \DoxyCodeLine{00079\ }
@@ -97,7 +98,7 @@
 \DoxyCodeLine{00139\ \textcolor{comment}{//}}
 \DoxyCodeLine{00140\ }
 \DoxyCodeLine{00146\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00147\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass}{LowPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <LowPassBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00147\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass}{LowPass}}\ :\ PoleFilter\ <LowPassBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00148\ \{}
 \DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowPass_a21da9f4c29a8dbf80f4611677a86d777}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency)\ \{}
@@ -128,7 +129,7 @@
 \DoxyCodeLine{00195\ \};}
 \DoxyCodeLine{00196\ }
 \DoxyCodeLine{00202\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00203\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass}{HighPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <HighPassBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00203\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass}{HighPass}}\ :\ PoleFilter\ <HighPassBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00204\ \{}
 \DoxyCodeLine{00205\ }
 \DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighPass_af7f7939a2e78245305cccd35aae4c75f}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
@@ -158,7 +159,7 @@
 \DoxyCodeLine{00250\ \};}
 \DoxyCodeLine{00251\ }
 \DoxyCodeLine{00257\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00258\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass}{BandPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandPassBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00258\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass}{BandPass}}\ :\ PoleFilter\ <BandPassBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
 \DoxyCodeLine{00259\ \{}
 \DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandPass_a73d7b106f2da5ccd5defe5e86f7b8ffd}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
@@ -199,7 +200,7 @@
 \DoxyCodeLine{00320\ }
 \DoxyCodeLine{00321\ }
 \DoxyCodeLine{00327\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00328\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{BandStop}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandStopBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00328\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{BandStop}}\ :\ PoleFilter\ <BandStopBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
 \DoxyCodeLine{00329\ \{}
 \DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_a88300cc9eef7b5eda35f0381f7238c16}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
@@ -240,7 +241,7 @@
 \DoxyCodeLine{00390\ \};}
 \DoxyCodeLine{00391\ }
 \DoxyCodeLine{00398\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00399\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf}{LowShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <LowShelfBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00399\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf}{LowShelf}}\ :\ PoleFilter\ <LowShelfBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00400\ \{}
 \DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1LowShelf_a74f72a17ffe747ad5b0e9f36235fcd34}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
@@ -283,7 +284,7 @@
 \DoxyCodeLine{00463\ }
 \DoxyCodeLine{00464\ }
 \DoxyCodeLine{00471\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00472\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf}{HighShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <HighShelfBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00472\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf}{HighShelf}}\ :\ PoleFilter\ <HighShelfBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00473\ \{}
 \DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1HighShelf_a19a78cb96c9b2454ccb48745ed50500d}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
@@ -324,7 +325,7 @@
 \DoxyCodeLine{00534\ }
 \DoxyCodeLine{00535\ }
 \DoxyCodeLine{00542\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00543\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf}{BandShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandShelfBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00543\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf}{BandShelf}}\ :\ PoleFilter\ <BandShelfBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
 \DoxyCodeLine{00544\ \{}
 \DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandShelf_a0de40c55dae63d23127cf4dd21bcf050}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}

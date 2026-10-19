@@ -7,7 +7,7 @@
 Inheritance diagram for Iir\+::Butterworth\+::Band\+Stop\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.492581cm]{structIir_1_1Butterworth_1_1BandStop}
+\includegraphics[height=2.434783cm]{structIir_1_1Butterworth_1_1BandStop}
 \end{center}
 \end{figure}
 \doxysubsubsubsection*{Public Member Functions}
@@ -21,14 +21,14 @@ void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_aff496377a74e44a7c5e8
 \item 
 void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop_ab88fa7f17faa3de891c9db4766b3cba6}{setupN}} (int req\+Order, double center\+Frequency, double width\+Frequency)
 \end{DoxyCompactItemize}
-\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$(\+Max\+Digital\+Poles+1)/2, Direct\+Form\+II $>$}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
 \item 
-{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
 \item 
 const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
 \end{DoxyCompactItemize}
@@ -46,13 +46,15 @@ struct Iir\+::\+Butterworth\+::\+Band\+Stop$<$ Filter\+Order, State\+Type $>$}
 \end{DoxyParams}
 
 
+\label{doc-func-members}
+\Hypertarget{structIir_1_1Butterworth_1_1BandStop_doc-func-members}
 \doxysubsubsection{Member Function Documentation}
-\Hypertarget{structIir_1_1Butterworth_1_1BandStop_a88300cc9eef7b5eda35f0381f7238c16}\label{structIir_1_1Butterworth_1_1BandStop_a88300cc9eef7b5eda35f0381f7238c16} 
-\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1Butterworth_1_1BandStop_a88300cc9eef7b5eda35f0381f7238c16}\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate,  }\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1Butterworth_1_1BandStop_a88300cc9eef7b5eda35f0381f7238c16} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients with the filter order provided by the instantiation 
 \begin{DoxyParams}{Parameters}
@@ -63,12 +65,12 @@ Calculates the coefficients with the filter order provided by the instantiation
 {\em width\+Frequency} & Width of the bandstop \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1Butterworth_1_1BandStop_ac3f115c8cba7bc11cf852b91244228a5}\label{structIir_1_1Butterworth_1_1BandStop_ac3f115c8cba7bc11cf852b91244228a5} 
-\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1Butterworth_1_1BandStop_ac3f115c8cba7bc11cf852b91244228a5}\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{int}]{req\+Order,  }\item[{double}]{sample\+Rate,  }\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1Butterworth_1_1BandStop_ac3f115c8cba7bc11cf852b91244228a5} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{int}]{req\+Order}{, }\item[{double}]{sample\+Rate}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients 
 \begin{DoxyParams}{Parameters}
@@ -81,12 +83,12 @@ Calculates the coefficients
 {\em width\+Frequency} & Width of the bandstop \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1Butterworth_1_1BandStop_aff496377a74e44a7c5e88e5d9b5abe5c}\label{structIir_1_1Butterworth_1_1BandStop_aff496377a74e44a7c5e88e5d9b5abe5c} 
-\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
+\Hypertarget{structIir_1_1Butterworth_1_1BandStop_aff496377a74e44a7c5e88e5d9b5abe5c}\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1Butterworth_1_1BandStop_aff496377a74e44a7c5e88e5d9b5abe5c} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients with the filter order provided by the instantiation 
 \begin{DoxyParams}{Parameters}
@@ -95,12 +97,12 @@ Calculates the coefficients with the filter order provided by the instantiation
 {\em width\+Frequency} & Normalised width of the bandstop \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1Butterworth_1_1BandStop_ab88fa7f17faa3de891c9db4766b3cba6}\label{structIir_1_1Butterworth_1_1BandStop_ab88fa7f17faa3de891c9db4766b3cba6} 
-\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
+\Hypertarget{structIir_1_1Butterworth_1_1BandStop_ab88fa7f17faa3de891c9db4766b3cba6}\index{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$@{Iir::Butterworth::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{int}]{req\+Order,  }\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1Butterworth_1_1BandStop_ab88fa7f17faa3de891c9db4766b3cba6} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1Butterworth_1_1BandStop}{Iir\+::\+Butterworth\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{int}]{req\+Order}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients 
 \begin{DoxyParams}{Parameters}

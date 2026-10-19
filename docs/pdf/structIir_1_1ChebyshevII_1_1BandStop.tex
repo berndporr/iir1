@@ -7,7 +7,7 @@
 Inheritance diagram for Iir\+::Chebyshev\+II\+::Band\+Stop\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.492581cm]{structIir_1_1ChebyshevII_1_1BandStop}
+\includegraphics[height=2.434783cm]{structIir_1_1ChebyshevII_1_1BandStop}
 \end{center}
 \end{figure}
 \doxysubsubsubsection*{Public Member Functions}
@@ -21,14 +21,14 @@ void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop_ab91192c2d3bf48f69849
 \item 
 void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop_a4abf9f03fa285f15001d8d99f0f8fab4}{setupN}} (int req\+Order, double center\+Frequency, double width\+Frequency, double stop\+Band\+Db)
 \end{DoxyCompactItemize}
-\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$(\+Max\+Digital\+Poles+1)/2, Direct\+Form\+II $>$}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
 \item 
-{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
 \item 
 const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
 \end{DoxyCompactItemize}
@@ -46,13 +46,15 @@ struct Iir\+::\+Chebyshev\+II\+::\+Band\+Stop$<$ Filter\+Order, State\+Type $>$}
 \end{DoxyParams}
 
 
+\label{doc-func-members}
+\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_doc-func-members}
 \doxysubsubsection{Member Function Documentation}
-\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_a2cced9fbf0ac69ac0f20192bc6d8375c}\label{structIir_1_1ChebyshevII_1_1BandStop_a2cced9fbf0ac69ac0f20192bc6d8375c} 
-\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_a2cced9fbf0ac69ac0f20192bc6d8375c}\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate,  }\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency,  }\item[{double}]{stop\+Band\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevII_1_1BandStop_a2cced9fbf0ac69ac0f20192bc6d8375c} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{, }\item[{double}]{stop\+Band\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter 
 \begin{DoxyParams}{Parameters}
@@ -65,12 +67,12 @@ Calculates the coefficients of the filter
 {\em stop\+Band\+Db} & Permitted ripples in dB in the stopband \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_abb424ebd2398df91406042580b25a173}\label{structIir_1_1ChebyshevII_1_1BandStop_abb424ebd2398df91406042580b25a173} 
-\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_abb424ebd2398df91406042580b25a173}\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{int}]{req\+Order,  }\item[{double}]{sample\+Rate,  }\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency,  }\item[{double}]{stop\+Band\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevII_1_1BandStop_abb424ebd2398df91406042580b25a173} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{int}]{req\+Order}{, }\item[{double}]{sample\+Rate}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{, }\item[{double}]{stop\+Band\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter 
 \begin{DoxyParams}{Parameters}
@@ -85,12 +87,12 @@ Calculates the coefficients of the filter
 {\em stop\+Band\+Db} & Permitted ripples in dB in the stopband \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_ab91192c2d3bf48f69849aba72c0c1c31}\label{structIir_1_1ChebyshevII_1_1BandStop_ab91192c2d3bf48f69849aba72c0c1c31} 
-\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
+\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_ab91192c2d3bf48f69849aba72c0c1c31}\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency,  }\item[{double}]{stop\+Band\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevII_1_1BandStop_ab91192c2d3bf48f69849aba72c0c1c31} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{, }\item[{double}]{stop\+Band\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter 
 \begin{DoxyParams}{Parameters}
@@ -101,12 +103,12 @@ Calculates the coefficients of the filter
 {\em stop\+Band\+Db} & Permitted ripples in dB in the stopband \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_a4abf9f03fa285f15001d8d99f0f8fab4}\label{structIir_1_1ChebyshevII_1_1BandStop_a4abf9f03fa285f15001d8d99f0f8fab4} 
-\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
+\Hypertarget{structIir_1_1ChebyshevII_1_1BandStop_a4abf9f03fa285f15001d8d99f0f8fab4}\index{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$@{Iir::ChebyshevII::BandStop$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{int}]{req\+Order,  }\item[{double}]{center\+Frequency,  }\item[{double}]{width\+Frequency,  }\item[{double}]{stop\+Band\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevII_1_1BandStop_a4abf9f03fa285f15001d8d99f0f8fab4} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevII_1_1BandStop}{Iir\+::\+Chebyshev\+II\+::\+Band\+Stop}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{int}]{req\+Order}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{width\+Frequency}{, }\item[{double}]{stop\+Band\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter 
 \begin{DoxyParams}{Parameters}

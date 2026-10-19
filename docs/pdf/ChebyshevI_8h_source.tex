@@ -3,6 +3,7 @@
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
+\DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_CHEBYSHEVI\_H}}
 \DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_CHEBYSHEVI\_H}}
 \DoxyCodeLine{00038\ }
@@ -13,12 +14,12 @@
 \DoxyCodeLine{00043\ }
 \DoxyCodeLine{00044\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}\ \{}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00050\ \textcolor{keyword}{namespace\ }ChebyshevI\ \{}
+\DoxyCodeLine{00050\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir_1_1ChebyshevI}{ChebyshevI}}\ \{}
 \DoxyCodeLine{00051\ }
-\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1ChebyshevI_1_1AnalogLowPass}{AnalogLowPass}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }IIR\_EXPORT\ AnalogLowPass\ :\ \textcolor{keyword}{public}\ LayoutBase}
 \DoxyCodeLine{00056\ \{}
 \DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1ChebyshevI_1_1AnalogLowPass}{AnalogLowPass}}\ ();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ AnalogLowPass\ ();}
 \DoxyCodeLine{00059\ }
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ design\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ numPoles,}
 \DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rippleDb);}
@@ -28,10 +29,10 @@
 \DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ m\_rippleDb\ =\ 0.0;}
 \DoxyCodeLine{00066\ \};}
 \DoxyCodeLine{00067\ }
-\DoxyCodeLine{00071\ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1ChebyshevI_1_1AnalogLowShelf}{AnalogLowShelf}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{class\ }IIR\_EXPORT\ AnalogLowShelf\ :\ \textcolor{keyword}{public}\ LayoutBase}
 \DoxyCodeLine{00072\ \{}
 \DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1ChebyshevI_1_1AnalogLowShelf}{AnalogLowShelf}}\ ();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ AnalogLowShelf\ ();}
 \DoxyCodeLine{00075\ }
 \DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ design\ (\textcolor{keywordtype}{int}\ numPoles,}
 \DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gainDb,}
@@ -107,7 +108,7 @@
 \DoxyCodeLine{00147\ \textcolor{comment}{//}}
 \DoxyCodeLine{00148\ }
 \DoxyCodeLine{00154\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{LowPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <LowPassBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{LowPass}}\ :\ PoleFilter\ <LowPassBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass_aea095d559db3f6dc7f9df5c8294ab696}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
@@ -147,7 +148,7 @@
 \DoxyCodeLine{00216\ \};}
 \DoxyCodeLine{00217\ }
 \DoxyCodeLine{00223\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1HighPass}{HighPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <HighPassBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1HighPass}{HighPass}}\ :\ PoleFilter\ <HighPassBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1HighPass_a031b43bd2545c4b0aba616c2464e1a65}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
@@ -187,7 +188,7 @@
 \DoxyCodeLine{00285\ \};}
 \DoxyCodeLine{00286\ }
 \DoxyCodeLine{00292\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandPass}{BandPass}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandPassBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandPass}{BandPass}}\ :\ PoleFilter\ <BandPassBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
 \DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandPass_ac52fcb50fb3022ac8290e07e954a0ab0}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
@@ -235,7 +236,7 @@
 \DoxyCodeLine{00366\ \};}
 \DoxyCodeLine{00367\ }
 \DoxyCodeLine{00373\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandStop}{BandStop}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandStopBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandStop}{BandStop}}\ :\ PoleFilter\ <BandStopBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
 \DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandStop_af269e777d9c7bae864571bd0db1db6ea}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}
@@ -284,7 +285,7 @@
 \DoxyCodeLine{00448\ \};}
 \DoxyCodeLine{00449\ }
 \DoxyCodeLine{00455\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowShelf}{LowShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <LowShelfBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowShelf}{LowShelf}}\ :\ PoleFilter\ <LowShelfBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowShelf_a310d49b7a15137b915969e8d8b12379d}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
@@ -332,7 +333,7 @@
 \DoxyCodeLine{00529\ \};}
 \DoxyCodeLine{00530\ }
 \DoxyCodeLine{00536\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1HighShelf}{HighShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <HighShelfBase,\ StateType,\ FilterOrder>}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1HighShelf}{HighShelf}}\ :\ PoleFilter\ <HighShelfBase,\ StateType,\ FilterOrder>}
 \DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1HighShelf_a9fe4f6cee3b4b1aa4688ea21d3f5202f}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cutoffFrequency,}
@@ -382,7 +383,7 @@
 \DoxyCodeLine{00612\ \};}
 \DoxyCodeLine{00613\ }
 \DoxyCodeLine{00619\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{int}\ FilterOrder\ =\ DEFAULT\_FILTER\_ORDER,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandShelf}{BandShelf}}\ :\ \mbox{\hyperlink{structIir_1_1PoleFilter}{PoleFilter}}\ <BandShelfBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandShelf}{BandShelf}}\ :\ PoleFilter\ <BandShelfBase,\ StateType,\ FilterOrder,\ FilterOrder*2>}
 \DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1BandShelf_a959d521af6b77dc269814c85543cff2f}{setup}}\ (\textcolor{keywordtype}{double}\ sampleRate,}
 \DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ centerFrequency,}

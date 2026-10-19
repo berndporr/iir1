@@ -17,23 +17,27 @@ Inheritance diagram for Iir\+::Custom\+::SOSCascade\texorpdfstring{$<$}{<} NSOS,
 \item 
 \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}{SOSCascade}} (const double(\&sos\+Coefficients)\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]})
 \item 
+\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a1d4c01dcd4baf023490d6476c23fe973}{SOSCascade}} (const std\+::array$<$ std\+::array$<$ double, 6 $>$, NSOS $>$ sos\+Coefficients)
+\item 
 void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup}} (const double(\&sos\+Coefficients)\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]})
+\item 
+void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a6b6b1342a7312221d2c75de1cf1597a5}{setup}} (const std\+::array$<$ std\+::array$<$ double, 6 $>$, NSOS $>$ sos\+Coefficients)
 \end{DoxyCompactItemize}
-\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ NSOS, Direct\+Form\+II $>$}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
 \item 
-{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
 \item 
 const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
-\subsubsection*{template$<$int NSOS, class State\+Type = Direct\+Form\+II$>$\newline
+\subsubsection*{template$<$std\+::size\+\_\+t NSOS, class State\+Type = Direct\+Form\+II$>$\newline
 struct Iir\+::\+Custom\+::\+SOSCascade$<$ NSOS, State\+Type $>$}
 A custom cascade of 2nd order (SOS / biquads) filters. 
 \begin{DoxyParams}{Parameters}
@@ -44,20 +48,34 @@ A custom cascade of 2nd order (SOS / biquads) filters.
 \end{DoxyParams}
 
 
+\label{doc-constructors}
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_doc-constructors}
 \doxysubsubsection{Constructor \& Destructor Documentation}
-\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}\label{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63} 
-\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
 \index{SOSCascade@{SOSCascade}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
-\doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int NSOS, class State\+Type  = Direct\+Form\+II$>$ \\
-\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+\doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63} 
+template$<$std\+::size\+\_\+t NSOS, class State\+Type = Direct\+Form\+II$>$ \\
+\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-Default constructor which creates a unity gain filter of NSOS biquads. Set the filter coefficients later with the \doxylink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup()} method. \Hypertarget{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}\label{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42} 
-\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
+Default constructor which creates a unity gain filter of NSOS biquads. Set the filter coefficients later with the \doxylink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup()} method. \Hypertarget{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
 \index{SOSCascade@{SOSCascade}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
-\doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int NSOS, class State\+Type  = Direct\+Form\+II$>$ \\
-\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42} 
+template$<$std\+::size\+\_\+t NSOS, class State\+Type = Direct\+Form\+II$>$ \\
+\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients}{\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Python scipy.\+signal-\/friendly setting of coefficients. Initialises the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered "{}\+Python"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em sos\+Coefficients} & 2D array Python style sos\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. Indexing\+: 0-\/2\+: FIR-\/, 3-\/5\+: IIR-\/coefficients. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a1d4c01dcd4baf023490d6476c23fe973}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!SOSCascade@{SOSCascade}}
+\index{SOSCascade@{SOSCascade}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
+\doxyparagraph{\texorpdfstring{SOSCascade()}{SOSCascade()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{structIir_1_1Custom_1_1SOSCascade_a1d4c01dcd4baf023490d6476c23fe973} 
+template$<$std\+::size\+\_\+t NSOS, class State\+Type = Direct\+Form\+II$>$ \\
+\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::\+SOSCascade (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::array$<$ double, 6 $>$, NSOS $>$}]{sos\+Coefficients}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Python scipy.\+signal-\/friendly setting of coefficients. Initialises the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered "{}\+Python"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
 \begin{DoxyParams}{Parameters}
@@ -66,13 +84,27 @@ Python scipy.\+signal-\/friendly setting of coefficients. Initialises the coeffi
 \end{DoxyParams}
 
 
+\label{doc-func-members}
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_doc-func-members}
 \doxysubsubsection{Member Function Documentation}
-\Hypertarget{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}\label{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc} 
-\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
-\doxyparagraph{\texorpdfstring{setup()}{setup()}}
-{\footnotesize\ttfamily template$<$int NSOS, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc} 
+template$<$std\+::size\+\_\+t NSOS, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{const double(\&)}]{sos\+Coefficients}{\mbox{[}\+NSOS\mbox{]}\mbox{[}6\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Python scipy.\+signal-\/friendly setting of coefficients. Sets the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered "{}\+Python"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em sos\+Coefficients} & 2D array Python style sos\mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. Indexing\+: 0-\/2\+: FIR-\/, 3-\/5\+: IIR-\/coefficients. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structIir_1_1Custom_1_1SOSCascade_a6b6b1342a7312221d2c75de1cf1597a5}\index{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}!setup@{setup}}
+\index{setup@{setup}!Iir::Custom::SOSCascade$<$ NSOS, StateType $>$@{Iir::Custom::SOSCascade$<$ NSOS, StateType $>$}}
+\doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structIir_1_1Custom_1_1SOSCascade_a6b6b1342a7312221d2c75de1cf1597a5} 
+template$<$std\+::size\+\_\+t NSOS, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade}{Iir\+::\+Custom\+::\+SOSCascade}}$<$ NSOS, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::array$<$ double, 6 $>$, NSOS $>$}]{sos\+Coefficients}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Python scipy.\+signal-\/friendly setting of coefficients. Sets the coefficients of the whole chain of biquads / SOS. The argument is a 2D array where the 1st dimension holds an array of 2nd order biquad / SOS coefficients. The six SOS coefficients are ordered "{}\+Python"{} style with first the FIR coefficients (B) and then the IIR coefficients (A). The 2D const double array needs to have exactly the size \mbox{[}NSOS\mbox{]}\mbox{[}6\mbox{]}. 
 \begin{DoxyParams}{Parameters}

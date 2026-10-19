@@ -20,7 +20,7 @@ void \mbox{\hyperlink{structIir_1_1RBJ_1_1IIRNotch_aedecb6358bc0a907742c56d5235d
 \doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{structIir_1_1RBJ_1_1RBJbase}{Iir\+::\+RBJ\+::\+RBJbase}}}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Sample $>$ }\\Sample {\bfseries filter} (Sample s)
+{\footnotesize template$<$typename Sample$>$ }\\Sample {\bfseries filter} (Sample s)
 \begin{DoxyCompactList}\small\item\em filter operation \end{DoxyCompactList}\item 
 void {\bfseries reset} ()
 \begin{DoxyCompactList}\small\item\em resets the delay lines to zero \end{DoxyCompactList}\item 
@@ -45,7 +45,7 @@ double \mbox{\hyperlink{classIir_1_1Biquad_af418a5f260baadbcffe5a7029f089937}{ge
 \item 
 double \mbox{\hyperlink{classIir_1_1Biquad_a8f3d697bb7c2def508da648938f6afc3}{get\+B2}} () const
 \item 
-{\footnotesize template$<$class State\+Type $>$ }\\double \mbox{\hyperlink{classIir_1_1Biquad_a527b9666d6aef0e576193fdce7e19750}{filter}} (double s, State\+Type \&state) const
+{\footnotesize template$<$class State\+Type$>$ }\\double \mbox{\hyperlink{classIir_1_1Biquad_a527b9666d6aef0e576193fdce7e19750}{filter}} (double s, State\+Type \&state) const
 \item 
 void \mbox{\hyperlink{classIir_1_1Biquad_a7f005089c194c68aeecdc66a3e6c6a78}{set\+Coefficients}} (double a0, double a1, double a2, double b0, double b1, double b2)
 \item 
@@ -64,12 +64,14 @@ void \mbox{\hyperlink{classIir_1_1Biquad_a38c8e327dca53dbfa9a25758b7be8227}{appl
 \doxysubsubsection{Detailed Description}
 Bandstop with Q factor\+: the higher the Q factor the more narrow is the notch. However, a narrow notch has a long impulse response ( = ringing) and numerical problems might prevent perfect damping. Practical values of the Q factor are about Q = 10 to 20. In terms of the design the Q factor defines the radius of the poles as r = exp(-\/ pi\texorpdfstring{$\ast$}{*}(center\+Frequency/sample\+Rate)/q\+\_\+factor) whereas the angles of the poles/zeros define the bandstop frequency. The higher Q the closer r moves towards the unit circle. 
 
+\label{doc-func-members}
+\Hypertarget{structIir_1_1RBJ_1_1IIRNotch_doc-func-members}
 \doxysubsubsection{Member Function Documentation}
-\Hypertarget{structIir_1_1RBJ_1_1IIRNotch_aedecb6358bc0a907742c56d5235d35df}\label{structIir_1_1RBJ_1_1IIRNotch_aedecb6358bc0a907742c56d5235d35df} 
-\index{Iir::RBJ::IIRNotch@{Iir::RBJ::IIRNotch}!setup@{setup}}
+\Hypertarget{structIir_1_1RBJ_1_1IIRNotch_aedecb6358bc0a907742c56d5235d35df}\index{Iir::RBJ::IIRNotch@{Iir::RBJ::IIRNotch}!setup@{setup}}
 \index{setup@{setup}!Iir::RBJ::IIRNotch@{Iir::RBJ::IIRNotch}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}}
-{\footnotesize\ttfamily void Iir\+::\+RBJ\+::\+IIRNotch\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate,  }\item[{double}]{center\+Frequency,  }\item[{double}]{q\+\_\+factor = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1RBJ_1_1IIRNotch_aedecb6358bc0a907742c56d5235d35df} 
+void Iir\+::\+RBJ\+::\+IIRNotch\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate}{, }\item[{double}]{center\+Frequency}{, }\item[{double}]{q\+\_\+factor}{ = {\ttfamily 10}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients 
 \begin{DoxyParams}{Parameters}
@@ -80,11 +82,11 @@ Calculates the coefficients
 {\em q\+\_\+factor} & Q factor of the notch (1 to \texorpdfstring{$\sim$}{\string~}20) \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1RBJ_1_1IIRNotch_a824ce85d420097081e71b3888acb7862}\label{structIir_1_1RBJ_1_1IIRNotch_a824ce85d420097081e71b3888acb7862} 
-\index{Iir::RBJ::IIRNotch@{Iir::RBJ::IIRNotch}!setupN@{setupN}}
+\Hypertarget{structIir_1_1RBJ_1_1IIRNotch_a824ce85d420097081e71b3888acb7862}\index{Iir::RBJ::IIRNotch@{Iir::RBJ::IIRNotch}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::RBJ::IIRNotch@{Iir::RBJ::IIRNotch}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}}
-{\footnotesize\ttfamily void Iir\+::\+RBJ\+::\+IIRNotch\+::setupN (\begin{DoxyParamCaption}\item[{double}]{center\+Frequency,  }\item[{double}]{q\+\_\+factor = {\ttfamily 10} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{structIir_1_1RBJ_1_1IIRNotch_a824ce85d420097081e71b3888acb7862} 
+void Iir\+::\+RBJ\+::\+IIRNotch\+::setupN (\begin{DoxyParamCaption}\item[{double}]{center\+Frequency}{, }\item[{double}]{q\+\_\+factor}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
 
 Calculates the coefficients 
 \begin{DoxyParams}{Parameters}

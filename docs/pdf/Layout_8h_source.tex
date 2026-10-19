@@ -3,6 +3,7 @@
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
+\DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_LAYOUT\_H}}
 \DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_LAYOUT\_H}}
 \DoxyCodeLine{00038\ }
@@ -21,24 +22,24 @@
 \DoxyCodeLine{00056\ }
 \DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ pairIndexOutOfBounds[]\ =\ \textcolor{stringliteral}{"{}Pair\ index\ out\ of\ bounds."{}};}
 \DoxyCodeLine{00058\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }IIR\_EXPORT\ LayoutBase}
 \DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ ()}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LayoutBase\ ()}
 \DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_numPoles\ (0)}
 \DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_maxPoles\ (0)}
 \DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_pair\ (\textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\ (\textcolor{keywordtype}{int}\ maxPoles,\ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{PoleZeroPair}}*\ pairs)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LayoutBase\ (\textcolor{keywordtype}{int}\ maxPoles,\ \mbox{\hyperlink{structIir_1_1PoleZeroPair}{PoleZeroPair}}*\ pairs)}
 \DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_numPoles\ (0)}
 \DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_maxPoles\ (maxPoles)}
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_pair\ (pairs)}
 \DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setStorage\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classIir_1_1LayoutBase}{LayoutBase}}\&\ other)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setStorage\ (\textcolor{keyword}{const}\ LayoutBase\&\ other)}
 \DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_numPoles\ =\ 0;}
 \DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_maxPoles\ =\ other.m\_maxPoles;}

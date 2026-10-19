@@ -8,6 +8,6 @@ var searchData=
   ['getb2_5',['getB2',['../classIir_1_1Biquad.html#a8f3d697bb7c2def508da648938f6afc3',1,'Iir::Biquad']]],
   ['getcascadestorage_6',['getCascadeStorage',['../classIir_1_1CascadeStages.html#a034a9be8ae590b814c8499898a93987a',1,'Iir::CascadeStages']]],
   ['getnumstages_7',['getNumStages',['../classIir_1_1Cascade.html#a9694b85c160e3689a4d71fd51ca6175d',1,'Iir::Cascade']]],
-  ['getpolezeros_8',['getpolezeros',['../classIir_1_1Biquad.html#a63c78d766bc40be10004a34aaebfb8e7',1,'Iir::Biquad::getPoleZeros()'],['../classIir_1_1Cascade.html#a18df8bebec4a5e8e3ddc28c35b6bb2f8',1,'Iir::Cascade::getPoleZeros()']]],
+  ['getpolezeros_8',['getPoleZeros',['../classIir_1_1Biquad.html#a63c78d766bc40be10004a34aaebfb8e7',1,'Iir::Biquad::getPoleZeros()'],['../classIir_1_1Cascade.html#a18df8bebec4a5e8e3ddc28c35b6bb2f8',1,'Iir::Cascade::getPoleZeros()']]],
   ['getstate_9',['getState',['../structIir_1_1RBJ_1_1RBJbase.html#afe6a9cf3f0168eaacae1932a852f57ec',1,'Iir::RBJ::RBJbase']]]
 ];

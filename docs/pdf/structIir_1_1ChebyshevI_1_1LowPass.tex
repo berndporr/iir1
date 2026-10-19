@@ -7,7 +7,7 @@
 Inheritance diagram for Iir\+::ChebyshevI\+::Low\+Pass\texorpdfstring{$<$}{<} Filter\+Order, State\+Type \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.492581cm]{structIir_1_1ChebyshevI_1_1LowPass}
+\includegraphics[height=2.400000cm]{structIir_1_1ChebyshevI_1_1LowPass}
 \end{center}
 \end{figure}
 \doxysubsubsubsection*{Public Member Functions}
@@ -21,14 +21,14 @@ void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass_a52ea5dcac2a5cdff2a73c3
 \item 
 void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass_a249a9236b0584edced2168a60b667106}{setupN}} (int req\+Order, double cutoff\+Frequency, double ripple\+Db)
 \end{DoxyCompactItemize}
-\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$ Max\+Stages, State\+Type $>$}}}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classIir_1_1CascadeStages}{Iir\+::\+Cascade\+Stages$<$(\+Max\+Analog\+Poles+1)/2, Direct\+Form\+II $>$}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_ae5253fde0be7ccfa459a3f70fe8e3e31}{reset}} ()
 \item 
 void \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{setup}} (const double(\&sos\+Coefficients)\mbox{[}Max\+Stages\mbox{]}\mbox{[}6\mbox{]})
 \item 
-{\footnotesize template$<$typename Sample $>$ }\\Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
+Sample \mbox{\hyperlink{classIir_1_1CascadeStages_aa18e9abcaac65fd21be31ee859add3bb}{filter}} (const Sample in)
 \item 
 const \mbox{\hyperlink{structIir_1_1Cascade_1_1Storage}{Cascade\+::\+Storage}} \mbox{\hyperlink{classIir_1_1CascadeStages_a034a9be8ae590b814c8499898a93987a}{get\+Cascade\+Storage}} ()
 \end{DoxyCompactItemize}
@@ -46,13 +46,15 @@ struct Iir\+::\+Chebyshev\+I\+::\+Low\+Pass$<$ Filter\+Order, State\+Type $>$}
 \end{DoxyParams}
 
 
+\label{doc-func-members}
+\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_doc-func-members}
 \doxysubsubsection{Member Function Documentation}
-\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_aea095d559db3f6dc7f9df5c8294ab696}\label{structIir_1_1ChebyshevI_1_1LowPass_aea095d559db3f6dc7f9df5c8294ab696} 
-\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_aea095d559db3f6dc7f9df5c8294ab696}\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate,  }\item[{double}]{cutoff\+Frequency,  }\item[{double}]{ripple\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevI_1_1LowPass_aea095d559db3f6dc7f9df5c8294ab696} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{double}]{sample\+Rate}{, }\item[{double}]{cutoff\+Frequency}{, }\item[{double}]{ripple\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter at the order Filter\+Order 
 \begin{DoxyParams}{Parameters}
@@ -63,12 +65,12 @@ Calculates the coefficients of the filter at the order Filter\+Order
 {\em ripple\+Db} & Permitted ripples in dB in the passband \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_a6ff5b40576b962bc35fa10eb2903873e}\label{structIir_1_1ChebyshevI_1_1LowPass_a6ff5b40576b962bc35fa10eb2903873e} 
-\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
+\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_a6ff5b40576b962bc35fa10eb2903873e}\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setup@{setup}}
 \index{setup@{setup}!Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{int}]{req\+Order,  }\item[{double}]{sample\+Rate,  }\item[{double}]{cutoff\+Frequency,  }\item[{double}]{ripple\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevI_1_1LowPass_a6ff5b40576b962bc35fa10eb2903873e} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{int}]{req\+Order}{, }\item[{double}]{sample\+Rate}{, }\item[{double}]{cutoff\+Frequency}{, }\item[{double}]{ripple\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter at specified order 
 \begin{DoxyParams}{Parameters}
@@ -81,12 +83,12 @@ Calculates the coefficients of the filter at specified order
 {\em ripple\+Db} & Permitted ripples in dB in the passband \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_a52ea5dcac2a5cdff2a73c3622ac55ce1}\label{structIir_1_1ChebyshevI_1_1LowPass_a52ea5dcac2a5cdff2a73c3622ac55ce1} 
-\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
+\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_a52ea5dcac2a5cdff2a73c3622ac55ce1}\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{double}]{cutoff\+Frequency,  }\item[{double}]{ripple\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevI_1_1LowPass_a52ea5dcac2a5cdff2a73c3622ac55ce1} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{double}]{cutoff\+Frequency}{, }\item[{double}]{ripple\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter at the order Filter\+Order 
 \begin{DoxyParams}{Parameters}
@@ -95,12 +97,12 @@ Calculates the coefficients of the filter at the order Filter\+Order
 {\em ripple\+Db} & Permitted ripples in dB in the passband \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_a249a9236b0584edced2168a60b667106}\label{structIir_1_1ChebyshevI_1_1LowPass_a249a9236b0584edced2168a60b667106} 
-\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
+\Hypertarget{structIir_1_1ChebyshevI_1_1LowPass_a249a9236b0584edced2168a60b667106}\index{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}!setupN@{setupN}}
 \index{setupN@{setupN}!Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$@{Iir::ChebyshevI::LowPass$<$ FilterOrder, StateType $>$}}
 \doxyparagraph{\texorpdfstring{setupN()}{setupN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$int Filter\+Order = 4, class State\+Type  = Direct\+Form\+II$>$ \\
-void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{int}]{req\+Order,  }\item[{double}]{cutoff\+Frequency,  }\item[{double}]{ripple\+Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{structIir_1_1ChebyshevI_1_1LowPass_a249a9236b0584edced2168a60b667106} 
+template$<$int Filter\+Order = 4, class State\+Type = Direct\+Form\+II$>$ \\
+void \mbox{\hyperlink{structIir_1_1ChebyshevI_1_1LowPass}{Iir\+::\+Chebyshev\+I\+::\+Low\+Pass}}$<$ Filter\+Order, State\+Type $>$\+::setupN (\begin{DoxyParamCaption}\item[{int}]{req\+Order}{, }\item[{double}]{cutoff\+Frequency}{, }\item[{double}]{ripple\+Db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Calculates the coefficients of the filter at specified order 
 \begin{DoxyParams}{Parameters}
