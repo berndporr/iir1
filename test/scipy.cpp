@@ -1,5 +1,6 @@
 #include "Iir.h"
 
+#include <array>
 #include <cmath>
 #include <filesystem>
 #include <fstream>
@@ -13,6 +14,24 @@
 
 namespace fs = std::filesystem;
 
+constexpr double lc = 200.0;
+constexpr double hc = 300.0;
+
+const std::array<int, 5> orders = { 1, 2, 4, 5, 10 };
+
+enum class FilterBType
+{
+    Lowpass,
+    Highpass,
+    Bandpass,
+    Bandstop,
+    NONE
+};
+
+const std::array<FilterBType, 4> types
+    = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
+        FilterBType::Bandstop };
+
 // ------------------------------------------------------------
 // Signal
 // ------------------------------------------------------------
@@ -23,20 +42,23 @@ struct Signal
     std::vector<double> values;
 
     std::size_t size () const { return values.size (); }
+    double sampleRate = 0;
+    void calcSamplerate ()
+    {
+        const double dt = time[1] - time[0];
+
+        if (dt <= 0.0)
+        {
+            throw std::runtime_error ("Invalid sampling interval");
+        }
+
+        sampleRate = 1.0 / dt;
+    }
 };
 
 // ------------------------------------------------------------
 // Filter configuration
 // ------------------------------------------------------------
-
-enum class FilterBType
-{
-    Lowpass,
-    Highpass,
-    Bandpass,
-    Bandstop,
-    NONE
-};
 
 std::string toString (FilterBType type)
 {
@@ -129,7 +151,7 @@ Signal readSignalFromCSV (const fs::path &filename)
         signal.time.push_back (std::stod (timeString));
         signal.values.push_back (std::stod (valueString));
     }
-
+    signal.calcSamplerate ();
     return signal;
 }
 
@@ -184,8 +206,7 @@ void compareSignals (const Signal &reference, const Signal &actual,
         }
     }
 
-    std::cerr << std::setprecision (12) << "max error=" << maxError
-              << " -- PASS." << std::endl;
+    std::cerr << "max error=" << maxError << " -- PASS." << std::endl;
 }
 
 // ------------------------------------------------------------
@@ -258,7 +279,7 @@ createButterworth (FilterBType type, double sampleRate, double lc, double hc)
             type, sampleRate, center, width);
 
     case FilterBType::NONE:
-        throw std::runtime_error ("Filter type not set.");
+        throw std::runtime_error ("BUG: Filter type not set.");
     }
 
     throw std::runtime_error ("Unknown filter configuration");
@@ -294,34 +315,16 @@ std::shared_ptr<IIRFilter> createFixedOrderButterworth (FilterBType type,
 
 int testButterworth ()
 {
-    constexpr double lc = 200.0;
-    constexpr double hc = 300.0;
     const std::string filtername{ "butterworth" };
-
-    const std::vector<int> orders = { 1, 2, 4, 5, 10 };
-
-    const std::vector<FilterBType> types
-        = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
-            FilterBType::Bandstop };
-
     try
     {
         const Signal input = readSignalFromCSV ("scipy/signal.txt");
-        const double dt = input.time[1] - input.time[0];
-
-        if (dt <= 0.0)
-        {
-            throw std::runtime_error ("Invalid sampling interval");
-        }
-
-        const double sampleRate = 1.0 / dt;
-
         for (FilterBType type : types)
         {
             for (int order : orders)
             {
-                auto filter = createFixedOrderButterworth (type, order,
-                                                           sampleRate, lc, hc);
+                auto filter = createFixedOrderButterworth (
+                    type, order, input.sampleRate, lc, hc);
                 runTest (filtername, input, filter, order, lc, hc);
             }
         }
@@ -405,34 +408,16 @@ std::shared_ptr<IIRFilter> createFixedOrderChebychev1 (FilterBType type,
 
 int testChebychev1 ()
 {
-    constexpr double lc = 200.0;
-    constexpr double hc = 300.0;
     const std::string filtername{ "chebychev1" };
-
-    const std::vector<int> orders = { 1, 2, 4, 5, 10 };
-
-    const std::vector<FilterBType> types
-        = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
-            FilterBType::Bandstop };
-
     try
     {
         const Signal input = readSignalFromCSV ("scipy/signal.txt");
-        const double dt = input.time[1] - input.time[0];
-
-        if (dt <= 0.0)
-        {
-            throw std::runtime_error ("Invalid sampling interval");
-        }
-
-        const double sampleRate = 1.0 / dt;
-
         for (FilterBType type : types)
         {
             for (int order : orders)
             {
-                auto filter = createFixedOrderChebychev1 (type, order,
-                                                          sampleRate, lc, hc);
+                auto filter = createFixedOrderChebychev1 (
+                    type, order, input.sampleRate, lc, hc);
                 runTest (filtername, input, filter, order, lc, hc);
             }
         }
@@ -480,7 +465,7 @@ createChebychev2 (FilterBType type, double sampleRate, double lc, double hc)
             type, sampleRate, center, width, rippledB);
 
     case FilterBType::NONE:
-        throw std::runtime_error ("Filter type not set.");
+        throw std::runtime_error ("BUG: Filter type not set.");
     }
 
     throw std::runtime_error ("Unknown filter configuration");
@@ -516,34 +501,16 @@ std::shared_ptr<IIRFilter> createFixedOrderChebychev2 (FilterBType type,
 
 int testChebychev2 ()
 {
-    constexpr double lc = 200.0;
-    constexpr double hc = 300.0;
     const std::string filtername{ "chebychev2" };
-
-    const std::vector<int> orders = { 1, 2, 4, 5, 10 };
-
-    const std::vector<FilterBType> types
-        = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
-            FilterBType::Bandstop };
-
     try
     {
         const Signal input = readSignalFromCSV ("scipy/signal.txt");
-        const double dt = input.time[1] - input.time[0];
-
-        if (dt <= 0.0)
-        {
-            throw std::runtime_error ("Invalid sampling interval");
-        }
-
-        const double sampleRate = 1.0 / dt;
-
         for (FilterBType type : types)
         {
             for (int order : orders)
             {
-                auto filter = createFixedOrderChebychev2 (type, order,
-                                                          sampleRate, lc, hc);
+                auto filter = createFixedOrderChebychev2 (
+                    type, order, input.sampleRate, lc, hc);
                 runTest (filtername, input, filter, order, lc, hc);
             }
         }
