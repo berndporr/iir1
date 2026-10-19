@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_CASCADE_H
-#define IIR1_CASCADE_H
+#pragma once
 
 #include "Common.h"
 #include "Biquad.h"
@@ -190,5 +189,3 @@ namespace Iir {
         };
         
 }
-
-#endif

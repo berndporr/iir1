@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_CUSTOM_H
-#define IIR1_CUSTOM_H
+#pragma once
 
 #include "Biquad.h"
 #include "Cascade.h"
@@ -153,5 +152,3 @@ struct SOSCascade : CascadeStages<NSOS, StateType>
 }
 
 }
-
-#endif

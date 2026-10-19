@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_STATE_H
-#define IIR1_STATE_H
+#pragma once
 
 #include "Common.h"
 #include "Biquad.h"
@@ -160,5 +159,3 @@ namespace Iir {
 	};
 
 }
-
-#endif

@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_RBJ_H
-#define IIR1_RBJ_H
+#pragma once
 
 #include "Common.h"
 #include "Biquad.h"
@@ -359,6 +358,3 @@ namespace RBJ {
 }
 
 }
-
-
-#endif

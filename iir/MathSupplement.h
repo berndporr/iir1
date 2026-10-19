@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_MATHSUPPLEMENT_H
-#define IIR1_MATHSUPPLEMENT_H
+#pragma once
 
 #include "Common.h"
 
@@ -89,5 +88,3 @@ inline bool is_nan<complex_t> (complex_t v)
 }
 
 }
-
-#endif

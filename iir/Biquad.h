@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_BIQUAD_H
-#define IIR1_BIQUAD_H
+#pragma once
 
 #include "Common.h"
 #include "MathSupplement.h"
@@ -182,5 +181,3 @@ namespace Iir {
 	};
 
 }
-	
-#endif

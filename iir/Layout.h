@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_LAYOUT_H
-#define IIR1_LAYOUT_H
+#pragma once
 
 #include "Common.h"
 #include "MathSupplement.h"
@@ -192,5 +191,3 @@ namespace Iir {
 	};
 
 }
-
-#endif

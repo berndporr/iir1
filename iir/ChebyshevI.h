@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_CHEBYSHEVI_H
-#define IIR1_CHEBYSHEVI_H
+#pragma once
 
 #include "Common.h"
 #include "Cascade.h"
@@ -713,5 +712,3 @@ template <int FilterOrder = DEFAULT_FILTER_ORDER, class StateType = DEFAULT_STAT
 }
 
 }
-
-#endif

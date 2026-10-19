@@ -33,16 +33,11 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_POLEFILTER_H
-#define IIR1_POLEFILTER_H
+#pragma once
 
 #include "Common.h"
 #include "MathSupplement.h"
 #include "Cascade.h"
-#include "State.h"
-
-// Purely for debugging...
-#include <iostream>
 
 namespace Iir {
 
@@ -240,5 +235,3 @@ namespace Iir {
 	};
 
 }
-
-#endif

@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_BUTTERWORTH_H
-#define IIR1_BUTTERWORTH_H
+#pragma once
 
 #include "Common.h"
 #include "Cascade.h"
@@ -618,6 +617,3 @@ struct BandShelf : PoleFilter <BandShelfBase, StateType, FilterOrder, FilterOrde
 }
 
 }
-
-#endif
-

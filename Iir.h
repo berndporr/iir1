@@ -32,8 +32,7 @@
  *
  **/
 
-#ifndef IIR_H
-#define IIR_H
+#pragma once
 
 //
 // Include this file in your application to get everything
@@ -51,5 +50,3 @@
 #include "iir/ChebyshevII.h"
 #include "iir/Custom.h"
 #include "iir/RBJ.h"
-
-#endif

@@ -33,8 +33,7 @@
  * THE SOFTWARE.
  **/
 
-#ifndef IIR1_COMMON_H
-#define IIR1_COMMON_H
+ #pragma once
 
 //
 // This must be the first file included in every DspFilters header and source
@@ -86,5 +85,3 @@ inline void throw_invalid_argument(const char* msg) {
 #endif
 
 }
-
-#endif
