@@ -64,6 +64,7 @@
 #include <string>
 #include <limits>
 #include <vector>
+#include <array>
 #include <stdexcept> // for invalid_argument
 
 static const char orderTooHigh[] = "Requested order is too high. Provide a higher order for the template.";

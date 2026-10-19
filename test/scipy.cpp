@@ -137,8 +137,8 @@ Signal readSignalFromCSV (const fs::path &filename)
 // Generate reference filename
 // ------------------------------------------------------------
 
-std::string generateFileName (std::string filterName, FilterBType type, int order, double lc,
-                              double hc)
+std::string generateFileName (std::string filterName, FilterBType type,
+                              int order, double lc, double hc)
 {
     return filterName + "-" + toString (type) + "-LC_"
            + std::to_string (static_cast<int> (lc)) + "-HC_"
@@ -150,46 +150,51 @@ std::string generateFileName (std::string filterName, FilterBType type, int orde
 // Compare reference and actual signals
 // ------------------------------------------------------------
 
-bool compareSignals (const Signal &reference, const Signal &actual,
+void compareSignals (const Signal &reference, const Signal &actual,
                      double tolerance)
 {
     if (reference.size () != actual.size ())
     {
-        std::cerr << "FAIL: signal sizes differ: reference="
-                  << reference.size () << ", actual=" << actual.size ()
-                  << '\n';
-
-        return false;
+        const std::string msg
+            = "FAIL: signal sizes differ: reference="
+              + std::to_string (reference.size ())
+              + ", actual=" + std::to_string (actual.size ());
+        throw std::runtime_error (msg);
     }
 
+    double maxError = 0;
     for (std::size_t i = 0; i < reference.size (); ++i)
     {
         const double expected = reference.values[i];
         const double actualValue = actual.values[i];
+        const double e = std::abs (expected - actualValue);
+        if (e > maxError)
+            maxError = e;
 
         if (!std::isfinite (expected) || !std::isfinite (actualValue)
-            || std::abs (expected - actualValue) > tolerance)
+            || (e > tolerance))
         {
-
-            std::cerr << std::setprecision (12) << "FAIL at index " << i
-                      << ": reference=" << expected
-                      << ", actual=" << actualValue
-                      << ", difference=" << std::abs (expected - actualValue)
-                      << '\n';
-
-            return false;
+            const std::string msg
+                = "FAIL at index " + std::to_string (i)
+                  + ": reference=" + std::to_string (expected)
+                  + ", actual=" + std::to_string (actualValue)
+                  + ", difference=" + std::to_string (e);
+            std::cerr << std::endl << msg << std::endl;
+            throw std::runtime_error (msg);
         }
     }
 
-    return true;
+    std::cerr << std::setprecision (12) << "max error=" << maxError
+              << " -- PASS." << std::endl;
 }
 
 // ------------------------------------------------------------
 // Run one test
 // ------------------------------------------------------------
 
-bool runTest (std::string filtername, const Signal &input, std::shared_ptr<IIRFilter> iirFilter,
-              int order, double lc, double hc)
+void runTest (std::string filtername, const Signal &input,
+              std::shared_ptr<IIRFilter> iirFilter, int order, double lc,
+              double hc)
 {
     constexpr double tolerance = 1e-5;
 
@@ -213,14 +218,10 @@ bool runTest (std::string filtername, const Signal &input, std::shared_ptr<IIRFi
         actual.values.push_back (iirFilter->filter (sample));
     }
 
-    std::cout << filename << ", " << toString (iirFilter->filterBtype)
+    std::cout << filtername << ", " << toString (iirFilter->filterBtype)
               << ", order=" << order << ": ";
 
-    const bool passed = compareSignals (reference, actual, tolerance);
-
-    std::cout << (passed ? "PASS" : "FAIL") << '\n';
-
-    return passed;
+    compareSignals (reference, actual, tolerance);
 }
 
 // ------------------------------------------------------------
@@ -295,17 +296,13 @@ int testButterworth ()
 {
     constexpr double lc = 200.0;
     constexpr double hc = 300.0;
-    const std::string filtername {"butterworth"};
+    const std::string filtername{ "butterworth" };
 
     const std::vector<int> orders = { 1, 2, 4, 5, 10 };
 
     const std::vector<FilterBType> types
         = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
             FilterBType::Bandstop };
-
-    int passed = 0;
-    int failed = 0;
-    int errors = 0;
 
     try
     {
@@ -323,49 +320,19 @@ int testButterworth ()
         {
             for (int order : orders)
             {
-                try
-                {
-                    auto filter = createFixedOrderButterworth (
-                        type, order, sampleRate, lc, hc);
-
-                    if (runTest (filtername, input, filter, order, lc, hc))
-                    {
-                        ++passed;
-                    }
-                    else
-                    {
-                        ++failed;
-                    }
-                }
-                catch (const std::exception &e)
-                {
-                    ++errors;
-
-                    std::cerr << "ERROR: " << toString (type)
-                              << ", order=" << order << ": " << e.what ()
-                              << '\n';
-                }
+                auto filter = createFixedOrderButterworth (type, order,
+                                                           sampleRate, lc, hc);
+                runTest (filtername, input, filter, order, lc, hc);
             }
         }
     }
     catch (const std::exception &e)
     {
-        std::cerr << "Fatal error: " << e.what () << '\n';
+        std::cerr << "Fatal error: " << e.what () << std::endl;
         return 1;
     }
-
-    std::cout << "Passed: " << passed << '\n'
-              << "Failed: " << failed << '\n'
-              << "Errors: " << errors << '\n'
-              << "Total:  " << passed + failed + errors << '\n';
-
-    return (failed == 0 && errors == 0) ? 0 : 1;
+    return 0;
 }
-
-
-
-
-
 
 // ------------------------------------------------------------
 // Chebyshev1
@@ -384,12 +351,12 @@ createChebychev1 (FilterBType type, double sampleRate, double lc, double hc)
     case FilterBType::Lowpass:
         return std::make_shared<
             IIR1Adapter<Iir::ChebyshevI::LowPass<Order> > > (type, sampleRate,
-                                                              hc, rippledB);
+                                                             hc, rippledB);
 
     case FilterBType::Highpass:
         return std::make_shared<
-            IIR1Adapter<Iir::ChebyshevI::HighPass<Order> > > (type,
-                                                               sampleRate, lc, rippledB);
+            IIR1Adapter<Iir::ChebyshevI::HighPass<Order> > > (type, sampleRate,
+                                                              lc, rippledB);
 
     case FilterBType::Bandpass:
         return std::make_shared<
@@ -409,9 +376,9 @@ createChebychev1 (FilterBType type, double sampleRate, double lc, double hc)
 }
 
 std::shared_ptr<IIRFilter> createFixedOrderChebychev1 (FilterBType type,
-                                                        int order,
-                                                        double sampleRate,
-                                                        double lc, double hc)
+                                                       int order,
+                                                       double sampleRate,
+                                                       double lc, double hc)
 {
     switch (order)
     {
@@ -440,17 +407,13 @@ int testChebychev1 ()
 {
     constexpr double lc = 200.0;
     constexpr double hc = 300.0;
-    const std::string filtername {"chebychev1"};
+    const std::string filtername{ "chebychev1" };
 
     const std::vector<int> orders = { 1, 2, 4, 5, 10 };
 
     const std::vector<FilterBType> types
         = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
             FilterBType::Bandstop };
-
-    int passed = 0;
-    int failed = 0;
-    int errors = 0;
 
     try
     {
@@ -468,50 +431,19 @@ int testChebychev1 ()
         {
             for (int order : orders)
             {
-                try
-                {
-                    auto filter = createFixedOrderChebychev1 (
-                        type, order, sampleRate, lc, hc);
-
-                    if (runTest (filtername, input, filter, order, lc, hc))
-                    {
-                        ++passed;
-                    }
-                    else
-                    {
-                        ++failed;
-                    }
-                }
-                catch (const std::exception &e)
-                {
-                    ++errors;
-
-                    std::cerr << "ERROR: " << toString (type)
-                              << ", order=" << order << ": " << e.what ()
-                              << '\n';
-                }
+                auto filter = createFixedOrderChebychev1 (type, order,
+                                                          sampleRate, lc, hc);
+                runTest (filtername, input, filter, order, lc, hc);
             }
         }
     }
     catch (const std::exception &e)
     {
-        std::cerr << "Fatal error: " << e.what () << '\n';
+        std::cerr << "Fatal error: " << e.what () << std::endl;
         return 1;
     }
-
-    std::cout << "Passed: " << passed << '\n'
-              << "Failed: " << failed << '\n'
-              << "Errors: " << errors << '\n'
-              << "Total:  " << passed + failed + errors << '\n';
-
-    return (failed == 0 && errors == 0) ? 0 : 1;
+    return 0;
 }
-
-
-
-
-
-
 
 // ------------------------------------------------------------
 // Chebyshev2
@@ -534,8 +466,8 @@ createChebychev2 (FilterBType type, double sampleRate, double lc, double hc)
 
     case FilterBType::Highpass:
         return std::make_shared<
-            IIR1Adapter<Iir::ChebyshevII::HighPass<Order> > > (type,
-                                                               sampleRate, lc, rippledB);
+            IIR1Adapter<Iir::ChebyshevII::HighPass<Order> > > (
+            type, sampleRate, lc, rippledB);
 
     case FilterBType::Bandpass:
         return std::make_shared<
@@ -555,9 +487,9 @@ createChebychev2 (FilterBType type, double sampleRate, double lc, double hc)
 }
 
 std::shared_ptr<IIRFilter> createFixedOrderChebychev2 (FilterBType type,
-                                                        int order,
-                                                        double sampleRate,
-                                                        double lc, double hc)
+                                                       int order,
+                                                       double sampleRate,
+                                                       double lc, double hc)
 {
     switch (order)
     {
@@ -586,17 +518,13 @@ int testChebychev2 ()
 {
     constexpr double lc = 200.0;
     constexpr double hc = 300.0;
-    const std::string filtername {"chebychev2"};
+    const std::string filtername{ "chebychev2" };
 
     const std::vector<int> orders = { 1, 2, 4, 5, 10 };
 
     const std::vector<FilterBType> types
         = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
             FilterBType::Bandstop };
-
-    int passed = 0;
-    int failed = 0;
-    int errors = 0;
 
     try
     {
@@ -614,59 +542,27 @@ int testChebychev2 ()
         {
             for (int order : orders)
             {
-                try
-                {
-                    auto filter = createFixedOrderChebychev2 (
-                        type, order, sampleRate, lc, hc);
-
-                    if (runTest (filtername, input, filter, order, lc, hc))
-                    {
-                        ++passed;
-                    }
-                    else
-                    {
-                        ++failed;
-                    }
-                }
-                catch (const std::exception &e)
-                {
-                    ++errors;
-
-                    std::cerr << "ERROR: " << toString (type)
-                              << ", order=" << order << ": " << e.what ()
-                              << '\n';
-                }
+                auto filter = createFixedOrderChebychev2 (type, order,
+                                                          sampleRate, lc, hc);
+                runTest (filtername, input, filter, order, lc, hc);
             }
         }
     }
     catch (const std::exception &e)
     {
-        std::cerr << "Fatal error: " << e.what () << '\n';
+        std::cerr << "Fatal error: " << e.what () << std::endl;
         return 1;
     }
 
-    std::cout << "Passed: " << passed << '\n'
-              << "Failed: " << failed << '\n'
-              << "Errors: " << errors << '\n'
-              << "Total:  " << passed + failed + errors << '\n';
-
-    return (failed == 0 && errors == 0) ? 0 : 1;
+    return 0;
 }
-
-
-
-
-
-
-
-
 
 int main ()
 {
     int fails = 0;
     fails += testButterworth ();
-    fails += testChebychev1();
-    fails += testChebychev2();
+    fails += testChebychev1 ();
+    fails += testChebychev2 ();
     if (fails > 0)
         throw;
     return 0;
