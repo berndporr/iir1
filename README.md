@@ -136,10 +136,7 @@ order = 4
 sos = signal.ellip(order, 5, 40, 0.2, 'low', output='sos')
 print(sos) # copy/paste the coefficients over & replace [] with {}
 
-///////
-// C++
-// part of "iirdemo.cpp"
-const double coeff[][6] = {
+const std::array<std::array<double, 6>, 2> sosCoefficients {{
 		{1.665623674062209972e-02,
 		 -3.924801366970616552e-03,
 		 1.665623674062210319e-02,
@@ -151,10 +148,9 @@ const double coeff[][6] = {
 		 1.000000000000000222e+00,
 		 1.000000000000000000e+00,
 		 -1.605878925999785656e+00,
-		 9.538657786383895054e-01}
-	};
-const int nSOS = sizeof(coeff) / sizeof(coeff[0]); // here: nSOS = 2 = order / 2
-Iir::Custom::SOSCascade<nSOS> cust(coeff);
+		 9.538657786383895054e-01}}
+};
+Iir::Custom::SOSCascade cust(sosCoefficients);
 ```
 
 ### Realtime filtering sample by sample
