@@ -18,10 +18,10 @@ namespace fs = std::filesystem;
 
 constexpr double lc = 200.0;
 constexpr double hc = 300.0;
-const double rippledB = 1;
-const double center = (lc + hc) / 2.0;
-const double width = hc - lc;
-const std::array<int, 5> orders = { 1, 2, 4, 5, 10 };
+constexpr double rippledB = 1;
+constexpr double center = (lc + hc) / 2.0;
+constexpr double width = hc - lc;
+constexpr std::array<int, 5> orders = { 1, 2, 4, 5, 10 };
 
 enum class FilterBType
 {
@@ -32,14 +32,13 @@ enum class FilterBType
     NONE
 };
 
-const std::array<FilterBType, 4> types
+constexpr std::array<FilterBType, 4> types
     = { FilterBType::Lowpass, FilterBType::Highpass, FilterBType::Bandpass,
         FilterBType::Bandstop };
 
 // ------------------------------------------------------------
 // Signal
 // ------------------------------------------------------------
-
 struct Signal
 {
     std::vector<double> time;
@@ -63,13 +62,11 @@ struct Signal
 // ------------------------------------------------------------
 // Filter configuration
 // ------------------------------------------------------------
-
 std::string toString (FilterBType type);
 
 // ------------------------------------------------------------
 // Common filter interface
 // ------------------------------------------------------------
-
 struct IIRFilter
 {
     virtual ~IIRFilter () = default;
@@ -80,7 +77,6 @@ struct IIRFilter
 // ------------------------------------------------------------
 // Adapter for an IIR1 filter
 // ------------------------------------------------------------
-
 template <typename Filter> struct IIR1Adapter final : IIRFilter
 {
     template <typename... Args>
@@ -98,27 +94,23 @@ template <typename Filter> struct IIR1Adapter final : IIRFilter
 // ------------------------------------------------------------
 // Read a semicolon-separated CSV signal
 // ------------------------------------------------------------
-
 Signal readSignalFromCSV (const fs::path &filename);
 
 // ------------------------------------------------------------
 // Generate reference filename
 // ------------------------------------------------------------
-
 std::string generateFileName (std::string filterName, FilterBType type,
                               int order, double lc, double hc);
 
 // ------------------------------------------------------------
 // Compare reference and actual signals
 // ------------------------------------------------------------
-
 void compareSignals (const Signal &reference, const Signal &actual,
                      double tolerance);
 
 // ------------------------------------------------------------
 // Run one test
 // ------------------------------------------------------------
-
 void runTest (std::string filtername, const Signal &input,
               std::shared_ptr<IIRFilter> iirFilter, int order, double lc,
               double hc);
