@@ -8,21 +8,14 @@
 #include "scipy.h"
 
 
-
-
-
 // ------------------------------------------------------------
 // Chebyshev1
 // ------------------------------------------------------------
 
 template <int Order>
 std::shared_ptr<IIRFilter>
-createChebychev1 (FilterBType type, double sampleRate, double lc, double hc)
+createChebychev1 (FilterBType type, double sampleRate)
 {
-    const double center = (lc + hc) / 2.0;
-    const double width = hc - lc;
-    const double rippledB = 1;
-
     switch (type)
     {
     case FilterBType::Lowpass:
@@ -54,25 +47,24 @@ createChebychev1 (FilterBType type, double sampleRate, double lc, double hc)
 
 std::shared_ptr<IIRFilter> createFixedOrderChebychev1 (FilterBType type,
                                                        int order,
-                                                       double sampleRate,
-                                                       double lc, double hc)
+                                                       double sampleRate)
 {
     switch (order)
     {
     case 1:
-        return createChebychev1<1> (type, sampleRate, lc, hc);
+        return createChebychev1<1> (type, sampleRate);
 
     case 2:
-        return createChebychev1<2> (type, sampleRate, lc, hc);
+        return createChebychev1<2> (type, sampleRate);
 
     case 4:
-        return createChebychev1<4> (type, sampleRate, lc, hc);
+        return createChebychev1<4> (type, sampleRate);
 
     case 5:
-        return createChebychev1<5> (type, sampleRate, lc, hc);
+        return createChebychev1<5> (type, sampleRate);
 
     case 10:
-        return createChebychev1<10> (type, sampleRate, lc, hc);
+        return createChebychev1<10> (type, sampleRate);
 
     default:
         throw std::invalid_argument ("Unsupported filter order: "
@@ -91,7 +83,7 @@ int compare2scipy()
             for (int order : orders)
             {
                 auto filter = createFixedOrderChebychev1 (
-                    type, order, input.sampleRate, lc, hc);
+                    type, order, input.sampleRate);
                 runTest (filtername, input, filter, order, lc, hc);
             }
         }

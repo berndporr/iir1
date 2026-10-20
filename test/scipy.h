@@ -18,7 +18,9 @@ namespace fs = std::filesystem;
 
 constexpr double lc = 200.0;
 constexpr double hc = 300.0;
-
+const double rippledB = 1;
+const double center = (lc + hc) / 2.0;
+const double width = hc - lc;
 const std::array<int, 5> orders = { 1, 2, 4, 5, 10 };
 
 enum class FilterBType

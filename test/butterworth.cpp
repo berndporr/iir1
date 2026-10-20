@@ -12,12 +12,9 @@
 // ------------------------------------------------------------
 
 template <int Order>
-std::shared_ptr<IIRFilter>
-createButterworth (FilterBType type, double sampleRate, double lc, double hc)
+std::shared_ptr<IIRFilter> createButterworth (FilterBType type,
+                                              double sampleRate)
 {
-    const double center = (lc + hc) / 2.0;
-    const double width = hc - lc;
-
     switch (type)
     {
     case FilterBType::Lowpass:
@@ -47,27 +44,25 @@ createButterworth (FilterBType type, double sampleRate, double lc, double hc)
     throw std::runtime_error ("Unknown filter configuration");
 }
 
-std::shared_ptr<IIRFilter> createFixedOrderButterworth (FilterBType type,
-                                                        int order,
-                                                        double sampleRate,
-                                                        double lc, double hc)
+std::shared_ptr<IIRFilter>
+createFixedOrderButterworth (FilterBType type, int order, double sampleRate)
 {
     switch (order)
     {
     case 1:
-        return createButterworth<1> (type, sampleRate, lc, hc);
+        return createButterworth<1> (type, sampleRate);
 
     case 2:
-        return createButterworth<2> (type, sampleRate, lc, hc);
+        return createButterworth<2> (type, sampleRate);
 
     case 4:
-        return createButterworth<4> (type, sampleRate, lc, hc);
+        return createButterworth<4> (type, sampleRate);
 
     case 5:
-        return createButterworth<5> (type, sampleRate, lc, hc);
+        return createButterworth<5> (type, sampleRate);
 
     case 10:
-        return createButterworth<10> (type, sampleRate, lc, hc);
+        return createButterworth<10> (type, sampleRate);
 
     default:
         throw std::invalid_argument ("Unsupported filter order: "
@@ -85,8 +80,8 @@ int compare2scipy ()
         {
             for (int order : orders)
             {
-                auto filter = createFixedOrderButterworth (
-                    type, order, input.sampleRate, lc, hc);
+                auto filter = createFixedOrderButterworth (type, order,
+                                                           input.sampleRate);
                 runTest (filtername, input, filter, order, lc, hc);
             }
         }
@@ -181,5 +176,5 @@ int main (int, char **)
         }
     }
 
-	return compare2scipy();
+    return compare2scipy ();
 }
