@@ -5,6 +5,107 @@
 #include <math.h>
 
 #include "assert_print.h"
+#include "scipy.h"
+
+
+
+
+
+// ------------------------------------------------------------
+// Chebyshev1
+// ------------------------------------------------------------
+
+template <int Order>
+std::shared_ptr<IIRFilter>
+createChebychev1 (FilterBType type, double sampleRate, double lc, double hc)
+{
+    const double center = (lc + hc) / 2.0;
+    const double width = hc - lc;
+    const double rippledB = 1;
+
+    switch (type)
+    {
+    case FilterBType::Lowpass:
+        return std::make_shared<
+            IIR1Adapter<Iir::ChebyshevI::LowPass<Order> > > (type, sampleRate,
+                                                             hc, rippledB);
+
+    case FilterBType::Highpass:
+        return std::make_shared<
+            IIR1Adapter<Iir::ChebyshevI::HighPass<Order> > > (type, sampleRate,
+                                                              lc, rippledB);
+
+    case FilterBType::Bandpass:
+        return std::make_shared<
+            IIR1Adapter<Iir::ChebyshevI::BandPass<Order> > > (
+            type, sampleRate, center, width, rippledB);
+
+    case FilterBType::Bandstop:
+        return std::make_shared<
+            IIR1Adapter<Iir::ChebyshevI::BandStop<Order> > > (
+            type, sampleRate, center, width, rippledB);
+
+    case FilterBType::NONE:
+        throw std::runtime_error ("Filter type not set.");
+    }
+
+    throw std::runtime_error ("Unknown filter configuration");
+}
+
+std::shared_ptr<IIRFilter> createFixedOrderChebychev1 (FilterBType type,
+                                                       int order,
+                                                       double sampleRate,
+                                                       double lc, double hc)
+{
+    switch (order)
+    {
+    case 1:
+        return createChebychev1<1> (type, sampleRate, lc, hc);
+
+    case 2:
+        return createChebychev1<2> (type, sampleRate, lc, hc);
+
+    case 4:
+        return createChebychev1<4> (type, sampleRate, lc, hc);
+
+    case 5:
+        return createChebychev1<5> (type, sampleRate, lc, hc);
+
+    case 10:
+        return createChebychev1<10> (type, sampleRate, lc, hc);
+
+    default:
+        throw std::invalid_argument ("Unsupported filter order: "
+                                     + std::to_string (order));
+    }
+}
+
+int compare2scipy()
+{
+    const std::string filtername{ "chebychev1" };
+    try
+    {
+        const Signal input = readSignalFromCSV ("scipy/signal.txt");
+        for (FilterBType type : types)
+        {
+            for (int order : orders)
+            {
+                auto filter = createFixedOrderChebychev1 (
+                    type, order, input.sampleRate, lc, hc);
+                runTest (filtername, input, filter, order, lc, hc);
+            }
+        }
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Fatal error: " << e.what () << std::endl;
+        return 1;
+    }
+    return 0;
+}
+
+
+
 
 int main(int, char**)
 {
@@ -54,7 +155,5 @@ int main(int, char**)
 		}
 	}
 
-	return 0;
-
-
+	return compare2scipy();
 }
