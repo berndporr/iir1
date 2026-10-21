@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.16)  19 OCT 2026 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.16)  21 OCT 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1742,12 +1742,12 @@ Package pdftex.def Info: structIir_1_1Custom_1_1TwoPole.pdf  used on input line
 (./Cascade_8h_source.tex [105]) (./ChebyshevI_8h_source.tex [106] [107]
 [108] [109] [110]) (./ChebyshevII_8h_source.tex [111] [112] [113] [114]
 [115] [116]) (./Common_8h_source.tex) (./Custom_8h_source.tex [117])
-(./Layout_8h_source.tex [118] [119]) (./MathSupplement_8h_source.tex [120])
-(./PoleFilter_8h_source.tex [121] [122]) (./RBJ_8h_source.tex [123] [124])
-(./State_8h_source.tex [125]) (./Types_8h_source.tex [126]) [127] [128
+(./Layout_8h_source.tex [118] [119]) (./MathSupplement_8h_source.tex)
+(./PoleFilter_8h_source.tex [120] [121]) (./RBJ_8h_source.tex [122] [123])
+(./State_8h_source.tex [124] [125]) (./Types_8h_source.tex [126]) [127]
+[128
 
-]
-(./refman.ind
+] (./refman.ind
 Underfull \hbox (badness 832) in paragraph at lines 93--95
 []\T1/phv/m/n/10 Iir::Butterworth::HighPass$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 
 Fil-terOrder, State-Type $\OML/cmm/m/it/10 >$\T1/phv/m/n/10 ,
@@ -1838,7 +1838,7 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 Here is how much of TeX's memory you used:
  23082 strings out of 467533
  445441 string characters out of 5422137
- 907073 words of memory out of 5000000
+ 908073 words of memory out of 5000000
  50317 multiletter control sequences out of 15000+600000
  679459 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1855,7 +1855,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (138 pages, 806018 bytes).
+Output written on refman.pdf (138 pages, 805351 bytes).
 PDF statistics:
  5351 PDF objects out of 6186 (max. 8388607)
  4700 compressed objects within 47 object streams

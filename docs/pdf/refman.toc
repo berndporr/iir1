@@ -335,13 +335,13 @@
 \contentsline {subsection}{\numberline {8.3}Butterworth.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{100}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Cascade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{105}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{106}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{112}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.6}Chebyshev\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}II.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{111}{subsection.8.6}%
 \contentsline {subsection}{\numberline {8.7}Common.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{117}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Custom.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{118}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.8}Custom.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{117}{subsection.8.8}%
 \contentsline {subsection}{\numberline {8.9}Layout.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{118}{subsection.8.9}%
 \contentsline {subsection}{\numberline {8.10}Math\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Supplement.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{120}{subsection.8.10}%
-\contentsline {subsection}{\numberline {8.11}Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{121}{subsection.8.11}%
+\contentsline {subsection}{\numberline {8.11}Pole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{120}{subsection.8.11}%
 \contentsline {subsection}{\numberline {8.12}RBJ.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{123}{subsection.8.12}%
-\contentsline {subsection}{\numberline {8.13}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{125}{subsection.8.13}%
+\contentsline {subsection}{\numberline {8.13}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{124}{subsection.8.13}%
 \contentsline {subsection}{\numberline {8.14}Types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{126}{subsection.8.14}%
 \contentsline {section}{Index}{129}{section*.370}%

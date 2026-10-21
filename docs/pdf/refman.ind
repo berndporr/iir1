@@ -44,14 +44,14 @@
   \item {iir/Butterworth.h}, \hyperpage{100}
   \item {iir/Cascade.h}, \hyperpage{105}
   \item {iir/ChebyshevI.h}, \hyperpage{106}
-  \item {iir/ChebyshevII.h}, \hyperpage{112}
+  \item {iir/ChebyshevII.h}, \hyperpage{111}
   \item {iir/Common.h}, \hyperpage{117}
-  \item {iir/Custom.h}, \hyperpage{118}
+  \item {iir/Custom.h}, \hyperpage{117}
   \item {iir/Layout.h}, \hyperpage{118}
   \item {iir/MathSupplement.h}, \hyperpage{120}
-  \item {iir/PoleFilter.h}, \hyperpage{121}
+  \item {iir/PoleFilter.h}, \hyperpage{120}
   \item {iir/RBJ.h}, \hyperpage{123}
-  \item {iir/State.h}, \hyperpage{125}
+  \item {iir/State.h}, \hyperpage{124}
   \item {iir/Types.h}, \hyperpage{126}
   \item {Iir::BandPassTransform}, \hyperpage{26}
   \item {Iir::BandStopTransform}, \hyperpage{46}

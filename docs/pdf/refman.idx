@@ -355,12 +355,12 @@
 \indexentry{iir/Butterworth.h@{iir/Butterworth.h}|hyperpage}{100}
 \indexentry{iir/Cascade.h@{iir/Cascade.h}|hyperpage}{105}
 \indexentry{iir/ChebyshevI.h@{iir/ChebyshevI.h}|hyperpage}{106}
-\indexentry{iir/ChebyshevII.h@{iir/ChebyshevII.h}|hyperpage}{112}
+\indexentry{iir/ChebyshevII.h@{iir/ChebyshevII.h}|hyperpage}{111}
 \indexentry{iir/Common.h@{iir/Common.h}|hyperpage}{117}
-\indexentry{iir/Custom.h@{iir/Custom.h}|hyperpage}{118}
+\indexentry{iir/Custom.h@{iir/Custom.h}|hyperpage}{117}
 \indexentry{iir/Layout.h@{iir/Layout.h}|hyperpage}{118}
 \indexentry{iir/MathSupplement.h@{iir/MathSupplement.h}|hyperpage}{120}
-\indexentry{iir/PoleFilter.h@{iir/PoleFilter.h}|hyperpage}{121}
+\indexentry{iir/PoleFilter.h@{iir/PoleFilter.h}|hyperpage}{120}
 \indexentry{iir/RBJ.h@{iir/RBJ.h}|hyperpage}{123}
-\indexentry{iir/State.h@{iir/State.h}|hyperpage}{125}
+\indexentry{iir/State.h@{iir/State.h}|hyperpage}{124}
 \indexentry{iir/Types.h@{iir/Types.h}|hyperpage}{126}

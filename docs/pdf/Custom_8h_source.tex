@@ -4,61 +4,58 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ IIR1\_CUSTOM\_H}}
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IIR1\_CUSTOM\_H}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Biquad.h"{}}}
-\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
-\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}State.h"{}}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}}
-\DoxyCodeLine{00044\ \{}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir_1_1Custom}{Custom}}}
-\DoxyCodeLine{00052\ \{}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00060\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1OnePole}{OnePole}}\ :\ \textcolor{keyword}{public}\ Biquad}
-\DoxyCodeLine{00061\ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{double}\ scale,\ \textcolor{keywordtype}{double}\ pole,\ \textcolor{keywordtype}{double}\ zero);}
-\DoxyCodeLine{00063\ \};}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00072\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1TwoPole}{TwoPole}}\ :\ \textcolor{keyword}{public}\ Biquad}
-\DoxyCodeLine{00073\ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{double}\ scale,\ \textcolor{keywordtype}{double}\ poleRho,\ \textcolor{keywordtype}{double}\ poleTheta,\ \textcolor{keywordtype}{double}\ zeroRho,}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zeroTheta);}
-\DoxyCodeLine{00076\ \};}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00083\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ NSOS,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
-\DoxyCodeLine{00084\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}{SOSCascade}}\ :\ CascadeStages<NSOS,\ StateType>}
-\DoxyCodeLine{00085\ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}{SOSCascade}}\ ()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}{SOSCascade}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ (\&sosCoefficients)[NSOS][6])}
-\DoxyCodeLine{00103\ \ \ \ \ \{}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
-\DoxyCodeLine{00105\ \ \ \ \ \}}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a1d4c01dcd4baf023490d6476c23fe973}{SOSCascade}}\ (\textcolor{keyword}{const}\ std::array<std::array<double,\ 6>,\ NSOS>\ sosCoefficients)}
-\DoxyCodeLine{00118\ \ \ \ \ \{}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
-\DoxyCodeLine{00120\ \ \ \ \ \}}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ (\&sosCoefficients)[NSOS][6])}
-\DoxyCodeLine{00133\ \ \ \ \ \{}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
-\DoxyCodeLine{00135\ \ \ \ \ \}}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a6b6b1342a7312221d2c75de1cf1597a5}{setup}}\ (\textcolor{keyword}{const}\ std::array<std::array<double,\ 6>,\ NSOS>\ sosCoefficients)}
-\DoxyCodeLine{00148\ \ \ \ \ \{}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
-\DoxyCodeLine{00150\ \ \ \ \ \}}
-\DoxyCodeLine{00151\ \};}
-\DoxyCodeLine{00152\ }
-\DoxyCodeLine{00153\ \}}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \}}
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}Biquad.h"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}State.h"{}}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir}{Iir}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceIir_1_1Custom}{Custom}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1OnePole}{OnePole}}\ :\ \textcolor{keyword}{public}\ Biquad}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{double}\ scale,\ \textcolor{keywordtype}{double}\ pole,\ \textcolor{keywordtype}{double}\ zero);}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1TwoPole}{TwoPole}}\ :\ \textcolor{keyword}{public}\ Biquad}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ setup\ (\textcolor{keywordtype}{double}\ scale,\ \textcolor{keywordtype}{double}\ poleRho,\ \textcolor{keywordtype}{double}\ poleTheta,\ \textcolor{keywordtype}{double}\ zeroRho,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zeroTheta);}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ NSOS,\ \textcolor{keyword}{class}\ StateType\ =\ DEFAULT\_STATE>}
+\DoxyCodeLine{00083\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}{SOSCascade}}\ :\ CascadeStages<NSOS,\ StateType>}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a04671c1c84cacaf1c822adeb850ccc63}{SOSCascade}}\ ()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a60654fe4bd861799dff82a6dce9dfd42}{SOSCascade}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ (\&sosCoefficients)[NSOS][6])}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a1d4c01dcd4baf023490d6476c23fe973}{SOSCascade}}\ (\textcolor{keyword}{const}\ std::array<std::array<double,\ 6>,\ NSOS>\ sosCoefficients)}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_aae603eb1bd4330411a6003e09ba36efc}{setup}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ (\&sosCoefficients)[NSOS][6])}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structIir_1_1Custom_1_1SOSCascade_a6b6b1342a7312221d2c75de1cf1597a5}{setup}}\ (\textcolor{keyword}{const}\ std::array<std::array<double,\ 6>,\ NSOS>\ sosCoefficients)}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIir_1_1CascadeStages_a56d24da4cf09f898b534b1b05578244d}{CascadeStages<NSOS,\ StateType>::setup}}\ (sosCoefficients);}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \}}
 
 \end{DoxyCode}
