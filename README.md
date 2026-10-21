@@ -150,7 +150,7 @@ const std::array<std::array<double, 6>, 2> sosCoefficients {{
 		 -1.605878925999785656e+00,
 		 9.538657786383895054e-01}}
 };
-Iir::Custom::SOSCascade cust(sosCoefficients);
+Iir::Custom::SOSCascade<2> cust(sosCoefficients);
 ```
 
 ### Realtime filtering sample by sample
