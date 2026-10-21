@@ -41,7 +41,7 @@ def filterAndExport(sos, signal, exportName):
 def createFileNameFromFilter(filtertype, btype, lc, hc, order):
     return str(filtertype + "-" + btype + "-Order_" + str(order) + ".csv")
 
-time, signal = readData('signal.txt')
+time, signal = readData('signal.csv')
 
 # Calculate the sample rate
 sample_rate = 1 / (time[1] - time[0])
