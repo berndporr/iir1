@@ -3,7 +3,6 @@
 #include "scipy.h"
 #include <array>
 #include <cmath>
-#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -40,13 +39,13 @@ std::string filterBType2String (FilterBType type)
 // Read a semicolon-separated CSV signal
 // ------------------------------------------------------------
 
-Signal readSignalFromCSV (const fs::path &filename)
+Signal readSignalFromCSV (const std::string filename)
 {
     std::ifstream file (filename);
 
     if (!file)
     {
-        throw std::runtime_error ("Cannot open " + filename.string ());
+        throw std::runtime_error ("Cannot open " + filename);
     }
 
     Signal signal;
@@ -55,7 +54,7 @@ Signal readSignalFromCSV (const fs::path &filename)
     // Skip the header.
     if (!std::getline (file, line))
     {
-        throw std::runtime_error ("Empty CSV: " + filename.string ());
+        throw std::runtime_error ("Empty CSV: " + filename);
     }
 
     while (std::getline (file, line))
@@ -73,7 +72,7 @@ Signal readSignalFromCSV (const fs::path &filename)
             || !std::getline (row, valueString, ';'))
         {
             throw std::runtime_error ("Malformed CSV row in "
-                                      + filename.string ());
+                                      + filename);
         }
 
         signal.time.push_back (std::stod (timeString));
@@ -98,8 +97,7 @@ std::string generateFileName (const std::string filterName, FilterBType type,
 // Compare reference and actual signals
 // ------------------------------------------------------------
 
-void compareSignals (const Signal &reference, const Signal &actual,
-                     double tolerance)
+void compareSignals (const Signal &reference, const Signal &actual)
 {
     if (reference.size () != actual.size ())
     {
@@ -151,7 +149,7 @@ void runTest (const std::string filtername, const Signal &input,
     const std::string filename
         = generateFileName (filtername, iirFilter->filterBtype, order);
 
-    const Signal reference = readSignalFromCSV (fs::path ("scipy") / filename);
+    const Signal reference = readSignalFromCSV (filename);
 
     Signal actual;
     actual.time = input.time;
@@ -165,5 +163,5 @@ void runTest (const std::string filtername, const Signal &input,
     std::cerr << filtername << ", " << filterBType2String (iirFilter->filterBtype)
               << ", order=" << order << ": ";
 
-    compareSignals (reference, actual, tolerance);
+    compareSignals (reference, actual);
 }

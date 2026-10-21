@@ -2,7 +2,6 @@
 
 #include <array>
 #include <cmath>
-#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -13,8 +12,6 @@
 #include <vector>
 
 #pragma once
-
-namespace fs = std::filesystem;
 
 constexpr double lc = 200.0;
 constexpr double hc = 300.0;
@@ -95,7 +92,7 @@ template <typename Filter> struct IIR1Adapter final : IIRFilter
 // ------------------------------------------------------------
 // Read a semicolon-separated CSV signal
 // ------------------------------------------------------------
-Signal readSignalFromCSV (const fs::path &filename);
+Signal readSignalFromCSV (const std::string filename);
 
 // ------------------------------------------------------------
 // Generate reference filename
@@ -106,8 +103,7 @@ std::string generateFileName (const std::string filterName, FilterBType type,
 // ------------------------------------------------------------
 // Compare reference and actual signals
 // ------------------------------------------------------------
-void compareSignals (const Signal &reference, const Signal &actual,
-                     double tolerance);
+void compareSignals (const Signal &reference, const Signal &actual);
 
 // ------------------------------------------------------------
 // Run one test

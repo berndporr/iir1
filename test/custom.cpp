@@ -7,7 +7,8 @@
 
 void stdarray ()
 {
-    const std::array<std::array<double, 6>, 2> coeff{
+    const int nSOS = 2;
+    const std::array<std::array<double, 6>, nSOS> coeff{
         { { 1.665623674062209972e-02, -3.924801366970616552e-03,
             1.665623674062210319e-02, 1.000000000000000000e+00,
             -1.715403014004022175e+00, 8.100474793174089472e-01 },
@@ -16,7 +17,7 @@ void stdarray ()
             -1.605878925999785656e+00, 9.538657786383895054e-01 } }
     };
 
-    Iir::Custom::SOSCascade f (coeff);
+    Iir::Custom::SOSCascade<nSOS> f (coeff);
 
     auto coeffRet = f.getCascadeStorage ();
     for (int i = 0; i < 2; i++)

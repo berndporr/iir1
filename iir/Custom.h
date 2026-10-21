@@ -113,6 +113,7 @@ struct SOSCascade : CascadeStages<NSOS, StateType>
      * The 2D const double array needs to have exactly the size [NSOS][6].
 	 * \param sosCoefficients 2D array Python style sos[NSOS][6]. Indexing: 0-2: FIR-, 3-5: IIR-coefficients.
 	 **/
+    template <std::size_t NSOS, class StateType = DEFAULT_STATE>
     SOSCascade (const std::array<std::array<double, 6>, NSOS> sosCoefficients)
     {
         CascadeStages<NSOS, StateType>::setup (sosCoefficients);

@@ -121,7 +121,7 @@ int main (int, char **)
             1.000000000000000222e+00, 1.000000000000000000e+00,
             -1.605878925999785656e+00, 9.538657786383895054e-01 } }
     };
-    Iir::Custom::SOSCascade cust (sosCoefficients);
+    Iir::Custom::SOSCascade<nSOS1> cust (sosCoefficients);
     fimpulse = fopen ("ellip.dat", "wt");
     for (int i = 0; i < 1000; i++)
     {
@@ -146,7 +146,7 @@ int main (int, char **)
           1.000000000000000000e+00, 1.000000000000000000e+00,
           -1.179438547708672624e+00, 5.264979795433866183e-01 },
     } };
-    Iir::Custom::SOSCascade cust2 (coeff2);
+    Iir::Custom::SOSCascade<nSOS2> cust2 (coeff2);
     fimpulse = fopen ("bessel.dat", "wt");
     for (int i = 0; i < 1000; i++)
     {

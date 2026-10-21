@@ -75,7 +75,7 @@ int compare2scipy ()
     const std::string filtername{ "butterworth" };
     try
     {
-        const Signal input = readSignalFromCSV ("scipy/signal.txt");
+        const Signal input = readSignalFromCSV ("signal.txt");
         for (FilterBType type : types)
         {
             for (int order : orders)
