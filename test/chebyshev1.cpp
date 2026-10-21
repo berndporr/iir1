@@ -77,7 +77,7 @@ int compare2scipy()
     const std::string filtername{ "chebychev1" };
     try
     {
-        const Signal input = readSignalFromCSV ("signal.txt");
+        const Signal input = readSignalFromCSV (inputSignalFilename);
         for (FilterBType type : types)
         {
             for (int order : orders)

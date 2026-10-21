@@ -20,6 +20,7 @@ constexpr double center = (lc + hc) / 2.0;
 constexpr double width = hc - lc;
 constexpr std::array<int, 5> orders = { 1, 2, 4, 5, 10 };
 constexpr double tolerance = 1e-5;
+const std::string inputSignalFilename = "signal.csv";
 
 enum class FilterBType
 {

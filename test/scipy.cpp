@@ -71,8 +71,7 @@ Signal readSignalFromCSV (const std::string filename)
         if (!std::getline (row, timeString, ';')
             || !std::getline (row, valueString, ';'))
         {
-            throw std::runtime_error ("Malformed CSV row in "
-                                      + filename);
+            throw std::runtime_error ("Malformed CSV row in " + filename);
         }
 
         signal.time.push_back (std::stod (timeString));
@@ -160,7 +159,8 @@ void runTest (const std::string filtername, const Signal &input,
         actual.values.push_back (iirFilter->filter (sample));
     }
 
-    std::cerr << filtername << ", " << filterBType2String (iirFilter->filterBtype)
+    std::cerr << filtername << ", "
+              << filterBType2String (iirFilter->filterBtype)
               << ", order=" << order << ": ";
 
     compareSignals (reference, actual);
