@@ -22,6 +22,7 @@ constexpr double rippledB = 1;
 constexpr double center = (lc + hc) / 2.0;
 constexpr double width = hc - lc;
 constexpr std::array<int, 5> orders = { 1, 2, 4, 5, 10 };
+constexpr double tolerance = 1e-5;
 
 enum class FilterBType
 {
@@ -100,7 +101,7 @@ Signal readSignalFromCSV (const fs::path &filename);
 // Generate reference filename
 // ------------------------------------------------------------
 std::string generateFileName (std::string filterName, FilterBType type,
-                              int order, double lc, double hc);
+                              int order);
 
 // ------------------------------------------------------------
 // Compare reference and actual signals
@@ -112,5 +113,4 @@ void compareSignals (const Signal &reference, const Signal &actual,
 // Run one test
 // ------------------------------------------------------------
 void runTest (std::string filtername, const Signal &input,
-              std::shared_ptr<IIRFilter> iirFilter, int order, double lc,
-              double hc);
+              std::shared_ptr<IIRFilter> iirFilter, int order);

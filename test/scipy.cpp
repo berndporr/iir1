@@ -1,5 +1,6 @@
 #include "Iir.h"
 
+#include "scipy.h"
 #include <array>
 #include <cmath>
 #include <filesystem>
@@ -11,7 +12,6 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "scipy.h"
 
 // ------------------------------------------------------------
 // Filter configuration
@@ -90,9 +90,7 @@ Signal readSignalFromCSV (const fs::path &filename)
 std::string generateFileName (std::string filterName, FilterBType type,
                               int order, double lc, double hc)
 {
-    return filterName + "-" + toString (type) + "-LC_"
-           + std::to_string (static_cast<int> (lc)) + "-HC_"
-           + std::to_string (static_cast<int> (hc)) + "-Order_"
+    return filterName + "-" + toString (type) + "-Order_"
            + std::to_string (order) + ".csv";
 }
 
@@ -142,11 +140,8 @@ void compareSignals (const Signal &reference, const Signal &actual,
 // ------------------------------------------------------------
 
 void runTest (std::string filtername, const Signal &input,
-              std::shared_ptr<IIRFilter> iirFilter, int order, double lc,
-              double hc)
+              std::shared_ptr<IIRFilter> iirFilter, int order)
 {
-    constexpr double tolerance = 1e-5;
-
     if (input.size () < 2)
     {
         throw std::runtime_error (

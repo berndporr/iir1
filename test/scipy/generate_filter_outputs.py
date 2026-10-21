@@ -4,6 +4,16 @@
 import numpy as np
 from scipy.signal import butter, lfilter, bessel, cheby1, cheby2, sosfilt
 
+
+lc = 200
+hc = 300
+rippleDb = 1
+
+filtertypes = ['Butterworth', 'Bessel', 'Chebychev1', 'Chebychev2']
+btypes = ['lowpass', 'highpass', 'bandpass', 'bandstop']
+orders = [1,2,4,5,10]
+
+
 def export_to_csv(time, filtered_signal, path):
     with open(path, 'w') as file:
         # Write the header row
@@ -29,20 +39,12 @@ def filterAndExport(sos, signal, exportName):
     print(f"Filtered signal has been saved to {exportName}")
 
 def createFileNameFromFilter(filtertype, btype, lc, hc, order):
-    return str(filtertype + "-" + btype + "-LC_" + str(lc) + "-HC_" + str(hc) + "-Order_" + str(order) + ".csv")
+    return str(filtertype + "-" + btype + "-Order_" + str(order) + ".csv")
 
 time, signal = readData('signal.txt')
 
 # Calculate the sample rate
 sample_rate = 1 / (time[1] - time[0])
-lc = 200
-hc = 300
-
-filtertypes = ['Butterworth', 'Bessel', 'Chebychev1', 'Chebychev2']
-btypes = ['lowpass', 'highpass', 'bandpass', 'bandstop']
-orders = [1,2,4,5,10]
-
-###########################################################################
 
 for filtertype in filtertypes:
     for btype in btypes:
@@ -55,12 +57,10 @@ for filtertype in filtertypes:
 
             if filtertype == "Butterworth":
                 sos = butter(N=order, Wn=Wn, fs=sample_rate, btype=btype, output='sos')
-            elif filtertype == "Bessel":
-                sos = bessel(N=order, Wn=Wn, fs=sample_rate, btype=btype, output='sos')
             elif filtertype == "Chebychev1":
-                sos = cheby1(N=order, rp=1, Wn=Wn, fs=sample_rate, btype=btype, output='sos')
+                sos = cheby1(N=order, rp=rippleDb, Wn=Wn, fs=sample_rate, btype=btype, output='sos')
             elif filtertype == "Chebychev2":
-                sos = cheby2(N=order, rs=1, Wn=Wn, fs=sample_rate, btype=btype, output='sos')
+                sos = cheby2(N=order, rs=rippleDb, Wn=Wn, fs=sample_rate, btype=btype, output='sos')
 
             filename = createFileNameFromFilter(filtertype.lower(), btype, lc, hc, order)
             filterAndExport(sos, signal, filename)

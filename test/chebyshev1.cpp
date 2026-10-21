@@ -84,7 +84,7 @@ int compare2scipy()
             {
                 auto filter = createFixedOrderChebychev1 (
                     type, order, input.sampleRate);
-                runTest (filtername, input, filter, order, lc, hc);
+                runTest (filtername, input, filter, order);
             }
         }
     }

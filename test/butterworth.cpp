@@ -82,7 +82,7 @@ int compare2scipy ()
             {
                 auto filter = createFixedOrderButterworth (type, order,
                                                            input.sampleRate);
-                runTest (filtername, input, filter, order, lc, hc);
+                runTest (filtername, input, filter, order);
             }
         }
     }
