@@ -47,3 +47,17 @@ add_executable (test_assignment assignment.cpp)
 target_link_libraries(test_assignment iir_static)
 add_test(TestOperator= test_assignment WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
 target_compile_features(test_assignment PRIVATE cxx_std_11)
+
+file(GLOB TSV_FILES "${CMAKE_SOURCE_DIR}/test/scipy/*.csv")
+
+add_custom_command(TARGET test_butterworth POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${TSV_FILES}
+            "$<TARGET_FILE_DIR:test_butterworth>"
+)
+
+add_custom_command(TARGET test_butterworth POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${CMAKE_SOURCE_DIR}/test/scipy/signal.txt"
+            "$<TARGET_FILE_DIR:test_butterworth>"
+)
