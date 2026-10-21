@@ -237,6 +237,16 @@ cmake .
 which generates the Makefile. Then run:
 ```
 make
+```
+
+Then run the unit tests:
+
+```
+make test
+```
+
+If it's been successful then install the library with:
+```
 sudo make install
 ```
 which installs it under `/usr/local/lib` and `/usr/local/include`.
@@ -253,6 +263,7 @@ See `cmake` for the different build-options. Above is for a 64 bit build.
 Then start Visual C++ and open the solution. This will create
 the DLL and the LIB files. Under Windows it's highly recommended
 to use the static library and link it into the application program.
+Finally do a `ctest` to run the unit tests.
 
 ### Unit tests
 
