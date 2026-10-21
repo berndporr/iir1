@@ -4,12 +4,12 @@
 import numpy as np
 from scipy.signal import butter, lfilter, bessel, cheby1, cheby2, sosfilt
 
+# Filter parameters
+lc = 200     # low cutoff used by HP, BS, BP
+hc = 300     # high cutoff used by LP, BS, BP
+rippleDb = 1 # Chebychev ripple in dB
 
-lc = 200
-hc = 300
-rippleDb = 1
-
-filtertypes = ['Butterworth', 'Bessel', 'Chebychev1', 'Chebychev2']
+filtertypes = ['Butterworth', 'Chebychev1', 'Chebychev2']
 btypes = ['lowpass', 'highpass', 'bandpass', 'bandstop']
 orders = [1,2,4,5,10]
 

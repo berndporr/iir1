@@ -63,7 +63,7 @@ struct Signal
 // ------------------------------------------------------------
 // Filter configuration
 // ------------------------------------------------------------
-std::string toString (FilterBType type);
+std::string filterBType2String (FilterBType type);
 
 // ------------------------------------------------------------
 // Common filter interface
@@ -100,7 +100,7 @@ Signal readSignalFromCSV (const fs::path &filename);
 // ------------------------------------------------------------
 // Generate reference filename
 // ------------------------------------------------------------
-std::string generateFileName (std::string filterName, FilterBType type,
+std::string generateFileName (const std::string filterName, FilterBType type,
                               int order);
 
 // ------------------------------------------------------------
@@ -112,5 +112,5 @@ void compareSignals (const Signal &reference, const Signal &actual,
 // ------------------------------------------------------------
 // Run one test
 // ------------------------------------------------------------
-void runTest (std::string filtername, const Signal &input,
+void runTest (const std::string filtername, const Signal &input,
               std::shared_ptr<IIRFilter> iirFilter, int order);

@@ -17,7 +17,7 @@
 // Filter configuration
 // ------------------------------------------------------------
 
-std::string toString (FilterBType type)
+std::string filterBType2String (FilterBType type)
 {
     switch (type)
     {
@@ -87,10 +87,10 @@ Signal readSignalFromCSV (const fs::path &filename)
 // Generate reference filename
 // ------------------------------------------------------------
 
-std::string generateFileName (std::string filterName, FilterBType type,
-                              int order, double lc, double hc)
+std::string generateFileName (const std::string filterName, FilterBType type,
+                              int order)
 {
-    return filterName + "-" + toString (type) + "-Order_"
+    return filterName + "-" + filterBType2String (type) + "-Order_"
            + std::to_string (order) + ".csv";
 }
 
@@ -139,7 +139,7 @@ void compareSignals (const Signal &reference, const Signal &actual,
 // Run one test
 // ------------------------------------------------------------
 
-void runTest (std::string filtername, const Signal &input,
+void runTest (const std::string filtername, const Signal &input,
               std::shared_ptr<IIRFilter> iirFilter, int order)
 {
     if (input.size () < 2)
@@ -149,7 +149,7 @@ void runTest (std::string filtername, const Signal &input,
     }
 
     const std::string filename
-        = generateFileName (filtername, iirFilter->filterBtype, order, lc, hc);
+        = generateFileName (filtername, iirFilter->filterBtype, order);
 
     const Signal reference = readSignalFromCSV (fs::path ("scipy") / filename);
 
@@ -162,7 +162,7 @@ void runTest (std::string filtername, const Signal &input,
         actual.values.push_back (iirFilter->filter (sample));
     }
 
-    std::cerr << filtername << ", " << toString (iirFilter->filterBtype)
+    std::cerr << filtername << ", " << filterBType2String (iirFilter->filterBtype)
               << ", order=" << order << ": ";
 
     compareSignals (reference, actual, tolerance);
