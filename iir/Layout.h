@@ -37,6 +37,7 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
+#include "Types.h"
 
 /**
  * Describes a filter as a collection of poles and zeros along with
@@ -123,8 +124,16 @@ namespace Iir {
 			m_numPoles += 2;
 		}
 
-		void add (const ComplexPair& poles, const ComplexPair& zeros)
+		void add (ComplexPair poles, ComplexPair zeros)
 		{
+			// If the imaginary part is non-zero it must be complex
+			// conjugate. So let's enforce that.
+			// However if the frist pole is real valued the end 2nd will
+			// also be real valued and has a completely unrelated value.
+			if (poles.first.imag () != 0)
+				poles.second = std::conj (poles.first);
+			if (zeros.first.imag () != 0)
+				zeros.second = std::conj (zeros.first);
 			if (m_numPoles&1)
 				throw_invalid_argument(errCantAdd2ndOrder);
 			if (!poles.isMatchedPair ())
