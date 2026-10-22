@@ -183,15 +183,14 @@ BandPassTransform::BandPassTransform (double fc,
 	{
 		ComplexPair poles = transform (analog[pairs].poles.first);
 		ComplexPair zeros = transform (analog[pairs].zeros.first);
-		
-		// A real analog root maps to a conjugate pair, but std::sqrt() of a
-		// negative real can leave a tiny real part (e.g. libc++), so the two
-		// roots are not exactly conjugate. Restore the exact symmetry.
+		// If the imaginary part is non-zero it must be complex
+		// conjugate. So let's enforce that.
+		// However if the frist pole is real valued the end 2nd will
+		// be also real valued and has a completely unrelated value.
 		if (poles.first.imag () != 0)
 			poles.second = std::conj (poles.first);
 		if (zeros.first.imag () != 0)
 			zeros.second = std::conj (zeros.first);
-		
 		digital.add (poles, zeros);
 	}
 	
@@ -276,15 +275,14 @@ BandStopTransform::BandStopTransform (double fc,
 	{
 		ComplexPair poles = transform (analog[pairs].poles.first);
 		ComplexPair zeros = transform (analog[pairs].zeros.first);
-		
-		// A real analog root maps to a conjugate pair, but std::sqrt() of a
-		// negative real can leave a tiny real part (e.g. libc++), so the two
-		// roots are not exactly conjugate. Restore the exact symmetry.
+		// If the imaginary part is non-zero it must be complex
+		// conjugate. So let's enforce that.
+		// However if the frist pole is real valued the end 2nd will
+		// be also real valued and has a completely unrelated value.
 		if (poles.first.imag () != 0)
 			poles.second = std::conj (poles.first);
 		if (zeros.first.imag () != 0)
-			zeros.second = std::conj (zeros.first);
-		
+			zeros.second = std::conj (zeros.first);	
 		digital.add (poles, zeros);
 	}
 	
