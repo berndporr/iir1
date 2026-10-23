@@ -74,7 +74,7 @@ void AnalogLowPass::design (int numPoles,
 
     if (numPoles & 1)
     {
-      add (complex_t (sinh_v0, 0), infinity());
+      add (sinh_v0, infinity());
       setNormal (0, 1);
     }
     else

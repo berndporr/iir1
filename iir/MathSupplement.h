@@ -53,6 +53,18 @@ const double doubleLn2  =0.69314718055994530941723212145818;
 const double doubleLn10	=2.3025850929940456840179914546844;
 
 typedef std::complex<double> complex_t;
+
+struct CustomComplex : public std::complex<double> {
+    bool is_pure_real_flag = false;
+
+    // Inherit constructors
+    using std::complex<double>::complex;
+
+    // Custom constructor that sets the flag
+    CustomComplex(double r, double i, bool pure_real) 
+        : std::complex<double>(r, i), is_pure_real_flag(pure_real) {}
+};
+
 typedef std::pair<complex_t, complex_t> complex_pair_t;
 
 inline const complex_t infinity()
