@@ -37,66 +37,59 @@
 
 #include "Common.h"
 
-#include<complex>
+#include <complex>
 
 #ifdef _MSC_VER
- // Under Unix these have already default instantiations but not under Vis Studio
+// Under Unix these have already default instantiations but not under Vis Studio
 template class IIR_EXPORT std::complex<double>;
 template class IIR_EXPORT std::complex<float>;
 #endif
 
-namespace Iir {
+namespace Iir
+{
 
-const double doublePi	=3.1415926535897932384626433832795028841971;
-const double doublePi_2	=1.5707963267948966192313216916397514420986;
-const double doubleLn2  =0.69314718055994530941723212145818;
-const double doubleLn10	=2.3025850929940456840179914546844;
+const double doublePi = 3.1415926535897932384626433832795028841971;
+const double doublePi_2 = 1.5707963267948966192313216916397514420986;
+const double doubleLn2 = 0.69314718055994530941723212145818;
+const double doubleLn10 = 2.3025850929940456840179914546844;
 
 typedef std::complex<double> complex_t;
 
-struct CustomComplex : public std::complex<double> {
+// container which knows when the value is pure real valued.
+struct LabelledComplex : public std::complex<double>
+{
     bool is_pure_real_flag = false;
-
-    // Inherit constructors
     using std::complex<double>::complex;
-
-    // Custom constructor that sets the flag
-    CustomComplex(double r, double i, bool pure_real) 
-        : std::complex<double>(r, i), is_pure_real_flag(pure_real) {}
+    LabelledComplex(double purereal) : std::complex<double>(purereal) {
+        is_pure_real_flag = true;
+    }
 };
 
-typedef std::pair<complex_t, complex_t> complex_pair_t;
+typedef std::pair<LabelledComplex, LabelledComplex> complex_pair_t;
 
-inline const complex_t infinity()
+inline const LabelledComplex infinity ()
 {
-  return complex_t (std::numeric_limits<double>::infinity());
+    return LabelledComplex (std::numeric_limits<double>::infinity ());
 }
 
 template <typename Ty, typename To>
-inline std::complex<Ty> addmul (const std::complex<Ty>& c,
-                                Ty v,
-                                const std::complex<To>& c1)
+inline std::complex<Ty> addmul (const std::complex<Ty> &c, Ty v,
+                                const std::complex<To> &c1)
 {
-  return std::complex <Ty> (
-    c.real() + v * c1.real(), c.imag() + v * c1.imag());
+    return std::complex<Ty> (c.real () + v * c1.real (),
+                             c.imag () + v * c1.imag ());
 }
 
-template <typename Ty>
-inline Ty asinh (Ty x)
+template <typename Ty> inline Ty asinh (Ty x)
 {
-  return log (x + std::sqrt (x * x + 1 ));
+    return log (x + std::sqrt (x * x + 1));
 }
 
-template <typename Ty>
-inline bool is_nan (Ty v)
-{
-  return !(v == v);
-}
+template <typename Ty> inline bool is_nan (Ty v) { return !(v == v); }
 
-template <>
-inline bool is_nan<complex_t> (complex_t v)
+template <> inline bool is_nan<LabelledComplex> (LabelledComplex v)
 {
-  return Iir::is_nan (v.real()) || Iir::is_nan (v.imag());
+    return Iir::is_nan (v.real ()) || Iir::is_nan (v.imag ());
 }
 
 }

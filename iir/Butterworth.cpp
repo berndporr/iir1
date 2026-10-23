@@ -33,171 +33,149 @@
  * THE SOFTWARE.
  **/
 
-#include "Common.h"
 #include "Butterworth.h"
+#include "Common.h"
+#include "MathSupplement.h"
 
-namespace Iir {
-
-namespace Butterworth {
-
-AnalogLowPass::AnalogLowPass ()
-  : m_numPoles (-1)
+namespace Iir
 {
-  setNormal (0, 1);
-}
+
+namespace Butterworth
+{
+
+AnalogLowPass::AnalogLowPass () : m_numPoles (-1) { setNormal (0, 1); }
 
 void AnalogLowPass::design (int numPoles)
 {
-  if (m_numPoles != numPoles)
-  {
-    m_numPoles = numPoles;
-
-    reset ();
-
-    const double n2 = 2 * numPoles;
-    const int pairs = numPoles / 2;
-    for (int i = 0; i < pairs; ++i)
+    if (m_numPoles != numPoles)
     {
-      complex_t c = std::polar (1., doublePi_2 + (2 * i + 1) * doublePi / n2);
-      addPoleZeroConjugatePairs (c, infinity());
-    }
+        m_numPoles = numPoles;
 
-    if (numPoles & 1)
-      add (-1, infinity());
-  }
+        reset ();
+
+        const double n2 = 2 * numPoles;
+        const int pairs = numPoles / 2;
+        for (int i = 0; i < pairs; ++i)
+        {
+            complex_t c
+                = std::polar (1., doublePi_2 + (2 * i + 1) * doublePi / n2);
+            addPoleZeroConjugatePairs (LabelledComplex (c),
+                                       LabelledComplex (infinity ()));
+        }
+
+        if (numPoles & 1)
+        {
+            add (LabelledComplex(-1), LabelledComplex(infinity()));
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
 
-AnalogLowShelf::AnalogLowShelf ()
-  : m_numPoles (-1)
+AnalogLowShelf::AnalogLowShelf () : m_numPoles (-1)
 {
-  setNormal (doublePi, 1);
+    setNormal (doublePi, 1);
 }
 
 void AnalogLowShelf::design (int numPoles, double gainDb)
 {
-  if (m_numPoles != numPoles ||
-      m_gainDb != gainDb)
-  {
-    m_numPoles = numPoles;
-    m_gainDb = gainDb;
-
-    reset ();
-
-    const double n2 = numPoles * 2;
-    const double g = pow (pow (10., gainDb/20), 1. / n2);
-    const double gp = -1. / g;
-    const double gz = -g;
-
-    const int pairs = numPoles / 2;
-    for (int i = 1; i <= pairs; ++i)
+    if (m_numPoles != numPoles || m_gainDb != gainDb)
     {
-      const double theta = doublePi * (0.5 - (2 * i - 1) / n2);
-      addPoleZeroConjugatePairs (std::polar (gp, theta), std::polar (gz, theta));
+        m_numPoles = numPoles;
+        m_gainDb = gainDb;
+
+        reset ();
+
+        const double n2 = numPoles * 2;
+        const double g = pow (pow (10., gainDb / 20), 1. / n2);
+        const double gp = -1. / g;
+        const double gz = -g;
+
+        const int pairs = numPoles / 2;
+        for (int i = 1; i <= pairs; ++i)
+        {
+            const double theta = doublePi * (0.5 - (2 * i - 1) / n2);
+            addPoleZeroConjugatePairs (LabelledComplex(std::polar (gp, theta)),
+                                       LabelledComplex(std::polar (gz, theta)));
+        }
+
+        if (numPoles & 1)
+            add (LabelledComplex(gp), LabelledComplex(gz));
     }
-    
-    if (numPoles & 1)
-      add (gp, gz);
-  }
 }
 
 //------------------------------------------------------------------------------
 
-void LowPassBase::setup (int order,
-                         double cutoffFrequency)
+void LowPassBase::setup (int order, double cutoffFrequency)
 {
-  m_analogProto.design (order);
+    m_analogProto.design (order);
 
-  LowPassTransform (cutoffFrequency,
-                    m_digitalProto,
-                    m_analogProto);
+    LowPassTransform (cutoffFrequency, m_digitalProto, m_analogProto);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
-void HighPassBase::setup (int order,
-                          double cutoffFrequency)
+void HighPassBase::setup (int order, double cutoffFrequency)
 {
-  m_analogProto.design (order);
+    m_analogProto.design (order);
 
-  HighPassTransform (cutoffFrequency,
-                     m_digitalProto,
-                     m_analogProto);
+    HighPassTransform (cutoffFrequency, m_digitalProto, m_analogProto);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
-void BandPassBase::setup (int order,
-                          double centerFrequency,
+void BandPassBase::setup (int order, double centerFrequency,
                           double widthFrequency)
 {
-  m_analogProto.design (order);
+    m_analogProto.design (order);
 
-  BandPassTransform (centerFrequency,
-                     widthFrequency,
-                     m_digitalProto,
-                     m_analogProto);
+    BandPassTransform (centerFrequency, widthFrequency, m_digitalProto,
+                       m_analogProto);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
-void BandStopBase::setup (int order,
-                          double centerFrequency,
+void BandStopBase::setup (int order, double centerFrequency,
                           double widthFrequency)
 {
-  m_analogProto.design (order);
+    m_analogProto.design (order);
 
-  BandStopTransform (centerFrequency,
-                     widthFrequency,
-                     m_digitalProto,
-                     m_analogProto);
+    BandStopTransform (centerFrequency, widthFrequency, m_digitalProto,
+                       m_analogProto);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
-void LowShelfBase::setup (int order,
-                         double cutoffFrequency,
-                         double gainDb)
+void LowShelfBase::setup (int order, double cutoffFrequency, double gainDb)
 {
-  m_analogProto.design (order, gainDb);
+    m_analogProto.design (order, gainDb);
 
-  LowPassTransform (cutoffFrequency,
-                    m_digitalProto,
-                    m_analogProto);
+    LowPassTransform (cutoffFrequency, m_digitalProto, m_analogProto);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
-void HighShelfBase::setup (int order,
-                           double cutoffFrequency,
-                           double gainDb)
+void HighShelfBase::setup (int order, double cutoffFrequency, double gainDb)
 {
-  m_analogProto.design (order, gainDb);
+    m_analogProto.design (order, gainDb);
 
-  HighPassTransform (cutoffFrequency,
-                     m_digitalProto,
-                     m_analogProto);
+    HighPassTransform (cutoffFrequency, m_digitalProto, m_analogProto);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
-void BandShelfBase::setup (int order,
-                           double centerFrequency,
-                           double widthFrequency,
-                           double gainDb)
+void BandShelfBase::setup (int order, double centerFrequency,
+                           double widthFrequency, double gainDb)
 {
-  m_analogProto.design (order, gainDb);
+    m_analogProto.design (order, gainDb);
 
-  BandPassTransform (centerFrequency,
-                     widthFrequency,
-                     m_digitalProto,
-                     m_analogProto);
+    BandPassTransform (centerFrequency, widthFrequency, m_digitalProto,
+                       m_analogProto);
 
-  // HACK!
-  m_digitalProto.setNormal ( (centerFrequency < 0.25) ? doublePi : 0, 1);
+    // HACK!
+    m_digitalProto.setNormal ((centerFrequency < 0.25) ? doublePi : 0, 1);
 
-  Cascade::setLayout (m_digitalProto);
+    Cascade::setLayout (m_digitalProto);
 }
 
 }

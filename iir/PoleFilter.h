@@ -160,7 +160,7 @@ namespace Iir {
 			  LayoutBase const& analog);
 
 	private:
-	complex_t transform (complex_t c);
+	LabelledComplex transform (LabelledComplex labelledComplex);
 
 	double f = 0.0;
 	};
@@ -178,7 +178,7 @@ namespace Iir {
 			   LayoutBase const& analog);
 
 	private:
-	complex_t transform (complex_t c);
+	LabelledComplex transform (LabelledComplex c);
 
 	double f = 0.0;
 	};
@@ -198,7 +198,7 @@ namespace Iir {
 			   LayoutBase const& analog);
 
 	private:
-	ComplexPair transform (complex_t c);
+	ComplexPair transform (LabelledComplex labelledComplex);
 
 	double wc = 0.0;
 	double wc2 = 0.0;
@@ -224,7 +224,7 @@ namespace Iir {
 			   LayoutBase const& analog);
 
 	private:
-	ComplexPair transform (complex_t c);
+	ComplexPair transform (LabelledComplex labelledComplex);
 
 	double wc = 0.0;
 	double wc2 = 0.0;

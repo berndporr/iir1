@@ -35,6 +35,8 @@
 
 #include "PoleFilter.h"
 #include "Common.h"
+#include "MathSupplement.h"
+#include <cstdio>
 
 namespace Iir
 {
@@ -45,16 +47,18 @@ static const char cutoffError[]
     = "The cutoff frequency needs to be below the Nyquist frequency.";
 static const char cutoffNeg[] = "Cutoff frequency is negative.";
 
-complex_t LowPassTransform::transform (complex_t c)
+LabelledComplex LowPassTransform::transform (LabelledComplex labelledComplex)
 {
+    complex_t c = labelledComplex;
     if (c == infinity ())
-        return complex_t (-1, 0);
+        return LabelledComplex (-1);
 
     // frequency transform
     c = f * c;
 
     // bilinear low pass transform
-    return (1. + c) / (1. - c);
+    c = (1. + c) / (1. - c);
+    return LabelledComplex (c);
 }
 
 LowPassTransform::LowPassTransform (double fc, LayoutBase &digital,
@@ -92,16 +96,18 @@ LowPassTransform::LowPassTransform (double fc, LayoutBase &digital,
 
 //------------------------------------------------------------------------------
 
-complex_t HighPassTransform::transform (complex_t c)
+LabelledComplex HighPassTransform::transform (LabelledComplex labelledComplex)
 {
+    complex_t c = labelledComplex;
     if (c == infinity ())
-        return complex_t (1, 0);
+        return LabelledComplex (1, 0);
 
     // frequency transform
     c = f * c;
 
     // bilinear high pass transform
-    return -(1. + c) / (1. - c);
+    c = -(1. + c) / (1. - c);
+    return LabelledComplex (c);
 }
 
 HighPassTransform::HighPassTransform (double fc, LayoutBase &digital,
@@ -183,7 +189,7 @@ BandPassTransform::BandPassTransform (double fc, double fw,
 
     if (numPoles & 1)
     {
-		fprintf(stderr,"Calc the final odd pole/zero:\n");
+        fprintf (stderr, "Calc the final odd pole/zero:\n");
         ComplexPair poles = transform (analog[pairs].poles.first);
         ComplexPair zeros = transform (analog[pairs].zeros.first);
         digital.add (poles, zeros);
@@ -195,15 +201,19 @@ BandPassTransform::BandPassTransform (double fc, double fw,
         analog.getNormalGain ());
 }
 
-ComplexPair BandPassTransform::transform (complex_t c)
+ComplexPair BandPassTransform::transform (LabelledComplex labelledComplex)
 {
+    complex_t c = labelledComplex;
     fprintf (stderr, "BandpassTransform: in c=(%f,%f).\n", c.real (),
              c.imag ());
     if (c == infinity ())
     {
-		fprintf(stderr,"BandpassTransform: returning (-1),(1)\n");
+        fprintf (stderr, "BandpassTransform: returning (-1),(1)\n\n");
         return ComplexPair (-1, 1);
     }
+
+    if (labelledComplex.is_pure_real_flag)
+        fprintf (stderr, "Pure real!\n");
 
     c = (1. + c) / (1. - c); // bilinear
     fprintf (stderr, "BandPassTransform: bil c=(%f,%f).\n", c.real (),
@@ -228,9 +238,11 @@ ComplexPair BandPassTransform::transform (complex_t c)
     complex_t d = 0;
     d = addmul (d, 2 * (b - 1), c) + 2 * (1 + b);
 
-    fprintf (stderr, "BandPassTransform u/d=(%f,%f)\n", (u/d).real (), (u/d).imag ());
-    fprintf (stderr, "BandPassTransform v/d=(%f,%f)\n\n", (v/d).real (), (v/d).imag ());
-    return ComplexPair (u / d, v / d);
+    fprintf (stderr, "BandPassTransform u/d=(%f,%f)\n", (u / d).real (),
+             (u / d).imag ());
+    fprintf (stderr, "BandPassTransform v/d=(%f,%f)\n\n", (v / d).real (),
+             (v / d).imag ());
+    return ComplexPair (LabelledComplex (u / d), LabelledComplex (v / d));
 }
 
 //------------------------------------------------------------------------------
@@ -272,7 +284,7 @@ BandStopTransform::BandStopTransform (double fc, double fw,
 
         // trick to get the conjugate
         if (z.second == z.first)
-            z.second = std::conj (z.first);
+            z.second = LabelledComplex (std::conj (z.first));
 
         digital.addPoleZeroConjugatePairs (p.first, z.first);
         digital.addPoleZeroConjugatePairs (p.second, z.second);
@@ -291,13 +303,17 @@ BandStopTransform::BandStopTransform (double fc, double fw,
         digital.setNormal (0, analog.getNormalGain ());
 }
 
-ComplexPair BandStopTransform::transform (complex_t c)
+ComplexPair BandStopTransform::transform (LabelledComplex labelledComplex)
 {
-    fprintf (stderr, "BandStopTransform of (%f,%f):", c.real (), c.imag ());
+    complex_t c = labelledComplex;
+    fprintf (stderr, "BandStopTransform of (%f,%f)\n", c.real (), c.imag ());
     if (c == infinity ())
         c = -1;
     else
         c = (1. + c) / (1. - c); // bilinear
+
+    if (labelledComplex.is_pure_real_flag)
+        fprintf (stderr, "Pure real!\n");
 
     complex_t u (0);
     u = addmul (u, 4 * (b2 + a2 - 1), c);
@@ -319,9 +335,11 @@ ComplexPair BandStopTransform::transform (complex_t c)
     complex_t d (b + 1);
     d = addmul (d, b - 1, c);
 
-    fprintf (stderr, "BandStopTransform u/d=(%f,%f)\n", (u/d).real (), (u/d).imag ());
-    fprintf (stderr, "BandStopTransform v/d=(%f,%f)\n\n", (v/d).real (), (v/d).imag ());
-    return ComplexPair (u / d, v / d);
+    fprintf (stderr, "BandStopTransform u/d=(%f,%f)\n", (u / d).real (),
+             (u / d).imag ());
+    fprintf (stderr, "BandStopTransform v/d=(%f,%f)\n\n", (v / d).real (),
+             (v / d).imag ());
+    return ComplexPair (LabelledComplex (u / d), LabelledComplex (v / d));
 }
 
 }
