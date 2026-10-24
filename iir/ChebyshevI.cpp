@@ -34,6 +34,7 @@
  **/
 
 #include "Common.h"
+#include "MathSupplement.h"
 #include "ChebyshevI.h"
 
 namespace Iir {
@@ -74,7 +75,7 @@ void AnalogLowPass::design (int numPoles,
 
     if (numPoles & 1)
     {
-      add (complex_t (sinh_v0, 0), infinity());
+      add (complex_t (sinh_v0), infinity());
       setNormal (0, 1);
     }
     else
@@ -150,7 +151,7 @@ void AnalogLowShelf::design (int numPoles,
     }
 
     if (numPoles & 1)
-      add (-sinh_u, -sinh_v);
+      add (complex_t(-sinh_u), complex_t(-sinh_v));
   }
 }
 

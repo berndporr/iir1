@@ -34,6 +34,7 @@
  **/
 
 #include "Common.h"
+#include "MathSupplement.h"
 #include "PoleFilter.h"
 
 namespace Iir {
@@ -47,7 +48,7 @@ static const char cutoffNeg[] = "Cutoff frequency is negative.";
 complex_t LowPassTransform::transform (complex_t c)
 {
   if (c == infinity())
-    return complex_t (-1, 0);
+    return complex_t (-1);
 
   // frequency transform
   c = f * c; 
@@ -94,7 +95,7 @@ LowPassTransform::LowPassTransform (double fc,
 complex_t HighPassTransform::transform (complex_t c)
 {
   if (c == infinity())
-    return complex_t (1, 0);
+    return complex_t (1);
 
   // frequency transform
   c = f * c; 
@@ -195,11 +196,11 @@ BandPassTransform::BandPassTransform (double fc,
 ComplexPair BandPassTransform::transform (complex_t c)
 {
 	if (c == infinity())
-		return ComplexPair (-1, 1);
+		return ComplexPair (complex_t(-1), complex_t(1));
 	
 	c = (1. + c) / (1. - c); // bilinear
 	
-	complex_t v = 0;
+	complex_t v = complex_t(0);
 	v = addmul (v, 4 * (b2 * (a2 - 1) + 1), c);
 	v += 8 * (b2 * (a2 - 1) - 1);
 	v *= c;
@@ -213,7 +214,7 @@ ComplexPair BandPassTransform::transform (complex_t c)
 	v = addmul (v, ab_2, c);
 	v += ab_2;
 	
-	complex_t d = 0;
+	complex_t d = complex_t(0);
 	d = addmul (d, 2 * (b - 1), c) + 2 * (1 + b);
 	
 	return ComplexPair (u/d, v/d);

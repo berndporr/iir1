@@ -34,6 +34,7 @@
  **/
 
 #include "Common.h"
+#include "MathSupplement.h"
 #include "Butterworth.h"
 
 namespace Iir {
@@ -63,7 +64,7 @@ void AnalogLowPass::design (int numPoles)
     }
 
     if (numPoles & 1)
-      add (-1, infinity());
+      add (complex_t(-1), complex_t(infinity()));
   }
 }
 
