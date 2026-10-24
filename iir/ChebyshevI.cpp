@@ -67,15 +67,15 @@ void AnalogLowPass::design (int numPoles,
     for (int i = 0; i < pairs; ++i)
     {
       const int k = 2 * i + 1 - numPoles;
-      double a = sinh_v0 * cos (k * doublePi / n2);
-      double b = cosh_v0 * sin (k * doublePi / n2);
+      const double a = sinh_v0 * cos (k * doublePi / n2);
+      const double b = cosh_v0 * sin (k * doublePi / n2);
 
-      addPoleZeroConjugatePairs (complex_t (a, b), complex_t(infinity()));
+      addPoleZeroConjugatePairs (complex_t (a, b), infinity());
     }
 
     if (numPoles & 1)
     {
-      add (complex_t (sinh_v0), complex_t(infinity()));
+      add (complex_t (sinh_v0), infinity());
       setNormal (0, 1);
     }
     else

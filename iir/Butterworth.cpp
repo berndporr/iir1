@@ -59,12 +59,12 @@ void AnalogLowPass::design (int numPoles)
     const int pairs = numPoles / 2;
     for (int i = 0; i < pairs; ++i)
     {
-      complex_t c = std::polar (1., doublePi_2 + (2 * i + 1) * doublePi / n2);
+      const complex_t c = std::polar (1., doublePi_2 + (2 * i + 1) * doublePi / n2);
       addPoleZeroConjugatePairs (c, infinity());
     }
 
     if (numPoles & 1)
-      add (complex_t(-1), complex_t(infinity()));
+      add (complex_t(-1), infinity());
   }
 }
 

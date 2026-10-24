@@ -38,87 +38,83 @@
 #include "Common.h"
 #include "MathSupplement.h"
 
-namespace Iir {
+namespace Iir
+{
 
 /**
  * A conjugate or real pair
  **/
-	struct IIR_EXPORT ComplexPair : complex_pair_t
-	{
-		ComplexPair() = default;
+struct IIR_EXPORT ComplexPair : complex_pair_t
+{
+    ComplexPair () = default;
 
-		explicit ComplexPair (const complex_t& c1)
-			: complex_pair_t (c1, 0.)
-		{
-			if (!isReal()) throw_invalid_argument("A single complex number needs to be real.");
-		}
+    static constexpr double epsilon = 1E-10;
 
-		ComplexPair (const complex_t& c1,
-			     const complex_t& c2)
-			: complex_pair_t (c1, c2)
-		{
-		}
+    explicit ComplexPair (const complex_t &c1) : complex_pair_t (c1, 0.)
+    {
+        if (!isReal ())
+            throw_invalid_argument (
+                "A single complex number needs to be real.");
+    }
 
-		bool isReal () const
-		{
-			return first.imag() == 0 && second.imag() == 0;
-		}
+    ComplexPair (const complex_t &c1, const complex_t &c2)
+        : complex_pair_t (c1, c2)
+    {
+    }
 
-		/**
-		 * Returns true if this is either a conjugate pair,
-		 * or a pair of reals where neither is zero.
-		 */
-		bool isMatchedPair () const
-		{
-			if (first.imag() != 0)
-				return second == std::conj (first);
-			else
-				return second.imag () == 0 &&
-					second.real () != 0 &&
-					first.real () != 0;
-		}
+    bool isReal () const
+    {
+        return (std::abs (first.imag ()) < epsilon)
+               && (std::abs (second.imag ()) < epsilon);
+    }
 
-		bool is_nan () const
-		{
-			return Iir::is_nan (first) || Iir::is_nan (second);
-		}
-	};
+    /**
+	 * Returns true if this is either a conjugate pair,
+	 * or a pair of reals where neither is zero.
+	 */
+    bool isMatchedPair () const
+    {
+        if ((isReal () && (std::abs (first.real ()) > 0))
+            && (std::abs (second.real ()) > 0))
+            return true;
+        return std::abs(second - std::conj (first)) < epsilon;
+    }
 
+    bool is_nan () const
+    {
+        return Iir::is_nan (first) || Iir::is_nan (second);
+    }
+};
 
 /**
  * A pair of pole/zeros. This fits in a biquad (but is missing the gain)
  **/
-	struct IIR_EXPORT PoleZeroPair
-	{
-		ComplexPair poles = ComplexPair();
-		ComplexPair zeros = ComplexPair();
+struct IIR_EXPORT PoleZeroPair
+{
+    ComplexPair poles = ComplexPair ();
+    ComplexPair zeros = ComplexPair ();
 
-		PoleZeroPair () = default;
+    PoleZeroPair () = default;
 
-		// single pole/zero
-		PoleZeroPair (const complex_t& p, const complex_t& z)
-			: poles (p), zeros (z)
-		{
-		}
+    // single pole/zero
+    PoleZeroPair (const complex_t &p, const complex_t &z)
+        : poles (p), zeros (z)
+    {
+    }
 
-		// pole/zero pair
-		PoleZeroPair (const complex_t& p1, const complex_t& z1,
-			      const complex_t& p2, const complex_t& z2)
-			: poles (p1, p2)
-			, zeros (z1, z2)
-		{
-		}
+    // pole/zero pair
+    PoleZeroPair (const complex_t &p1, const complex_t &z1,
+                  const complex_t &p2, const complex_t &z2)
+        : poles (p1, p2), zeros (z1, z2)
+    {
+    }
 
-		bool isSinglePole () const
-		{
-			return poles.second == 0. && zeros.second == 0.;
-		}
+    bool isSinglePole () const
+    {
+        return poles.second == 0. && zeros.second == 0.;
+    }
 
-		bool is_nan () const
-		{
-			return poles.is_nan() || zeros.is_nan();
-		}
-	};
-
+    bool is_nan () const { return poles.is_nan () || zeros.is_nan (); }
+};
 
 }

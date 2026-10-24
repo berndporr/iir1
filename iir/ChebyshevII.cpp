@@ -80,7 +80,7 @@ void AnalogLowPass::design (int numPoles,
 
     if (numPoles & 1)
     {
-      add (complex_t(1 / sinh_v0), complex_t(infinity()));
+      add (complex_t(1 / sinh_v0), infinity());
     }
   }
 }
