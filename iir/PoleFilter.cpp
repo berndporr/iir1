@@ -282,7 +282,7 @@ BandStopTransform::BandStopTransform (double fc,
 ComplexPair BandStopTransform::transform (complex_t c)
 {
 	if (c == infinity())
-		c = -1;
+		c = complex_t(-1);
 	else
 		c = (1. + c) / (1. - c); // bilinear
 	
