@@ -224,6 +224,8 @@ ComplexPair BandPassTransform::transform (LabelledComplex labelledComplex)
     v += 8 * (b2 * (a2 - 1) - 1);
     v *= c;
     v += 4 * (b2 * (a2 - 1) + 1);
+    fprintf (stderr, "BandPassTransform: v=(%f,%f).\n", v.real (),
+             v.imag ());
     v = std::sqrt (v);
     fprintf (stderr, "BandPassTransform: sqrt(v)=(%f,%f).\n", v.real (),
              v.imag ());
@@ -320,6 +322,8 @@ ComplexPair BandStopTransform::transform (LabelledComplex labelledComplex)
     u += 8 * (b2 - a2 + 1);
     u *= c;
     u += 4 * (a2 + b2 - 1);
+    fprintf (stderr, "BandStopTransform u=(%f,%f)\n", u.real (),
+             u.imag ());
     u = std::sqrt (u);
     fprintf (stderr, "BandStopTransform sqrt(u)=(%f,%f)\n", u.real (),
              u.imag ());
