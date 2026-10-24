@@ -37,6 +37,7 @@
 
 #include "Common.h"
 #include "MathSupplement.h"
+#include "Types.h"
 
 /**
  * Describes a filter as a collection of poles and zeros along with
