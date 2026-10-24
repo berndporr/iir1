@@ -50,7 +50,7 @@ struct IIR_EXPORT ComplexPair : complex_pair_t
 
     static constexpr double epsilon = 1E-10;
 
-    explicit ComplexPair (const complex_t &c1) : complex_pair_t (c1, 0.)
+    explicit ComplexPair (const complex_t &c1) : complex_pair_t (c1, complex_t(0))
     {
         if (!isReal ())
             throw_invalid_argument (
@@ -74,8 +74,8 @@ struct IIR_EXPORT ComplexPair : complex_pair_t
 	 */
     bool isMatchedPair () const
     {
-        if ((isReal () && (std::abs (first.real ()) > 0))
-            && (std::abs (second.real ()) > 0))
+        if ((isReal () && (std::abs (first.real ()) > epsilon))
+            && (std::abs (second.real ()) > epsilon))
             return true;
         return std::abs(second - std::conj (first)) < epsilon;
     }
@@ -96,6 +96,8 @@ struct IIR_EXPORT PoleZeroPair
 
     PoleZeroPair () = default;
 
+    static constexpr double epsilon = 1E-10;
+
     // single pole/zero
     PoleZeroPair (const complex_t &p, const complex_t &z)
         : poles (p), zeros (z)
@@ -111,7 +113,7 @@ struct IIR_EXPORT PoleZeroPair
 
     bool isSinglePole () const
     {
-        return poles.second == 0. && zeros.second == 0.;
+        return (std::abs(poles.second) < epsilon) && (std::abs(zeros.second) < epsilon);
     }
 
     bool is_nan () const { return poles.is_nan () || zeros.is_nan (); }
