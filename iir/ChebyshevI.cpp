@@ -70,12 +70,12 @@ void AnalogLowPass::design (int numPoles,
       double a = sinh_v0 * cos (k * doublePi / n2);
       double b = cosh_v0 * sin (k * doublePi / n2);
 
-      addPoleZeroConjugatePairs (complex_t (a, b), infinity());
+      addPoleZeroConjugatePairs (complex_t (a, b), complex_t(infinity()));
     }
 
     if (numPoles & 1)
     {
-      add (complex_t (sinh_v0), infinity());
+      add (complex_t (sinh_v0), complex_t(infinity()));
       setNormal (0, 1);
     }
     else
