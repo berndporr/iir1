@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10.0)
 
-project(iir VERSION 1.11.0 LANGUAGES CXX)
+project(iir VERSION 1.11.1 LANGUAGES CXX)
 
 set (CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
