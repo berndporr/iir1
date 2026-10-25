@@ -162,16 +162,16 @@ namespace Iir {
 		const char errMsgPole[] = "imaginary parts of both poles need to be 0 or complex conjugate";
 		const char errMsgZero[] = "imaginary parts of both zeros need to be 0 or complex conjugate";
 
-		if (pole1.imag() != 0)
+		if (std::abs (pole1.imag()) > ComplexPair::epsilon)
 		{
-			if (pole2 != std::conj (pole1))
+			if (std::abs (pole2 - std::conj (pole1)) > ComplexPair::epsilon)
 				throw_invalid_argument(errMsgPole);
 			a1 = -2 * pole1.real();
 			a2 = std::norm (pole1);
 		}
 		else
 		{
-			if (pole2.imag() != 0)
+			if (std::abs (pole2.imag()) > ComplexPair::epsilon)
 				throw_invalid_argument(errMsgPole);
 			a1 = -(pole1.real() + pole2.real());
 			a2 =   pole1.real() * pole2.real();
@@ -181,16 +181,16 @@ namespace Iir {
 		double b1;
 		double b2;
 
-		if (zero1.imag() != 0)
+		if (std::abs (zero1.imag()) > ComplexPair::epsilon)
 		{
-			if (zero2 != std::conj (zero1))
+			if (std::abs (zero2 - std::conj (zero1)) > ComplexPair::epsilon)
 				throw_invalid_argument(errMsgZero);
 			b1 = -2 * zero1.real();
 			b2 = std::norm (zero1);
 		}
 		else
 		{
-			if (zero2.imag() != 0)
+			if (std::abs (zero2.imag()) > ComplexPair::epsilon)
 				throw_invalid_argument(errMsgZero);
 
 			b1 = -(zero1.real() + zero2.real());
