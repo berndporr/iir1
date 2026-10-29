@@ -1,6 +1,6 @@
-project(IIRDemo)
-
 cmake_minimum_required(VERSION 3.10.0)
+
+project(IIRDemo)
 
 if (MSVC)
     add_compile_options(/W4)
